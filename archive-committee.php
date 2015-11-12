@@ -38,11 +38,11 @@ get_header(); ?>
 
 <?php 
 if(get_field('level') { 
-echo '<tr>';}
-echo '<td colspan="3">';}
-echo '<h2 class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style " style="font-size: 14px; text-align: left; color: #3d3d3d; font-style: inherit; font-weight: bold; padding-top: 0px; padding-bottom: 0px; text-transform: initial; letter-spacing: 0px; margin-bottom: 0px;">Undergraduate &amp; Graduate</h2>';}
-echo '</td>';}
-echo '</tr>';}
+echo '<tr>';
+echo '<td colspan="3">';
+echo '<h2 class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style " style="font-size: 14px; text-align: left; color: #3d3d3d; font-style: inherit; font-weight: bold; padding-top: 0px; padding-bottom: 0px; text-transform: initial; letter-spacing: 0px; margin-bottom: 0px;">Undergraduate &amp; Graduate</h2>';
+echo '</td>';
+echo '</tr>';
 			 }?>
 <tr>
 <td><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
