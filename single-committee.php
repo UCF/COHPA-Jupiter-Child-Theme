@@ -23,8 +23,16 @@ get_header(); ?>
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 			
 
-<div id="mk-tabs-5644eb6a0ecec" class="mk-shortcode mobile-true mk-tabs simple-style  "><ul class="mk-tabs-tabs"><li><a href="#1447354239-1-18">About</a></li><li><a href="#1447354239-2-76">Members</a></li><li><a href="#1447354402671-2-0">Minutes</a></li><li><a href="#1447354418752-3-5">Schedule</a></li><div class="clearboth"></div></ul><div class="mk-tabs-panes">
-			
+<div id="mk-tabs-5644eb6a0ecec" class="mk-shortcode mobile-true mk-tabs simple-style  ">
+	<ul class="mk-tabs-tabs">
+    	<li><a href="#1447354239-1-18">About</a></li>
+        <li><a href="#1447354239-2-76">Members</a></li>
+        <?php if( have_rows('manage_minutes') ):?><li><a href="#1447354402671-2-0">Minutes</a></li><?php endif; ?>
+        <li><a href="#1447354418752-3-5">Schedule</a></li>
+        <div class="clearboth"></div>
+    </ul>
+    
+    <div class="mk-tabs-panes">			
 			<div id="1447354239-1-18" class="mk-tabs-pane"><div class="title-mobile">About</div>	<div style="text-align: left;" class="mk-text-block  true"><?php the_field('content'); ?>
 <div class="clearboth"></div></div> 
 			<div class="clearboth"></div></div>
@@ -44,7 +52,7 @@ get_header(); ?>
         <?php while( have_rows('content') ): the_row(); ?>   
 			<div style="width: 25%; text-align: center; float:left;"><a href="<?php the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php the_sub_field('date_of_meeting'); ?>"><?php the_sub_field('date_of_meeting'); ?></a></div>
 		<?php endwhile; ?>
-        <? endif; ?>
+        <?php endif; ?>
 
 		</div>
 	</div>
