@@ -45,7 +45,7 @@ get_header(); ?>
 
 <?php while( have_rows('manage_minutes') ): the_row(); ?>
 	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5644eb6a10466" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('year'); ?></span></h2>
-    <div class="clearboth"></div>
+
     
         <div class="wpb_raw_code wpb_content_element wpb_raw_html">
             <div class="wpb_wrapper">
@@ -58,15 +58,9 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-            <div class="wpb_wrapper">
-                <div style="clear:both;"></div>
-            </div>
-        </div>
         <div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot ">
             <div class="divider-inner" style=""></div>
         </div>
-    <div class="clearboth"></div>
 </div>
 <?php endwhile; ?>          
 <?php endif; ?>
