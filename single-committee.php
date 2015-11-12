@@ -39,11 +39,11 @@ get_header(); ?>
 			<div id="1447354239-2-76" class="mk-tabs-pane"><div class="title-mobile">Members</div>	<div style="text-align: left;" class="mk-text-block  true"><p>Insert Members List</p>
 <div class="clearboth"></div></div> 
 			<div class="clearboth"></div></div>
-<?php //if( have_rows('manage_minutes') ):?>            
+<?php if( have_rows('manage_minutes') ):?>            
 <div id="1447354402671-2-0" class="mk-tabs-pane">
 	<div class="title-mobile">Minutes</div>
 
-<?php //while( have_rows('manage_minutes') ): the_row(); ?>
+<?php while( have_rows('manage_minutes') ): the_row(); ?>
 	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5644eb6a10466" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('year'); ?></span></h2>
 
     
@@ -61,9 +61,10 @@ get_header(); ?>
         <div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot ">
             <div class="divider-inner" style=""></div>
         </div>
+        <div class="clearboth"></div>
 </div>
-<?php //endwhile; ?>          
-<?php //endif; ?>
+<?php endwhile; ?>          
+<?php endif; ?>
 
 
 
