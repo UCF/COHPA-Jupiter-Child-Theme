@@ -40,30 +40,34 @@ get_header(); ?>
 <div class="clearboth"></div></div> 
 			<div class="clearboth"></div></div>
 <?php if( have_rows('manage_minutes') ):?>            
-<div id="1447354402671-2-0" class="mk-tabs-pane"><div class="title-mobile">Minutes</div>
+<div id="1447354402671-2-0" class="mk-tabs-pane">
+	<div class="title-mobile">Minutes</div>
 
 <?php while( have_rows('manage_minutes') ): the_row(); ?>
 	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5644eb6a10466" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('year'); ?></span></h2>
     <div class="clearboth"></div>
     
-	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
-		<div class="wpb_wrapper">
-        <?php if( have_rows('content') ):?> 
-        <?php while( have_rows('content') ): the_row(); ?>   
-			<div style="width: 25%; text-align: center; float:left;"><a href="<?php the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php the_sub_field('date_of_meeting'); ?>"><?php the_sub_field('date_of_meeting'); ?></a></div>
-		<?php endwhile; ?>
-        <?php endif; ?>
+        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+            <div class="wpb_wrapper">
+            <?php if( have_rows('content') ):?> 
+            <?php while( have_rows('content') ): the_row(); ?>   
+            <div style="width: 25%; text-align: center; float:left;"><a href="<?php the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php the_sub_field('date_of_meeting'); ?>"><?php the_sub_field('date_of_meeting'); ?></a></div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+    
+            </div>
+        </div>
 
-		</div>
-	</div>
-
-	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
-		<div class="wpb_wrapper">
-			<div style="clear:both;"></div>
-		</div>
-	</div>
-<div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot "><div class="divider-inner" style=""></div></div><div class="clearboth"></div>
-			<div class="clearboth"></div></div>
+        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+            <div class="wpb_wrapper">
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot ">
+            <div class="divider-inner" style=""></div>
+        </div>
+    <div class="clearboth"></div>
+</div>
 <?php endwhile; ?>          
 <?php endif; ?>
 
