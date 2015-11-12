@@ -51,7 +51,7 @@ get_header(); ?>
 
  <?php if( have_rows('content') ):?> 
         <?php while( have_rows('content') ): the_row(); ?>   
-            <div style="width: 25%; text-align: center; float:left;">Note<a href="<?php the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php the_sub_field('date_of_meeting'); ?>"><?php the_sub_field('date_of_meeting'); ?></a></div>
+            <div style="width: 25%; text-align: center; float:left;"><a href="<?php the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php the_sub_field('date_of_meeting'); ?>"><?php the_sub_field('date_of_meeting'); ?></a></div>
         <?php endwhile; ?>
         <?php endif; ?>
 
