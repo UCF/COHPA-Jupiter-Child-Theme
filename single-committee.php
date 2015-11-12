@@ -36,25 +36,31 @@ get_header(); ?>
 			<div id="1447354239-1-18" class="mk-tabs-pane"><div class="title-mobile">About</div>	<div style="text-align: left;" class="mk-text-block  true"><?php the_field('content'); ?>
 <div class="clearboth"></div></div> 
 			<div class="clearboth"></div></div>
-			<div id="1447354239-2-76" class="mk-tabs-pane"><div class="title-mobile">Members</div>	<div style="text-align: left;" class="mk-text-block  true"><p>Insert Members List</p>
-<div class="clearboth"></div></div> 
-			<div class="clearboth"></div></div>
-<?php if( have_rows('manage_minutes') ):?>            
+			
+<div id="1447354239-2-76" class="mk-tabs-pane">
+	<div class="title-mobile">Members</div>	
+    
+    <div style="text-align: left;" class="mk-text-block  true"><p>Insert Members List</p>
+	<div class="clearboth"></div>
+	</div> 
+	<div class="clearboth"></div>
+</div>
+          
 <div id="1447354402671-2-0" class="mk-tabs-pane">
 	<div class="title-mobile">Minutes</div>
-
+<?php if( have_rows('manage_minutes') ):?>  
 <?php while( have_rows('manage_minutes') ): the_row(); ?>
 	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5644eb6a10466" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('year'); ?></span></h2>
 
     
-        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-            <div class="wpb_wrapper">
-            <?php //if( have_rows('content') ):?> 
-            <?php //while( have_rows('content') ): the_row(); ?>   
+    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+        <div class="wpb_wrapper">
+        <?php //if( have_rows('content') ):?> 
+        <?php //while( have_rows('content') ): the_row(); ?>   
             <div style="width: 25%; text-align: center; float:left;">Note<a href="<?php //the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php //the_sub_field('date_of_meeting'); ?>"><?php //the_sub_field('date_of_meeting'); ?></a></div>
-            <?php //endwhile; ?>
-            <?php //endif; ?>
-    
+        <?php //endwhile; ?>
+        <?php //endif; ?>
+
             </div>
         </div>
 
@@ -62,10 +68,11 @@ get_header(); ?>
             <div class="divider-inner" style=""></div>
         </div>
         <div class="clearboth"></div>
-</div>
+    </div>
 <?php endwhile; ?>          
 <?php endif; ?>
-
+	<div class="clearboth"></div>
+</div>
 
 
 
