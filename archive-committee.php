@@ -41,7 +41,7 @@ get_header(); ?>
 </td>
 </tr>
 <tr>
-<td><a title="<?php the_title(); ?>" href="<?php get_permalink(); ?>"><?php the_title(); ?></a></td>
+<td><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 <td><?php the_field('charge'); ?></td>
 <td><?php the_field('member_type'); ?></td>
 </tr>
