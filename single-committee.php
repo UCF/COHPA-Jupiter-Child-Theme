@@ -42,28 +42,10 @@ get_header(); ?>
 			<div class="clearboth"></div></div>
             
             
-<?php if( have_rows('manage_minutes') ):?><div id="1447354402671-2-0" class="mk-tabs-pane"><div class="title-mobile">Minutes</div><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5645036807e44" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">2015-2016</span></h2><div class="clearboth"></div>
-	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
-		<div class="wpb_wrapper">
-			<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
+<?php if( have_rows('manage_minutes') ):?><div id="1447354402671-2-0" class="mk-tabs-pane"><div class="title-mobile">Minutes</div>
 
-		</div>
-	</div>
-
-	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
-		<div class="wpb_wrapper">
-			<div style="clear:both;"></div>
-		</div>
-	</div>
-<div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot "><div class="divider-inner" style=""></div></div><div class="clearboth"></div><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5645036808604" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">2015-2016</span></h2><div class="clearboth"></div>
+<?php while( have_rows('manage_minutes') ): the_row(); ?>
+<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5645036807e44" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">2015-2016</span></h2><div class="clearboth"></div>
 	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 		<div class="wpb_wrapper">
 			<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
@@ -85,6 +67,10 @@ get_header(); ?>
 		</div>
 	</div>
 <div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot "><div class="divider-inner" style=""></div></div><div class="clearboth"></div>
+<?php endwhile; ?>  
+
+
+
 			<div class="clearboth"></div></div>
 <?php endif; ?>			
             
