@@ -45,10 +45,11 @@ get_header(); ?>
 	</div> 
 	<div class="clearboth"></div>
 </div>
-          
+
+<?php if( have_rows('manage_minutes') ):?>         
 <div id="1447354402671-2-0" class="mk-tabs-pane">
 	<div class="title-mobile">Minutes</div>
-<?php if( have_rows('manage_minutes') ):?>  
+
 <?php while( have_rows('manage_minutes') ): the_row(); ?>
 	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5644eb6a10466" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('year'); ?></span></h2>
 
@@ -69,11 +70,10 @@ get_header(); ?>
         </div>
         <div class="clearboth"></div>
     </div>
-<?php endwhile; ?>          
-<?php endif; ?>
+        <?php endwhile; ?>  
 	<div class="clearboth"></div>
 </div>
-
+<?php endif; ?>
 
 
 			<div id="1447354418752-3-5" class="mk-tabs-pane"><div class="title-mobile">Schedule</div><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5644eb6a11009" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">Fall 2014 Schedule</span></h2><div class="clearboth"></div>	<div style="text-align: left;" class="mk-text-block  true"><p>Schedules are subject to change.</p>
