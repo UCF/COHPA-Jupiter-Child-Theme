@@ -45,18 +45,15 @@ get_header(); ?>
 <?php if( have_rows('manage_minutes') ):?><div id="1447354402671-2-0" class="mk-tabs-pane"><div class="title-mobile">Minutes</div>
 
 <?php while( have_rows('manage_minutes') ): the_row(); ?>
-<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5645036807e44" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">2015-2016</span></h2><div class="clearboth"></div>
+<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5645036807e44" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('year'); ?></span></h2><div class="clearboth"></div>
 	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 		<div class="wpb_wrapper">
-			<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
-<div style="width: 25%; text-align: center; float:left;">Insert Minutes</div>
+
+ <?php if( have_rows('content') ):?> 
+        <?php while( have_rows('content') ): the_row(); ?>   
+            <div style="width: 25%; text-align: center; float:left;">Note<a href="<?php the_sub_field('pdf_upload'); ?>" title="Meeting Notes from <?php the_sub_field('date_of_meeting'); ?>"><?php the_sub_field('date_of_meeting'); ?></a></div>
+        <?php endwhile; ?>
+        <?php endif; ?>
 
 		</div>
 	</div>
