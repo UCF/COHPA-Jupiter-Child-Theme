@@ -42,8 +42,8 @@ get_header(); ?>
 </tr>
 <tr>
 <td><a title="<?php the_title(); ?>" href="<?php get_permalink(); ?>"><?php the_title(); ?></a></td>
-<td><?php get_field('charge'); ?></td>
-<td><?php get_field('member_type'); ?></td>
+<td><?php the_field('charge'); ?></td>
+<td><?php the_field('member_type'); ?></td>
 </tr>
 <?php endwhile; ?>
 </tbody>
