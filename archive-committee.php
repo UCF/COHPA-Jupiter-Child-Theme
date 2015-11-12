@@ -36,7 +36,22 @@ get_header(); ?>
 <tbody>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 
-<?php $terms = get_field('program');?>
+<?php 
+$terms = get_field('program');
+
+if( $terms ) {
+  $count = count( $terms );
+    $i = 0;
+    $term_list = '<p>';
+foreach( $terms as $term ) {
+  $i++;
+  echo $term->name;
+if ( $count != $i ) {
+            echo ', ';
+        }
+	}
+ }
+?>
 <?php if( $terms ): ?>
 
 <tr>
