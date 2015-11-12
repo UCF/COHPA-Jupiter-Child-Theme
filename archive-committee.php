@@ -37,31 +37,25 @@ get_header(); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 
 
-<?php if( get_field('program') ): ?>
 <?php 
-$terms = get_field('program');
 
-if( $terms ) {
-  $count = count( $terms );
-    $i = 0;
-    $term_list = '<p>';
-foreach( $terms as $term ) {
-  $i++;
-  echo $term->name;
-if ( $count != $i ) {
-            echo ', ';
-        }
-	}
- }
- ?>
+$term = get_field('program');
+
+if( $term ): ?>
+
+	<h2><?php echo $term->name; ?></h2>
+	<p><?php echo $term->description; ?></p>
+
+<?php endif; ?>
+
 
 
 <tr>
 <td colspan="3">
-<h2 class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style " style="font-size: 14px; text-align: left; color: #3d3d3d; font-style: inherit; font-weight: bold; padding-top: 0px; padding-bottom: 0px; text-transform: initial; letter-spacing: 0px; margin-bottom: 0px;"><?php  echo $term->name; ?></h2>
+<h2 class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style " style="font-size: 14px; text-align: left; color: #3d3d3d; font-style: inherit; font-weight: bold; padding-top: 0px; padding-bottom: 0px; text-transform: initial; letter-spacing: 0px; margin-bottom: 0px;"><?php the_field('program'); ?></h2>
 </td>
 </tr>
-<?php endif; ?>
+
 <tr>
 <td><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 <td><?php the_field('charge'); ?></td>
