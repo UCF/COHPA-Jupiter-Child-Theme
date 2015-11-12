@@ -38,7 +38,7 @@ get_header(); ?>
 <?php if( get_field('program') ): ?>
 <tr>
 <td colspan="3">
-<h2 class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style " style="font-size: 14px; text-align: left; color: #3d3d3d; font-style: inherit; font-weight: bold; padding-top: 0px; padding-bottom: 0px; text-transform: initial; letter-spacing: 0px; margin-bottom: 0px;"><?php the_field('program', $term); ?></h2>
+<h2 class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style " style="font-size: 14px; text-align: left; color: #3d3d3d; font-style: inherit; font-weight: bold; padding-top: 0px; padding-bottom: 0px; text-transform: initial; letter-spacing: 0px; margin-bottom: 0px;"><?php the_field('program'); ?></h2>
 </td>
 </tr>
 <?php endif; ?>
