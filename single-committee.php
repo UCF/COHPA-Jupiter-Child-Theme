@@ -28,7 +28,7 @@ get_header(); ?>
     	<li><a href="#1447354239-1-18">About</a></li>
         <li><a href="#1447354239-2-76">Members</a></li>
         <?php if( have_rows('manage_minutes') ):?><li><a href="#1447354402671-2-0">Minutes</a></li><?php endif; ?>
-        <?php if( have_rows('schedule_year') ):?><li><a href="#1447354418752-3-5">Schedule</a></li><?php endif; ?>
+        <?php if( have_rows('schedule') ):?><li><a href="#1447354418752-3-5">Schedule</a></li><?php endif; ?>
         <div class="clearboth"></div>
     </ul>
     
