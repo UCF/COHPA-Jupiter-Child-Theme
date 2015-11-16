@@ -95,8 +95,8 @@ get_header(); ?>
         <div class="left-side ">
             <i style="color:#ffc904;" class="mk-moon-calendar medium mk-main-ico"></i>
             <div class="box-detail-wrapper medium-size">
-                <h4 style="font-size:18px;font-weight:bold;"><?php the_field('schedule_date'); ?></h4>
-                <p>Location: <a class="color-darkGold" title="Map to HPA I" href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank"><?php the_field('schedule_location'); ?></a> Room: <?php the_field('schedule_room_number'); ?><br /><?php the_field('schedule_start_time'); ?></p>
+                <h4 style="font-size:18px;font-weight:bold;"><?php the_sub_field('schedule_date'); ?></h4>
+                <p>Location: <a class="color-darkGold" title="Map to HPA I" href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank"><?php the_sub_field('schedule_location'); ?></a> Room: <?php the_sub_field('schedule_room_number'); ?><br /><?php the_sub_field('schedule_start_time'); ?></p>
             </div>
             <div class="clearboth"></div>
         </div>
