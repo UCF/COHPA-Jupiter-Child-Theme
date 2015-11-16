@@ -73,34 +73,43 @@ get_header(); ?>
 <!-- END REPEAT SECTION FOR MINUTES -->                 
             
 <!-- START SCHEDULE ENDS HERE -->            
-<?php if( have_rows('schedule_year') ):?><div id="1447354418752-3-5" class="mk-tabs-pane"><div class="title-mobile">Schedule</div>
+<?php if( have_rows('schedule') ):?><div id="1447354418752-3-5" class="mk-tabs-pane"><div class="title-mobile">Schedule</div>
 
-<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-56450368091b8" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_field('schedule_year'); ?></span></h2><div class="clearboth"></div>	<div style="text-align: left;" class="mk-text-block  true"><p>Schedules are subject to change.</p>
-<div class="clearboth"></div></div> <div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot "><div class="divider-inner" style=""></div></div><div class="clearboth"></div>
+<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-56450368091b8" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_field('schedule_year'); ?></span></h2>
 
-
-<!-- REPEAT STARTS HERE -->
-<?php if( have_rows('schedule') ):?> 
-<?php while( have_rows('schedule') ): the_row(); ?>
-<div id="box-icon-564503680998a" style="margin-bottom:30px;" class="simple_ultimate-style mk-box-icon">
-	<div class="left-side ">
-    	<i style="color:#ffc904;" class="mk-moon-calendar medium mk-main-ico"></i>
-        <div class="box-detail-wrapper medium-size">
-        	<h4 style="font-size:18px;font-weight:bold;"><?php the_field('schedule_date'); ?></h4>
-            <p>Location: <a class="color-darkGold" title="Map to HPA I" href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank"><?php the_field('schedule_location'); ?></a> Room: <?php the_field('schedule_room_number'); ?><br /><?php the_field('schedule_start_time'); ?></p>
-		</div>
+    <div class="clearboth"></div>	
+    <div style="text-align: left;" class="mk-text-block  true">
+        <p>Schedules are subject to change.</p>
         <div class="clearboth"></div>
+    </div> 
+	<div style="padding: 20px 0 20px;" class="mk-divider mk-shortcode divider_full_width center double_dot ">
+    	<div class="divider-inner" style=""></div>
     </div>
+    <div class="clearboth"></div>
+
+
+    <!-- REPEAT STARTS HERE -->
+    <?php if( have_rows('schedule') ):?> 
+    <?php while( have_rows('schedule') ): the_row(); ?>
+    <div id="box-icon-564503680998a" style="margin-bottom:30px;" class="simple_ultimate-style mk-box-icon">
+        <div class="left-side ">
+            <i style="color:#ffc904;" class="mk-moon-calendar medium mk-main-ico"></i>
+            <div class="box-detail-wrapper medium-size">
+                <h4 style="font-size:18px;font-weight:bold;"><?php the_field('schedule_date'); ?></h4>
+                <p>Location: <a class="color-darkGold" title="Map to HPA I" href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank"><?php the_field('schedule_location'); ?></a> Room: <?php the_field('schedule_room_number'); ?><br /><?php the_field('schedule_start_time'); ?></p>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
+
+    <div class="clearboth"></div>
 </div>
-<?php endwhile; ?>
-<?php endif; ?>
-
-
 <?php endif; ?>
 <!-- REPEAT SCHEDULE ENDS HERE -->
-
-<div id="ajax-564503680998a" class="mk-dynamic-styles"><!-- --></div>
-			<div class="clearboth"></div></div><div class="clearboth"></div></div><div class="clearboth"></div></div><div id="ajax-56450368066c5" class="mk-dynamic-styles"><!--  #mk-tabs-56450368066c5 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-56450368066c5 .mk-tabs-panes, #mk-tabs-56450368066c5 .mk-fancy-title span{ background-color:#ffffff; }--></div>
+            
+            <div class="clearboth"></div></div><div class="clearboth"></div></div><div id="ajax-56450368066c5" class="mk-dynamic-styles"><!--  #mk-tabs-56450368066c5 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-56450368066c5 .mk-tabs-panes, #mk-tabs-56450368066c5 .mk-fancy-title span{ background-color:#ffffff; }--></div>
 
 
 </div></div>
