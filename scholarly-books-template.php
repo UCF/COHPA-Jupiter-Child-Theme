@@ -31,7 +31,7 @@ get_header(); ?>
 							endif;
 						}
 						?>
-				</div>
+				
                         
                         
                         
@@ -55,16 +55,7 @@ get_header(); ?>
                         
                         
                         
-						<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
-				<?php endwhile; ?>
-						<?php
-						if($mk_options['pages_comments'] == 'true') {
-							if ( comments_open() ) :
-							comments_template( '', true ); 	
-							endif;
-						}
-						?>
-				</div>
+					
 			
 		<?php if ( $page_layout != 'full' ) get_sidebar(); ?>
 		<div class="clearboth"></div>
