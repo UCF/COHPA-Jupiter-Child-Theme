@@ -37,7 +37,7 @@ get_header(); ?>
                         
                         
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
-	<div style="" class="vc_col-sm-12 wpb_column column_container ">
+	<div style="float:left;" class="vc_col-sm-6 wpb_column column_container ">
 		<div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid vc_custom_1452017887231">
         	<div class="wpb_column vc_column_container vc_col-sm-3">
             	<div class="wpb_wrapper">
