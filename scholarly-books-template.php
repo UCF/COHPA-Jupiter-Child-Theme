@@ -32,7 +32,7 @@ get_header(); ?>
                         
                         
                         
-<div style="" class="vc_col-sm-6 wpb_column column_container " style="float:left;">
+<div class="vc_col-sm-6 wpb_column column_container " style="float:left;">
     <div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false">
         <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="wpb_wrapper">
@@ -64,7 +64,7 @@ get_header(); ?>
                         
                         
                  
-<div style="" class="vc_col-sm-6 wpb_column column_container " style="float:left;">
+<div class="vc_col-sm-6 wpb_column column_container " style="float:left;">
     <div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false">
         <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="wpb_wrapper">
