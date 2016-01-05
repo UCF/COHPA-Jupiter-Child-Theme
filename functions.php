@@ -9,7 +9,7 @@
 
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
-    if( get_post_id() == "254" ) {
+    if( is_page( 254 )) {
 	?>
 	<style>
 		.acf-editor-wrap iframe {
