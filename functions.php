@@ -9,14 +9,12 @@
 
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
-    if( get_post_type() == "scholarly_books" ) {
 	?>
 	<style>
-		.acf-editor-wrap iframe {
+		#wp-acf-editor-568bfbd4a3249-editor-container {
 			height: 100px !important;
 			min-height: 100px;
 		}
 	</style>
 	<?php
-	}
 }
