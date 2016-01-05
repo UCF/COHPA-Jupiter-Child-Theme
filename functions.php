@@ -12,8 +12,8 @@ function admin_styles() {
 	?>
 	<style>
 		.acf-editor-wrap iframe {
-			height: 50px !important;
-			min-height: 50px;
+			height: 100px !important;
+			min-height: 100px;
 		}
 	</style>
 	<?php
