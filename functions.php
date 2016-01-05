@@ -9,7 +9,7 @@
 
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
-    if( is_page( 'scholarly-books' );) {
+    if( is_page( 'scholarly-books' )) {
 	?>
 	<style>
 		.acf-editor-wrap iframe {
