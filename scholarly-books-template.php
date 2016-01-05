@@ -32,15 +32,7 @@ get_header(); ?>
 
 </div></div></div><div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " ><div class="mk-video-color-mask"></div><div class="background-clipper"></div><div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper">
 
-!!!!
 
- <?php
-
-// check if the repeater field has rows of data
-if( have_rows('scholarly_books') ):
-
- 	// loop through the rows of data
-    while ( have_rows('scholarly_books') ) : the_row();?> 
    
 
 
@@ -55,7 +47,6 @@ if( have_rows('scholarly_books') ):
 </div>
 
 <!-- END OF THE REPEAT SECTION -->
-<?php endwhile; ?> 
 
 
 
