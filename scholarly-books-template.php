@@ -37,7 +37,7 @@ get_header(); ?>
         <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="wpb_wrapper">
                 <div class="mk-image-shortcode mk-shortcode   align-left mk-animate-element fade-in simple-frame inside-image " style="max-width: 800px; margin-bottom:10px">
-                    <div class="mk-image-inner" style="float:left;">
+                    <div class="mk-image-inner">
                     <a href="#" target="_self" class="mk-image-shortcode-link">
                         <img class="lightbox-false" alt="" title="" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/9781611636857_thumb.jpg" />
                     </a>
@@ -65,7 +65,33 @@ get_header(); ?>
                         
                         
                  
-                 
+<div style="" class="vc_col-sm-6 wpb_column column_container ">
+    <div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false">
+        <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="wpb_wrapper">
+                <div class="mk-image-shortcode mk-shortcode   align-left mk-animate-element fade-in simple-frame inside-image " style="max-width: 800px; margin-bottom:10px">
+                    <div class="mk-image-inner">
+                    <a href="#" target="_self" class="mk-image-shortcode-link">
+                        <img class="lightbox-false" alt="" title="" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/9781611636857_thumb.jpg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-9">
+        <div class="wpb_wrapper">
+            <h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
+                    <a href="#">A Primer on Crime and Delinquency Theory</a>
+            </h2>
+            <div class="clearboth"></div>
+            <div style="text-align: left;" class="mk-text-block  true">
+                <p>By <strong>Robert M. Bohm</strong>, professor of criminal justice, and Brenda L. Vogel</p>
+                <p><em>Published in: February 2015</em></p>
+                <div class="clearboth"></div>
+            </div>
+        </div>
+    </div>
+</div>                 
                  
                  
                  
