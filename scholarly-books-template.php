@@ -22,6 +22,16 @@ get_header(); ?>
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 						<?php the_content();?>
 						<div class="clearboth"></div>
+						<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
+				<?php endwhile; ?>
+						<?php
+						if($mk_options['pages_comments'] == 'true') {
+							if ( comments_open() ) :
+							comments_template( '', true ); 	
+							endif;
+						}
+						?>
+				</div>
                         
                         
                         
