@@ -11,7 +11,7 @@ add_action('admin_head', 'admin_styles');
 function admin_styles() {
 	?>
 	<style>
-		.acf-editor-wrap iframe {
+		.acf-field-564a3ce92e262 .acf-editor-wrap iframe {
 			height: 50px !important;
 			min-height: 50px;
 		}
