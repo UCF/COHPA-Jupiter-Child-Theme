@@ -25,53 +25,39 @@ get_header(); ?>
                         
                         
                         
-                        <div id="LOOKHERE" data-intro-effect="false" class="full-width-568c04406e47c  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " >
-<div class="mk-video-color-mask"></div>
-<div class="background-clipper"></div>
-<div class="mk-grid vc_row-fluid page-section-content">
-	<div class="mk-padding-wrapper">
-		<div style="" class="vc_col-sm-6 wpb_column column_container ">
-			<div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid vc_custom_1452016415055">
+                        <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+	<div style="" class="vc_col-sm-6 wpb_column column_container ">
+			<div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid vc_custom_1452017887231">
             	<div class="wpb_column vc_column_container vc_col-sm-3">
                 	<div class="wpb_wrapper">
                     	<div class="mk-image-shortcode mk-shortcode   align-left mk-animate-element fade-in simple-frame inside-image " style="max-width: 800px; margin-bottom:10px">
                         	<div class="mk-image-inner">
-                            	<a href="#" target="_self" class="mk-image-shortcode-link">
-                                	<img class="lightbox-false" alt="" title="" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/9781611636857_thumb.jpg" />
-                                </a>
-                             </div>
-                             <div class="clearboth"></div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="wpb_column vc_column_container vc_col-sm-9">
-                 	<div class="wpb_wrapper">
-                    	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568c04406fbe6" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
-                        	<span style="">
-                            	<a href="#">
-                                	A Primer on Crime and Delinquency Theory
-                                </a>
-                            </span>
-                        </h2>
-                        <div class="clearboth"></div>	
-                        <div style="text-align: left;" class="mk-text-block  true">
-                        	<p>By <strong>Robert M. Bohm</strong>, professor of criminal justice, and Brenda L. Vogel</p>
-
-							<p><em>Published in: February 2015</em></p>
-							<div class="clearboth"></div>
+                            <a href="#" target="_self" class="mk-image-shortcode-link">
+                            	<img class="lightbox-false" alt="" title="" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/9781611636857_thumb.jpg" />
+                            </a>
                         </div>
+                        <div class="clearboth"></div>
                     </div>
                 </div>
             </div>
-	</div>
-    
-    
-	<div style="" class="vc_col-sm-6 wpb_column column_container ">
-			<div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="wpb_wrapper"><div class="mk-image-shortcode mk-shortcode   align-left mk-animate-element fade-in simple-frame inside-image " style="max-width: 800px; margin-bottom:10px"><div class="mk-image-inner"><a href="#" target="_self" class="mk-image-shortcode-link"><img class="lightbox-false" alt="" title="" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/9781611636857_thumb.jpg" /></a></div><div class="clearboth"></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="wpb_wrapper"><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568c044071355" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><a href="#">A Primer on Crime and Delinquency Theory</a></span></h2><div class="clearboth"></div>	<div style="text-align: left;" class="mk-text-block  true"><p>By <strong>Robert M. Bohm</strong>, professor of criminal justice, and Brenda L. Vogel</p>
-<p><em>Published in: February 2015</em></p>
-<div class="clearboth"></div></div> </div></div></div>
-	</div></div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  right-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c04406e47c" class="mk-dynamic-styles"><!--  .full-width-568c04406e47c { min-height:100px; padding:10px 0 10px; margin-bottom:0px; } #background-layer--568c04406e47c { background-position:left top; background-repeat:repeat; ; } --></div>
-						<div class="clearboth"></div>
+            <div class="wpb_column vc_column_container vc_col-sm-9">
+            	<div class="wpb_wrapper">
+                	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568c08c0c7d15" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
+                        <span style="">
+                            <a href="#">A Primer on Crime and Delinquency Theory</a>
+                        </span>
+                	</h2>
+                    <div class="clearboth"></div>
+                <div style="text-align: left;" class="mk-text-block  true">
+                	<p>By <strong>Robert M. Bohm</strong>, professor of criminal justice, and Brenda L. Vogel</p>
+					<p><em>Published in: February 2015</em></p>
+					<div class="clearboth"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
                         
                         
                         
