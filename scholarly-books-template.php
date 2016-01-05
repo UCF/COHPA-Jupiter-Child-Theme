@@ -26,7 +26,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 						
                         
-                        
+      <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1452017887231{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1452017887231{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1452017887231{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1452017887231{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}</style>                  
                         
                         
                         
