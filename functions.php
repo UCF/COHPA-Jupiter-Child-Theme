@@ -11,7 +11,7 @@ add_action('admin_head', 'admin_styles');
 function admin_styles() {
 	?>
 	<style>
-		#wp-acf-editor-568bfbd4a3249-editor-container {
+		#acf-editor-568bfbd4a3249 {
 			height: 100px !important;
 			min-height: 100px;
 		}
