@@ -56,6 +56,7 @@ get_header(); ?>
     <div class="clearboth"></div>
     <div class="mk-shortcode mk-padding-shortcode" style="height:80px"></div>
     <div class="clearboth"></div>
+    </div>
 </div>
 																		
 <style>  
