@@ -82,7 +82,15 @@ get_header(); ?>
 
 <!-- END OF THE CUSTOM SECTION -->
 
+<?php
 
+if ( is_page( 491 ) {
+    This is infact the FACULTY AWARDS PAGE
+
+} else {
+    THIS IS THE STUDENT AWARDS PAGE
+}
+?>
 
 
     </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
