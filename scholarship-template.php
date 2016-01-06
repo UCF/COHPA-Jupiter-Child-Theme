@@ -29,7 +29,7 @@ get_header(); ?>
 <?php $myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarships',
 								'orderby'=>'title',
-								'order'=>'DESC'
+								'order'=>'ASC'
 																	
 							)); ?>
                             
