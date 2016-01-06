@@ -90,7 +90,7 @@ get_header(); ?>
 
 <ul class="mk-tabs-tabs">
 <?php $myfavetools = new WP_Query(array(
-								'post_type'	=> 'award',
+								'post_type'	=> 'awards',
 								'orderby'=>'id',
 								'order'=>'ASC'
 																	
