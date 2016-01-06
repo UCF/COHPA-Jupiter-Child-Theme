@@ -22,10 +22,10 @@ get_header(); ?>
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 						<?php the_content();?>
-						<div class="clearboth"></div>
-						
-						
-<!-- START THE CUSTOM SECTION -->
+                        
+                        
+                        
+                        <!-- START THE CUSTOM SECTION -->
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 		<h2 style="font-size: 30px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568d5c104e1fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">College of Health and Public Affairs Doctoral Scholarship</span></h2>
@@ -65,8 +65,13 @@ get_header(); ?>
 	.button-568d5c104f525 { background-color:#e8e8e8 !important; } 
 	.mk-button.button-568d5c104f525.flat-dimension:hover { background-color:#252525 !important; color:#ffc904 !important; } 
 </style>
-<div class="clearboth"></div>
 <!-- END OF THE CUSTOM SECTION -->
+                        
+                        
+						<div class="clearboth"></div>
+						
+						
+
 					
 						
 						
