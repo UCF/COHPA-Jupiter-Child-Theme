@@ -31,12 +31,11 @@ get_header(); ?>
 								'orderby'=>'title',
 								'order'=>'ASC',
 								'tax_query' => array(
-										array(
-											'taxonomy' => 'scholarship_cat',
-											'field' => 'collegewide',
-											'terms' => $cat->term_id,
-										)
-								)									
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 16)
+								))							
 							)); ?>
                             
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
