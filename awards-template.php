@@ -89,7 +89,23 @@ get_header(); ?>
 <!-- END OF THE CUSTOM SECTION -->
 
 
+<?php
 
+if ( is_page( 'about' ) || '2' == $post->post_parent ) {    
+    // the page is "About", or the parent of the page is "About"
+    $bannerimg = 'about.jpg';
+
+} elseif ( is_page( 'learning' ) || '56' == $post->post_parent ) {	
+    $bannerimg = 'teaching.jpg';
+
+} elseif ( is_page( 'admissions' ) || '15' == $post->post_parent ) { 
+    $bannerimg = 'admissions.jpg';
+
+} else { 
+    $bannerimg = 'home.jpg'; // just in case we are at an unclassified page, perhaps the home page
+}	
+
+?>
 
     </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
 						<div class="clearboth"></div>
