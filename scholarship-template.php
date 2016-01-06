@@ -22,7 +22,8 @@ get_header(); ?>
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 						<?php the_content();?>
-                        
+                  <?php endif; endwhile; ?>
+                <?php wp_reset_query(); ?>       
                         
                         
 <!-- START THE CUSTOM SECTION -->
@@ -83,7 +84,6 @@ if( has_term( 'collegewide', 'scholarship_cat' ) && is_page( 539 )) {
                     
                     <div class="clearboth"></div>
 					<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
-				<?php endwhile; ?>
 						<?php
 						if($mk_options['pages_comments'] == 'true') {
 							if ( comments_open() ) :
