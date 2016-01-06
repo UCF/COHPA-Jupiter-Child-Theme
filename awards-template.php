@@ -52,17 +52,6 @@ get_header(); ?>
 																	
 							)); ?>
                             
-                            <?php
-
-if ( is_page( 'awards' )) {    
-    // the page is "About", or the parent of the page is "About"
-    echo 'this is the right page'
-
-} else { 
-    echo 'this is not the page' // just in case we are at an unclassified page, perhaps the home page
-}	
-
-?>
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
