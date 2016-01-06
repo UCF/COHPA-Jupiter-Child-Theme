@@ -38,12 +38,8 @@ get_header(); ?>
                 <?php the_field('scholarship_category'); ?>
                 
 <?php 
-if( has_term( 'Collegewide' ) ) {
-    echo "COLLEGE WIDE";
-} elseif ( has_term( 'collegewide' ) ) {
-    echo "This is ID 15";
-} else {
-    echo "this is OTHER";
+if( has_term( 'collegewide', 'scholarship_cat' ) ) {
+    echo "asdasdasdasdasda";
 }
 ?>
                
