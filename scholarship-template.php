@@ -30,7 +30,7 @@ get_header(); ?>
 								'post_type'	=> 'scholarship',
 								'tax_query' => array(
 									array(
-									'taxonomy' => 'scholarship_cat',
+									'taxonomy' => 'scholarship_category',
 									'field' => 'term_id',
 									'terms' => 15)
 								)),
