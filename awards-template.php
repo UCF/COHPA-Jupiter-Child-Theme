@@ -34,6 +34,20 @@ get_header(); ?>
 </div></div></div><div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " ><div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper">
 
                 
+<?php
+
+global $post;     // if outside the loop
+
+if ( is_page( 491 ) { ?>
+    <div>This is infact the FACULTY AWARDS PAGE</div>
+
+<?php } else { ?>
+    <div>THIS IS THE STUDENT AWARDS PAGE</div>
+<?php } ?>
+                
+                
+                
+                
 <!-- START THE CUSTOM SECTION -->
                
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
@@ -82,17 +96,7 @@ get_header(); ?>
 
 <!-- END OF THE CUSTOM SECTION -->
 
-<?php
 
-global $post;     // if outside the loop
-
-if ( is_page( 491 ) {
-    This is infact the FACULTY AWARDS PAGE
-
-} else {
-    THIS IS THE STUDENT AWARDS PAGE
-}
-?>
 
 
     </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
