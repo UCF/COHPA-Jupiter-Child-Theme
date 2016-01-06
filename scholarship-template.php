@@ -38,7 +38,7 @@ get_header(); ?>
                 <?php the_field('scholarship_category'); ?>
                 
 <?php 
-if( has_term( 'collegewide', 'scholarship_cat' ) ) {
+if( has_term( 'collegewide', 'scholarship_cat' ) && is_page( 539 )) {
     echo "asdasdasdasdasda";
 }
 ?>
