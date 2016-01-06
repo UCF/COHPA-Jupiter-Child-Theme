@@ -35,17 +35,9 @@ get_header(); ?>
                             
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
-                <?php the_field('scholarship_category'); ?>
                 
-                <?php 
+                <p><?php the_field('scholarship_category', $term); ?></p>
 
-$term = get_field('scholarship_category');
-
-if( $term ): ?>
-
-	<h2><?php echo $term->name; ?></h2>
-
-<?php endif; ?>
                 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
