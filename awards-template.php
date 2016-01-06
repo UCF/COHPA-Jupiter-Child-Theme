@@ -1,0 +1,117 @@
+<?php
+/*
+Template Name: Awards
+*/
+
+global $post,
+$mk_options;
+$page_layout = get_post_meta( $post->ID, '_layout', true );
+$padding = get_post_meta( $post->ID, '_padding', true );
+
+
+if ( empty( $page_layout ) ) {
+	$page_layout = 'full';
+}
+$padding = ($padding == 'true') ? 'no-padding' : '';
+
+get_header(); ?>
+<div id="theme-page" <?php echo get_schema_markup('main'); ?>>
+	<div class="mk-main-wrapper-holder">
+		<div id="mk-page-id-<?php echo $post->ID; ?>" class="theme-page-wrapper mk-main-wrapper <?php echo $page_layout; ?>-layout <?php echo $padding; ?> mk-grid vc_row-fluid">
+			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
+				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
+						<?php the_content();?>
+						<div class="clearboth"></div>
+						<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
+				<?php endwhile; ?>
+						
+      <?php wp_reset_query(); ?>                  
+
+
+
+
+
+</div></div></div><div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " ><div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper">
+
+                
+<!-- START THE CUSTOM SECTION -->
+               
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+	<div style="" class="vc_col-sm-12 wpb_column column_container ">
+		<div id="mk-tabs-568d2e73ba7e9" class="mk-shortcode mobile-true mk-tabs vertical-left default-style  vertical-style  ">
+        	<ul class="mk-tabs-tabs">
+            	<li><a href="#Tab1">Tab 1</a></li>
+                <li><a href="#Tab2">Tab 2</a></li>
+                <li><a href="#Tab3">Tab 2</a></li>
+                <div class="clearboth"></div>
+            </ul>
+            
+            <div class="mk-tabs-panes">
+				<div id="Tab1" class="mk-tabs-pane">
+                	<div class="title-mobile">Tab 1</div>
+                    <div style="text-align: left;" class="mk-text-block  true">
+                    	<p>content for tab 1</p>
+						<div class="clearboth"></div>
+                    </div> 
+					<div class="clearboth"></div>
+                </div>
+				
+                <div id="Tab2" class="mk-tabs-pane">
+                	<div class="title-mobile">Tab 2</div>
+                    <div style="text-align: left;" class="mk-text-block  true">
+                    	<p>content for tab 2</p>
+						<div class="clearboth"></div>
+                    </div> 
+					<div class="clearboth"></div>
+                </div>
+                
+                <div id="Tab3" class="mk-tabs-pane">
+                	<div class="title-mobile">Tab 3</div>
+                    <div style="text-align: left;" class="mk-text-block  true">
+                    	<p>content for tab 3</p>
+						<div class="clearboth"></div>
+                    </div> 
+					<div class="clearboth"></div>
+                </div>
+                
+
+                <div class="clearboth"></div>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+        <div id="ajax-568d2e73ba7e9" class="mk-dynamic-styles"><!--  #mk-tabs-568d2e73ba7e9 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-568d2e73ba7e9 .mk-tabs-panes, #mk-tabs-568d2e73ba7e9 .mk-fancy-title span{ background-color:#ffffff; }--></div>
+	</div>
+</div>
+
+
+<!-- END OF THE CUSTOM SECTION -->
+
+
+
+
+
+
+    </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
+						<div class="clearboth"></div>
+																				       
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                        
+
+		</div>			
+		<?php if ( $page_layout != 'full' ) get_sidebar(); ?>
+		<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>	
+</div>
+<?php get_footer(); ?>
