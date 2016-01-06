@@ -36,8 +36,6 @@ get_header(); ?>
                 
 <?php
 
-global $post;     // if outside the loop
-
 if ( is_page( 491 ) { ?>
     <div>This is infact the FACULTY AWARDS PAGE</div>
 
