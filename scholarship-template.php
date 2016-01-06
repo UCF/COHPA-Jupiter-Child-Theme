@@ -29,14 +29,18 @@ get_header(); ?>
 <?php $myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
 								'orderby'=>'title',
-								'order'=>'ASC'
-																	
+								'order'=>'ASC',
+								'tax_query' => array(
+										array(
+											'taxonomy' => 'scholarship_cat',
+											'field' => 'collegewide',
+											'terms' => $cat->term_id,
+										)
+								)									
 							)); ?>
                             
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
-                
-                <?php the_field('scholarship_category'); ?>
-                
+                                
 <?php 
 if( has_term( 'collegewide', 'scholarship_cat' ) && is_page( 539 )) {
     echo "asdasdasdasdasda";
