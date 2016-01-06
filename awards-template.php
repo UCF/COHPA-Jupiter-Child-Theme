@@ -91,12 +91,15 @@ get_header(); ?>
 
 <?php
 
-if ( is_page( 491 )  ) {    
-   echo "Hello World";
+if ( is_page( 491 )  ) {  ?>  
+   
+   <div>here is the right page</div>
 
-} else { 
-    echo "THIS IS NOT THE RIGHT PAGE";
-}	
+<?php } else { ?> 
+
+   <div>THIS IS THE WRONG PAGE</div>
+   
+<?php }	
 
 ?>
 
