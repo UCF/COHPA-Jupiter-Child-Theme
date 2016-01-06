@@ -97,7 +97,7 @@ get_header(); ?>
 							)); ?>
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
-                <li><a href="#">Tab 1</a></li>
+                <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
                 <?php wp_reset_query(); ?> 
