@@ -91,18 +91,11 @@ get_header(); ?>
 
 <?php
 
-if ( is_page( 'about' ) || '2' == $post->post_parent ) {    
-    // the page is "About", or the parent of the page is "About"
-    $bannerimg = 'about.jpg';
-
-} elseif ( is_page( 'learning' ) || '56' == $post->post_parent ) {	
-    $bannerimg = 'teaching.jpg';
-
-} elseif ( is_page( 'admissions' ) || '15' == $post->post_parent ) { 
-    $bannerimg = 'admissions.jpg';
+if ( is_page( 'about' )  ) {    
+   echo "Hello World";
 
 } else { 
-    $bannerimg = 'home.jpg'; // just in case we are at an unclassified page, perhaps the home page
+    echo "THIS IS NOT THE RIGHT PAGE";
 }	
 
 ?>
