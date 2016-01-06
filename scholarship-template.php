@@ -37,11 +37,11 @@ if(is_page( 539 )) {
 									array(
 									'taxonomy' => 'scholarship_cat',
 									'field' => 'term_id',
-									'terms' => 15)
+									'terms' => 15)  // COLLEGE WIDE
 								)
 							)); }
 	
-	elseif (is_page( 547 )) {
+elseif (is_page( 547 )) {
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
 								'orderby'=>'title',
@@ -50,11 +50,11 @@ if(is_page( 539 )) {
 									array(
 									'taxonomy' => 'scholarship_cat',
 									'field' => 'term_id',
-									'terms' => 16)
+									'terms' => 16) // COMMUNICATION SCIENCES & DISORDERS
 								)
 							)); }
-	else {                                  
-        $myfavetools = new WP_Query(array(
+else {                                  
+	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
 								'orderby'=>'title',
 								'order'=>'ASC'
