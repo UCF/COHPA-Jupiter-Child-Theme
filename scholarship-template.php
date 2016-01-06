@@ -28,8 +28,7 @@ get_header(); ?>
                         
 <!-- START THE CUSTOM SECTION -->
 <?php 
-
-	
+if(is_page( 539 )) {
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
 								'orderby'=>'title',
@@ -38,14 +37,30 @@ get_header(); ?>
 									array(
 									'taxonomy' => 'scholarship_cat',
 									'field' => 'term_id',
-									if(is_page( 539 )) { 
-										'terms' => 15) 
-									}
+									'terms' => 15)
 								)
-							)); 
+							)); }
+	
+	elseif (is_page( 547 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 16)
+								)
+							)); }
+	else {                                  
+        $myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC'
+							)); }
 ?> 
                 
-				
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
