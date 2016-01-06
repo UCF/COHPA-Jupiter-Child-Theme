@@ -25,7 +25,42 @@ get_header(); ?>
                         
                         
                         
-                        <!-- START THE CUSTOM SECTION -->
+<!-- START THE CUSTOM SECTION -->
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+	<div style="" class="vc_col-sm-12 wpb_column column_container ">
+		<h2 style="font-size: 30px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568d5c104e1fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">College of Health and Public Affairs Doctoral Scholarship</span></h2>
+        <div class="clearboth"></div>
+        <div id="list-style-568d5c104e58b" class="mk-list-styles mk-shortcode mk-align-none " style="margin-bottom:30px">
+        	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading"><span>Recipient Criteria:</span></h3>
+            	<ul>
+					<li>Must have completed a minimum of 9 doctoral credit hours and be enrolled in a doctoral degree program in the College of Health and Public Affairs</li>
+					<li>Must have a minimum overall 3.5 GPA</li>
+					<li>Must provide an essay (two or less pages, double spaced, 12 point font) outlining how their career pathway aligns with the COHPA mission of &#8220;Strengthening Communities. Changing Lives&#8221;.</li>
+					<li>Must provide a letter of recommendation from a full-time faculty member from their academic program in the College of Health and Public Affairs</li>
+				</ul>
+		</div>
+        <div id="list-style-568d5c104ed55" class="mk-list-styles mk-shortcode mk-align-none " style="margin-bottom:30px">
+        	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading"><span>Required Attachments for Application Submission:</span></h3>
+            	<ul>
+                    <li>GPS Report</li>
+                    <li>Essay</li>
+                    <li>Letter of Recommendation</li>
+                    <li>Resume</li>
+                </ul>
+		</div>
+        <div class="mk-button-align left">
+        	<a href="https://my.ucf.edu" target="_self"  class="mk-button dark button-568d5c104f525 dark-color  flat-dimension large pointed   ">
+            	<span>Award: 2 awards at $2,000 each</span>
+            </a>
+        </div>
+    <div class="clearboth"></div>
+    <div class="mk-shortcode mk-padding-shortcode" style="height:80px"></div>
+    <div class="clearboth"></div>
+    </div>
+</div>
+
+
+
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 		<h2 style="font-size: 30px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568d5c104e1fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">College of Health and Public Affairs Doctoral Scholarship</span></h2>
@@ -69,18 +104,11 @@ get_header(); ?>
 <!-- END OF THE CUSTOM SECTION -->
                         
                         
-						<div class="clearboth"></div>
-						
-						
-
 					
-						
-						
-						
-						
-						
-						
-						<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
+                    
+                    
+                    <div class="clearboth"></div>
+					<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
 				<?php endwhile; ?>
 						<?php
 						if($mk_options['pages_comments'] == 'true') {
