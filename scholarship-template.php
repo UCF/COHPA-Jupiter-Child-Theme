@@ -22,7 +22,7 @@ get_header(); ?>
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 						<?php the_content();?>
-                  <?php endif; endwhile; ?>
+                  <?php endwhile; ?>
                 <?php wp_reset_query(); ?>       
                         
                         
