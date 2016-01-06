@@ -40,40 +40,36 @@ get_header(); ?>
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 		<div id="mk-tabs-568d2e73ba7e9" class="mk-shortcode mobile-true mk-tabs vertical-left default-style  vertical-style  ">
         	<ul class="mk-tabs-tabs">
-            	<li><a href="#Tab1">Tab 1</a></li>
-                <li><a href="#Tab2">Tab 2</a></li>
-                <li><a href="#Tab3">Tab 2</a></li>
+            	<?php $myfavetools = new WP_Query(array(
+								'post_type'	=> 'awards',
+								'orderby'=>'title',
+								'order'=>'DESC'
+																	
+							)); ?>
+                <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+   				<!--START OF THE REPEAT SECTION -->
+                <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
                 <div class="clearboth"></div>
             </ul>
             
             <div class="mk-tabs-panes">
-				<div id="Tab1" class="mk-tabs-pane">
-                	<div class="title-mobile">Tab 1</div>
+				
+                <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+   				<!--START OF THE REPEAT SECTION -->
+                <div id="<?php the_title(); ?>" class="mk-tabs-pane">
+                	<div class="title-mobile"><?php the_title(); ?></div>
                     <div style="text-align: left;" class="mk-text-block  true">
-                    	<p>content for tab 1</p>
+                    	<?php the_field('faculty_content'); ?>
 						<div class="clearboth"></div>
                     </div> 
 					<div class="clearboth"></div>
                 </div>
 				
-                <div id="Tab2" class="mk-tabs-pane">
-                	<div class="title-mobile">Tab 2</div>
-                    <div style="text-align: left;" class="mk-text-block  true">
-                    	<p>content for tab 2</p>
-						<div class="clearboth"></div>
-                    </div> 
-					<div class="clearboth"></div>
-                </div>
-                
-                <div id="Tab3" class="mk-tabs-pane">
-                	<div class="title-mobile">Tab 3</div>
-                    <div style="text-align: left;" class="mk-text-block  true">
-                    	<p>content for tab 3</p>
-						<div class="clearboth"></div>
-                    </div> 
-					<div class="clearboth"></div>
-                </div>
-                
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
+                <?php wp_reset_query(); ?> 
 
                 <div class="clearboth"></div>
             </div>
@@ -87,22 +83,6 @@ get_header(); ?>
 <!-- END OF THE CUSTOM SECTION -->
 
 
-
-<ul class="mk-tabs-tabs">
-<?php $myfavetools = new WP_Query(array(
-								'post_type'	=> 'awards',
-								'orderby'=>'title',
-								'order'=>'DESC'
-																	
-							)); ?>
-                <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
-   				<!--START OF THE REPEAT SECTION -->
-                <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
-                <!-- END OF THE REPEAT SECTION -->
-   				<?php endwhile; ?>
-                <?php wp_reset_query(); ?> 
-                <div class="clearboth"></div>
-            </ul>
 
 
     </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
