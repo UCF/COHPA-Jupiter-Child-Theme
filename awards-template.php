@@ -40,40 +40,38 @@ get_header(); ?>
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 		<div id="mk-tabs-568d2e73ba7e9" class="mk-shortcode mobile-true mk-tabs vertical-left default-style  vertical-style  ">
         	<ul class="mk-tabs-tabs">
-            	<li><a href="#Tab1">Tab 1</a></li>
-                <li><a href="#Tab2">Tab 2</a></li>
-                <li><a href="#Tab3">Tab 2</a></li>
+            <?php $facultyawards = new WP_Query(array(
+								'post_type'	=> 'award',
+								'orderby'=>'title',
+								'order'=>'ASC'
+																	
+							)); ?>
+                            
+                <?php while($facultyawards->have_posts()) : $facultyawards->the_post(); ?> 
+            	<!-- START OF THE REPEAT SECTION -->
+                <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
+                <!-- END OF THE REPEAT SECTION -->
+          		<?php endwhile; ?>
+
                 <div class="clearboth"></div>
             </ul>
-            
             <div class="mk-tabs-panes">
-				<div id="Tab1" class="mk-tabs-pane">
-                	<div class="title-mobile">Tab 1</div>
+            
+            
+                <?php while($facultyawards->have_posts()) : $facultyawards->the_post(); ?> 
+            	<!-- START OF THE REPEAT SECTION -->
+				<div id="<?php the_title(); ?>" class="mk-tabs-pane">
+                	<div class="title-mobile"><?php the_title(); ?></div>
                     <div style="text-align: left;" class="mk-text-block  true">
-                    	<p>content for tab 1</p>
+                    	<?php the_field('faculty_content'); ?>
 						<div class="clearboth"></div>
                     </div> 
 					<div class="clearboth"></div>
                 </div>
-				
-                <div id="Tab2" class="mk-tabs-pane">
-                	<div class="title-mobile">Tab 2</div>
-                    <div style="text-align: left;" class="mk-text-block  true">
-                    	<p>content for tab 2</p>
-						<div class="clearboth"></div>
-                    </div> 
-					<div class="clearboth"></div>
-                </div>
-                
-                <div id="Tab3" class="mk-tabs-pane">
-                	<div class="title-mobile">Tab 3</div>
-                    <div style="text-align: left;" class="mk-text-block  true">
-                    	<p>content for tab 3</p>
-						<div class="clearboth"></div>
-                    </div> 
-					<div class="clearboth"></div>
-                </div>
-                
+                <!-- END OF THE REPEAT SECTION -->
+				<?php endwhile; ?>
+               
+                <?php wp_reset_query(); ?> 
 
                 <div class="clearboth"></div>
             </div>
