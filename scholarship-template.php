@@ -38,9 +38,9 @@ get_header(); ?>
                 <?php the_field('scholarship_category'); ?>
                 
 <?php 
-if( has_term( '16' ) ) {
+if( has_term( 16 ) ) {
     echo "COLLEGE WIDE";
-} elseif ( has_term( '15' ) ) {
+} elseif ( has_term( 15 ) ) {
     echo "This is ID 15";
 } else {
     echo "this is OTHER";
