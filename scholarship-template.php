@@ -28,7 +28,7 @@ get_header(); ?>
                         
 <!-- START THE CUSTOM SECTION -->
 <?php 
-if(is_page( 539 )) {
+
 	
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
@@ -38,19 +38,19 @@ if(is_page( 539 )) {
 									array(
 									'taxonomy' => 'scholarship_cat',
 									'field' => 'term_id',
-									'terms' => 15)
+									if(is_page( 539 )) { 
+										'terms' => 15) 
+									}
 								)
-							)); }
+							)); 
 ?> 
-                <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+                
+				
+				
+				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
                 <?php the_field('scholarship_category'); ?>
                 
-<?php 
-if(is_page( 539 )) {
-    echo "asdasdasdasdasda";
-}
-?>
                
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
