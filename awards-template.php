@@ -67,7 +67,13 @@ get_header(); ?>
                 <div id="<?php the_title(); ?>" class="mk-tabs-pane">
                 	<div class="title-mobile"><?php the_title(); ?></div>
                     <div style="text-align: left;" class="mk-text-block  true">
-                    	<?php the_field('faculty_content'); ?>
+                    	<?php
+						if ( is_page( 491 )  ) {  
+							the_field('faculty_content'); 
+						} else { 
+							the_field('student_content'); 
+						}	
+						?>
 						<div class="clearboth"></div>
                     </div> 
 					<div class="clearboth"></div>
@@ -89,19 +95,7 @@ get_header(); ?>
 <!-- END OF THE CUSTOM SECTION -->
 
 
-<?php
 
-if ( is_page( 491 )  ) {  ?>  
-   
-   <div>here is the right page</div>
-
-<?php } else { ?> 
-
-   <div>THIS IS THE WRONG PAGE</div>
-   
-<?php }	
-
-?>
 
     </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
 						<div class="clearboth"></div>
