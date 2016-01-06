@@ -34,17 +34,7 @@ get_header(); ?>
 </div></div></div><div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " ><div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper">
 
                 
-<?php
 
-if ( is_page( 'awards' )) {    
-    // the page is "About", or the parent of the page is "About"
-    echo 'this is the right page'
-
-} else { 
-    echo 'this is not the page' // just in case we are at an unclassified page, perhaps the home page
-}	
-
-?>
                 
                 
                 
@@ -61,6 +51,18 @@ if ( is_page( 'awards' )) {
 								'order'=>'DESC'
 																	
 							)); ?>
+                            
+                            <?php
+
+if ( is_page( 'awards' )) {    
+    // the page is "About", or the parent of the page is "About"
+    echo 'this is the right page'
+
+} else { 
+    echo 'this is not the page' // just in case we are at an unclassified page, perhaps the home page
+}	
+
+?>
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
