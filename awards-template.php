@@ -91,8 +91,8 @@ get_header(); ?>
 <ul class="mk-tabs-tabs">
 <?php $myfavetools = new WP_Query(array(
 								'post_type'	=> 'awards',
-								'orderby'=>'id',
-								'order'=>'ASC'
+								'orderby'=>'title',
+								'order'=>'DESC'
 																	
 							)); ?>
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
