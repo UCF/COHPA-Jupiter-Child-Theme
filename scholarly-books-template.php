@@ -38,7 +38,7 @@ get_header(); ?>
                 
 <!-- START THE REPEAT SECTION -->
                
-<div style="float:left; background-color:#CCC;" class="vc_col-sm-6 wpb_column column_container ">
+<div style="float:left;" class="vc_col-sm-6 wpb_column column_container ">
 	<div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid vc_custom_1452017887231">
     	<div class="wpb_column vc_column_container vc_col-sm-3">
         	<div class="wpb_wrapper">
@@ -52,10 +52,10 @@ get_header(); ?>
         </div>
         <div class="wpb_column vc_column_container vc_col-sm-9">
         	<div class="wpb_wrapper">
-            	<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-weight:bold;padding-top:0px;padding-bottom:0px; margin-bottom:8px;" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
-                	<span style=""><?php the_sub_field('book_title'); ?></span>
+            	<h2 style="font-size: 20px;color: #3d3d3d;font-weight:bold; margin-bottom:8px;" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
+                	<?php the_sub_field('book_title'); ?>
                 </h2>
-                <div style="text-align: left;" class="mk-text-block  true">
+                <div class="mk-text-block  true">
                 	<?php the_sub_field('book_citation'); ?>
 					<em>Published in: <?php the_sub_field('publish_date'); ?></em>
 					<div class="clearboth"></div>
