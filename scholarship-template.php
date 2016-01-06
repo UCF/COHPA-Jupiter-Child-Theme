@@ -27,7 +27,7 @@ get_header(); ?>
                         
 <!-- START THE CUSTOM SECTION -->
 <?php $myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarships',
+								'post_type'	=> 'scholarship',
 								'orderby'=>'title',
 								'order'=>'ASC'
 																	
