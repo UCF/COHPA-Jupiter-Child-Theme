@@ -52,26 +52,25 @@ get_header(); ?>
                 <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
                 <!-- END OF THE REPEAT SECTION -->
           		<?php endwhile; ?>
-
+<?php wp_reset_query(); ?> 
                 <div class="clearboth"></div>
             </ul>
             <div class="mk-tabs-panes">
             
             
-                <?php while($facultyawards->have_posts()) : $facultyawards->the_post(); ?> 
             	<!-- START OF THE REPEAT SECTION -->
-				<div id="<?php the_title(); ?>" class="mk-tabs-pane">
-                	<div class="title-mobile"><?php the_title(); ?></div>
+				<div id="Tab1" class="mk-tabs-pane">
+                	<div class="title-mobile">Tab1</div>
                     <div style="text-align: left;" class="mk-text-block  true">
-                    	<?php the_field('faculty_content'); ?>
+                    	Tab1
 						<div class="clearboth"></div>
                     </div> 
 					<div class="clearboth"></div>
                 </div>
                 <!-- END OF THE REPEAT SECTION -->
-				<?php endwhile; ?>
+				
                
-                <?php wp_reset_query(); ?> 
+                
 
                 <div class="clearboth"></div>
             </div>
