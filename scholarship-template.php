@@ -28,12 +28,6 @@ get_header(); ?>
 <!-- START THE CUSTOM SECTION -->
 <?php $myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_category',
-									'field' => 'term_id',
-									'terms' => 15)
-								)),
 								'orderby'=>'title',
 								'order'=>'ASC'
 							)); ?>
