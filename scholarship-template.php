@@ -30,7 +30,13 @@ get_header(); ?>
 <?php $myfavetools = new WP_Query(array(
 								'post_type'	=> 'scholarship',
 								'orderby'=>'title',
-								'order'=>'ASC'
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 15)
+								)
 							)); ?>
                             
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
