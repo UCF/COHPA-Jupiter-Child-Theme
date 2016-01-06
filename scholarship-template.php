@@ -36,6 +36,16 @@ get_header(); ?>
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
                 <?php the_field('scholarship_category'); ?>
+                
+<?php 
+if( has_term( '16' ) ) {
+    echo "COLLEGE WIDE";
+} elseif ( has_term( '15' ) ) {
+    echo "This is ID 15";
+} else {
+    echo "this is OTHER";
+}
+?>
                
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
