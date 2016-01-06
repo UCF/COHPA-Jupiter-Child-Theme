@@ -36,12 +36,15 @@ get_header(); ?>
                 
 <?php
 
-if ( is_page( 491 ) { ?>
-    <div>This is infact the FACULTY AWARDS PAGE</div>
+if ( is_page( 'awards' )) {    
+    // the page is "About", or the parent of the page is "About"
+    echo 'this is the right page'
 
-<?php } else { ?>
-    <div>THIS IS THE STUDENT AWARDS PAGE</div>
-<?php } ?>
+} else { 
+    echo 'this is not the page' // just in case we are at an unclassified page, perhaps the home page
+}	
+
+?>
                 
                 
                 
