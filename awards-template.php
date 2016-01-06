@@ -91,7 +91,7 @@ get_header(); ?>
 
 <?php
 
-if ( is_page( 'about' )  ) {    
+if ( is_page( 491 )  ) {    
    echo "Hello World";
 
 } else { 
