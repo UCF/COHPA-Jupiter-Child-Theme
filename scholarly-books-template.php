@@ -35,43 +35,20 @@ get_header(); ?>
 
 <!-- START THE REPEAT SECTION -->
 <?php if (have_rows('scholarly_books') ):
-				while (have_rows('scholarly_books') ) {
-
-    $date = get_sub_field('publish_date');
-    // $date = 19881123 (23/11/1988)
-
-    // extract Y,M,D
-    $y = substr($date, 0, 4);
-    $m = substr($date, 4, 2);
-    $d = substr($date, 6, 2);
-
-    // create UNIX
-    $time = strtotime("{$d}-{$m}-{$y}");
-
-    $tmp_array[$time] = array(
-        'link' => get_sub_field('link'),
-        'title' => get_sub_field('title'),
-        'publisher' => get_sub_field('publisher'),
-        'date' => date('d/m/Y', $time)  
-    );
-}
-
-krsort($tmp_array);
-
-foreach($tmp_array as $entry ) { ?>
+				while (have_rows('scholarly_books') ): the_row(); ?>
                 
                 
 <div style="float:left;" class="vc_col-sm-6 wpb_column column_container ">
 			
             <div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid vc_custom_1452017887231"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="wpb_wrapper"><div class="mk-image-shortcode mk-shortcode   align-left mk-animate-element fade-in simple-frame inside-image " style="max-width: 800px; margin-bottom:10px"><div class="mk-image-inner"><a href="#" target="_self" class="mk-image-shortcode-link"><img class="lightbox-false" alt="" title="" src="<?php the_sub_field('book_cover'); ?>" /></a></div><div class="clearboth"></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="wpb_wrapper"><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; margin-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568c239d0d942" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><a href="#"><?php the_sub_field('book_title'); ?></a></span></h2><div style="text-align: left;" class="mk-text-block  true"><p><?php the_sub_field('book_citation'); ?></p>
-<em>Published in: <?php echo date('d/m/Y', $time);?></em>
+<em>Published in: <?php $date = the_sub_field('publish_date'); echo date('F dS Y', $date);?></em>
 <div class="clearboth"></div></div> </div></div></div>
 <div class="mk-shortcode mk-padding-shortcode" style="height:40px"></div>
 </div>
 
 
 <!-- END OF THE REPEAT SECTION -->
-<? } endforeach; ?>
+<? endforeach; ?>
 <?php endwhile; ?>
              <?php endif; ?>
 
