@@ -64,6 +64,8 @@ get_header(); ?>
 <!-- END THE CUSTOM SECTION -->
 
 <?php 
+	if (have_rows('scholarly_books') ):
+				while (have_rows('scholarly_books') ): the_row();
 				
  $repeater = get_sub_field('publish_date');
     foreach( $repeater as $key => $row ) { 
@@ -75,6 +77,7 @@ array_multisort( $column_id, SORT_DESC, $repeater );
 foreach( $repeater as $row ) {
     echo "HELLO";
 }
+endwhile; endif; 
 ?>
 
 
