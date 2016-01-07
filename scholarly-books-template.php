@@ -64,34 +64,17 @@ get_header(); ?>
 <!-- END THE CUSTOM SECTION -->
 
 <?php 
-                        /*build and fill: cp-loop and repeater loop*/
-                        if(have_posts()) : while(have_posts()) : the_post(); 
+ $repeater = get_sub_field('publish_date');
+    foreach( $repeater as $key => $row ) { 
+        $column_id[ $key ] = $row['date'];
+}
 
-                            if( have_rows('scholarly_books') ):
-                                while ( have_rows('scholarly_books') ) : the_row();
+array_multisort( $column_id, SORT_DESC, $repeater );
 
-                                $my_workshop_date = get_sub_field('publish_date');
-                                $the_ID = get_the_ID();
-
-                                /*of course you can extend this with additional fields or infos for that workshop that you can use later*/
-                                $workshops[$my_workshop_date][$the_ID]['date'] = $my_workshop_date;
-                                endwhile;
-                            endif;
-
-                        endwhile;
-                        endif;
-
-                        ksort($workshops);
-
-                        foreach ($workshops as $key_day => $row_day){
-                            if ($key_day > date("F Y")) {
-                                foreach ($row_day as $key_workshop => $row_workshop){
-                                    $workshop_date = $row_workshop['date'];
-                                    echo $workshop_date .'<br />';
-                                }
-                            }
-                        }
-                    ?>
+foreach( $repeater as $row ) {
+    the_sub_field('publish_date');
+}
+?>
 
 
 
