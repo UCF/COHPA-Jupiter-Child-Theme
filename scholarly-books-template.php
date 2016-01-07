@@ -64,6 +64,7 @@ get_header(); ?>
 <!-- END THE CUSTOM SECTION -->
 
 <?php 
+				
  $repeater = get_sub_field('publish_date');
     foreach( $repeater as $key => $row ) { 
         $column_id[ $key ] = $row['date'];
@@ -72,7 +73,7 @@ get_header(); ?>
 array_multisort( $column_id, SORT_DESC, $repeater );
 
 foreach( $repeater as $row ) {
-    the_sub_field('publish_date');
+    echo "HELLO";
 }
 ?>
 
