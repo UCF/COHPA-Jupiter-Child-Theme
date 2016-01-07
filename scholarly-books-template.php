@@ -54,12 +54,19 @@ get_header(); ?>
         </div> 
 	</div>
 </div>
+
+<?php
+$get_startdate = get_field('publish_date'); 
+$start_date = (strtotime($get_startdate)); //use $get_startdate to order, and $start_date_pretty to output your date
+ $start_date_pretty = date_i18n( 'd/m/Y', $start_date );
+echo $start_date_pretty;
+?>
 <!-- END OF THE REPEAT SECTION -->
 
 <?php endwhile; ?>
              <?php endif; ?>
 <style>
-.vc_custom_1452180931408{margin-bottom: 20px !important;padding-top: 20px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;background-color: #f2f2f2 !important;}
+.vc_custom_1452180931408{margin-bottom: 20px !important;padding-top: 15px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;background-color: #f2f2f2 !important;}
 </style>
 <!-- END THE CUSTOM SECTION -->
 
