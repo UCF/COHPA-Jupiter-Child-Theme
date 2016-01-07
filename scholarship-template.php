@@ -91,6 +91,7 @@ else {
 </div>
 <!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
+<?php endif; ?>
 <?php wp_reset_query(); ?> 
 																		
 <style>  
