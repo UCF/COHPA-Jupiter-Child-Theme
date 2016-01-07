@@ -64,6 +64,14 @@ else {
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
+<?php
+foreach ( $myfavetools as $post ) : setup_postdata( $post ); ?>
+	<li>
+		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	</li>
+<?php endforeach; 
+wp_reset_postdata();?>
+                
                 <?php the_field('scholarship_category'); ?>
                 
                
@@ -91,7 +99,7 @@ else {
 </div>
 <!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
-<?php endif; ?>
+
 <?php wp_reset_query(); ?> 
 																		
 <style>  
