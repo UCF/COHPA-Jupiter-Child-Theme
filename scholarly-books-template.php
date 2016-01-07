@@ -58,7 +58,9 @@ get_header(); ?>
 
 <?php endwhile; ?>
              <?php endif; ?>
-
+<style>
+.vc_custom_1452180931408{margin-bottom: 20px !important;padding-top: 20px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;background-color: #f2f2f2 !important;}
+</style>
 <!-- END THE CUSTOM SECTION -->
 
 
