@@ -58,7 +58,7 @@ get_header(); ?>
 <?php
 $get_startdate = get_field('publish_date'); 
 $start_date = (strtotime($get_startdate)); //use $get_startdate to order, and $start_date_pretty to output your date
- $start_date_pretty = date_i18n( 'd/m/Y', $start_date );
+ $start_date_pretty = date_i18n( 'F Y', $start_date );
 echo $start_date_pretty;
 ?>
 <!-- END OF THE REPEAT SECTION -->
