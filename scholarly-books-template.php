@@ -66,7 +66,6 @@ get_header(); ?>
 <?php 
                         /*build and fill: cp-loop and repeater loop*/
                         if(have_posts()) : while(have_posts()) : the_post(); 
-                            $my_workshop_name = get_the_title();
 
                             if( have_rows('scholarly_books') ):
                                 while ( have_rows('scholarly_books') ) : the_row();
@@ -76,26 +75,19 @@ get_header(); ?>
 
                                 /*of course you can extend this with additional fields or infos for that workshop that you can use later*/
                                 $workshops[$my_workshop_date][$the_ID]['date'] = $my_workshop_date;
-                                $workshops[$my_workshop_date][$the_ID]['name'] = $my_workshop_name;
                                 endwhile;
                             endif;
 
                         endwhile;
                         endif;
 
-                        /*output*/
-
-                        //    [20151201]=> array(1) { [29]=> array(2) { ["date"]=> string(8) "20151201" ["name"]=> string(18) "TEST123 4-12-2015" } } 
-                        //$datum = date("Ymd");
-
                         ksort($workshops);
 
                         foreach ($workshops as $key_day => $row_day){
                             if ($key_day > date("F Y")) {
                                 foreach ($row_day as $key_workshop => $row_workshop){
-                                    $workshop_name = $row_workshop['name'];
                                     $workshop_date = $row_workshop['date'];
-                                    echo $workshop_date .' : '. $workshop_name .'<br />';
+                                    echo $workshop_date .'<br />';
                                 }
                             }
                         }
