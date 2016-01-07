@@ -54,13 +54,6 @@ get_header(); ?>
         </div> 
 	</div>
 </div>
-
-<?php
-$get_startdate = get_field('publish_date'); 
-$start_date = (strtotime($get_startdate)); //use $get_startdate to order, and $start_date_pretty to output your date
- $start_date_pretty = date_i18n( 'F Y', $start_date );
-echo $start_date_pretty;
-?>
 <!-- END OF THE REPEAT SECTION -->
 
 <?php endwhile; ?>
@@ -69,6 +62,48 @@ echo $start_date_pretty;
 .vc_custom_1452180931408{margin-bottom: 20px !important;padding-top: 15px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;background-color: #f2f2f2 !important;}
 </style>
 <!-- END THE CUSTOM SECTION -->
+
+<?php 
+                        /*build and fill: cp-loop and repeater loop*/
+                        if(have_posts()) : while(have_posts()) : the_post(); 
+                            $my_workshop_name = get_the_title();
+
+                            if( have_rows('scholarly_books') ):
+                                while ( have_rows('scholarly_books') ) : the_row();
+
+                                $my_workshop_date = get_sub_field('publish_date');
+                                $the_ID = get_the_ID();
+
+                                /*of course you can extend this with additional fields or infos for that workshop that you can use later*/
+                                $workshops[$my_workshop_date][$the_ID]['date'] = $my_workshop_date;
+                                $workshops[$my_workshop_date][$the_ID]['name'] = $my_workshop_name;
+                                endwhile;
+                            endif;
+
+                        endwhile;
+                        endif;
+
+                        /*output*/
+
+                        //    [20151201]=> array(1) { [29]=> array(2) { ["date"]=> string(8) "20151201" ["name"]=> string(18) "TEST123 4-12-2015" } } 
+                        //$datum = date("Ymd");
+
+                        ksort($workshops);
+
+                        foreach ($workshops as $key_day => $row_day){
+                            if ($key_day > date("F Y")) {
+                                foreach ($row_day as $key_workshop => $row_workshop){
+                                    $workshop_name = $row_workshop['name'];
+                                    $workshop_date = $row_workshop['date'];
+                                    echo $workshop_date .' : '. $workshop_name .'<br />';
+                                }
+                            }
+                        }
+                    ?>
+
+
+
+
 
 
 
