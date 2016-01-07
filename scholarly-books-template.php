@@ -32,42 +32,35 @@ get_header(); ?>
 				while (have_rows('scholarly_books') ): the_row(); ?>
                 
 <!-- START THE REPEAT SECTION -->
-               
-<div style="float:left;" class="vc_col-sm-6 wpb_column column_container ">
-	<div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid vc_custom_1452017887231">
-    	<div class="wpb_column vc_column_container vc_col-sm-3">
-        	<div class="wpb_wrapper">
-            	<div class="mk-image-shortcode mk-shortcode   align-left mk-animate-element fade-in simple-frame inside-image " style="max-width: 800px; margin-bottom:10px">
-                	<div class="mk-image-inner">
-                    	<img class="lightbox-false" alt="" title="" src="<?php the_sub_field('book_cover'); ?>" />
-                    </div>
-                    <div class="clearboth"></div>
-                </div>
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1452180931408">
+	<div style="" class="vc_col-sm-2 wpb_column column_container ">
+		<div class="mk-image-shortcode mk-shortcode   align-center simple-frame inside-image " style="max-width: 800px; margin-bottom:15px">
+        	<div class="mk-image-inner">
+            	<img class="lightbox-false" alt="" title="" src="<?php the_sub_field('book_cover'); ?>" />
             </div>
+            <div class="clearboth"></div>
         </div>
-        <div class="wpb_column vc_column_container vc_col-sm-9">
-        	<div class="wpb_wrapper">
-            	<h2 style="font-size: 20px;color: #3d3d3d;font-weight:bold; margin-bottom:8px;" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
-                	<?php the_sub_field('book_title'); ?>
-                </h2>
-                <div class="mk-text-block  true">
-                	<?php the_sub_field('book_citation'); ?>
-					<em>Published in: <?php the_sub_field('publish_date'); ?></em>
-					<div class="clearboth"></div>
-                </div>
-            </div>
+	</div>
+	<div style="" class="vc_col-sm-10 wpb_column column_container ">
+		<h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568e863eea335" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_sub_field('book_title'); ?></span></h2>
+        <div class="clearboth"></div>
+        <div style="text-align: left;" class="mk-text-block  true">
+        	<?php the_sub_field('book_citation'); ?>
+			<div class="clearboth"></div>
         </div>
-    </div>
-	<div class="mk-shortcode mk-padding-shortcode" style="height:40px"></div>
+        <div style="text-align: left;" class="mk-text-block  true">
+        	<p><em>Published in: <?php the_sub_field('publish_date'); ?></em></p>
+			<div class="clearboth"></div>
+        </div> 
+	</div>
 </div>
-
-
 <!-- END OF THE REPEAT SECTION -->
 
 <?php endwhile; ?>
              <?php endif; ?>
 
 <!-- END THE CUSTOM SECTION -->
+
 
 
                     
