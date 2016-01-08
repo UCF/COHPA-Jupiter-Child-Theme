@@ -46,11 +46,10 @@ get_header(); ?>
                 <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
-                
-                WHAT IF I WRITE TEXT HERE
+
                 <div class="clearboth"></div>
             </ul>
-            
+            WHAT IF I WRITE TEXT HERE
             <div class="mk-tabs-panes">
 				
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
