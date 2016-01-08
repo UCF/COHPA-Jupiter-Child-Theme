@@ -21,17 +21,15 @@ get_header(); ?>
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 						<?php the_content();?>
-						<div class="clearboth"></div>
-						<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
-				<?php endwhile; ?>
-						
-      <?php wp_reset_query(); ?>                  
+                  <?php endwhile; ?>
+                <?php wp_reset_query(); ?>       
+                        
+                        
+<!-- START THE CUSTOM SECTION -->
 
-
-
-
-
-</div></div></div><div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " ><div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper">
+<div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " >
+</div>
+<!-- <div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper"> -->
 
                 
 
@@ -97,23 +95,23 @@ get_header(); ?>
 
 
 
-    </div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper  full-layout mk-grid vc_row-fluid row-fluid"><div class="theme-content "><div id="ajax-568c239d0b628" class="mk-dynamic-styles"><!--  .full-width-568c239d0b628 { min-height:100px; padding:0px 0 0px; margin-bottom:0px; } #background-layer--568c239d0b628 { background-position:left top; background-repeat:repeat; ; } --></div>
-						<div class="clearboth"></div>
-																				       
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
+<!-- END THE CUSTOM SECTION -->
                         
-
-		</div>			
+                        
+					
+                    
+                    
+                    <div class="clearboth"></div>
+					<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
+						<?php
+						if($mk_options['pages_comments'] == 'true') {
+							if ( comments_open() ) :
+							comments_template( '', true ); 	
+							endif;
+						}
+						?>
+				</div>
+			
 		<?php if ( $page_layout != 'full' ) get_sidebar(); ?>
 		<div class="clearboth"></div>
 		</div>
