@@ -49,9 +49,7 @@ get_header(); ?>
 
                 <div class="clearboth"></div>
             </ul>
-            WHAT IF I WRITE TEXT HERE
             <div class="mk-tabs-panes">
-				
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <div id="<?php the_title(); ?>" class="mk-tabs-pane">
