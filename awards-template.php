@@ -29,16 +29,7 @@ get_header(); ?>
 
 <div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " >
 </div>
-<!-- <div class="mk-grid vc_row-fluid page-section-content"><div class="mk-padding-wrapper"> -->
-
-                
-
-                
-                
-                
-                
-<!-- START THE CUSTOM SECTION -->
-               
+          
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 		<div id="mk-tabs-568d2e73ba7e9" class="mk-shortcode mobile-true mk-tabs vertical-left default-style  vertical-style  ">
@@ -55,6 +46,8 @@ get_header(); ?>
                 <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
+                
+                WHAT IF I WRITE TEXT HERE
                 <div class="clearboth"></div>
             </ul>
             
@@ -88,19 +81,9 @@ get_header(); ?>
         <div id="ajax-568d2e73ba7e9" class="mk-dynamic-styles"><!--  #mk-tabs-568d2e73ba7e9 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-568d2e73ba7e9 .mk-tabs-panes, #mk-tabs-568d2e73ba7e9 .mk-fancy-title span{ background-color:#ffffff; }--></div>
 	</div>
 </div>
-						
-
-<!-- END OF THE CUSTOM SECTION -->
-
-
-
 
 <!-- END THE CUSTOM SECTION -->
-                        
-                        
-					
-                    
-                    
+
                     <div class="clearboth"></div>
 					<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
 						<?php
