@@ -38,8 +38,11 @@ foreach ( $wp_user_search as $userid ) {
 	$display_name  = stripslashes($userid->display_name);?>
     
     
-    <li>Hello</li>
-    <?php the_field('upload_headshot'); ?>
+    <li>Hello</li> 
+    <p><?php print($user_id);
+	
+	the_field('upload_headshot', 'user_2'); ?></p>
+
     
 <?php
 	//$return  = '';
