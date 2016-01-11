@@ -27,8 +27,6 @@ get_header(); ?>
                         
 <!-- START THE CUSTOM SECTION -->
 
-<p><?php the_field('upload_headshot', 'user_2'); ?></p>
-
 <?php
 $wp_user_search = $wpdb->get_results("SELECT ID, display_name FROM $wpdb->users ORDER BY ID");
 
@@ -48,6 +46,53 @@ foreach ( $wp_user_search as $userid ) {
 	//print($return);
 }
 ?>
+
+
+
+
+<?php
+
+// Get the authors from the database ordered by user nicename
+	global $wpdb;
+	$query = "SELECT ID, user_nicename from $wpdb->users ORDER BY user_nicename";
+	$author_ids = $wpdb->get_results($query);
+
+// Loop through each author
+	foreach($author_ids as $author) :
+
+	// Get user data
+		$curauth = get_userdata($author->ID);
+
+	// If user level is above 0 or login name is "admin", display profile
+		if($curauth->user_level > 0 || $curauth->user_login == 'admin') :
+
+		// Get link to author page
+			$user_link = get_author_posts_url($curauth->ID);
+
+		// Set default avatar (values = default, wavatar, identicon, monsterid)
+			$avatar = 'wavatar';
+?>
+<div class="post">
+
+	<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>">
+		<?php echo get_avatar($curauth->user_email, '96', $avatar); ?>
+	</a>
+
+	<h3 class="post-title">
+		<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>"><?php echo $curauth->display_name; ?></a>
+	</h3>
+
+	<p>
+		<?php echo $curauth->description; ?>
+	</p>
+
+</div>
+
+<?php endif; ?>
+
+	<?php endforeach; ?>
+
+<?php get_footer(); ?>
 
 <!-- END THE CUSTOM SECTION -->
 
