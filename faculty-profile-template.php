@@ -38,9 +38,9 @@ foreach ( $wp_user_search as $userid ) {
 	$display_name  = stripslashes($userid->display_name);?>
     
     
-    <li>Hello</li> 
-    <p><?php the_field("upload_headshot", "user_' . print($user_id) .'"); ?></p>
-    <p><?php the_field("upload_headshot", "user_' . $user_id .'"); ?></p>
+    <li>Hello!</li> 
+    <p><?php the_field('upload_headshot', 'user_' . print($user_id) .''); ?></p>
+    <p><?php the_field('upload_headshot', 'user_' . $user_id .''); ?></p>
 
     
 <?php
