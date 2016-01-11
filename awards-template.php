@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Awards
+Template Name: Awards Page
 */
 
 global $post,
