@@ -39,9 +39,8 @@ foreach ( $wp_user_search as $userid ) {
     
     
     <li>Hello</li> 
-    <p><?php print($user_id);
-	
-	the_field('upload_headshot', 'user_2'); ?></p>
+    <p><?php the_field("upload_headshot", "user_' . print($user_id) .'"); ?></p>
+    <p><?php the_field("upload_headshot", "user_' . $user_id .'"); ?></p>
 
     
 <?php
