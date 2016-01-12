@@ -13,7 +13,7 @@
 			
 			<?php do_action('um_profile_header', $args ); ?>
 			
-			<?php do_action('um_profile_navbar', $args ); ?>
+			<?php //do_action('um_profile_navbar', $args ); ?>
 			
 			<?php
 				
@@ -23,8 +23,8 @@
 			print "<div class='um-profile-body $nav $nav-$subnav'>";
 				
 				// Custom hook to display tabbed content
-				//do_action("um_profile_content_{$nav}", $args);
-				//do_action("um_profile_content_{$nav}_{$subnav}", $args);
+				do_action("um_profile_content_{$nav}", $args);
+				do_action("um_profile_content_{$nav}_{$subnav}", $args);
 				
 			print "</div>";
 				
