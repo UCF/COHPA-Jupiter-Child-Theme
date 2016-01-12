@@ -5,13 +5,30 @@
 
 	<div class="um-form">
 	HELLO
+    
+    <?php 	echo um_user_last_login_date( $user_id ); 
+	
+			echo um_get_display_name( $user_id );
+			
+	?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 		<?php do_action('um_profile_before_header', $args ); ?>
 		
 		<?php if ( um_is_on_edit_profile() ) { ?><form method="post" action=""><?php } ?>
 		
 			<?php do_action('um_profile_header_cover_area', $args ); ?>
 			
-			<?php //do_action('um_profile_header', $args ); ?>
+			<?php do_action('um_profile_header', $args ); ?>
 			
 			<?php do_action('um_profile_navbar', $args ); ?>
 			
