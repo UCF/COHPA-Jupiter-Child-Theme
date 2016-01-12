@@ -140,6 +140,8 @@
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
 								
+								echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Course number 1</p><p>course number 2</p><p>course number 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								
 						echo '</div></div>';
 						}?>
 						<div class="clearboth"></div>
