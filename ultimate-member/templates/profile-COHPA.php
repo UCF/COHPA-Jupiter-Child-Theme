@@ -13,14 +13,15 @@
 <?php
 	$user_id       = um_profile_id();
 	$profile_link  = um_user_profile_url();
-	print($user_id);
-	print($profile_link);
+	//print($user_id);
+	//print($profile_link);
 ?>
-<p><?php the_field('upload_headshot', 'user_' . $user_id .''); ?></p>
+<?php //the_field('upload_headshot', 'user_' . $user_id .''); ?>
 
 
-hi
-<div id="mk-page-section-568c239d0b628" data-intro-effect="false" class="full-width-568c239d0b628  full-height-false mk-page-section self-hosted mk-blur-parent mk-shortcode  " >
+<div class="mk-main-wrapper-holder">
+		<div id="mk-page-id-150" class="theme-page-wrapper mk-main-wrapper full-layout  mk-grid vc_row-fluid">
+			<div class="theme-content " itemprop="mainContentOfPage">
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
@@ -74,8 +75,8 @@ hi
 	</div>
 </div>
 </div>
-
-
+</div>
+</div>
 
 
 
