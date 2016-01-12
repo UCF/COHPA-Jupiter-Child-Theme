@@ -36,19 +36,6 @@
             <div class="wpb_column vc_column_container vc_col-sm-8">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                        <div class="blog-share-container">
-                            <div class="blog-single-share mk-toggle-trigger"><i class="mk-moon-share-2"></i></div>
-                                <ul class="single-share-box mk-box-to-trigger">
-                                    <li><a class="facebook-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-facebook"></i></a></li>
-                                    <li><a class="twitter-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-moon-twitter"></i></a></li>
-                                    <li><a class="googleplus-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-googleplus"></i></a></li>
-                                    <li><a class="pinterest-share" data-image="<?php echo $image_src_array[0]; ?>" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-pinterest"></i></a></li>
-                                    <li><a class="linkedin-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                            <a class="mk-blog-print" onClick="window.print()" href="#" title="<?php _e('Print', 'mk_framework'); ?>"><i class="mk-moon-print-3"></i></a>
-                            <div class="clearboth"></div>
-                        </div>
                         <h2><?php the_title(); ?></h2>
                         
                         <h3>Job Title</h3>
