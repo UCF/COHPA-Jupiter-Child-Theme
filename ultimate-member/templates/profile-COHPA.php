@@ -36,7 +36,10 @@
             <a class="mk-blog-print" onClick="window.print()" href="#" title="<?php _e('Print', 'mk_framework'); ?>"><i class="mk-moon-print-3"></i></a>
         	<div class="clearboth"></div>
         </div>
-		<h2 class="blog-single-title"><?php the_title(); ?></h2>
+		<h2><?php the_title(); ?></h2>
+        
+        <h3>Job Title</h3>
+        
 		<?php 
         $terms = get_field('department');
         if( $terms ) {
