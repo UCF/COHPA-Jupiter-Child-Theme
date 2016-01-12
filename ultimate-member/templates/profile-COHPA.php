@@ -1,13 +1,8 @@
 <?php /* Template: COHPA Profile */ ?>
 
 
-<div class="um <?php echo $this->get_class( $mode ); ?> um-<?php echo $form_id; ?> um-role-<?php echo um_user('role'); ?> ">
 
-	<div class="um-form">
-
-    
-    <a href="<?php echo um_user_profile_url(); ?>" class="um-profile-photo-img" title="<?php echo um_user('display_name'); ?>"><?php echo $overlay . get_avatar( um_user('ID'), $default_size ); ?></a>
-    
+        
 <!-- START THE CUSTOM SECTION -->
 
 <?php
@@ -19,9 +14,6 @@
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?>
 
 
-<div class="mk-main-wrapper-holder">
-		<div id="mk-page-id-150" class="theme-page-wrapper mk-main-wrapper full-layout  mk-grid vc_row-fluid">
-			<div class="theme-content " itemprop="mainContentOfPage">
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
@@ -74,9 +66,7 @@
         </div>
 	</div>
 </div>
-</div>
-</div>
-</div>
+
 
 
 
@@ -324,6 +314,9 @@
     
     
     
+<div class="um <?php echo $this->get_class( $mode ); ?> um-<?php echo $form_id; ?> um-role-<?php echo um_user('role'); ?> ">
+
+	<div class="um-form">
     
     
     
