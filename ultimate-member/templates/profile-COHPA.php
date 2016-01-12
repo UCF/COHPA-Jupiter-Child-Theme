@@ -21,8 +21,8 @@
         	<?php echo do_shortcode ('[mk_button dimension="flat" corner_style="pointed" size="medium" outline_skin="dark" outline_active_color="#ffffff" outline_hover_color="#333333" bg_color="#212121" btn_hover_bg="#ffc904" text_color="light" icon="mk-moon-arrow-left-6" icon_anim="none" url="/cohpa/directory" target="_self" align="center" fullwidth="true" button_custom_width="0" margin_top="0" margin_bottom="15" btn_hover_txt_color="#000000"]Back to the Directory[/mk_button]');   ?>
             
 			<form method="get" action="" />
-                <div class="um-search-filter"><input type="text" name="first_name" id="first_name" placeholder="First Name" value="" /></div>
-                <div class="um-search-filter"><input type="text" name="last_name" id="last_name" placeholder="Last Name" value="" /></div>				
+                <div><input type="text" name="first_name" id="first_name" placeholder="First Name" value="" /></div>
+                <div><input type="text" name="last_name" id="last_name" placeholder="Last Name" value="" /></div>				
                 <div class="um-clear"></div>
                 <div class="um-search-submit">
                     <input type="hidden" name="um_search" id="um_search" value="1" />
