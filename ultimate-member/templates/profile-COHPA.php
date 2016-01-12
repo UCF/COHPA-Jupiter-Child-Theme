@@ -8,7 +8,20 @@
     
     <a href="<?php echo um_user_profile_url(); ?>" class="um-profile-photo-img" title="<?php echo um_user('display_name'); ?>"><?php echo $overlay . get_avatar( um_user('ID'), $default_size ); ?></a>
     
+<!-- START THE CUSTOM SECTION -->
+
+<?php
+
+	$user_id       = um_profile_id();
+	?>
     
+    
+    <li>Hello!</li> 
+    <p><?php the_field('upload_headshot', 'user_' . $user_id .''); ?></p>
+
+
+
+<!-- END THE CUSTOM SECTION -->
     
     
     
