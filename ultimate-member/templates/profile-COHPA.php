@@ -6,11 +6,7 @@
 	<div class="um-form">
 	HELLO
     
-    <?php 	echo um_user_last_login_date( $user_id ); 
-	
-			echo um_get_display_name( $user_id );
-			
-	?>
+    <a href="<?php echo um_user_profile_url(); ?>" class="um-profile-photo-img" title="<?php echo um_user('display_name'); ?>"><?php echo $overlay . get_avatar( um_user('ID'), $default_size ); ?></a>
     
     
     
