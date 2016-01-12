@@ -11,7 +11,7 @@
 	//print($user_id);
 	//print($profile_link);
 ?>
-<?php //the_field('upload_headshot', 'user_' . $user_id .''); ?>
+<?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
 
 
