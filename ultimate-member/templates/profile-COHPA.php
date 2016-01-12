@@ -11,14 +11,11 @@
 <!-- START THE CUSTOM SECTION -->
 
 <?php
-
 	$user_id       = um_profile_id();
 	print($user_id);
-
-	?>
-    
-    
-    <li>Hello!</li> 
+?>
+        
+    <li>working</li> 
     <p><?php the_field('upload_headshot', 'user_' . $user_id .''); ?></p>
 
 
