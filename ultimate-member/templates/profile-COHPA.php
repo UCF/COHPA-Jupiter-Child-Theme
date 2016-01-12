@@ -28,11 +28,11 @@
 		<div class="blog-share-container">
 			<div class="blog-single-share mk-toggle-trigger"><i class="mk-moon-share-2"></i></div>
                 <ul class="single-share-box mk-box-to-trigger">
-                    <li><a class="facebook-share" data-title="<?php the_title(); ?>" data-url="<?php echo um_user_profile_url(); ?>" href="#"><i class="mk-jupiter-icon-simple-facebook"></i></a></li>
+                    <li><a class="facebook-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-facebook"></i></a></li>
                     <li><a class="twitter-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-moon-twitter"></i></a></li>
-                    <li><a class="googleplus-share" data-title="<?php the_title(); ?>" data-url="<?php echo um_user_profile_url(); ?>" href="#"><i class="mk-jupiter-icon-simple-googleplus"></i></a></li>
-                    <li><a class="pinterest-share" data-image="<?php echo $image_src_array[0]; ?>" data-title="<?php the_title(); ?>" data-url="<?php echo um_user_profile_url(); ?>" href="#"><i class="mk-jupiter-icon-simple-pinterest"></i></a></li>
-                    <li><a class="linkedin-share" data-title="<?php the_title(); ?>" data-url="<?php echo um_user_profile_url(); ?>" href="#"><i class="mk-jupiter-icon-simple-linkedin"></i></a></li>
+                    <li><a class="googleplus-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-googleplus"></i></a></li>
+                    <li><a class="pinterest-share" data-image="<?php echo $image_src_array[0]; ?>" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-pinterest"></i></a></li>
+                    <li><a class="linkedin-share" data-title="<?php the_title(); ?>" data-url="<?php print($profile_link); ?>" href="#"><i class="mk-jupiter-icon-simple-linkedin"></i></a></li>
                 </ul>
             </div>
             <a class="mk-blog-print" onClick="window.print()" href="#" title="<?php _e('Print', 'mk_framework'); ?>"><i class="mk-moon-print-3"></i></a>
@@ -100,7 +100,19 @@
 	</div>
 </div>
 <!-- END MAIN INFO SECTION --> 
-
+<!-- START DIVIDER -->
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+	<div style="" class="vc_col-sm-12 wpb_column column_container ">
+        <div style="padding: 20px 0 40px;" class="mk-divider mk-shortcode divider_full_width center shadow_line ">
+        	<div class="divider-inner">
+            	<span class="divider-shadow-left"></span>
+                <span class="divider-shadow-right"></span>
+            </div>
+        </div>
+        <div class="clearboth"></div>
+	</div>
+</div>
+<!-- END DIVIDER -->
 
 
 
