@@ -111,19 +111,23 @@
         	<div class="wpb_column vc_column_container vc_col-sm-9">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	David Janosik is a professional Web Developer and Business Consultant with the knowledge and experience to help you leverage your online presence and social media to maximize your exposure and increase your sales. He is also the web developer for the College of Health and Public Affairs.
-
-As an Internet Marketer, David Janosik is hard working, fast learning and enthusiastic about developing businesses online and designing successful marketing campaigns. He specializes in providing resources and strategies for businesses and entrepreneurs to take their projects to the next level.
-
-Some of David’s favorite tools for website design are: Adobe Photoshop, Dreamweaver, WordPress, PHP, Umbraco, jQuery, CSS, Javascript and Google’s Keyword Tool.David Janosik is a professional Web Developer and Business Consultant with the knowledge and experience to help you leverage your online presence and social media to maximize your exposure and increase your sales. He is also the web developer for the College of Health and Public Affairs.
-
-As an Internet Marketer, David Janosik is hard working, fast learning and enthusiastic about developing businesses online and designing successful marketing campaigns. He specializes in providing resources and strategies for businesses and entrepreneurs to take their projects to the next level.
-
-Some of David’s favorite tools for website design are: Adobe Photoshop, Dreamweaver, WordPress, PHP, Umbraco, jQuery, CSS, Javascript and Google’s Keyword Tool.David Janosik is a professional Web Developer and Business Consultant with the knowledge and experience to help you leverage your online presence and social media to maximize your exposure and increase your sales. He is also the web developer for the College of Health and Public Affairs.
-
-As an Internet Marketer, David Janosik is hard working, fast learning and enthusiastic about developing businesses online and designing successful marketing campaigns. He specializes in providing resources and strategies for businesses and entrepreneurs to take their projects to the next level.
-
-Some of David’s favorite tools for website design are: Adobe Photoshop, Dreamweaver, WordPress, PHP, Umbraco, jQuery, CSS, Javascript and Google’s Keyword Tool.
+                    	<?php 
+						if(get_field('biography', 'user_' . $user_id .'') || get_field('research_info', 'user_' . $user_id .'')) {
+						   echo '<div id="mk-tabs-54db5aa2f2863" class="mk-shortcode mk-tabs default-style  horizental-style"><ul class="mk-tabs-tabs">';
+								
+								if(get_field('biography', 'user_' . $user_id .'')) { 
+										echo '<li><a href="#1423603736-1-73">Biography</a></li>';
+									}
+								if(get_field('research_info', 'user_' . $user_id .'')) { 
+										echo '<li><a href="#1423603736-2-45">Research</a></li>';
+									}
+						echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
+								
+								if($profilenews) { 
+										echo '<li><a href="#1423658400557-2-999">News</a></li>';
+									}
+						echo '<div class="clearboth"></div></ul></div>';
+						}?>
 						<div class="clearboth"></div>
                     </div>
                 </div>
