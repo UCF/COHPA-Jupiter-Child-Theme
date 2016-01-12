@@ -127,13 +127,19 @@
 										echo '<li><a href="#1423658400557-2-999">News</a></li>';
 									}
 						echo '<div class="clearboth"></div></ul><div class="mk-tabs-panes">';
-						
 									
-							 if(get_field('biography', 'user_' . $user_id .'')) { 
-								echo '<div id="1423603736-1-73" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Biography</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
-								the_field('biography', 'user_' . $user_id .'');
-								echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
-							}
+								 if(get_field('biography', 'user_' . $user_id .'')) { 
+									echo '<div id="1423603736-1-73" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Biography</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
+									the_field('biography', 'user_' . $user_id .'');
+									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								}
+							
+								if(get_field('research_info', 'user_' . $user_id .'')) { 
+									echo '<div id="1423603736-2-45" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Research</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
+									the_field('research_info', 'user_' . $user_id .'');
+									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								}
+								
 						echo '</div></div>';
 						}?>
 						<div class="clearboth"></div>
