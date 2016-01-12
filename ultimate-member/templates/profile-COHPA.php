@@ -130,7 +130,61 @@
         	<div class="wpb_column vc_column_container vc_col-sm-9">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	<p>INSERT TABBED CONTENT</p>
+<!-- START TABBED CONTENT -->
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+	<div style="" class="vc_col-sm-9 wpb_column column_container ">
+		<?php 
+        if(get_field('biography', 'user_' . $user_id .'') || get_field('research_info', 'user_' . $user_id .'')) {
+           echo '<div id="mk-tabs-54db5aa2f2863" class="mk-shortcode mk-tabs default-style  horizental-style"><ul class="mk-tabs-tabs">';
+                
+                if(get_field('biography', 'user_' . $user_id .'')) { 
+                        echo '<li><a href="#1423603736-1-73">Biography</a></li>';
+                    }
+                if(get_field('research_info', 'user_' . $user_id .'')) { 
+                        echo '<li><a href="#1423603736-2-45">Research</a></li>';
+                    }
+        echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
+                
+                if($profilenews) { 
+                        echo '<li><a href="#1423658400557-2-999">News</a></li>';
+                    }
+        echo '<div class="clearboth"></div></ul><div class="mk-tabs-panes">';
+        
+                    
+             if(get_field('biography', 'user_' . $user_id .'')) { 
+                echo '<div id="1423603736-1-73" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Biography</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
+                the_field('biography', 'user_' . $user_id .'');
+                echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+            }
+                    
+                    
+             if(get_field('research_info', 'user_' . $user_id .'')) { 
+                echo '<div id="1423603736-2-45" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Research</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
+                the_field('research_info', 'user_' . $user_id .'');
+                echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+            }   
+            
+            
+                if($profilenews) { 
+            // THIS IS MY NEWS POSTS SECTION 
+                echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
+        
+            echo '<ul>';
+            foreach( $profilenews as $profilenew ) {
+                echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
+            }
+            echo '</ul>';
+        /* Restore original Post Data */
+        wp_reset_postdata();
+                echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+        }
+        echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Course number 1</p><p>course number 2</p><p>course number 3</p><div class="clearboth"></div></div> <div class="clearboth"></div></div><div class="clearboth"></div></div>';	
+
+        echo '<div class="clearboth"></div></div><div id="ajax-54db5aa2f2863" class="mk-dynamic-styles"> #mk-tabs-54db5aa2f2863 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-54db5aa2f2863 .mk-tabs-panes, #mk-tabs-54db5aa2f2863 .mk-fancy-title span{ background-color: #fff; }';
+        }?>    
+	</div>
+</div>
+<!-- END TABBED CONTENT -->
 						<div class="clearboth"></div>
                     </div>
                 </div>
@@ -138,7 +192,61 @@
             <div class="wpb_column vc_column_container vc_col-sm-3">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	<p>INSERT LINKS SECTION</p>
+<!-- START PROFESSIONAL LINKS --> 
+<div style="" class="vc_col-sm-3 wpb_column column_container vc_custom_1423659749038 ">
+	 <?php
+       if(get_field('cv', 'user_' . $user_id .'') || get_field('website_url', 'user_' . $user_id .'')) {
+        echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional LInks</span></h3>';
+                    
+        if(get_field('cv', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-cv"><i style="color:#666;margin:4px;4px;" class="mk-moon-vcard  mk-size-small"></i> <a href="';
+            the_field('cv', 'user_' . $user_id .'');
+            echo '" target="_blank">Curriculum Vitae</a></div>';
+        }
+        
+        if(get_field('website_url', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+            the_field('website_url', 'user_' . $user_id .'');
+            echo '" target="_blank">Personal Website</a></div>';
+        }
+        
+    echo '<p>&nbsp;</p><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
+    
+    }?>	
+
+    <?php 
+    if(get_field('facebook_url', 'user_' . $user_id .'') || get_field('linkedin_url', 'user_' . $user_id .'') || get_field('twitter_url', 'user_' . $user_id .'') || get_field('google_url', 'user_' . $user_id .'') || get_field('youtube_url', 'user_' . $user_id .'')) {
+       echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h3><div id="cohpa-directoryDetail-rightcolumn"><div id="cohpa-directoryDetail-rightcolumn-GRAY">';
+    
+    if(get_field('facebook_url', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+            the_field('facebook_url', 'user_' . $user_id .'');
+            echo '" target="_blank">Facebook</a></div>';
+        }
+        if(get_field('linkedin_url', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px;4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
+            the_field('linkedin_url', 'user_' . $user_id .'');
+            echo '" target="_blank">Linkedin</a></div>';
+        }
+        if(get_field('twitter_url', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-Twitter"><i style="color:#00aced;margin:4px;4px;" class="mk-moon-twitter-2  mk-size-small"></i> <a href="';
+            the_field('twitter_url', 'user_' . $user_id .'');
+            echo '" target="_blank">Twitter</a></div>';
+        }
+        if(get_field('google_url', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-Google"><i style="color:#dd4b39;margin:4px;4px;" class="mk-moon-google-plus-3  mk-size-small"></i> <a href="';
+            the_field('google_url', 'user_' . $user_id .'');
+            echo '" target="_blank">Google+</a></div>';
+        }
+        if(get_field('youtube_url', 'user_' . $user_id .'')) {
+            echo '<div id="directoryProfile-YouTube"><i style="color:#bb0000;margin:4px;4px;" class="mk-moon-youtube  mk-size-small"></i> <a href="';
+            the_field('youtube_url', 'user_' . $user_id .'');
+            echo '" target="_blank">YouTube</a></div>';
+        }
+       echo '</div></div><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
+    }?>     	
+</div>
+<!-- END PROFESSIONAL LINKS -->
 						<div class="clearboth"></div>
                     </div>
                 </div>
