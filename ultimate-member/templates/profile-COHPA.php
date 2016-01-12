@@ -11,9 +11,9 @@
 		
 			<?php do_action('um_profile_header_cover_area', $args ); ?>
 			
-			<?php do_action('um_profile_header', $args ); ?>
+			<?php //do_action('um_profile_header', $args ); ?>
 			
-			<?php //do_action('um_profile_navbar', $args ); ?>
+			<?php do_action('um_profile_navbar', $args ); ?>
 			
 			<?php
 				
