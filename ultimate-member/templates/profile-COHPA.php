@@ -17,7 +17,7 @@
         
     <li>working</li> 
     <p><?php the_field('upload_headshot', 'user_' . $user_id .''); ?></p>
-
+<?php echo um_user_profile_url(); ?>
 
 
 
