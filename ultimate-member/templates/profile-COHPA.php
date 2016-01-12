@@ -119,7 +119,57 @@
             <div class="wpb_column vc_column_container vc_col-sm-3">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	<p>INSERT LINKS SECTION</p>
+                    	<?php
+					   if(get_field('cv', 'user_' . $user_id .'') || get_field('website_url', 'user_' . $user_id .'')) {
+						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional LInks</span></h3>';
+									
+						if(get_field('cv', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-cv"><i style="color:#666;margin:4px;4px;" class="mk-moon-vcard  mk-size-small"></i> <a href="';
+							the_field('cv', 'user_' . $user_id .'');
+							echo '" target="_blank">Curriculum Vitae</a></div>';
+						}
+						
+						if(get_field('website_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+							the_field('website_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Personal Website</a></div>';
+						}
+						
+					echo '<p>&nbsp;</p><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
+					
+					}?>	
+				
+					<?php 
+					if(get_field('facebook_url', 'user_' . $user_id .'') || get_field('linkedin_url', 'user_' . $user_id .'') || get_field('twitter_url', 'user_' . $user_id .'') || get_field('google_url', 'user_' . $user_id .'') || get_field('youtube_url', 'user_' . $user_id .'')) {
+					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h3><div id="cohpa-directoryDetail-rightcolumn"><div id="cohpa-directoryDetail-rightcolumn-GRAY">';
+					
+					if(get_field('facebook_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							the_field('facebook_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Facebook</a></div>';
+						}
+						if(get_field('linkedin_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px;4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
+							the_field('linkedin_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Linkedin</a></div>';
+						}
+						if(get_field('twitter_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-Twitter"><i style="color:#00aced;margin:4px;4px;" class="mk-moon-twitter-2  mk-size-small"></i> <a href="';
+							the_field('twitter_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Twitter</a></div>';
+						}
+						if(get_field('google_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-Google"><i style="color:#dd4b39;margin:4px;4px;" class="mk-moon-google-plus-3  mk-size-small"></i> <a href="';
+							the_field('google_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Google+</a></div>';
+						}
+						if(get_field('youtube_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-YouTube"><i style="color:#bb0000;margin:4px;4px;" class="mk-moon-youtube  mk-size-small"></i> <a href="';
+							the_field('youtube_url', 'user_' . $user_id .'');
+							echo '" target="_blank">YouTube</a></div>';
+						}
+					   echo '</div></div><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
+					}?>
 						<div class="clearboth"></div>
                     </div>
                 </div>
