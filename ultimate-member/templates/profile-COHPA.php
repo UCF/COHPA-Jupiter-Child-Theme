@@ -12,12 +12,13 @@
 
 <?php
 	$user_id       = um_profile_id();
+	$profile_link  = um_user_profile_url();
 	print($user_id);
+	print($profile_link);
 ?>
         
     <li>working</li> 
     <p><?php the_field('upload_headshot', 'user_' . $user_id .''); ?></p>
-<?php echo um_user_profile_url(); ?>
 
 
 
