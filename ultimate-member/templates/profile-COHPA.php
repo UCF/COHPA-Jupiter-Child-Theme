@@ -31,7 +31,20 @@
         	<div class="wpb_column vc_column_container vc_col-sm-4">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	<p>INSERT PROFILE PIC</p>
+                    	<div class="mk-image-shortcode mk-shortcode  lightbox-enabled align-left border_shadow-frame inside-image " style="max-width: 250px; margin-bottom:10px">
+
+            <div class="mk-image-inner">
+
+            	    <img class="lightbox-true" alt="David Janosik" title="David Janosik" src="http://davidjanosik.com/cohpa/wp-content/uploads/bfi_thumb/David-Headshot-1-m4othlawsg7c9lrp8a1r66gp7ft67qt1qb1k6psj88.jpg" itemprop="image" /><div class="mk-image-overlay"></div><a href="http://davidjanosik.com/cohpa/wp-content/uploads/2015/02/David-Headshot-1.jpg" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox"><i class="mk-jupiter-icon-plus-circle"></i></a>                    
+
+                    
+
+                    
+
+                    
+
+                </div><div class="clearboth"></div></div>
+
 						<div class="clearboth"></div>
                     </div>
                 </div>
