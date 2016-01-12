@@ -36,7 +36,9 @@
             <div class="wpb_column vc_column_container vc_col-sm-8">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	<!-- START MAIN INFO SECTION -->    
+<!-- START MAIN INFO SECTION -->    
+<div style="" class="vc_col-sm-8 wpb_column column_container ">
+	<div class="single-social-section">
 		<div class="blog-share-container">
 			<div class="blog-single-share mk-toggle-trigger"><i class="mk-moon-share-2"></i></div>
                 <ul class="single-share-box mk-box-to-trigger">
@@ -112,6 +114,8 @@
         }
         echo '</div>';
         ?>  
+	</div>
+</div>
 <!-- END MAIN INFO SECTION --> 
 						<div class="clearboth"></div>
                     </div>
