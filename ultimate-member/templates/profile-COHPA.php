@@ -37,7 +37,6 @@
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
 <!-- START MAIN INFO SECTION -->    
-<div style="" class="vc_col-sm-8 wpb_column column_container ">
 	<div class="single-social-section">
 		<div class="blog-share-container">
 			<div class="blog-single-share mk-toggle-trigger"><i class="mk-moon-share-2"></i></div>
@@ -115,7 +114,6 @@
         echo '</div>';
         ?>  
 	</div>
-</div>
 <!-- END MAIN INFO SECTION --> 
 						<div class="clearboth"></div>
                     </div>
@@ -131,8 +129,6 @@
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
 <!-- START TABBED CONTENT -->
-<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
-	<div style="" class="vc_col-sm-9 wpb_column column_container ">
 		<?php 
         if(get_field('biography', 'user_' . $user_id .'') || get_field('research_info', 'user_' . $user_id .'')) {
            echo '<div id="mk-tabs-54db5aa2f2863" class="mk-shortcode mk-tabs default-style  horizental-style"><ul class="mk-tabs-tabs">';
@@ -182,8 +178,6 @@
 
         echo '<div class="clearboth"></div></div><div id="ajax-54db5aa2f2863" class="mk-dynamic-styles"> #mk-tabs-54db5aa2f2863 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-54db5aa2f2863 .mk-tabs-panes, #mk-tabs-54db5aa2f2863 .mk-fancy-title span{ background-color: #fff; }';
         }?>    
-	</div>
-</div>
 <!-- END TABBED CONTENT -->
 						<div class="clearboth"></div>
                     </div>
@@ -193,7 +187,6 @@
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
 <!-- START PROFESSIONAL LINKS --> 
-<div style="" class="vc_col-sm-3 wpb_column column_container vc_custom_1423659749038 ">
 	 <?php
        if(get_field('cv', 'user_' . $user_id .'') || get_field('website_url', 'user_' . $user_id .'')) {
         echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional LInks</span></h3>';
@@ -245,7 +238,6 @@
         }
        echo '</div></div><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
     }?>     	
-</div>
 <!-- END PROFESSIONAL LINKS -->
 						<div class="clearboth"></div>
                     </div>
