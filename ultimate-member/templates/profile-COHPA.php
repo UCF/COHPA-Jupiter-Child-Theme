@@ -23,17 +23,10 @@
 	<div style="" class="vc_col-sm-4 wpb_column column_container ">
 		<div class="mk-image-shortcode mk-shortcode  lightbox-enabled align-left border_shadow-frame inside-image " style="max-width: 250px; margin-bottom:10px">
 			<div class="mk-image-inner">
-				<?php 		
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );			
-                $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
-                $image_output_src = bfi_thumb($image_src_array[0], array(
-                'width' => '600',
-                'height' => '700'
-                 ));
-                
-                if (get_field('upload_headshot', 'user_' . $user_id .'')) {
-                    echo '<img class="lightbox-true" alt="' . get_the_title() . '" title="' . get_the_title() . '" src="'. the_field('upload_headshot', 'user_' . $user_id .'', $image_width, $image_height) . '" itemprop="image" />';
-                    echo '<div class="mk-image-overlay"></div><a href="' . $image[0] . '" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox"><i class="mk-jupiter-icon-plus-circle"></i></a>';
+				<?php 		                
+                if (get_field('upload_headshot', 'user_' . $user_id .'')) { ?>
+                    <img class="lightbox-true" alt="TITLE" title="TITLE 2" src="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" width="600" height="700" itemprop="image" />';
+                    <?php echo '<div class="mk-image-overlay"></div><a href="' . $image[0] . '" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox"><i class="mk-jupiter-icon-plus-circle"></i></a>';
                 }else {
                     
                     echo '<img alt="' . get_the_title() . '" title="' . get_the_title() . '" src="' . get_site_url() . '/wp-content/uploads/2015/02/blank-profile.jpg" width="238" height="221" itemprop="image" />';
