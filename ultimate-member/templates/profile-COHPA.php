@@ -26,7 +26,7 @@
     
        <div class="single-social-section">
 
-            <?php if($mk_options['single_blog_social'] == 'true' ) : ?>
+            
             <div class="blog-share-container">
                 <div class="blog-single-share mk-toggle-trigger"><i class="mk-moon-share-2"></i></div>
                 <ul class="single-share-box mk-box-to-trigger">
@@ -37,7 +37,7 @@
                     <li><a class="linkedin-share" data-title="<?php the_title(); ?>" data-url="<?php echo get_permalink(); ?>" href="#"><i class="mk-jupiter-icon-simple-linkedin"></i></a></li>
                 </ul>
             </div>
-            <?php endif; ?>
+            
             <a class="mk-blog-print" onClick="window.print()" href="#" title="<?php _e('Print', 'mk_framework'); ?>"><i class="mk-moon-print-3"></i></a>
         <div class="clearboth"></div>
         </div>
