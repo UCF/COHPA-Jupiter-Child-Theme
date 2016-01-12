@@ -4,7 +4,7 @@
 <div class="um <?php echo $this->get_class( $mode ); ?> um-<?php echo $form_id; ?> um-role-<?php echo um_user('role'); ?> ">
 
 	<div class="um-form">
-	HELLO
+
     
     <a href="<?php echo um_user_profile_url(); ?>" class="um-profile-photo-img" title="<?php echo um_user('display_name'); ?>"><?php echo $overlay . get_avatar( um_user('ID'), $default_size ); ?></a>
     
@@ -13,6 +13,8 @@
 <?php
 
 	$user_id       = um_profile_id();
+	print($user_id);
+
 	?>
     
     
