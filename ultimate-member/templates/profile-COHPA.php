@@ -70,16 +70,16 @@ if ( $count != $i ) {
  }
  ?>
     
-    <?php if(get_field('phone_number')) { 
+    <?php if(get_field('phone_number', 'user_' . $user_id .'')) { 
  		echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
-		the_field('phone_number');
+		the_field('phone_number', 'user_' . $user_id .'');
 		echo '</div>';
 	}?>
-    <?php if(get_field('email_address')) { 
+    <?php if(get_field('email_address', 'user_' . $user_id .'')) { 
  		echo '<div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a href="mailto:';
-		the_field('email_address');
+		the_field('email_address', 'user_' . $user_id .'');
 		echo '">';
-		the_field('email_address');
+		the_field('email_address', 'user_' . $user_id .'');
 		echo '</a></div>';
 	}?> 
     <?php 
@@ -103,9 +103,9 @@ if ( $count != $i ) {
 	echo '">';
 	the_field('building');
 	echo '</a> ';
-	if(get_field('room_number')) { 
+	if(get_field('room_number', 'user_' . $user_id .'')) { 
 		echo ' Room: ';
-		the_field('room_number');
+		the_field('room_number', 'user_' . $user_id .'');
 	}
 	echo '</div>';
 	?>  
