@@ -96,21 +96,19 @@
                     
                     
                     
-                        <h2><?php the_title(); ?></h2>
+                        <h2><?php the_title(); ?>
+							<?php 
+                                if( get_field('degrees', 'user_' . $user_id .'') ) {
+                                    while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
+                                     $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
+                                    endwhile;
+                                    $degreeIDs = implode(', ', $arrayDegree);
+                                
+                                    echo '<span style=" font-size:12px !important;>" , ' . $degreeIDs; . '</span>';
+                                }
+                                ?>
                         
-                        <?php 
-							if( get_field('degrees', 'user_' . $user_id .'') ) {
-								while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
-								 $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
-								endwhile;
-								$degreeIDs = implode(', ', $arrayDegree);
-							
-								echo ',' . $degreeIDs;
-							}
-							
-							?>
-                        
-                        
+                        </h2>
                         
                         <h3 id="directoryJobTitle">
 							<?php 
