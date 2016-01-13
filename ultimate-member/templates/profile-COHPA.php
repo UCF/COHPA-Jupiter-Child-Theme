@@ -22,7 +22,9 @@
 		 )
  	));
 	echo '<ul>';
-	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello 2</li>';
+	foreach( $profilenews as $profilenew ) {
+		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello</li>';
+	}
 	echo '</ul>';
 	/* Restore original Post Data */
 wp_reset_postdata();
