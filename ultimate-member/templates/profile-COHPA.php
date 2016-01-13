@@ -32,7 +32,7 @@
 	<ul>
 		<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
             <li>
-				<?php the_sub_field('course_number', 'user_' . $user_id .''); ?> <?php the_sub_field('course_name', 'user_' . $user_id .''); ?><br />
+				<div id="directoryCourseTitle"><?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?></div>
                 <?php the_sub_field('course_description', 'user_' . $user_id .''); ?><br />
                 <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?><br />
                 <?php the_sub_field('course_url', 'user_' . $user_id .''); ?>
