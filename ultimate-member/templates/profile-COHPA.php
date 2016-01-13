@@ -23,7 +23,7 @@
  	));
 	echo '<ul>';
 	foreach( $profilenews as $profilenew ) {
-		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello</li>';
+		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
 	}
 	echo '</ul>';
 	/* Restore original Post Data */
@@ -184,13 +184,13 @@ wp_reset_postdata();
 								if(get_field('research_info', 'user_' . $user_id .'')) { 
 										echo '<li><a href="#1423603736-2-45">Research</a></li>';
 									}
-						echo '<li><a href="#1423658400557-2-999">News</a></li>';
+									
+								if($profilenews) { 
+										echo '<li><a href="#1423658400557-2-999">News</a></li>';
+									}
 						echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
 						echo '<li><a href="#1423658400557-2-555">Books</a></li>';
-								
-								//if($profilenews) { 
-										//echo '<li><a href="#1423658400557-2-999">News</a></li>';
-									//}
+
 						echo '<div class="clearboth"></div></ul><div class="mk-tabs-panes">';
 									
 								 if(get_field('biography', 'user_' . $user_id .'')) { 
@@ -205,7 +205,19 @@ wp_reset_postdata();
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
 								
-								echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>News Story 1</p><p>News Story 2</p><p>News Story 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								if($profilenews) { 
+									echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
+									echo '<ul>';
+										foreach( $profilenews as $profilenew ) {
+											echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
+										}
+									echo '</ul>';
+									/* Restore original Post Data */
+									wp_reset_postdata();
+									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								}
+								
+								
 								
 								echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Course number 1</p><p>course number 2</p><p>course number 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								
