@@ -99,9 +99,17 @@
                         
                         
                         <h3>
-							<?php while (have_rows('job_titles', 'user_' . $user_id .'') ): the_row(); ?>
-                           		<?php the_sub_field('job_title', 'user_' . $user_id .''); ?>
-                        	<?php endwhile; ?>
+							<?php 
+							if( get_field('job_titles', 'user_' . $user_id .'') ) {
+								while ( have_rows('job_titles', 'user_' . $user_id .'') ) : the_row();
+								 $array[] = get_sub_field('job_title', 'user_' . $user_id .''); 
+								endwhile;
+								$foo = implode(', ', $array);
+							
+								echo $foo;
+							}
+							
+							?>
                         </h3>
                         
                         <?php 
