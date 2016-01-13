@@ -96,8 +96,7 @@
                     
                     
                     
-                        <h2><?php the_title(); ?>
-							<?php 
+                        <h2><?php the_title();  
                                 if( get_field('degrees', 'user_' . $user_id .'') ) {
                                     while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
                                      $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
