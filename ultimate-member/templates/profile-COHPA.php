@@ -111,6 +111,10 @@
 							
 							?>
                         </h3>
+                        <?php the_field('department', 'user_' . $user_id .''); ?>
+                        
+                        
+                        
                         
                         <?php 
 						$terms = get_field('department');
