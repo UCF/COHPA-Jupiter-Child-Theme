@@ -246,13 +246,30 @@
 								
 								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
 								
-								<div style="background-color:#CCC; padding:20px;">
-                                    <div style="width:20%; margin-right:2%; height:100%; float:left; background-color:#666;">   
+								<div style="background-color:#f2f2f2; padding:20px; margin-bottom:20px;">
+                                    <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
                                         INSERT IMAGE HERE
                                     </div>
                                     
-                                    <div style="width:78%; height:100%; float:left;">   
-                                            <div>National Service and Volunteerism: Achieving Impact in Our Communities</div>
+                                    <div style="width:75%; height:100%; float:left;">   
+                                            <div style="font-size:18px; font-weight:bold;">National Service and Volunteerism: Achieving Impact in Our Communities</div>
+                                
+                                            Edited by Thomas A. Bryer, director of the Center for Public and Nonprofit Management and associate professor of public administration
+                                
+                                            <div>Published in: December 2014</div>
+                                    </div>
+                                    
+                                    <div style="clear:both;"></div>
+                                </div>
+                                
+                                
+                                <div style="background-color:#f2f2f2; padding:20px; margin-bottom:20px;">
+                                    <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
+                                        INSERT IMAGE HERE
+                                    </div>
+                                    
+                                    <div style="width:75%; height:100%; float:left;">   
+                                            <div style="font-size:18px; font-weight:bold;">National Service and Volunteerism: Achieving Impact in Our Communities</div>
                                 
                                             Edited by Thomas A. Bryer, director of the Center for Public and Nonprofit Management and associate professor of public administration
                                 
