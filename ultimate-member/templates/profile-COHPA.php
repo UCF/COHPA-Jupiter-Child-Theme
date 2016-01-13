@@ -256,7 +256,7 @@
                                 
                                             Edited by Thomas A. Bryer, director of the Center for Public and Nonprofit Management and associate professor of public administration
                                 
-                                            <div style="margin-top:10px;">Published in: December 2014</div>
+                                            <div style="margin-top:10px; font-style:italic;">Published in: December 2014</div>
                                     </div>
                                     
                                     <div style="clear:both;"></div>
