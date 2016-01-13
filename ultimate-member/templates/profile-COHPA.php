@@ -246,9 +246,9 @@
 								
 								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
 								
-								<div style="background-color:#f2f2f2; padding:20px; margin-bottom:20px;">
+								<div style="margin-bottom:20px; border-bottom:1px dashed #CCC;">
                                     <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
-                                        INSERT IMAGE HERE
+                                        <img src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/national_service_and_volunteerism_thumb.jpg" width="100%" />
                                     </div>
                                     
                                     <div style="width:75%; height:100%; float:left;">   
