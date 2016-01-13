@@ -200,7 +200,7 @@
 								
 								if($profilenews) { 
 									echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
-									echo '<ul>';
+									echo '<ul id="directoryNews">';
 										foreach( $profilenews as $profilenew ) {
 											echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
 										}
