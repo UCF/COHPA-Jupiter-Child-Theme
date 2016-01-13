@@ -24,7 +24,7 @@
 	
 	echo '<ul>';
 	foreach( $profilenews as $profilenew ) {
-		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
+		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello</li>';
 	}
 	echo '</ul>';
 ?>
