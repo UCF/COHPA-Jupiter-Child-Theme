@@ -215,9 +215,9 @@
 								}
 								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
 									echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
-									<ul>
+									<ul id="directoryCourseList">
 										<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
-                                            <li id="directoryCourseList">
+                                            <li>
                                                 <div id="directoryCourseTitle">
                                                     <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
                                                                 <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
