@@ -204,7 +204,7 @@
                 	<div style="text-align: left;" class="mk-text-block  true">
                     	<?php
 					   if(get_field('cv', 'user_' . $user_id .'') || get_field('website_url', 'user_' . $user_id .'')) {
-						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional LInks</span></h3>';
+						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h3>';
 									
 						if(get_field('cv', 'user_' . $user_id .'')) {
 							echo '<div id="directoryProfile-cv"><i style="color:#666;margin:4px;4px;" class="mk-moon-vcard  mk-size-small"></i> <a href="';
