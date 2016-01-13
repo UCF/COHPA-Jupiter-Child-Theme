@@ -175,7 +175,7 @@ wp_reset_postdata();
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
                     	<?php 
-						if(get_field('biography', 'user_' . $user_id .'') || get_field('research_info', 'user_' . $user_id .'')) {
+						if(get_field('biography', 'user_' . $user_id .'') || get_field('research_info', 'user_' . $user_id .'') || $profilenews) {
 						   echo '<div id="mk-tabs-54db5aa2f2863" class="mk-shortcode mk-tabs default-style  horizental-style"><ul class="mk-tabs-tabs">';
 								
 								if(get_field('biography', 'user_' . $user_id .'')) { 
