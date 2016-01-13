@@ -101,9 +101,9 @@
                         <?php 
 							if( get_field('degrees', 'user_' . $user_id .'') ) {
 								while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
-								 $array[] = get_sub_field('degree', 'user_' . $user_id .''); 
+								 $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
 								endwhile;
-								$degreeIDs = implode(', ', $array);
+								$degreeIDs = implode(', ', $arrayDegree);
 							
 								echo ',' . $degreeIDs;
 							}
@@ -116,9 +116,9 @@
 							<?php 
 							if( get_field('job_titles', 'user_' . $user_id .'') ) {
 								while ( have_rows('job_titles', 'user_' . $user_id .'') ) : the_row();
-								 $array[] = get_sub_field('job_title', 'user_' . $user_id .''); 
+								 $arrayJob[] = get_sub_field('job_title', 'user_' . $user_id .''); 
 								endwhile;
-								$jobTitles = implode(', ', $array);
+								$jobTitles = implode(', ', $arrayJob);
 							
 								echo $jobTitles;
 							}
