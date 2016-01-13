@@ -205,7 +205,9 @@
 								if($profilenews) { 
 										echo '<li><a href="#1423658400557-2-999">News</a></li>';
 									}
-						echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
+								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
+										echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
+									}
 						echo '<li><a href="#1423658400557-2-555">Books</a></li>';
 
 						echo '<div class="clearboth"></div></ul><div class="mk-tabs-panes">';
@@ -233,12 +235,34 @@
 									wp_reset_postdata();
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
+								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
+									echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
+									<ul id="directoryCourses">
+										<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
+                                            <li>
+                                                <div id="directoryCourseTitle">
+                                                    <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+                                                                <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
+                                                    <?php }?>
+                                                                <?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
+                                                    <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+                                                                </a>
+                                                    <?php }?>
+                                                </div>
+                                                <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
+                                                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> Semesters                                        
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+									<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								}?>
+								<?php endif; ?>
+								
+ 
 								
 								
 								
-								echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Course number 1</p><p>course number 2</p><p>course number 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
-								
-								echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Book Title 1</p><p>Book Title 2</p><p>Book Title 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Book Title 1</p><p>Book Title 2</p><p>Book Title 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								
 						echo '</div></div>';
 						}?>
