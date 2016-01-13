@@ -148,7 +148,7 @@
 							echo '</a></div>';
 						}?> 
 						<?php 
-						$buildingMap = the_field('building', 'user_' . $user_id .'');
+						$buildingMap = get_post_meta($post->ID, 'building', true);
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
 						if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 						if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
