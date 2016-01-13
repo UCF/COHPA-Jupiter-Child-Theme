@@ -42,7 +42,9 @@
 							echo '<a href="';
 							the_sub_field('course_url', 'user_' . $user_id .'');
 							echo '" target="_blank">TEST LINK</a>';
-						}?>
+				}?>
+                        
+                <?php endif; ?>
                 
             </li>
         <?php endwhile; ?>
