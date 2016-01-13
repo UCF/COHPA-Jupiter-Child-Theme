@@ -29,7 +29,7 @@
 
 
 <?php if (have_rows('add_courses', 'user_' . $user_id .'') ): ?>
-	<ul>
+	<ul id="directoryCourses">
 		<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
             <li>
 				<div id="directoryCourseTitle">
@@ -42,11 +42,7 @@
                     <?php }?>
                 </div>
                 <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
-                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> Semesters
-                
-                
-                
-                                        
+                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> Semesters                                        
             </li>
         <?php endwhile; ?>
 	</ul>
