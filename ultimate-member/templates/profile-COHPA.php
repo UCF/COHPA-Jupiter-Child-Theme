@@ -98,6 +98,18 @@
                     
                         <h2><?php the_title(); ?></h2>
                         
+                        <?php 
+							if( get_field('degrees', 'user_' . $user_id .'') ) {
+								while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
+								 $array[] = get_sub_field('degree', 'user_' . $user_id .''); 
+								endwhile;
+								$foo = implode(', ', $array);
+							
+								echo $foo;
+							}
+							
+							?>
+                        
                         
                         
                         <h3 id="directoryJobTitle">
@@ -114,6 +126,7 @@
 							?>
                         </h3>
                         <h4 id="directoryDepartments"><?php the_field('department', 'user_' . $user_id .''); ?></h4>
+                        
                         
                         
                         
