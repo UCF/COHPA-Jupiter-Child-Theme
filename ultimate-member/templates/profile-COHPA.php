@@ -10,6 +10,23 @@
 	$profile_link  = um_user_profile_url();
 	//print($user_id);
 	//print($profile_link);
+	
+	$profilenews = get_posts(array(			 
+    'post_type' => 'post', // "post" because I'm calling regular blog posts? 
+    'meta_query' => array(
+  array(  
+    'key' => 'directory_news', // slug of custom field
+    'value' => '"' . get_the_ID() . '"', // keep this to match current profile
+    'compare' => 'LIKE'
+       )
+ )
+ ));
+	
+	echo '<ul>';
+	foreach( $profilenews as $profilenew ) {
+		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
+	}
+	echo '</ul>';
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
