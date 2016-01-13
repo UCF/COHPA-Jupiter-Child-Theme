@@ -256,7 +256,6 @@
                                     </ul>
 									<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}?>
-								<?php endif; ?>
 								
  
 								
