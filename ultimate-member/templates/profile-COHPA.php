@@ -33,7 +33,13 @@
 		<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
             <li>
 				<?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-							<div id="directoryCourseTitle"><a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?></a></div>
+							<div id="directoryCourseTitle"><a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
+				 <?php }?>
+                 
+                 		<?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
+                 
+                 <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+							</a></div>
 				 <?php }?>
                 
                 <?php the_sub_field('course_description', 'user_' . $user_id .''); ?><br />
