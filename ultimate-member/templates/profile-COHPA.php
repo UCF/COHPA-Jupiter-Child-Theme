@@ -148,7 +148,7 @@
 							echo '</a></div>';
 						}?> 
 						<?php 
-						$buildingMap = get_post_meta($post->ID, 'building', true);
+						$buildingMap = the_field('building', 'user_' . $user_id .'');
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
 						if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 						if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
@@ -164,9 +164,9 @@
 						if ($buildingMap == 'UCF Valencia Osceola') {echo 'http://map.ucf.edu/locations/valencia-osceola/valencia-osceola/';}
 						if ($buildingMap == 'UCF Valencia West') {echo 'http://map.ucf.edu/locations/valencia-west/valencia-west/';}
 						echo '" target="_blank" title="Map to ';
-						the_field('building');
+						the_field('building', 'user_' . $user_id .'');
 						echo '">';
-						the_field('building');
+						the_field('building', 'user_' . $user_id .'');
 						echo '</a> ';
 						if(get_field('room_number', 'user_' . $user_id .'')) { 
 							echo ' Room: ';
