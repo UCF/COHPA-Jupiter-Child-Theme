@@ -21,13 +21,6 @@
 			  )
 		 )
  	));
-	echo '<ul>';
-	foreach( $profilenews as $profilenew ) {
-		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
-	}
-	echo '</ul>';
-	/* Restore original Post Data */
-wp_reset_postdata();
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
