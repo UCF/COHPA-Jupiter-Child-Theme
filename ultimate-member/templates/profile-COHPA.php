@@ -98,7 +98,7 @@
                         
                         
                         
-                        <h3>
+                        <h3 id="directoryJobTitle">
 							<?php 
 							if( get_field('job_titles', 'user_' . $user_id .'') ) {
 								while ( have_rows('job_titles', 'user_' . $user_id .'') ) : the_row();
