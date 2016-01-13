@@ -230,9 +230,9 @@
                                                 
 												<?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
                                                 
-												<?php if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
-                                                                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  
-                                                <?php }?>
+												<?php //if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
+                                                               <!-- Typically Available in: <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  -->
+                                                <?php //}?>
                                     
                                             </li>
                                         <?php endwhile; ?>
