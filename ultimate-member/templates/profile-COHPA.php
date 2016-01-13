@@ -14,14 +14,13 @@
 	$profilenews = get_posts(array(			 
     'post_type' => 'post', // "post" because I'm calling regular blog posts? 
     'meta_query' => array(
-  array(  
-    'key' => 'directory_news', // slug of custom field
-    'value' => '"' . get_the_ID() . '"', // keep this to match current profile
-    'compare' => 'LIKE'
-       )
- )
- ));
-	print($profilenews);
+  		array(  
+			'key' => 'directory_news', // slug of custom field
+			'value' => '"' . um_profile_id() . '"', // keep this to match current profile
+			'compare' => 'LIKE'
+			  )
+		 )
+ 	));
 	echo '<ul>';
 	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello 2</li>';
 	echo '</ul>';
