@@ -8,6 +8,8 @@
 <?php
 	$user_id       = um_profile_id();
 	$profile_link  = um_user_profile_url();
+	$building_map = the_field('building', 'user_' . $user_id .'');
+	print($building_map);
 	//print($user_id);
 	//print($profile_link);
 	
@@ -26,6 +28,7 @@
  	));
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
+
 
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
@@ -148,7 +151,6 @@
 							echo '</a></div>';
 						}?> 
 						<?php 
-						$buildingMap = get_post_meta($post->ID, 'building', true);
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
 						if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 						if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
