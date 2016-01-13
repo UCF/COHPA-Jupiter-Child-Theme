@@ -103,9 +103,9 @@
 								while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
 								 $array[] = get_sub_field('degree', 'user_' . $user_id .''); 
 								endwhile;
-								$foo = implode(', ', $array);
+								$degreeIDs = implode(', ', $array);
 							
-								echo $foo;
+								echo ',' . $degreeIDs;
 							}
 							
 							?>
@@ -118,9 +118,9 @@
 								while ( have_rows('job_titles', 'user_' . $user_id .'') ) : the_row();
 								 $array[] = get_sub_field('job_title', 'user_' . $user_id .''); 
 								endwhile;
-								$foo = implode(', ', $array);
+								$jobTitles = implode(', ', $array);
 							
-								echo $foo;
+								echo $jobTitles;
 							}
 							
 							?>
