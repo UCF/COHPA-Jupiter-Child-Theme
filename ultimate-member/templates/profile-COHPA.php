@@ -10,6 +10,8 @@
 	$profile_link  = um_user_profile_url();
 	$building_map = the_field('building', 'user_' . $user_id .'');
 	print($building_map);
+	print($building_map);
+	print($building_map);
 	//print($user_id);
 	//print($profile_link);
 	
