@@ -111,7 +111,7 @@
 							
 							?>
                         </h3>
-                        <?php the_field('department', 'user_' . $user_id .''); ?>
+                        <h4 id="directoryDepartments"><?php the_field('department', 'user_' . $user_id .''); ?></h4>
                         
                         
                         
