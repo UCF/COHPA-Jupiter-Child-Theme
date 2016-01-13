@@ -215,7 +215,7 @@
 								}
 								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
 									echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
-									<ul id="directoryCourseList">
+									<ul>
 										<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
                                             <li>
                                                 <div id="directoryCourseTitle">
@@ -244,7 +244,25 @@
 								
 								
 								
-								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><p>Book Title 1</p><p>Book Title 2</p><p>Book Title 3</p><div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
+								
+								<div style="background-color:#CCC; padding:20px;">
+                                    <div style="width:20%; margin-right:2%; height:100%; float:left; background-color:#666;">   
+                                        INSERT IMAGE HERE
+                                    </div>
+                                    
+                                    <div style="width:78%; height:100%; float:left;">   
+                                            <div>National Service and Volunteerism: Achieving Impact in Our Communities</div>
+                                
+                                            Edited by Thomas A. Bryer, director of the Center for Public and Nonprofit Management and associate professor of public administration
+                                
+                                            <div>Published in: December 2014</div>
+                                    </div>
+                                    
+                                    <div style="clear:both;"></div>
+                                </div>
+								
+								<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								
 						echo '</div></div>';
 						}?>
