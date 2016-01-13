@@ -8,7 +8,7 @@
 <?php
 	$user_id       = um_profile_id();
 	$profile_link  = um_user_profile_url();
-	$buildingMap = the_field('building', 'user_' . $user_id .'');
+	$buildingMap = get_field('building', 'user_' . $user_id .'');
 	//print($user_id);
 	//print($profile_link);
 	
