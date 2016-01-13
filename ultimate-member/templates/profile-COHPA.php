@@ -13,6 +13,7 @@
 	
 	$profilenews = get_posts(array(			 
     'post_type' => 'post', // "post" because I'm calling regular blog posts? 
+	'posts_per_page' => '1',
     'meta_query' => array(
   		array(  
 			'key' => 'directory_news', // slug of custom field
