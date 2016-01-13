@@ -38,7 +38,7 @@
                 
                 
                 
-                <?php if(get_field('course_url', 'user_' . $user_id .'')) { ?>
+                <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
 							<!-- <a href=" " target="_blank">TEST LINK</a>-->
                             <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?>
 				 <?php }?>
