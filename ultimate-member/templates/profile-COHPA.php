@@ -34,15 +34,14 @@
             <li>
 				<div id="directoryCourseTitle"><?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?></div>
                 <?php the_sub_field('course_description', 'user_' . $user_id .''); ?><br />
-                <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?><br />
+                <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?><br />
                 
                 
                 
-                <?php //if(the_sub_field('course_url', 'user_' . $user_id .'')) {
-							//echo '<a href="';
-							//the_sub_field('course_url', 'user_' . $user_id .'');
-							//echo '" target="_blank">TEST LINK</a>';
-				//}?>
+                <?php if(the_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+							<!-- <a href=" " target="_blank">TEST LINK</a>-->
+                            <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?>
+				 <?php }?>
                                         
             </li>
         <?php endwhile; ?>
