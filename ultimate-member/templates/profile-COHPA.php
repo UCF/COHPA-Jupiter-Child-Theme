@@ -28,6 +28,13 @@
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
 
+<?php if (have_rows('add_courses', 'user_' . $user_id .'') ):
+	while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
+		<h2><?php the_sub_field('course_number'); ?></h2>
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
