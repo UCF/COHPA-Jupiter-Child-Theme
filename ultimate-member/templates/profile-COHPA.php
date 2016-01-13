@@ -21,10 +21,9 @@
        )
  )
  ));
-	
+	print($profilenews);
 	echo '<ul>';
-	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello </li>';
-	the_field('directory_news', 'user_' . $user_id .'');
+	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello 2</li>';
 	echo '</ul>';
 	/* Restore original Post Data */
 wp_reset_postdata();
