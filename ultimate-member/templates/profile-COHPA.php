@@ -28,28 +28,6 @@
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
 
-<?php if (have_rows('add_courses', 'user_' . $user_id .'') ): ?>
-	<ul id="directoryCourses">
-		<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
-            <li>
-				<div id="directoryCourseTitle">
-					<?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
-                    <?php }?>
-                            	<?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
-                    <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                </a>
-                    <?php }?>
-                </div>
-                <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
-                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> Semesters                                        
-            </li>
-        <?php endwhile; ?>
-	</ul>
-<?php endif; ?>
-
-
-
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
 		<div style="text-align: left;" class="mk-text-block  true">
@@ -249,8 +227,13 @@
                                                                 </a>
                                                     <?php }?>
                                                 </div>
-                                                <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
-                                                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> Semesters                                        
+                                                
+												<?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
+                                                
+												<?php if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
+                                                                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  
+                                                <?php }?>
+                                    
                                             </li>
                                         <?php endwhile; ?>
                                     </ul>
