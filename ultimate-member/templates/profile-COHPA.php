@@ -96,7 +96,13 @@
                     
                         <h2><?php the_title(); ?></h2>
                         
-                        <h3><?php the_sub_field('job_title', 'user_' . $user_id .''); ?></h3>
+                        
+                        
+                        <h3>
+							<?php while (have_rows('job_titles', 'user_' . $user_id .'') ): the_row(); ?>
+                           		<?php the_sub_field('job_title', 'user_' . $user_id .''); ?>
+                        	<?php endwhile; ?>
+                        </h3>
                         
                         <?php 
 						$terms = get_field('department');
