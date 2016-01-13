@@ -41,9 +41,8 @@
                                 </a>
                     <?php }?>
                 </div>
-                <?php the_sub_field('course_description', 'user_' . $user_id .''); ?><br />
-                <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?><br />
-                <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?>
+                <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
+                Typically Available in: <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?> Semesters
                 
                 
                 
