@@ -15,7 +15,7 @@
     'post_type' => 'post', // "post" because I'm calling regular blog posts? 
     'meta_query' => array(
   array(  
-    'key' => 'directory_news', 'user_' . $user_id .'', // slug of custom field
+    'key' => 'directory_news', // slug of custom field
     'value' => '"' . get_the_ID() . '"', // keep this to match current profile
     'compare' => 'LIKE'
        )
@@ -23,10 +23,10 @@
  ));
 	
 	echo '<ul>';
-	foreach( $profilenews as $profilenew ) {
-		echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello</li>';
-	}
+	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a> hello</li>';
 	echo '</ul>';
+	/* Restore original Post Data */
+wp_reset_postdata();
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
