@@ -28,10 +28,17 @@
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
 
-<?php if (have_rows('add_courses', 'user_' . $user_id .'') ):
-	while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
-		<h2><?php the_sub_field('course_number'); ?></h2>
-	<?php endwhile; ?>
+<?php if (have_rows('add_courses', 'user_' . $user_id .'') ): ?>
+	<ul>
+		<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
+            <li>
+				<?php the_sub_field('course_number', 'user_' . $user_id .''); ?> <?php the_sub_field('course_name', 'user_' . $user_id .''); ?><br />
+                <?php the_sub_field('course_description', 'user_' . $user_id .''); ?><br />
+                <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?><br />
+                <?php the_sub_field('course_url', 'user_' . $user_id .''); ?>
+            </li>
+        <?php endwhile; ?>
+	</ul>
 <?php endif; ?>
 
 
