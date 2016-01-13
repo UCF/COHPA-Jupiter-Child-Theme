@@ -32,16 +32,15 @@
 	<ul>
 		<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
             <li>
-				<?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-							<div id="directoryCourseTitle"><a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
-				 <?php }?>
-                 
-                 		<?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
-                 
-                 <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-							</a></div>
-				 <?php }?>
-                
+				<div id="directoryCourseTitle">
+					<?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+                                <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
+                    <?php }?>
+                            	<?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
+                    <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+                                </a>
+                    <?php }?>
+                </div>
                 <?php the_sub_field('course_description', 'user_' . $user_id .''); ?><br />
                 <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?><br />
                 <?php the_sub_field('course_semesters', 'user_' . $user_id .''); ?>
