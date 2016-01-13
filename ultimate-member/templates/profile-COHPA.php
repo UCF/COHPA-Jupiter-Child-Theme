@@ -15,7 +15,7 @@
     'post_type' => 'post', // "post" because I'm calling regular blog posts? 
     'meta_query' => array(
   array(  
-    'key' => 'directory_news', // slug of custom field
+    'key' => 'directory_news', 'user_' . $user_id .'', // slug of custom field
     'value' => '"' . get_the_ID() . '"', // keep this to match current profile
     'compare' => 'LIKE'
        )
