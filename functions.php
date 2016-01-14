@@ -5,7 +5,7 @@
 		}
 		add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
-add_image_size( 'faculty_directory', 100, 200, true ); // Hard crop center center
+add_image_size( 'faculty', 100, 200, true ); // Hard crop center center
 
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
