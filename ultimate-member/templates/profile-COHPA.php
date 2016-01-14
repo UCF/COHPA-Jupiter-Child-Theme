@@ -88,9 +88,7 @@ $image_FDurl = $image_FDarray[0];
 
  
 ?>
-
-<!-- Usages-->
- <img src="<?php echo $image_FDurl;?>" />   HELLO                        
+                  
 
   
                     
@@ -107,7 +105,9 @@ $image_FDurl = $image_FDarray[0];
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
                     
-                    
+         
+<!-- Usages-->
+ <img src="<?php echo $image_FDurl;?>" />   HELLO                 
                     
                     
                     
