@@ -105,7 +105,7 @@ else { ?>
                     
                     
                                        
-<?php if ( get_field( 'disable_lightbox' ) ): ?>
+<?php if ( get_field( 'disable_lightbox', 'user_' . $user_id .'') ): ?>
 
 This is displayed when the field_name is TRUE or has a value.
 
