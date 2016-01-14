@@ -60,15 +60,26 @@ if(get_field('upload_headshot', 'user_' . $user_id .'')) { ?>
 <?php }
 else { ?> 
 	<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />
-<?php } ?>                        
-                        
+<?php } ?>  
+
+                   
                     <div class="mk-image-overlay"></div>
                     <a href="http://davidjanosik.com/cohpa/wp-content/uploads/2015/02/David-Headshot-1.jpg" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
                     	<i class="mk-jupiter-icon-plus-circle"></i>
                     </a>                    
 
                     
-
+<?php
+if( get_field('field_name') )
+{
+    echo "do something";
+}
+else
+{
+    echo "do something else";
+}
+?>                        
+     
                     
 
                     
