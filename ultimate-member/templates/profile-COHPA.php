@@ -227,13 +227,7 @@
                                   	<h4>Credentials</h4>
 									
 									<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
-                                        <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?>
-                                        	<?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>
-                                                        , <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); ?>
-                                            <?php }?>
-                                            <?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>
-                                                        , <?php the_sub_field('degree_location', 'user_' . $user_id .''); ?>
-                                            <?php }?>  
+                                        <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
                                         </li>
                                     <?php endwhile; ?>
 																				
