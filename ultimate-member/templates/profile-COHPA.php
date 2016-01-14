@@ -66,17 +66,7 @@ else { ?>
                                         
 
                     
-<?php
-if( get_field('disable_lightbox') )
-{
-    echo "the lightbox has been disabled";
-}
-else { ?> 
-    <div class="mk-image-overlay"></div>
-    <a href="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
-        <i class="mk-jupiter-icon-plus-circle"></i>
-    </a>       
-<?php } ?>                        
+                   
      
                     
 
@@ -92,7 +82,17 @@ else { ?>
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
                     
-                    
+<?php
+if( get_field('disable_lightbox') )
+{
+    echo "the lightbox has been disabled";
+}
+else { ?> 
+    <div class="mk-image-overlay"></div>
+    <a href="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
+        <i class="mk-jupiter-icon-plus-circle"></i>
+    </a>       
+<?php } ?>                    
                     
                     
                     
