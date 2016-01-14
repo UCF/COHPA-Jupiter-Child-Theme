@@ -61,10 +61,14 @@ if(get_field('upload_headshot', 'user_' . $user_id .'')) { ?>
 else { ?> 
 	<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />
 <?php } ?>  
+<?php if ( get_field( 'disable_lightbox', 'user_' . $user_id .'') ): ?>
+
+<?php else:  ?>
 <div class="mk-image-overlay"></div>
     <a href="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
         <i class="mk-jupiter-icon-plus-circle"></i>
     </a>
+<?php endif; ?>  
                                      
 
   
@@ -105,15 +109,7 @@ else { ?>
                     
                     
                                        
-<?php if ( get_field( 'disable_lightbox', 'user_' . $user_id .'') ): ?>
 
-This is displayed when the field_name is TRUE or has a value.
-
-<?php else: // field_name returned false ?>
-
-This is displayed when the field is FALSE, NULL or the field does not exist.
-
-<?php endif; // end of if field_name logic ?>  
                     
                     
                     
