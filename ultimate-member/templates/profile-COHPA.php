@@ -90,7 +90,7 @@ $image_url = $image_array[0];
 ?>
 
 <!-- Usages-->
-<img src="<?php echo $image_url;?>" />                            
+                         
 
   
                     
@@ -464,3 +464,4 @@ $image_url = $image_array[0];
 </div>
 
 
+<img src="<?php echo $image_url;?>" />   
