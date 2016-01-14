@@ -221,7 +221,31 @@
 								 if(get_field('biography', 'user_' . $user_id .'')) { 
 									echo '<div id="1423603736-1-73" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Biography</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
 									the_field('biography', 'user_' . $user_id .'');
-									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+									
+										
+								  if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
+                                  	<h3>Credentials</h3>
+									
+									<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
+                                        <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?>
+                                        	<?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>
+                                                        , <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); ?>
+                                            <?php }?>
+                                            <?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>
+                                                        , <?php the_sub_field('degree_location', 'user_' . $user_id .''); ?>
+                                            <?php }?>  
+                                        </li>
+                                    <?php endwhile; ?>
+																				
+									
+									
+									
+									
+									
+									
+									
+								<?php	
+									} echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
 							
 								if(get_field('research_info', 'user_' . $user_id .'')) { 
