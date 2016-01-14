@@ -224,7 +224,8 @@
 									
 										
 								  if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
-									<div style="font-size:18px; font-weight:bold;">Credentials</div>
+                                  	<h4>Credentials</h4>
+									
 									<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
                                         <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?>
                                         	<?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>
