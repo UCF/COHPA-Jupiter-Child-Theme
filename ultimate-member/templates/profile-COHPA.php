@@ -96,7 +96,7 @@
                     
                     
                     
-                        <h2><?php the_title();?>
+                        <h2><?php the_title();?></h2>
 							<?php 
                                 if( get_field('degrees', 'user_' . $user_id .'') ) {
                                     while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
@@ -108,7 +108,7 @@
                                 }
                                 ?>
                         
-                        </h2>
+                        
                         
                         <h3 id="directoryJobTitle">
 							<?php 
