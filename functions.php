@@ -5,9 +5,8 @@
 		}
 		add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
-function supported() {
         add_image_size('faculties', 300, 100, true);
-    }
+
 
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
