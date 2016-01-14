@@ -50,7 +50,22 @@
 
             <div class="mk-image-inner">
 
-            	    <img class="lightbox-true" alt="David Janosik" title="David Janosik" src="http://davidjanosik.com/cohpa/wp-content/uploads/bfi_thumb/David-Headshot-1-m4othlawsg7c9lrp8a1r66gp7ft67qt1qb1k6psj88.jpg" itemprop="image" /><div class="mk-image-overlay"></div><a href="http://davidjanosik.com/cohpa/wp-content/uploads/2015/02/David-Headshot-1.jpg" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox"><i class="mk-jupiter-icon-plus-circle"></i></a>                    
+
+
+
+
+<?php
+if(get_field('upload_headshot', 'user_' . $user_id .'')) { ?> 
+	<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" itemprop="image" />
+<?php }
+else { ?> 
+	<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />
+<?php } ?>                        
+                        
+                    <div class="mk-image-overlay"></div>
+                    <a href="http://davidjanosik.com/cohpa/wp-content/uploads/2015/02/David-Headshot-1.jpg" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
+                    	<i class="mk-jupiter-icon-plus-circle"></i>
+                    </a>                    
 
                     
 
