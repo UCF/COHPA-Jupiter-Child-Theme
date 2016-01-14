@@ -374,6 +374,29 @@
 						}
 					   echo '</div></div><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
 					}?>
+                    
+                    
+                    
+                    <?php
+					   if (have_rows('affiliations', 'user_' . $user_id .'') ) { 
+						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block"><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span>Affiliations</span></h3>';?>
+							<?php while (have_rows('affiliations', 'user_' . $user_id .'') ): the_row(); ?>
+                                <div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
+                                        <a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
+                                </div>                     
+                            <?php  endwhile;
+						echo '<p>&nbsp;</p><div class="clearboth"></div></div>';}?>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 						<div class="clearboth"></div>
                     </div>
                 </div>
