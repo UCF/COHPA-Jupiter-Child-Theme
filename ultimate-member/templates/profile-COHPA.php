@@ -63,22 +63,20 @@ else { ?>
 <?php } ?>  
 
                    
-                    <div class="mk-image-overlay"></div>
-                    <a href="http://davidjanosik.com/cohpa/wp-content/uploads/2015/02/David-Headshot-1.jpg" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
-                    	<i class="mk-jupiter-icon-plus-circle"></i>
-                    </a>                    
+                                        
 
                     
 <?php
-if( get_field('field_name') )
+if( get_field('disable_lightbox') )
 {
-    echo "do something";
+    echo "the lightbox has been disabled";
 }
-else
-{
-    echo "do something else";
-}
-?>                        
+else { ?> 
+    <div class="mk-image-overlay"></div>
+    <a href="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
+        <i class="mk-jupiter-icon-plus-circle"></i>
+    </a>       
+<?php } ?>                        
      
                     
 
