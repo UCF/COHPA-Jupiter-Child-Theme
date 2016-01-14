@@ -103,8 +103,9 @@
                                      $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
                                     endwhile;
                                     $degreeIDs = implode(', ', $arrayDegree);
-                                
-                                    echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+                                    echo $degreeIDs;
+
+                                   // echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
                                 }
                                 ?>
                         
