@@ -345,7 +345,7 @@
 				
 					<?php 
 					if(get_field('facebook_url', 'user_' . $user_id .'') || get_field('linkedin_url', 'user_' . $user_id .'') || get_field('twitter_url', 'user_' . $user_id .'') || get_field('google_url', 'user_' . $user_id .'') || get_field('youtube_url', 'user_' . $user_id .'')) {
-					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h3><div id="cohpa-directoryDetail-rightcolumn"><div id="cohpa-directoryDetail-rightcolumn-GRAY">';
+					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h3>';
 					
 					if(get_field('facebook_url', 'user_' . $user_id .'')) {
 							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
@@ -372,7 +372,7 @@
 							the_field('youtube_url', 'user_' . $user_id .'');
 							echo '" target="_blank">YouTube</a></div>';
 						}
-					   echo '<p>&nbsp;</p></div></div><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
+					   echo '<p>&nbsp;</p></div>';
 					}?>
                     
                     
@@ -385,7 +385,7 @@
                                         <a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
                                 </div>                     
                             <?php  endwhile;
-						echo '</div></div><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';
+						echo '</div>';
 					}?>                    
                     
                     
