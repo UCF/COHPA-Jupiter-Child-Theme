@@ -96,18 +96,16 @@
                     
                     
                     
-                        <h2 style="display: inline;"><?php the_title();?></h2>
-							<?php 
-                                if( get_field('degrees', 'user_' . $user_id .'') ) {
-                                    while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
-                                     $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
-                                    endwhile;
-                                    $degreeIDs = implode(', ', $arrayDegree);
-                                    echo $degreeIDs;
-
-                                   // echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
-                                }
-                                ?>
+                        <h2 style="display: inline;"><?php the_title();?></h2><?php if( get_field('degrees', 'user_' . $user_id .'') ) {
+																					while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
+																					 $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
+																					endwhile;
+																					$degreeIDs = implode(', ', $arrayDegree);
+																					echo $degreeIDs;
+												
+																				   // echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+																				}
+																				?>
                         
                         
                         
