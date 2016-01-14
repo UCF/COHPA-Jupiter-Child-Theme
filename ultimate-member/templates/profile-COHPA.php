@@ -74,23 +74,23 @@ else { ?>
          <?php
  
 // get the image field ID returned by ACF first
-$image_id = get_field('upload_headshot', 'user_' . $user_id .'');
+$image_FDid = get_field('upload_headshot', 'user_' . $user_id .'');
 
 // define your image size
-$image_size = 'faculty_directory';
+$image_FDsize = 'faculty_directory';
 
 // Pass in the $image_id in the first parameter
 // and the image size registered in functions.php
-$image_array = wp_get_attachment_image_src($image_id, $image_size);
+$image_FDarray = wp_get_attachment_image_src($image_FDid, $image_FDsize);
 
 // extract & store the URL from $image_array
-$image_url = $image_array[0];
+$image_FDurl = $image_FDarray[0];
 
  
 ?>
 
 <!-- Usages-->
-                         
+ <img src="<?php echo $image_FDurl;?>" />   HELLO                        
 
   
                     
@@ -464,4 +464,3 @@ $image_url = $image_array[0];
 </div>
 
 
-<img src="<?php echo $image_url;?>" />   
