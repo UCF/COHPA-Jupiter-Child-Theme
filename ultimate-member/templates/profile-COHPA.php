@@ -339,7 +339,7 @@
                         	<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
                         </div>
                        <?php  endwhile;
-						echo '<p>&nbsp;</p><div id="facultytabContainer"></div><div id="facultytabpage_2" class="facultytabpage"></div><h2></h2><div class="clearboth"></div></div>';}?>	
+						echo '<p>&nbsp;</p></div>';}?>	
                         
                         
 				
