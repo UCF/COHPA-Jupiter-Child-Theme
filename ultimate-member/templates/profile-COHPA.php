@@ -69,7 +69,28 @@ else { ?>
 	<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />
 <?php } ?>  
 
-                                     
+         
+         
+         <?php
+ 
+// get the image field ID returned by ACF first
+$image_id = get_field('upload_headshot', 'user_' . $user_id .'');
+
+// define your image size
+$image_size = 'faculty_directory';
+
+// Pass in the $image_id in the first parameter
+// and the image size registered in functions.php
+$image_array = wp_get_attachment_image_src($image_id, $image_size);
+
+// extract & store the URL from $image_array
+$image_url = $image_array[0];
+
+ 
+?>
+
+<!-- Usages-->
+<img src="<?php echo $image_url;?>" />                            
 
   
                     
