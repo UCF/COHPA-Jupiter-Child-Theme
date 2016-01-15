@@ -13,6 +13,22 @@ function custom_thumbs() {
 }
 add_action( 'after_setup_theme', 'custom_thumbs' );
 
+if ( function_exists( 'add_image_size' ) ) {
+add_image_size( 'Mysize-200', 200, 200 );
+add_image_size( 'Mysize-400', 400, 400 );
+add_image_size( 'Mysize-500', 500, 500 );
+add_image_size( 'Mysize-500tall-1000wide', 1000, 500 );
+}
+add_filter('image_size_names_choose', 'my_image_sizes');
+function my_image_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'Mysize-200' => __('Mysize-200'),
+        'Mysize-400' => __('Mysize-400'),
+        'Mysize-500' => __('Mysize-500'),
+        'Mysize-500tall-1000wide' => __('Mysize-500tall-1000wide'),
+    ) );
+}
+
 
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
