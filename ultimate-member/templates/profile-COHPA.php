@@ -55,12 +55,10 @@
             
 <?php            
 foreach( $profilebooks as $profilebook ) {?> 
-    <?php //echo get_the_post_thumbnail( $profilebook->ID ); ?>
+    <?php echo wp_get_attachment_url( get_post_thumbnail_id( $profilebook->ID ) ); ?>
     <?php echo '<li><a href="' . get_permalink( $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
 <?php echo get_field( "book_citation", $profilebook->ID ); ?> 
 <?php echo get_field( "book_url", $profilebook->ID ); ?> 
-<?php echo get_field( "book_department", $profilebook->ID ); ?> 
-<?php echo get_field( "book_faculty", $profilebook->ID ); ?> 
 <?php } 
 
 /* Restore original Post Data */
