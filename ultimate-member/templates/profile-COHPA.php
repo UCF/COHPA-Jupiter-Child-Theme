@@ -55,15 +55,12 @@
             
 <?php            
 foreach( $profilebooks as $profilebook ) {?> 
-    <?php the_title();?>
-    <?php the_post_thumbnail(); ?>
-	<?php the_field('book_citation'); ?>
-    <?php the_field('book_url'); ?> 
-    <?php get_field('book_department'); ?> 
-    <?php get_field('book_faculty'); ?>  
+    <?php echo get_the_post_thumbnail( $profilebook->ID ); ?>
     <?php echo '<li><a href="' . get_permalink( $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
-    hello
-    <?php echo get_field( "book_url", $profilebook->ID ); ?> 
+<?php echo get_field( "book_citation", $profilebook->ID ); ?> 
+<?php echo get_field( "book_url", $profilebook->ID ); ?> 
+<?php echo get_field( "book_department", $profilebook->ID ); ?> 
+<?php echo get_field( "book_faculty", $profilebook->ID ); ?> 
 <?php } 
 
 /* Restore original Post Data */
