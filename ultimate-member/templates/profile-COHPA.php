@@ -25,6 +25,20 @@
 			  )
 		 )
  	));
+	
+	$profilebooks = get_posts(array(			 
+    'post_type' => 'scholarly-books', // "post" because I'm calling regular blog posts? 
+	'posts_per_page' => '10',
+	'order' => 'DESC',
+    'orderby' => 'date',
+    'meta_query' => array(
+  		array(  
+			'key' => 'book_faculty', // slug of custom field
+			'value' => '"' . um_profile_id() . '"', // keep this to match current profile
+			'compare' => 'LIKE'
+			  )
+		 )
+ 	));
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
@@ -39,9 +53,11 @@
 ?>
 
             
-            
-            
-            
+<?php            
+foreach( $profilebooks as $profilebook ) {
+	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
+}         
+?>            
             
             
             
