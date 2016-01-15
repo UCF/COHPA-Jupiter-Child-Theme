@@ -107,12 +107,12 @@ $image_url = $image_array[0];
                     
          
 <!-- Usages-->
- <img src="<?php echo $image_url;?>" />   HELLO4
+ <img src="<?php echo $image_url;?>" />   HELLO5
  
 <?php 
 
 $imageasd = get_field('upload_headshot', 'user_' . $user_id .'');
-$sizeasd = 'faculty'; // (thumbnail, medium, large, full or custom size)
+$sizeasd = 'Mysize-200'; // (thumbnail, medium, large, full or custom size)
 
 if( $imageasd ) {
 
