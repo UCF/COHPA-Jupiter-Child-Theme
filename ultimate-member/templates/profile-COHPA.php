@@ -43,7 +43,7 @@ $image = get_field('upload_headshot', 'user_' . $user_id .'');
 	$caption = $image['caption'];
 
 	// thumbnail
-	$size = 'thumbnail';
+	$size = 'faculty';
 	$thumb = $image['sizes'][ $size ];
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
