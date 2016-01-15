@@ -38,14 +38,14 @@
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
-<?php echo $urlFaculty; ?>
-<?php echo $titleFaculty; ?>
-<?php echo $thumbFaculty; ?>
-<?php echo $altFaculty; ?>
-<?php echo $widthFaculty; ?>
-<?php echo $heightFaculty; ?>
+<?php print($urlFaculty); ?>
+<?php print($titleFaculty); ?>
+<?php print($thumbFaculty); ?>
+<?php print($altFaculty); ?>
+<?php print($widthFaculty); ?>
+<?php print($heightFaculty); ?>
 
-HELLO 1
+HELLO 2
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
