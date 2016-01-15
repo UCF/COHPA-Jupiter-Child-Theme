@@ -62,6 +62,8 @@ foreach( $profilebooks as $profilebook ) {?>
     <?php get_field('book_department'); ?> 
     <?php get_field('book_faculty'); ?>  
     <?php echo '<li><a href="' . get_permalink( $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
+    hello
+    <?php echo get_field( "book_url", $profilebook->ID ); ?> 
 <?php } 
 
 /* Restore original Post Data */
