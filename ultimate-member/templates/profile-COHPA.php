@@ -111,7 +111,7 @@ $image_url = $image_array[0];
  
 <?php 
 
-$imageasd = get_field('image');
+$imageasd = get_field('upload_headshot', 'user_' . $user_id .'');
 $sizeasd = 'faculty'; // (thumbnail, medium, large, full or custom size)
 
 if( $imageasd ) {
