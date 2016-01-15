@@ -54,11 +54,19 @@
 
             
 <?php            
-foreach( $profilebooks as $profilebook ) {
-	echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
-}         
+foreach( $profilebooks as $profilebook ) {?> 
+    <?php the_title();?>
+    <?php the_post_thumbnail(); ?>
+	<?php the_field('book_citation'); ?>
+    <?php the_field('book_url'); ?> 
+    <?php the_field('book_department'); ?> 
+    <?php the_field('book_faculty'); ?>  
+    
+<?php } 
+/* Restore original Post Data */
+wp_reset_postdata();    
 ?>            
-            
+       
             
             
 
