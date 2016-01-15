@@ -107,36 +107,20 @@ $image_url = $image_array[0];
                     
          
 <!-- Usages-->
- <img src="<?php echo $image_url;?>" />   HELLO3
+ <img src="<?php echo $image_url;?>" />   HELLO4
  
 <?php 
 
-$image = get_field('upload_headshot', 'user_' . $user_id .'');
+$imageasd = get_field('image');
+$sizeasd = 'faculty'; // (thumbnail, medium, large, full or custom size)
 
-if( !empty($image) ): 
+if( $imageasd ) {
 
-	// vars
-	$url = $image['url'];
-	$title = $image['title'];
-	$alt = $image['alt'];
-	$caption = $image['caption'];
+	echo wp_get_attachment_image( $imageasd, $sizeasd );
 
-	// thumbnail
-	$size = 'faculty';
-	$thumb = $image['sizes'][ $size ];
-	$width = $image['sizes'][ $size . '-width' ];
-	$height = $image['sizes'][ $size . '-height' ];?> 
+}
 
-
-	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
-
-		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
-
-	</a>
-
-
-
-<?php endif; ?>          
+?>         
                     
                     
                     
