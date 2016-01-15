@@ -259,7 +259,10 @@ else { ?>
 								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
 										echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
 									}
-						echo '<li><a href="#1423658400557-2-555">Books</a></li>';
+								if($profilebooks) { 
+										echo '<li><a href="#1423658400557-2-555">Books</a></li>';
+									}
+									
 
 						echo '<div class="clearboth"></div></ul><div class="mk-tabs-panes">';
 									
