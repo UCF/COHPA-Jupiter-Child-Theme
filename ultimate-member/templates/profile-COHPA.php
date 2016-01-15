@@ -71,24 +71,7 @@ else { ?>
 
          
          
-         <?php
- 
-// get the image field ID returned by ACF first
-$image_id = get_field('upload_headshot', 'user_' . $user_id .'');
-
-// define your image size
-$image_size = 'Mysize-200';
-
-// Pass in the $image_id in the first parameter
-// and the image size registered in functions.php
-$image_array = wp_get_attachment_image_src($image_id, $image_size);
-
-// extract & store the URL from $image_array
-$image_url = $image_array[0];
-
- 
-?>
-                  
+            
 
   
                     
@@ -107,7 +90,7 @@ $image_url = $image_array[0];
                     
          
 <!-- Usages-->
- <img src="<?php echo $image_url;?>" />   HELLO5
+HELLO6
  
 <?php 
 

@@ -14,7 +14,7 @@ function custom_thumbs() {
 add_action( 'after_setup_theme', 'custom_thumbs' );
 
 if ( function_exists( 'add_image_size' ) ) {
-add_image_size( 'Mysize-200', 200, 200 );
+add_image_size( 'Mysize-200', 200, 200, array( 'center', 'center')  );
 add_image_size( 'Mysize-400', 400, 400 );
 add_image_size( 'Mysize-500', 500, 500 );
 add_image_size( 'Mysize-500tall-1000wide', 1000, 500 );
