@@ -8,11 +8,7 @@
 <?php
 	$user_id       = um_profile_id();
 	$profile_link  = um_user_profile_url();
-	$buildingMap = get_field('building', 'user_' . $user_id .'');
-	
-	$imageFaculty = get_field('upload_headshot', 'user_' . $user_id .'');
-	$sizeFaculty = 'faculty'; // (thumbnail, medium, large, full or custom size)
-   
+	$buildingMap = get_field('building', 'user_' . $user_id .'');   
 	//print($user_id);
 	//print($profile_link);
 	
@@ -43,34 +39,14 @@ $image = get_field('upload_headshot', 'user_' . $user_id .'');
 	$caption = $image['caption'];
 
 	// thumbnail
-	$size = 'Mysize-200';
+	$size = 'faculty';
 	$thumb = $image['sizes'][ $size ];
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
 
 ?>
 
-		<div class="wp-caption">
 
-inside div
-
-	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
-
-		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
-
-	</a>
-
-
-
-			<p class="wp-caption-text"><?php echo $caption; ?></p>
-
-		</div>
-
-
-
-
-
-HELLO 4
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
@@ -97,12 +73,12 @@ HELLO 4
 
 
 <?php
-if( $imageFaculty ) { 
-	echo wp_get_attachment_image( $imageFaculty, $sizeFaculty ) ?> 
+if( $image ) { ?>
+	<img src="<?php echo $thumb; ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
 	<?php if ( get_field( 'disable_lightbox', 'user_' . $user_id .'') ): ?>
 	<?php else:  ?>
     <div class="mk-image-overlay"></div>
-        <a href="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
+        <a href="<?php echo $url; ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
             <i class="mk-jupiter-icon-plus-circle"></i>
         </a>
     <?php endif; ?>  
