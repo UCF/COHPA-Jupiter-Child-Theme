@@ -9,7 +9,7 @@
  
 
 function faculty_thumbs() {
-    add_image_size('faculty', 300, 300, true  );
+    add_image_size('faculty', 500, 600, true  );
 }
 add_action( 'after_setup_theme', 'faculty_thumbs' );
 
