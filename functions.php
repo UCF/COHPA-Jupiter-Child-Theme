@@ -8,10 +8,10 @@
 
  
 
-function custom_thumbs() {
-    add_image_size('faculty', 1140, 580, true);
+function faculty_thumbs() {
+    add_image_size('faculty', 500, 600, true);
 }
-add_action( 'after_setup_theme', 'custom_thumbs' );
+add_action( 'after_setup_theme', 'faculty_thumbs' );
 
 if ( function_exists( 'add_image_size' ) ) {
 add_image_size( 'Mysize-200', 200, 200, array( 'center', 'center')  );

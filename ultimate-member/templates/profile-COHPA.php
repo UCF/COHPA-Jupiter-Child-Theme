@@ -90,16 +90,16 @@ else { ?>
                     
          
 <!-- Usages-->
-HELLO6
+HELLO7
  
 <?php 
 
-$imageasd = get_field('upload_headshot', 'user_' . $user_id .'');
-$sizeasd = 'Mysize-200'; // (thumbnail, medium, large, full or custom size)
+$imageFaculty = get_field('upload_headshot', 'user_' . $user_id .'');
+$sizeFaculty = 'faculty'; // (thumbnail, medium, large, full or custom size)
 
-if( $imageasd ) {
+if( $imageFaculty ) {
 
-	echo wp_get_attachment_image( $imageasd, $sizeasd );
+	echo wp_get_attachment_image( $imageFaculty, $sizeFaculty );
 
 }
 
