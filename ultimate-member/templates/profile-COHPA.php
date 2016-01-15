@@ -12,13 +12,7 @@
 	
 	$imageFaculty = get_field('upload_headshot', 'user_' . $user_id .'');
 	$sizeFaculty = 'faculty'; // (thumbnail, medium, large, full or custom size)
-    $thumbFaculty = $imageFaculty['sizes'][ $sizeFaculty ];
-	$widthFaculty = $imageFaculty['sizes'][ $sizeFaculty . '-width' ];
-	$heightFaculty = $imageFaculty['sizes'][ $sizeFaculty . '-height' ];
-	$urlFaculty = $imageFaculty['url'];
-	$titleFaculty = $imageFaculty['title'];
-	$altFaculty = $imageFaculty['alt'];
-	$captionFaculty = $imageFaculty['caption'];
+   
 	//print($user_id);
 	//print($profile_link);
 	
@@ -38,14 +32,45 @@
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
-<?php print($urlFaculty); ?>
-<?php print($titleFaculty); ?>
-<?php print($thumbFaculty); ?>
-<?php print($altFaculty); ?>
-<?php print($widthFaculty); ?>
-<?php print($heightFaculty); ?>
+<?php 
 
-HELLO 2
+$image = get_field('upload_headshot', 'user_' . $user_id .'');
+
+	// vars
+	$url = $image['url'];
+	$title = $image['title'];
+	$alt = $image['alt'];
+	$caption = $image['caption'];
+
+	// thumbnail
+	$size = 'thumbnail';
+	$thumb = $image['sizes'][ $size ];
+	$width = $image['sizes'][ $size . '-width' ];
+	$height = $image['sizes'][ $size . '-height' ];
+
+?>
+
+		<div class="wp-caption">
+
+inside div
+
+	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+
+		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+
+	</a>
+
+
+
+			<p class="wp-caption-text"><?php echo $caption; ?></p>
+
+		</div>
+
+
+
+
+
+HELLO 4
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
