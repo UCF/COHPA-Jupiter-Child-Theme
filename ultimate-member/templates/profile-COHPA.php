@@ -109,15 +109,45 @@ $image_url = $image_array[0];
 <!-- Usages-->
  <img src="<?php echo $image_url;?>" />   HELLO2
  
- <?php 
+<?php 
 
-$image123 = get_field('upload_headshot', 'user_' . $user_id .'');
+$image = get_field('upload_headshot', 'user_' . $user_id .'');
 
-echo '<pre>';
-	var_dump( $image123 );
-echo '</pre>';
+if( !empty($image) ): 
 
-?>                 
+	// vars
+	$url = $image['url'];
+	$title = $image['title'];
+	$alt = $image['alt'];
+	$caption = $image['caption'];
+
+	// thumbnail
+	$size = 'Mysize-200';
+	$thumb = $image['sizes'][ $size ];
+	$width = $image['sizes'][ $size . '-width' ];
+	$height = $image['sizes'][ $size . '-height' ];
+
+	if( $caption ): ?>
+
+		<div class="wp-caption">
+
+	<?php endif; ?>
+
+	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+
+		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+
+	</a>
+
+	<?php if( $caption ): ?>
+
+			<p class="wp-caption-text"><?php echo $caption; ?></p>
+
+		</div>
+
+	<?php endif; ?>
+
+<?php endif; ?>          
                     
                     
                     
