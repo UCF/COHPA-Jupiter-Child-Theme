@@ -9,9 +9,16 @@
 	$user_id       = um_profile_id();
 	$profile_link  = um_user_profile_url();
 	$buildingMap = get_field('building', 'user_' . $user_id .'');
+	
 	$imageFaculty = get_field('upload_headshot', 'user_' . $user_id .'');
 	$sizeFaculty = 'faculty'; // (thumbnail, medium, large, full or custom size)
-
+    $thumbFaculty = $imageFaculty['sizes'][ $sizeFaculty ];
+	$widthFaculty = $imageFaculty['sizes'][ $sizeFaculty . '-width' ];
+	$heightFaculty = $imageFaculty['sizes'][ $sizeFaculty . '-height' ];
+	$urlFaculty = $imageFaculty['url'];
+	$titleFaculty = $imageFaculty['title'];
+	$altFaculty = $imageFaculty['alt'];
+	$captionFaculty = $imageFaculty['caption'];
 	//print($user_id);
 	//print($profile_link);
 	
@@ -31,6 +38,12 @@
 ?>
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
+<?php echo $urlFaculty; ?>
+<?php echo $titleFaculty; ?>
+<?php echo $thumbFaculty; ?>
+<?php echo $altFaculty; ?>
+<?php echo $widthFaculty; ?>
+<?php echo $heightFaculty; ?>
 
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
