@@ -55,7 +55,7 @@
             
 <?php            
 foreach( $profilebooks as $profilebook ) {?> 
-    <?php echo get_the_post_thumbnail( $profilebook->ID ); ?>
+    <?php //echo get_the_post_thumbnail( $profilebook->ID ); ?>
     <?php echo '<li><a href="' . get_permalink( $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
 <?php echo get_field( "book_citation", $profilebook->ID ); ?> 
 <?php echo get_field( "book_url", $profilebook->ID ); ?> 
