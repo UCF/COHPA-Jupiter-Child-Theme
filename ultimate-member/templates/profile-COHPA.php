@@ -107,7 +107,7 @@ $image_url = $image_array[0];
                     
          
 <!-- Usages-->
- <img src="<?php echo $image_url;?>" />   HELLO2
+ <img src="<?php echo $image_url;?>" />   HELLO3
  
 <?php 
 
@@ -122,16 +122,11 @@ if( !empty($image) ):
 	$caption = $image['caption'];
 
 	// thumbnail
-	$size = 'Mysize-200';
+	$size = 'faculty';
 	$thumb = $image['sizes'][ $size ];
 	$width = $image['sizes'][ $size . '-width' ];
-	$height = $image['sizes'][ $size . '-height' ];
+	$height = $image['sizes'][ $size . '-height' ];?> 
 
-	if( $caption ): ?>
-
-		<div class="wp-caption">
-
-	<?php endif; ?>
 
 	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
 
@@ -139,13 +134,7 @@ if( !empty($image) ):
 
 	</a>
 
-	<?php if( $caption ): ?>
 
-			<p class="wp-caption-text"><?php echo $caption; ?></p>
-
-		</div>
-
-	<?php endif; ?>
 
 <?php endif; ?>          
                     
