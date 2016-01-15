@@ -45,6 +45,7 @@
 <?php echo $widthFaculty; ?>
 <?php echo $heightFaculty; ?>
 
+HELLO 1
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
