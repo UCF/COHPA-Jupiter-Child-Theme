@@ -24,6 +24,10 @@ function my_image_sizes( $sizes ) {
 }
 
 
+
+
+
+
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
 	?>
@@ -32,6 +36,7 @@ function admin_styles() {
 			height: 100px !important;
 			min-height: 100px;
 		}
+		tr.user-url-wrap{ display: none; }
 	</style>
 	<?php
 }
