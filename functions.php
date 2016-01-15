@@ -6,13 +6,12 @@
 		add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
 
-        
+ 
 
-function supports() {
+function custom_thumbs() {
     add_image_size('faculty', 1140, 580, true);
-    }
-
-
+}
+add_action( 'after_setup_theme', 'custom_thumbs' );
 
 
 add_action('admin_head', 'admin_styles');
