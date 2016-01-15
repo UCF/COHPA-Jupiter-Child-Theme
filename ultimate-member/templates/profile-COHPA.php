@@ -51,21 +51,7 @@
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
 ?>
-
-            
-<?php            
-foreach( $profilebooks as $profilebook ) {?> 
-    <?php echo wp_get_attachment_url( get_post_thumbnail_id($profilebook->ID) ); ?>
-    <?php echo '<li><a href="' . get_field( "book_url", $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
-<?php echo get_field( "book_citation", $profilebook->ID ); ?> 
-<?php } 
-
-/* Restore original Post Data */
-wp_reset_postdata();    
-?>            
-       
-            
-            
+ 
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
@@ -366,6 +352,58 @@ else { ?>
                                     
                                     <div style="clear:both;"></div>
                                 </div>
+                                
+                                
+                                <?php            
+									foreach( $profilebooks as $profilebook ) {?>
+                                    
+                                    <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #e6e6e6;">
+                                        <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
+                                            <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($profilebook->ID) ); ?>" width="100%" />
+                                        </div>
+                                        <div style="width:75%; height:100%; float:left;">   
+                                                <div style="font-size:18px; font-weight:bold;">
+                                                	<?php if(get_field( "book_url", $profilebook->ID )) { ?>
+                                                                <a href="<?php echo get_field( "book_url", $profilebook->ID ); ?>" title="" target="_blank">
+                                                    <?php }?>
+                                                	
+                                                		<?php echo get_the_title( $profilebook->ID ); ?>
+                                                        
+                                                    <?php if(get_field( "book_url", $profilebook->ID )) { ?>
+                                                                </a>
+                                                    <?php }?>
+                                                </div>
+                                                <?php echo get_field( "book_citation", $profilebook->ID ); ?>
+                                    
+                                                <div style="margin-top:10px; font-style:italic;">Published in: December 2014</div>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                               <?php } 
+									
+									/* Restore original Post Data */
+									wp_reset_postdata();    
+								?>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                                 
                                 
                                 <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #CCC;">
