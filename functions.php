@@ -36,7 +36,7 @@ function admin_styles() {
 			height: 100px !important;
 			min-height: 100px;
 		}
-		tr.user-url-wrap, user-description-wrap, user-rich-editing-wrap{ display: none; }
+		tr.user-url-wrap, tr.user-description-wrap, tr.user-rich-editing-wrap{ display: none; }
 	</style>
 	<?php
 }
