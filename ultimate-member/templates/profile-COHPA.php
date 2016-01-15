@@ -337,23 +337,6 @@ else { ?>
 								
 								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
 								
-								<div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #e6e6e6;">
-                                    <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
-                                        <img src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/national_service_and_volunteerism_thumb.jpg" width="100%" />
-                                    </div>
-                                    
-                                    <div style="width:75%; height:100%; float:left;">   
-                                            <div style="font-size:18px; font-weight:bold;">National Service and Volunteerism: Achieving Impact in Our Communities</div>
-                                
-                                            Edited by Thomas A. Bryer, director of the Center for Public and Nonprofit Management and associate professor of public administration
-                                
-                                            <div style="margin-top:10px; font-style:italic;">Published in: December 2014</div>
-                                    </div>
-                                    
-                                    <div style="clear:both;"></div>
-                                </div>
-                                
-                                
                                 <?php            
 									foreach( $profilebooks as $profilebook ) {?>
                                     
@@ -375,7 +358,7 @@ else { ?>
                                                 </div>
                                                 <?php echo get_field( "book_citation", $profilebook->ID ); ?>
                                     
-                                                <div style="margin-top:10px; font-style:italic;">Published in: December 2014</div>
+                                                <div style="margin-top:10px; font-style:italic;">Published in: <?php echo get_the_date( 'F Y', $profilebook->ID ); ?></div>
                                         </div>
                                         <div style="clear:both;"></div>
                                     </div>
