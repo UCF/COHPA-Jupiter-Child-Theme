@@ -385,42 +385,6 @@ else { ?>
 									wp_reset_postdata();    
 								?>
                                 
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #CCC;">
-                                    <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
-                                        <img src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2015/11/national_service_and_volunteerism_thumb.jpg" width="100%" />
-                                    </div>
-                                    
-                                    <div style="width:75%; height:100%; float:left;">   
-                                            <div style="font-size:18px; font-weight:bold;">National Service and Volunteerism: Achieving Impact in Our Communities</div>
-                                
-                                            Edited by Thomas A. Bryer, director of the Center for Public and Nonprofit Management and associate professor of public administration
-                                
-                                            <div style="margin-top:10px;">Published in: December 2014</div>
-                                    </div>
-                                    
-                                    <div style="clear:both;"></div>
-                                </div>
 								
 								<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								
