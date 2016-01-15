@@ -340,12 +340,12 @@ else { ?>
                                 <?php            
 									foreach( $profilebooks as $profilebook ) {?>
                                     
-                                    <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #e6e6e6;">
+                                    <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #d9d9d9;">
                                         <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
                                             <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($profilebook->ID) ); ?>" width="100%" />
                                         </div>
                                         <div style="width:75%; height:100%; float:left;">   
-                                                <div style="font-size:18px; font-weight:bold;">
+                                                <div style="font-size:18px; font-weight:bold; margin-bottom:10px;">
                                                 	<?php if(get_field( "book_url", $profilebook->ID )) { ?>
                                                                 <a href="<?php echo get_field( "book_url", $profilebook->ID ); ?>" title="" target="_blank">
                                                     <?php }?>
