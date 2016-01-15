@@ -29,24 +29,22 @@
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
 <?php 
-
-$image = get_field('upload_headshot', 'user_' . $user_id .'');
-
+	$image = get_field('upload_headshot', 'user_' . $user_id .'');
 	// vars
 	$url = $image['url'];
-	$title = $image['title'];
-	$alt = $image['alt'];
-	$caption = $image['caption'];
-
-	// thumbnail
 	$size = 'faculty';
 	$thumb = $image['sizes'][ $size ];
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
-
 ?>
 
-
+            
+            
+            
+            
+            
+            
+            
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-3 wpb_column column_container ">
