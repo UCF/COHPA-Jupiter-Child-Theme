@@ -5,7 +5,14 @@
 		}
 		add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
-        add_image_size('faculty', 1140, 580, true);
+
+        
+function child_theme_setup() {
+    add_image_size('faculty', 1140, 580, true);
+}
+add_action( 'after_setup_theme', 'child_theme_setup', 11 );
+
+
 
 
 add_action('admin_head', 'admin_styles');
