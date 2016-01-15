@@ -55,10 +55,9 @@
             
 <?php            
 foreach( $profilebooks as $profilebook ) {?> 
-    <?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id( $profilebook->ID ) ); ?>
-    <?php echo '<li><a href="' . get_permalink( $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
+    <?php echo wp_get_attachment_url( get_post_thumbnail_id( $profilebook->ID ) ); ?>
+    <?php echo '<li><a href="' . get_field( "book_url", $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
 <?php echo get_field( "book_citation", $profilebook->ID ); ?> 
-<?php echo get_field( "book_url", $profilebook->ID ); ?> 
 <?php } 
 
 /* Restore original Post Data */
