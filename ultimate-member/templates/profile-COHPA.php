@@ -77,7 +77,7 @@ else { ?>
 $image_id = get_field('upload_headshot', 'user_' . $user_id .'');
 
 // define your image size
-$image_size = 'faculty';
+$image_size = 'Mysize-200';
 
 // Pass in the $image_id in the first parameter
 // and the image size registered in functions.php
