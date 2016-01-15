@@ -9,6 +9,9 @@
 	$user_id       = um_profile_id();
 	$profile_link  = um_user_profile_url();
 	$buildingMap = get_field('building', 'user_' . $user_id .'');
+	$imageFaculty = get_field('upload_headshot', 'user_' . $user_id .'');
+	$sizeFaculty = 'faculty'; // (thumbnail, medium, large, full or custom size)
+
 	//print($user_id);
 	//print($profile_link);
 	
@@ -55,8 +58,8 @@
 
 
 <?php
-if(get_field('upload_headshot', 'user_' . $user_id .'')) { ?> 
-	<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php the_field('upload_headshot', 'user_' . $user_id .''); ?>" itemprop="image" />
+if( $imageFaculty ) { 
+	echo wp_get_attachment_image( $imageFaculty, $sizeFaculty ) ?> 
 	<?php if ( get_field( 'disable_lightbox', 'user_' . $user_id .'') ): ?>
 	<?php else:  ?>
     <div class="mk-image-overlay"></div>
@@ -89,21 +92,7 @@ else { ?>
                 	<div style="text-align: left;" class="mk-text-block  true">
                     
          
-<!-- Usages-->
-HELLO7
- 
-<?php 
-
-$imageFaculty = get_field('upload_headshot', 'user_' . $user_id .'');
-$sizeFaculty = 'faculty'; // (thumbnail, medium, large, full or custom size)
-
-if( $imageFaculty ) {
-
-	echo wp_get_attachment_image( $imageFaculty, $sizeFaculty );
-
-}
-
-?>         
+        
                     
                     
                     
