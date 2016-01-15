@@ -38,6 +38,8 @@ function admin_styles() {
 		}
 		tr.user-url-wrap, tr.user-description-wrap, tr.user-rich-editing-wrap, tr.user-comment-shortcuts-wrap, tr.user-admin-bar-front-wrap, tr.user-profile-picture, tr.user-nickname-wrap{ display: none; }
 		#profile-page h2 { display: none; }
+		#profile-page h3 { display: none; }
+		input #twitter { display: none; } 
 	</style>
 	<?php
 }
