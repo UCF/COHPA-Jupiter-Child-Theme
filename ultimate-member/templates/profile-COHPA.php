@@ -335,7 +335,9 @@ else { ?>
 								
 								
 								
-								<?php echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
+								<?php 
+								if($profilebooks) { 
+								echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
 								
                                 <?php            
 									foreach( $profilebooks as $profilebook ) {?>
@@ -369,9 +371,9 @@ else { ?>
 								?>
                                 
 								
-								<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
+								<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>'; }?>
 								
-						echo '</div></div>';
+						 <?php echo '</div></div>';
 						}?>
 						<div class="clearboth"></div>
                     </div>
