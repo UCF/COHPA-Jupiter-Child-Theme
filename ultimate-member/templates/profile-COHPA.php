@@ -107,7 +107,17 @@ $image_url = $image_array[0];
                     
          
 <!-- Usages-->
- <img src="<?php echo $image_url;?>" />   HELLO2                 
+ <img src="<?php echo $image_url;?>" />   HELLO2
+ 
+ <?php 
+
+$image123 = get_field('upload_headshot', 'user_' . $user_id .'');
+
+echo '<pre>';
+	var_dump( $image123 );
+echo '</pre>';
+
+?>                 
                     
                     
                     
