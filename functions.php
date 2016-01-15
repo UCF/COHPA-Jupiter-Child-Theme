@@ -36,7 +36,7 @@ function admin_styles() {
 			height: 100px !important;
 			min-height: 100px;
 		}
-		tr.user-url-wrap, tr.user-description-wrap, tr.user-rich-editing-wrap, tr.user-comment-shortcuts-wrap, tr.user-admin-bar-front-wrap, tr.user-profile-picture{ display: none; }
+		tr.user-url-wrap, tr.user-description-wrap, tr.user-rich-editing-wrap, tr.user-comment-shortcuts-wrap, tr.user-admin-bar-front-wrap, tr.user-profile-picture, tr.user-nickname-wrap{ display: none; }
 		#profile-page h2 { display: none; }
 	</style>
 	<?php
