@@ -59,8 +59,8 @@ foreach( $profilebooks as $profilebook ) {?>
     <?php the_post_thumbnail(); ?>
 	<?php the_field('book_citation'); ?>
     <?php the_field('book_url'); ?> 
-    <?php the_field('book_department'); ?> 
-    <?php the_field('book_faculty'); ?>  
+    <?php get_field('book_department'); ?> 
+    <?php get_field('book_faculty'); ?>  
     <?php echo '<li><a href="' . get_permalink( $profilebook->ID ) . '">' . get_the_title( $profilebook->ID ) . '</a></li>' ?>
 <?php } 
 
