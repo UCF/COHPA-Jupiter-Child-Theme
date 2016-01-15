@@ -295,7 +295,7 @@ else { ?>
 									the_field('research_info', 'user_' . $user_id .'');
 									
 									
-									<h4>Research Interests</h4>
+									echo '<h4>Research Interests</h4>';
 									the_field('research_interests', 'user_' . $user_id .'');
 									
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
