@@ -7,10 +7,10 @@
 
 
         
-function child_theme_setup() {
+
+function supports() {
     add_image_size('faculty', 1140, 580, true);
-}
-add_action( 'after_setup_theme', 'child_theme_setup', 11 );
+    }
 
 
 
