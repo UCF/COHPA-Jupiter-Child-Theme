@@ -228,8 +228,10 @@ else { ?>
 							the_field('room_number', 'user_' . $user_id .'');
 						}
 						echo '</div>';
-						?> HELLO WORLD 
+						?> 
 						<div class="clearboth"></div> 
+                        
+                        HELLO WORLD  
                     </div>
                 </div>
             </div>
