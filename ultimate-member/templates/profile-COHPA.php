@@ -230,6 +230,7 @@ else { ?>
 						echo '</div>';
 						?> 
 						<div class="clearboth"></div>
+                        Hello
                     </div>
                 </div>
             </div>
