@@ -230,11 +230,15 @@ else { ?>
 						echo '</div>';
 						?> 
 						<div class="clearboth"></div>
-                        Hello
+                        
                     </div>
                 </div>
             </div>
         </div>
+        
+        Hello WORLD
+        
+        
         <div style="padding: 20px 0 40px;" class="mk-divider mk-shortcode divider_full_width center shadow_line ">
         	<div class="divider-inner"><span class="divider-shadow-left"></span><span class="divider-shadow-right"></span></div>
         </div>
