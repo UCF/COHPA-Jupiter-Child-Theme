@@ -1,4 +1,4 @@
-<?php /* Template: COHPA Profile */ ?>
+<?php /* Template: COHPA NEW Profile */ ?>
 
 
 
