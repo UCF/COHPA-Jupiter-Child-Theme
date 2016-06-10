@@ -309,7 +309,26 @@ else { ?>
 									echo '<h4>Research Interests</h4>';
 									
 									
-									the_field('research_interests', 'user_' . $user_id .'', $term);
+								
+									
+								
+
+									$terms = get_field('research_interests', 'user_' . $user_id .'', $term);
+									
+									if( $terms ): 
+									
+										<ul>
+									
+										foreach( $terms as $term ): 
+									
+											<h2>$term->name;</h2>
+											
+									
+										 endforeach; 
+									
+										</ul>
+									
+									endif;
 									
 									
 									
