@@ -309,28 +309,32 @@ else { ?>
 									echo '<h4>Research Interests</h4>';
 									
 									
-								
+									the_field('research_interests', 'user_' . $user_id .'', $term);
 									
-								
+                                    echo '<h4>TRY LOOP</h4>';
+									
+									?>
+                                    
+									<?php 
 
-									$terms = get_field('research_interests', 'user_' . $user_id .'', $term);
+									$termswer = get_field('research_interests', 'user_' . $user_id .'', $term);
 									
-									if( $terms ): 
+									if( $termswer ): ?>
 									
 										<ul>
 									
-										foreach( $terms as $term ): 
+										<?php foreach( $termswer as $term ): ?>
 									
-											<h2>$term->name;</h2>
-											
+											<h2><?php echo $term->name; ?></h2>
+											<p><?php echo $term->description; ?></p>
 									
-										 endforeach; 
+										<?php endforeach; ?>
 									
 										</ul>
 									
-									endif;
+									<?php endif; ?>
 									
-									
+								<?php 	
 									
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
