@@ -41,7 +41,53 @@ get_header(); ?>
             <div class="clearboth"></div>
         </div>
 	</div>
-  
+    
+	<div style="" class="vc_col-sm-6 wpb_column column_container ">
+		<h2 style="font-size: 25px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-575b11ad34b3b" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style directoryNameFixer"><span style="">
+        	<a title="David Janosik" href="https://www.cohpa.ucf.edu/directory/david-janosik/" target="_parent">David Janosik</a></span>
+        </h2>
+        <div class="clearboth"></div>	
+        
+        <div style=" margin-bottom:10px;text-align: left;" class="mk-text-block  true">
+        	<div id="cohpa-directory-name">
+            	<strong>Web Applications Developer</strong><br />
+				<span class="color-lightgray">Dean&#8217;s Office</span><br />
+				<span class="color-lightgray">Phone: </span>407-823-5884<br />
+				<span class="color-lightgray">Email: </span><a title="Contact David Janosik" href="mailto:djanosik@ucf.edu">djanosik@ucf.edu</a></div>
+				<div class="clearboth"></div>
+            </div> 	
+            <div style="text-align: left;" class="mk-text-block  true">
+            	<div id="cohpa-directory-name"></div>
+				<div>Location: <a class="color-darkGold" title="Map to HPA I" href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: 341</div>
+				<div class="clearboth"></div>
+            </div> 
+		</div>
+        
+		<div style="" class="vc_col-sm-4 wpb_column column_container ">
+			<h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-575b11ad3535c" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
+            	<span style="">Additional Info</span>
+            </h2>
+            <div class="clearboth"></div>	
+            <div style="text-align: left;" class="mk-text-block  true">
+            	<p>
+                	<a title="Curriculum Vitae for David Janosik" href="https://www.cohpa.ucf.edu/media/496089/janosik-2013.pdf" target="_parent">
+                    	<i class="mk-icon-file-pdf-o mk-size-small" style="color: #c1c1c1; margin: 4px 4px;"></i> Curriculum Vitae
+                    </a><br />
+					<a title="Curriculum Vitae for David Janosik" href="https://www.cohpa.ucf.edu/media/496089/janosik-2013.pdf" target="_parent">
+                    	<i class="mk-icon-external-link-square mk-size-small" style="color: #c1c1c1; margin: 4px 4px;"></i> Personal Website
+                    </a><br />
+					<a title="Curriculum Vitae for David Janosik" href="https://www.cohpa.ucf.edu/media/496089/janosik-2013.pdf" target="_parent">
+                    	<i class="mk-icon-facebook-square mk-size-small" style="color: #c1c1c1; margin: 4px 4px;"></i> Facebook
+                    </a><br />
+					<a title="Curriculum Vitae for David Janosik" href="https://www.cohpa.ucf.edu/media/496089/janosik-2013.pdf" target="_parent">
+                    	<i class="mk-moon-linkedin mk-size-small" style="color: #c1c1c1; margin: 4px 4px;"></i> Linkedin
+                    </a></p>
+					<div class="clearboth"></div>
+                </div> 
+			</div>
+        </div>
+    </div>
+
 	
 <?php
 $args = array(
