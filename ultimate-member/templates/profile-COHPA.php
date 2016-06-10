@@ -311,7 +311,7 @@ else { ?>
 									if( $termswer ): 
 									echo '<h4>Research Interests</h4>';
 									?>
-										<ul>
+										<ul id="capitalText">
 										<?php foreach( $termswer as $term ): ?>
 											<li><?php echo $term->name; ?></li>
 										<?php endforeach; ?>
