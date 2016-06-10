@@ -308,14 +308,20 @@ else { ?>
 									
 									echo '<h4>Research Interests</h4>';
 									
+									echo 'ONE';
+									the_field('research_interests', $term);
 									
-									
+									echo 'TWO';
 									$related = get_field('research_interests', $queried_object);
 									if ($related) {
 													  foreach ($related as $term) {
 														echo $term->name;
 													  }
 													}
+									echo 'THREE';
+									$selected = get_field('selected_tags');
+									$selectags = implode(",",$selected);
+									the_tags('Tags: ', ', ', '');
 									
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
