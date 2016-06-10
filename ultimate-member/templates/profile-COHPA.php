@@ -309,17 +309,17 @@ else { ?>
 									echo '<h4>Research Interests</h4>';
 									
 									echo 'ONE';
-									the_field('research_interests', $term);
+									the_field('research_interests', 'user_' . $user_id .'', $term);
 									
 									echo 'TWO';
-									$related = get_field('research_interests', $queried_object);
+									$related = get_field('research_interests', 'user_' . $user_id .'', $queried_object);
 									if ($related) {
 													  foreach ($related as $term) {
 														echo $term->name;
 													  }
 													}
 									echo 'THREE';
-									$selected = get_field('research_interests');
+									$selected = get_field('research_interests', 'user_' . $user_id .'');
 									$selectags = implode(",",$selected);
 									the_tags('Tags: ', ', ', '');
 									
@@ -329,7 +329,7 @@ else { ?>
 									echo 'FOUR';?>
 								<?php 
 								
-								$terms = get_field('research_interests');
+								$terms = get_field('research_interests', 'user_' . $user_id .'');
 								
 								if( $terms ): ?>
 								
