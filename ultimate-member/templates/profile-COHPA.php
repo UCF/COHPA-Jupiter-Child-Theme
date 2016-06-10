@@ -319,7 +319,7 @@ else { ?>
 													  }
 													}
 									echo 'THREE';
-									$selected = get_field('selected_tags');
+									$selected = get_field('research_interests');
 									$selectags = implode(",",$selected);
 									the_tags('Tags: ', ', ', '');
 									
