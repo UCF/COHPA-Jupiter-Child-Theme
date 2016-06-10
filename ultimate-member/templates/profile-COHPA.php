@@ -326,6 +326,16 @@ else { ?>
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
 								
+									echo 'FOUR';
+								$termwert = get_field('research_interests');
+								
+								if( $termwert ): 
+								
+									echo $termwert->name; </h2>
+									echo $termwert->description;</p>
+								
+								 endif; 
+								
 								if($profilenews) { 
 									echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
 									echo '<ul id="directoryNews">';
