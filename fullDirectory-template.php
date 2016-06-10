@@ -107,7 +107,7 @@ if ( ! empty( $user_query->results ) ) {
 }
 ?>
     
-    </div>
+
 </div>
 						
 <!-- END THE CUSTOM SECTION -->
