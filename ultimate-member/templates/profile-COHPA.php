@@ -326,16 +326,29 @@ else { ?>
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
 								
-									echo 'FOUR';
-								$termwert = get_field('research_interests');
+									echo 'FOUR';?>
+								<?php 
 								
-								if( $termwert ): 
+								$terms = get_field('research_interests');
 								
-									echo $termwert->name; </h2>
-									echo $termwert->description;</p>
+								if( $terms ): ?>
 								
-								 endif; 
+									<ul>
 								
+									<?php foreach( $terms as $term ): ?>
+								
+										<h2><?php echo $term->name; ?></h2>
+										<p><?php echo $term->description; ?></p>
+										<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+								
+									<?php endforeach; ?>
+								
+									</ul>
+								
+								<?php endif; ?>
+								
+                                
+                                <?php
 								if($profilenews) { 
 									echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
 									echo '<ul id="directoryNews">';
