@@ -30,7 +30,7 @@ get_header(); ?>
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
     
- <div> <!--  START -->    
+ <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1455896967960"> <!--  START -->    
 	<div style="" class="vc_col-sm-2 wpb_column column_container ">
 		<div class="mk-image-shortcode mk-shortcode   align-left single_line-frame inside-image " style="max-width: 600px; margin-bottom:10px">
         	<div class="mk-image-inner">
@@ -90,7 +90,7 @@ get_header(); ?>
  </div><!-- END -->   
 
 
- <div> <!--  START -->    
+ <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1455896967960"> <!--  START -->    
 	<div style="" class="vc_col-sm-2 wpb_column column_container ">
 		<div class="mk-image-shortcode mk-shortcode   align-left single_line-frame inside-image " style="max-width: 600px; margin-bottom:10px">
         	<div class="mk-image-inner">
