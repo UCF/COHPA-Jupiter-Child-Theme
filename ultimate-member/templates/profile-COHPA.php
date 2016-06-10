@@ -317,7 +317,7 @@ else { ?>
                                     
 									<?php 
 
-									$termswer = get_field('research_interests', 'user_' . $user_id .'', $term);
+									$termswer = get_field('research_interests', 'user_' . $user_id .'');
 									
 									if( $termswer ): ?>
 									
