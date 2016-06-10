@@ -308,47 +308,15 @@ else { ?>
 									
 									echo '<h4>Research Interests</h4>';
 									
-									echo 'ONE';
+									
 									the_field('research_interests', 'user_' . $user_id .'', $term);
 									
-									echo 'TWO';
-									$related = get_field('research_interests', 'user_' . $user_id .'', $queried_object);
-									if ($related) {
-													  foreach ($related as $term) {
-														echo $term->name;
-													  }
-													}
-									echo 'THREE';
-									$selected = get_field('research_interests', 'user_' . $user_id .'');
-									$selectags = implode(",",$selected);
-									the_tags('Tags: ', ', ', '');
+									
 									
 									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
 								}
 								
-									echo 'FOUR';?>
-								<?php 
-								
-								$terms = get_field('research_interests', 'user_' . $user_id .'');
-								
-								if( $terms ): ?>
-								
-									<ul>
-								
-									<?php foreach( $terms as $term ): ?>
-								
-										<h2><?php echo $term->name; ?></h2>
-										<p><?php echo $term->description; ?></p>
-										<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
-								
-									<?php endforeach; ?>
-								
-									</ul>
-								
-								<?php endif; ?>
-								
-                                
-                                <?php
+									
 								if($profilenews) { 
 									echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
 									echo '<ul id="directoryNews">';
