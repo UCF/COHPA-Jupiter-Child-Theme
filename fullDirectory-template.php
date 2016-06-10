@@ -31,11 +31,6 @@ get_header(); ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	
 <?php
-$args = array(
-	.
-	.
-	.
-);
 
 // The Query
 $user_query = new WP_User_Query( $args );
