@@ -229,9 +229,18 @@ else { ?>
 						}
 						echo '</div>';
 						?> 
-						<div class="clearboth"></div> 
+					  <div class="clearboth"></div> 
+
+					
+					<?php 
+                    if(get_field('cv', 'user_' . $user_id .'')) {
+							echo '<a href="';
+							the_field('cv', 'user_' . $user_id .'');
+							echo '" title="Curriculum Vitae" target="_blank"><img src="/wp-content/uploads/2016/06/CV-Document.png" width="128" height="128" /></a>';
+						}
+                      ?> 
+                      
                         
-                        HELLO WORLD  
                     </div>
                 </div>
             </div>
