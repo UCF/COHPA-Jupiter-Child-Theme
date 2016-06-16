@@ -43,7 +43,7 @@ get_header(); ?>
 $args = array(
 	
     'orderby' => 'meta_value',
-    'meta_key ' => 'last_name',
+    'meta_key ' => 'user_lastname',
 	'order' => 'DESC',
 );
 
