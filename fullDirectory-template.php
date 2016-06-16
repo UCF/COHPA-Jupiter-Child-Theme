@@ -52,7 +52,17 @@ if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		echo '<p>' . $user->display_name . '</p>';
 		//echo '<p>' . $user->phone_number . '</p>';
-		//echo '<p>Hello 5</p>';
+		echo '<p>Hello 6</p>';
+		
+		
+		if( ! empty( $user->job_titles ) ) {
+								while ( have_rows($user->job_titles) ) : the_row();
+								 $arrayJob[] = get_sub_field($user->job_title); 
+								endwhile;
+								$jobTitles = implode(', ', $arrayJob);
+							
+								echo $jobTitles;
+							}
 		
 		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
