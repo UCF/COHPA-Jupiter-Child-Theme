@@ -72,7 +72,20 @@ if ( ! empty( $user_query->results ) ) {
 							}
 		echo'</h3>';?>
 		
+        
+        
+        <?php $i = 0; foreach( um_members('users_per_page') as $member) { $i++; um_fetch_user( $member ); ?>
+        <a href="<?php echo um_user_profile_url(); ?>" title="<?php echo esc_attr(um_user('display_name')); ?>"><?php echo um_user('cover_photo', $cover_size); ?></a>
+        <?php 
+			um_reset_user_clean();
+			} // end foreach
+		
+			um_reset_user();
+		?>
+        
+        
 		<h4 id="directoryDepartments">
+        
 		
 		<?php the_field('department', 'user_' . $user->id .''); ?></h4>
                         
