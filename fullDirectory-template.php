@@ -70,6 +70,24 @@ if ( ! empty( $user_query->results ) ) {
 		echo '' . $user->department . ''; 
 		echo'</h4>';
 		
+		$terms = get_field('department');
+						if( $terms ) {
+						  $count = count( $terms );
+							$i = 0;
+							$term_list = '<p>';
+						foreach( $terms as $term ) {
+						  $i++;
+						  echo '<a href="';
+						  echo get_term_link( $term );
+						  echo'">';
+						  echo $term->name;
+						  echo '</a>';
+						if ( $count != $i ) {
+									echo ', ';
+								}
+							}
+						 }
+		
 		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
 							echo '' . $user->phone_number . '';
