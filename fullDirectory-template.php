@@ -51,7 +51,7 @@ $user_query = new WP_User_Query( $args );
 if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		echo '<p>' . $user->display_name . '</p>';
-		echo '<p>' . $user->email . '</p>';
+		echo '<p>Hello 1</p>';
 		
 		if(get_field('phone_number')) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
