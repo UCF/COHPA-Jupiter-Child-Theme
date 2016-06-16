@@ -66,17 +66,19 @@ if ( ! empty( $user_query->results ) ) {
 		
 		<?php
 			if( $image ) { ?>
-				<img src="<?php echo $thumb; ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" width="50px" />
-				<?php if ( get_field( 'disable_lightbox', 'user_' . $user->id .'') ): ?>
-				<?php else:  ?>
+				<a href="<?php echo um_user_profile_url(); ?>" title="<?php echo '' . $user->display_name . ''; ?>">
+                <img src="<?php echo $thumb; ?>" alt="<?php echo '' . $user->display_name . ''; ?>" title="<?php echo '' . $user->display_name . ''; ?>" width="150px" />
+                </a>
+                
+				
 				<div class="mk-image-overlay"></div>
-					<a href="<?php echo $url; ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
+					<a href="<?php echo um_user_profile_url(); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
 						<i class="mk-jupiter-icon-plus-circle"></i>
 					</a>
-				<?php endif; ?>  
+				 
 			<?php }
 			else { ?> 
-				<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />
+				<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image"  width="150px" />
 			<?php } ?>  
 		
 <?php		
