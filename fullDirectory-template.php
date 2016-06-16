@@ -52,12 +52,18 @@ if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		echo '<p>' . $user->display_name . '</p>';
 		//echo '<p>' . $user->phone_number . '</p>';
-		echo '<p>Hello 7</p>';
-		echo '<p>' . $user->id . '</p>';
+		//echo '<p>Hello 7</p>';
+		//echo '<p>' . $user->id . '</p>';
 		
 		
 		if( ! empty( $user->job_titles ) ) {
-								echo '' . $user->job_title . '';
+								while ( have_rows('job_titles', 'user_' . $user->id .'') ) : the_row();
+								 $arrayJob[] = get_sub_field('job_title', 'user_' . $user->id .''); 
+								endwhile;
+								$jobTitles = implode(', ', $arrayJob);
+							
+								echo $jobTitles;
+								echo '<p>I HAVE A JOB</p>';
 							}
 		
 		if( ! empty( $user->phone_number ) ) { 
