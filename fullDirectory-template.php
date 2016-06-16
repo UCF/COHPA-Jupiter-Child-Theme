@@ -73,7 +73,7 @@ if ( ! empty( $user_query->results ) ) {
 		echo'</h3>';
 		
 
-		um_fetch_user(91);
+		um_fetch_user( $user->id );
 		echo um_user_profile_url();
 		um_reset_user();
 		?>
