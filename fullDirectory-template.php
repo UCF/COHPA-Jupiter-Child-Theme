@@ -34,7 +34,8 @@ $args = array(
 	'meta_key' => 'last_name',
     'orderby' => 'meta_value',
     'order' => 'ASC',
-	'author' => '-8, -9, -1', //excludes users with id 1, 8 and 9.
+	'exclude' => array(1,8,9),
+	
 );
 
 // The Query
