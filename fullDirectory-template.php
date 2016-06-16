@@ -34,6 +34,7 @@ $args = array(
 	'meta_key' => 'last_name',
     'orderby' => 'meta_value',
     'order' => 'ASC'
+	'exclude' => array(1, 8, 9),
 );
 
 // The Query
