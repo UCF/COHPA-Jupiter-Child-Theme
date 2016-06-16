@@ -41,10 +41,8 @@ get_header(); ?>
 	
 <?php
 $args = array(
-	
-    'orderby' => 'meta_value',
-    'meta_key ' => 'user_lastname',
-	'order' => 'DESC',
+	'order' => 'ASC',
+    'orderby' => 'user_lastname',
 );
 
 // The Query
