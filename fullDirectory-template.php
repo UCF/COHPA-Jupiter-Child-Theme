@@ -70,7 +70,7 @@ if ( ! empty( $user_query->results ) ) {
 		echo '' . $user->department . ''; 
 		echo'</h4>';
 		
-		$terms = get_field('department');
+		$terms = get_field('department', 'user_' . $user->id .'');
 						if( $terms ) {
 						  $count = count( $terms );
 							$i = 0;
