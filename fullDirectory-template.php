@@ -196,7 +196,7 @@ if ( ! empty( $user_query->results ) ) {
 							echo '" target="_blank">Linkedin</a></div>';
 						}
 						
-					   echo '<p>&nbsp;</p>';
+					   echo '<p>&nbsp;</p></div>';
 					}?>					
 						
 	<?php 					
