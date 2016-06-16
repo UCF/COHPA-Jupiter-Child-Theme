@@ -69,12 +69,6 @@ if ( ! empty( $user_query->results ) ) {
 				<a href="<?php echo um_user_profile_url(); ?>" title="<?php echo '' . $user->display_name . ''; ?>">
                 <img src="<?php echo $thumb; ?>" alt="<?php echo '' . $user->display_name . ''; ?>" title="<?php echo '' . $user->display_name . ''; ?>" width="150px" />
                 </a>
-                
-				
-				<div class="mk-image-overlay"></div>
-					<a href="<?php echo um_user_profile_url(); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
-						<i class="mk-jupiter-icon-plus-circle"></i>
-					</a>
 				 
 			<?php }
 			else { ?> 
