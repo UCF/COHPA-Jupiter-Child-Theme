@@ -73,13 +73,8 @@ if ( ! empty( $user_query->results ) ) {
 		echo'</h3>';
 		
 		echo um_user_profile_url('user_' . $user->id .'');
-		
-		echo '/?page_id=';
-		echo '' . $user->id . '';
-		echo ';um_user=admin';
-		
-		echo 'CHECK THIS';
-		um_fetch_user(5);
+
+		um_fetch_user('user_' . $user->id .'');
 		echo um_user_profile_url();
 		um_reset_user();
 		?>
