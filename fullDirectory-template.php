@@ -8,7 +8,7 @@ global $post,
 $mk_options;
 $page_layout = get_post_meta( $post->ID, '_layout', true );
 $padding = get_post_meta( $post->ID, '_padding', true );
-$buildingMap = get_field('building', 'user_' . $user->id .'');
+
 
 
 if ( empty( $page_layout ) ) {
@@ -52,6 +52,7 @@ $user_query = new WP_User_Query( $args );
 if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		um_fetch_user( $user->id );
+		$buildingMap = get_field('building', 'user_' . $user->id .'');
 		
 		echo '<h2><a href="';
 		echo um_user_profile_url();
