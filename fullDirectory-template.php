@@ -59,7 +59,7 @@ if ( ! empty( $user_query->results ) ) {
 		echo '</a></h2>';
 		//echo '<p>' . $user->phone_number . '</p>';
 		//echo '<p>Hello 7</p>';
-		//echo '<p>' . $user->id . '</p>';
+		echo '<p>' . $user->id . '</p>';
 		
 		echo'<h3 id="directoryJobTitle">';
 		if( get_field('job_titles', 'user_' . $user->id .'') ) {
@@ -73,6 +73,15 @@ if ( ! empty( $user_query->results ) ) {
 		echo'</h3>';
 		
 		echo um_user_profile_url('user_' . $user->id .'');
+		
+		echo '/?page_id=';
+		echo '' . $user->id . '';
+		echo ';um_user=admin';
+		
+		echo 'CHECK THIS';
+		um_fetch_user(5);
+		echo um_user_profile_url();
+		um_reset_user();
 		?>
 		
         
