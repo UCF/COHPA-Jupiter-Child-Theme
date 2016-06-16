@@ -91,7 +91,7 @@ if ( ! empty( $user_query->results ) ) {
                         
                         
                         <?php 
-						$terms = get_field('department', 'user_' . $user->id .'');
+						$terms = get_field('department');
 						if( $terms ) {
 						  $count = count( $terms );
 							$i = 0;
@@ -107,7 +107,7 @@ if ( ! empty( $user_query->results ) ) {
 									echo ', ';
 								}
 							}
-						 } wp_reset_postdata();
+						 } 
 						?>
 		<?php 
 		if( ! empty( $user->phone_number ) ) { 
