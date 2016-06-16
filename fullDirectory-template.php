@@ -150,7 +150,8 @@ if ( ! empty( $user_query->results ) ) {
 						}
 						echo '</div>';				
 						
-	um_reset_user();					
+	um_reset_user();	
+	wp_reset_query();  // Restore global post data stomped by the_post().
 	// END LOOP					
 	}
 } else {
