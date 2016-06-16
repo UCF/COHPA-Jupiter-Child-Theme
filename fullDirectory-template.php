@@ -190,9 +190,14 @@ if ( ! empty( $user_query->results ) ) {
         <div style="text-align: left;" class="mk-text-block  true">
             <p>
             <?php 
-					if(get_field('cv', 'user_' . $user->id .'') || get_field('website_url', 'user_' . $user->id .'') || get_field('facebook_url', 'user_' . $user->id .'') || get_field('linkedin_url', 'user_' . $user->id .'')) {
-					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Additional Info</span></h3>';
-					
+					if(get_field('cv', 'user_' . $user->id .'') || get_field('website_url', 'user_' . $user->id .'') || get_field('facebook_url', 'user_' . $user->id .'') || get_field('linkedin_url', 'user_' . $user->id .'')) { ?>
+					  	<h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
+                            <span style="">Additional Info</span>
+                        </h2>
+                        <div class="clearboth"></div>
+                        <div style="text-align: left;" class="mk-text-block  true">
+                            <p>
+					<?php 
 					if(get_field('cv', 'user_' . $user->id .'')) {
 							echo '<div id="directoryProfile-link"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-icon-file-pdf-o  mk-size-small"></i> <a href="';
 							the_field('cv', 'user_' . $user->id .'');
@@ -214,7 +219,7 @@ if ( ! empty( $user_query->results ) ) {
 							echo '" target="_blank">Linkedin</a></div>';
 						}
 						
-					   echo '<p>&nbsp;</p></div>';
+					   echo '<p>&nbsp;</p>';
 					}?>	
                 
                 
