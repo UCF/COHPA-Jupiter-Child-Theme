@@ -51,15 +51,13 @@ $user_query = new WP_User_Query( $args );
 if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		echo '<p>' . $user->display_name . '</p>';
+		echo '<p>' . $user->email . '</p>';
 		
-		if( get_field('job_titles', 'user_' . $user_id .'') ) {
-								while ( have_rows('job_titles', 'user_' . $user_id .'') ) : the_row();
-								 $arrayJob[] = get_sub_field('job_title', 'user_' . $user_id .''); 
-								endwhile;
-								$jobTitles = implode(', ', $arrayJob);
-							
-								echo $jobTitles;
-							}
+		if(get_field('phone_number')) { 
+							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
+							the_field('phone_number');
+							echo '</div>';
+						}
 	}
 } else {
 	echo 'No users found.';
