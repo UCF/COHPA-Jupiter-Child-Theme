@@ -53,7 +53,33 @@ if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		um_fetch_user( $user->id );
 		$buildingMap = get_field('building', 'user_' . $user->id .'');
+
+		$image = get_field('upload_headshot', 'user_' . $user->id .'');
+		// vars
+		$url = $image['url'];
+		$size = 'faculty';
+		$thumb = $image['sizes'][ $size ];
+		$width = $image['sizes'][ $size . '-width' ];
+		$height = $image['sizes'][ $size . '-height' ];
+?>  
 		
+		
+		<?php
+			if( $image ) { ?>
+				<img src="<?php echo $thumb; ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+				<?php if ( get_field( 'disable_lightbox', 'user_' . $user->id .'') ): ?>
+				<?php else:  ?>
+				<div class="mk-image-overlay"></div>
+					<a href="<?php echo $url; ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-shortcode-lightbox">
+						<i class="mk-jupiter-icon-plus-circle"></i>
+					</a>
+				<?php endif; ?>  
+			<?php }
+			else { ?> 
+				<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />
+			<?php } ?>  
+		
+<?php		
 		echo '<h2><a href="';
 		echo um_user_profile_url();
 		echo '" title="';
@@ -107,7 +133,6 @@ if ( ! empty( $user_query->results ) ) {
 						  echo '</a>';
 						if ( $count != $i ) {
 									echo ', ';
-									wp_reset_query();  // Restore global post data stomped by the_post().
 								}
 							}
 						 } 	
