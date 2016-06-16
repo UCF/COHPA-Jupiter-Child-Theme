@@ -55,7 +55,7 @@ if ( ! empty( $user_query->results ) ) {
 		//echo '<p>Hello 7</p>';
 		//echo '<p>' . $user->id . '</p>';
 		
-		
+		echo'<h3 id="directoryJobTitle">';
 		if( ! empty( $user->job_titles ) ) {
 								while ( have_rows('job_titles', 'user_' . $user->id .'') ) : the_row();
 								 $arrayJob[] = get_sub_field('job_title', 'user_' . $user->id .''); 
@@ -63,8 +63,12 @@ if ( ! empty( $user_query->results ) ) {
 								$jobTitles = implode(', ', $arrayJob);
 							
 								echo $jobTitles;
-								echo '<p>I HAVE A JOB</p>';
 							}
+		echo'</h3>';
+		
+		echo'<h4 id="directoryDepartments">';
+		echo '' . $user->department . ''; 
+		echo'</h4>';
 		
 		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
