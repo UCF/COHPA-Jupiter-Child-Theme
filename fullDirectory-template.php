@@ -52,13 +52,25 @@ if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		echo '<p>' . $user->display_name . '</p>';
 		//echo '<p>' . $user->phone_number . '</p>';
-		echo '<p>Hello 4</p>';
+		echo '<p>Hello 5</p>';
 		
 		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
 							echo '' . $user->phone_number . '';
 							echo '</div>';
 						}
+		if( ! empty( $user->email_address ) ) { 
+							echo '<div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a href="mailto:';
+							echo '' . $user->email_address . '';
+							echo '">';
+							echo '' . $user->email_address . '';
+							echo '</a></div>';
+						}				
+						
+						
+						
+						
+	// END LOOP					
 	}
 } else {
 	echo 'No users found.';
