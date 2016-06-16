@@ -171,7 +171,35 @@ if ( ! empty( $user_query->results ) ) {
 							echo ' Room: ';
 							echo '' . $user->room_number . '';
 						}
-						echo '</div>';				
+						echo '</div>';	?>	
+						
+						
+						
+						
+	<?php 
+					if(get_field('website_url', 'user_' . $user->id .'') || get_field('facebook_url', 'user_' . $user->id .'') || get_field('linkedin_url', 'user_' . $user->id .'')) {
+					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Additional Info</span></h3>';
+					
+					if(get_field('website_url', 'user_' . $user->id .'')) {
+							echo '<div id="directoryProfile-link"><i style="color:#3b5998;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+							the_field('website_url', 'user_' . $user->id .'');
+							echo '" target="_blank">Personal Website</a></div>';
+						}
+						if(get_field('facebook_url', 'user_' . $user->id .'')) {
+							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							the_field('facebook_url', 'user_' . $user->id .'');
+							echo '" target="_blank">Facebook</a></div>';
+						}
+						if(get_field('linkedin_url', 'user_' . $user->id .'')) {
+							echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px;4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
+							the_field('linkedin_url', 'user_' . $user->id .'');
+							echo '" target="_blank">Linkedin</a></div>';
+						}
+						
+					   echo '<p>&nbsp;</p>';
+					}?>					
+						
+	<?php 					
 						
 	um_reset_user();	
 	// END LOOP					
