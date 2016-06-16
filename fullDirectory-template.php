@@ -52,12 +52,11 @@ if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
 		echo '<p>' . $user->display_name . '</p>';
 		echo '<p>' . $user->phone_number . '</p>';
-		echo '<p>Hello 3</p>';
+		echo '<p>Hello 4</p>';
 		
-		if(get_field('phone_number')) { 
+		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
-							//the_field('phone_number');
-							//the_field('phone_number', $user);
+							echo  . $user->phone_number . ;
 							echo '</div>';
 						}
 	}
