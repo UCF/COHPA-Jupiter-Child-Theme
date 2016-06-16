@@ -66,7 +66,7 @@ if ( ! empty( $user_query->results ) ) {
 		
 		<?php
 			if( $image ) { ?>
-				<img src="<?php echo $thumb; ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+				<img src="<?php echo $thumb; ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" width="50px" />
 				<?php if ( get_field( 'disable_lightbox', 'user_' . $user->id .'') ): ?>
 				<?php else:  ?>
 				<div class="mk-image-overlay"></div>
