@@ -50,6 +50,8 @@ $user_query = new WP_User_Query( $args );
 // User Loop
 if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
+		um_fetch_user( $user->id );
+		
 		echo '<h2><a href="';
 		echo um_user_profile_url();
 		echo '" title="';
@@ -59,7 +61,9 @@ if ( ! empty( $user_query->results ) ) {
 		echo '</a></h2>';
 		//echo '<p>' . $user->phone_number . '</p>';
 		//echo '<p>Hello 7</p>';
-		echo '<p>' . $user->id . '</p>';
+		//echo '<p>' . $user->id . '</p>';
+		
+		
 		
 		echo'<h3 id="directoryJobTitle">';
 		if( get_field('job_titles', 'user_' . $user->id .'') ) {
@@ -71,11 +75,6 @@ if ( ! empty( $user_query->results ) ) {
 								echo $jobTitles;
 							}
 		echo'</h3>';
-		
-
-		um_fetch_user( $user->id );
-		echo um_user_profile_url();
-		um_reset_user();
 		?>
 		
         
@@ -149,7 +148,7 @@ if ( ! empty( $user_query->results ) ) {
 						}
 						echo '</div>';				
 						
-						
+	um_reset_user();					
 	// END LOOP					
 	}
 } else {
