@@ -56,7 +56,7 @@ if ( ! empty( $user_query->results ) ) {
 		
 		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
-							echo '<p>' . $user->phone_number . '</p>';
+							echo '' . $user->phone_number . '';
 							echo '</div>';
 						}
 	}
