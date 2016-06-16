@@ -50,9 +50,11 @@ $user_query = new WP_User_Query( $args );
 // User Loop
 if ( ! empty( $user_query->results ) ) {
 	foreach ( $user_query->results as $user ) {
-		echo '<a href="/directory/" title"Display Name">';
-		echo '<h2>' . $user->display_name . '</h2>';
-		echo '</a>';
+		echo '<h2><a href="/directory/" title"';
+		echo '' . $user->display_name . '';
+		echo '">';
+		echo '' . $user->display_name . '';
+		echo '</a></h2>';
 		//echo '<p>' . $user->phone_number . '</p>';
 		//echo '<p>Hello 7</p>';
 		//echo '<p>' . $user->id . '</p>';
