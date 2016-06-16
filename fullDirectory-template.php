@@ -183,9 +183,12 @@ if ( ! empty( $user_query->results ) ) {
         </div> 
     </div>
     <div style="" class="vc_col-sm-4 wpb_column column_container ">
-        <h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style ">
-            <span style="">Additional Info</span>
-        </h2>
+    
+    <?php 
+	if(get_field('cv', 'user_' . $user->id .'') || get_field('website_url', 'user_' . $user->id .'') || get_field('facebook_url', 'user_' . $user->id .'') || get_field('linkedin_url', 'user_' . $user->id .'')) {
+	   ?>
+        <h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">Additional Info</span></h2>
+       <?php  }?>	
         <div class="clearboth"></div>
         <div style="text-align: left;" class="mk-text-block  true">
             <p>
