@@ -107,9 +107,10 @@ if ( ! empty( $user_query->results ) ) {
 						  echo '</a>';
 						if ( $count != $i ) {
 									echo ', ';
+									wp_reset_query();  // Restore global post data stomped by the_post().
 								}
 							}
-						 } 	wp_reset_query();  // Restore global post data stomped by the_post().
+						 } 	
 
 						?>
 		<?php 
