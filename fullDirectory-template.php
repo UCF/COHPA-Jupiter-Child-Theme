@@ -56,7 +56,7 @@ if ( ! empty( $user_query->results ) ) {
 		//echo '<p>' . $user->id . '</p>';
 		
 		echo'<h3 id="directoryJobTitle">';
-		if( ! empty( $user->job_titles ) ) {
+		if( get_field('job_titles', 'user_' . $user->id .'') ) {
 								while ( have_rows('job_titles', 'user_' . $user->id .'') ) : the_row();
 								 $arrayJob[] = get_sub_field('job_title', 'user_' . $user->id .''); 
 								endwhile;
