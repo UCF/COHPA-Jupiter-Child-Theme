@@ -107,7 +107,7 @@ if ( ! empty( $user_query->results ) ) {
 									echo ', ';
 								}
 							}
-						 }
+						 } wp_reset_postdata();
 						?>
 		<?php 
 		if( ! empty( $user->phone_number ) ) { 
