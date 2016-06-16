@@ -109,7 +109,8 @@ if ( ! empty( $user_query->results ) ) {
 									echo ', ';
 								}
 							}
-						 } 
+						 } 	wp_reset_query();  // Restore global post data stomped by the_post().
+
 						?>
 		<?php 
 		if( ! empty( $user->phone_number ) ) { 
@@ -151,7 +152,6 @@ if ( ! empty( $user_query->results ) ) {
 						echo '</div>';				
 						
 	um_reset_user();	
-	wp_reset_query();  // Restore global post data stomped by the_post().
 	// END LOOP					
 	}
 } else {
