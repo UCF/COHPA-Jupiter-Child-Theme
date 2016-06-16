@@ -64,13 +64,18 @@ if ( ! empty( $user_query->results ) ) {
 							
 								echo $jobTitles;
 							}
-		echo'</h3>';
+		echo'</h3>';?>
 		
-		echo'<h4 id="directoryDepartments">';
-		echo '' . $user->department . ''; 
-		echo'</h4>';
+		<h4 id="directoryDepartments">
 		
-		$terms = get_field('department', 'user_' . $user->id .'');
+		<?php the_field('department', 'user_' . $user->id .''); ?></h4>
+                        
+                        
+                        
+                        
+                        
+                        <?php 
+						$terms = get_field('department');
 						if( $terms ) {
 						  $count = count( $terms );
 							$i = 0;
@@ -87,7 +92,8 @@ if ( ! empty( $user_query->results ) ) {
 								}
 							}
 						 }
-		
+						?>
+		<?php 
 		if( ! empty( $user->phone_number ) ) { 
 							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
 							echo '' . $user->phone_number . '';
