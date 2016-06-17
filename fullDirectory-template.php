@@ -37,7 +37,7 @@ $args = array(
 	//'exclude' => array(1,8,9),
 		//array(
 		'meta_key' => 'Social Work',
-		'meta_value' => $user->department,
+		'meta_value' => department,
 		'meta_compare' => '=',
 	//),
 );
