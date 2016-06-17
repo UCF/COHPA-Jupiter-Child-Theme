@@ -31,17 +31,22 @@ get_header(); ?>
 
 <?php
 $args = array(
-	'meta_key' => 'last_name',
- 	'orderby' => 'meta_value',
-    'order' => 'ASC',
-	'exclude' => array(1,8,9),
-		array(
-		'meta_key' => $user->department,
-		'meta_value' => 'Social Work',
-		'meta_compare' => '=',
-	),
+'meta_query' => array(
+        'relation' => 'AND',
+			array(
+			'meta_key' => 'last_name',
+			'orderby' => 'meta_value',
+			'order' => 'ASC',
+			'exclude' => array(1,8,9),
+			),	
+			
+			array(	
+			'meta_key' => $user->department,
+			'meta_value' => 'Social Work',
+			'meta_compare' => '=',
+			),
+    )
 );
-
 // The Query
 $user_query = new WP_User_Query( $args );
 
