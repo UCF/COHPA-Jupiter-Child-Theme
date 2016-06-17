@@ -35,7 +35,7 @@ $args = array(
     'orderby' => 'meta_value',
     'order' => 'ASC',
 	'exclude' => array(1,8,9),
-	'search' => 'criminal justice',
+	'search' => 'david',
 	
 );
 
