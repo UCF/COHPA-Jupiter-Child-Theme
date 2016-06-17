@@ -31,17 +31,15 @@ get_header(); ?>
 
 <?php
 $args = array(
-	'meta_key' => 'last_name',
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
-	'exclude' => array(1,8,9),
-	array(
-			'relation' => 'AND',
-			'meta_key'     => 'department',
-			'value'   => 'Social Work',
-			'compare' => '=',
-		),
-	
+	//'meta_key' => 'last_name',
+    //'orderby' => 'meta_value',
+   // 'order' => 'ASC',
+	//'exclude' => array(1,8,9),
+		//array(
+		'meta_key' => 'Social Work',
+		'meta_value' => $user->department,
+		'meta_compare' => '=',
+	//),
 );
 
 // The Query
