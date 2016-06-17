@@ -30,15 +30,15 @@ get_header(); ?>
 <!-- START THE CUSTOM SECTION -->
 
 <?php
-/*$args = array(
+$args = array(
 	'meta_key' => 'last_name',
     'orderby' => 'meta_value',
     'order' => 'ASC',
 	'exclude' => array(1,8,9),
 	
-);*/
+);
 
-$args = array(
+/*$args = array(
 'meta_query' => array(
         'relation' => 'AND',
 			array(
@@ -54,7 +54,7 @@ $args = array(
 			'meta_compare' => '=',
 			),
     )
-);
+);*/
 
 // The Query
 $user_query = new WP_User_Query( $args );
