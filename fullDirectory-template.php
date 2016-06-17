@@ -35,7 +35,11 @@ $args = array(
     'orderby' => 'meta_value',
     'order' => 'ASC',
 	'exclude' => array(1,8,9),
-	'search' => 'david',
+	array(
+			'key'     => 'department',
+			'value'   => 'Social Work',
+			'compare' => '='
+		),
 	
 );
 
