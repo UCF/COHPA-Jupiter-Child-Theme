@@ -36,8 +36,8 @@ $args = array(
    // 'order' => 'ASC',
 	//'exclude' => array(1,8,9),
 		//array(
-		'meta_key' => 'Social Work',
-		'meta_value' => department,
+		'meta_key' => $user->department,
+		'meta_value' => 'Social Work',
 		'meta_compare' => '=',
 	//),
 );
