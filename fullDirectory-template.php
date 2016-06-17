@@ -36,9 +36,10 @@ $args = array(
     'order' => 'ASC',
 	'exclude' => array(1,8,9),
 	array(
-			'key'     => 'department',
+			'relation' => 'AND',
+			'meta_key'     => 'department',
 			'value'   => 'Social Work',
-			'compare' => '='
+			'compare' => '=',
 		),
 	
 );
