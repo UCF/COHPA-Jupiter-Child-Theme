@@ -38,16 +38,16 @@ get_header(); ?>
 	
 );*/
 
-$args = array(
+/*$args = array(
 	'key' => 'department',
 	'value' => 'Social Work',
 	'compare' => '=',
 	
-);
+);*/
 
-/*$args = array(
+$args = array(
 'meta_query' => array(
-        'relation' => 'AND',
+        'relation' => 'OR',
 			array(	
 			'meta_key' => 'department',
 			'meta_value' => 'Social Work',
@@ -62,7 +62,7 @@ $args = array(
 			),	
 			
     )
-);*/
+);
 
 // The Query
 $user_query = new WP_User_Query( $args );
