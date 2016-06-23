@@ -8,16 +8,16 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-$search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : '';
+$search = ( get_query_var( 'search' ) ) ? get_query_var( 'search' )  : '';
 
 ?>
 
 <div class="author-search">
-	<h2><?php _e('Search authors by name' ,'simple-user-listing');?></h2>
+	<h2><?php _e(' ' ,'simple-user-listing');?></h2>
 		<form method="get" id="sul-searchform" action="<?php the_permalink() ?>">
 			<label for="as" class="assistive-text"><?php _e('Search' ,'simple-user-listing');?></label>
-			<input type="text" class="field" name="as" id="sul-s" placeholder="<?php _e('Search Authors' ,'simple-user-listing');?>" value="<?php echo $search; ?>"/>
-			<input type="submit" class="submit" id="sul-searchsubmit" value="<?php _e('Search Authors' ,'simple-user-listing');?>" />
+			<input type="text" class="field" name="as" id="sul-s" placeholder="<?php _e('Search Our Directory' ,'simple-user-listing');?>" value="<?php echo $search; ?>"/>
+			<input type="submit" class="submit" id="sul-searchsubmit" value="<?php _e('Search' ,'simple-user-listing');?>" />
 		</form>
 	<?php
 	if( $search ){ ?>
