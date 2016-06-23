@@ -39,9 +39,9 @@ get_header(); ?>
 );*/
 
 $args = array(
-	'meta_key' => 'department',
-	'meta_value' => 'Social Work',
-	'meta_compare' => '=',
+	'key' => 'department',
+	'value' => 'Social Work',
+	'compare' => '=',
 	
 );
 
