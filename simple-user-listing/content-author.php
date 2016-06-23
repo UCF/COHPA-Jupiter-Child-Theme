@@ -10,10 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $user;
 
-$user_info = get_userdata( $user->ID );
+$user_info = um_fetch_user( $user->id );
 $num_posts = count_user_posts( $user->ID );
 
 // my vars
+
 $buildingMap = get_field('building', 'user_' . $user->id .'');
 
 $image = get_field('upload_headshot', 'user_' . $user->id .'');
