@@ -42,9 +42,9 @@ $args = array(
 'meta_query' => array(
         'relation' => 'AND',
 			array(	
-			'meta_key' => 'department',
-			'meta_value' => 'Social Work',
-			'meta_compare' => '=',
+			'key' => 'department',
+			'value' => 'Social Work',
+			'compare' => '=',
 			),
 			
 			array(
