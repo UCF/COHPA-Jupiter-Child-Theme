@@ -12,6 +12,17 @@ global $user;
 
 $user_info = get_userdata( $user->ID );
 $num_posts = count_user_posts( $user->ID );
+
+// my vars
+$buildingMap = get_field('building', 'user_' . $user->id .'');
+
+$image = get_field('upload_headshot', 'user_' . $user->id .'');
+$url = $image['url'];
+$size = 'faculty';
+$thumb = $image['sizes'][ $size ];
+$width = $image['sizes'][ $size . '-width' ];
+$height = $image['sizes'][ $size . '-height' ];
+		
 ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1455896967960" style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #ddd;">
 	<div style="" class="vc_col-sm-2 wpb_column column_container ">
