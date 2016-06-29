@@ -20,8 +20,10 @@ get_header(); ?>
 	<div class="mk-main-wrapper-holder">
 		<div id="mk-page-id-<?php echo $post->ID; ?>" class="theme-page-wrapper mk-main-wrapper <?php echo $page_layout; ?>-layout <?php echo $padding; ?> mk-grid vc_row-fluid">
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
+            
+            
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
-						<?php the_content();?>
+						<?php //the_content();?>
                   <?php endwhile; ?>
                 <?php wp_reset_query(); ?>       
                         
