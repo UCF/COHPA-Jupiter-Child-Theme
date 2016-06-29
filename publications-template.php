@@ -27,7 +27,7 @@ get_header(); ?>
                         
                         
 <!-- START THE CUSTOM SECTION -->
-
+<?php the_field('engage_photo'); ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	
     <div style="" class="vc_col-sm-4 wpb_column column_container ">
