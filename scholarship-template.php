@@ -201,9 +201,17 @@ else {
 	#list-4 {margin-bottom:30px}
 	
 	#mk-button-4 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px; }
-	#mk-button-4 .mk-button--corner-rounded {padding: 14px 24px;line-height: 100%;border-radius: 3px;}
+	#mk-button-4 .mk-button--corner-rounded {padding: 14px 24px;line-height: 100%;border-radius: 3px; color:#333;}
 	#mk-button-4 .mk-button {display: inline-block;max-width: 100%;}
-	#mk-button-4 .mk-button {background-color: #e8e8e8;} 
+	#mk-button-4 .mk-button {
+		background-color: #e8e8e8;
+		-o-transition:.5s;
+  		-ms-transition:.5s;
+  		-moz-transition:.5s;
+  		-webkit-transition:.5s;
+  		/* ...and now for the proper property */
+  		transition:.5s;
+	} 
 	#mk-button-4 .mk-button:hover {color:#ffc904;background-color:#000000;}
 	#mk-button-4 .mk-button:hover .mk-svg-icon {color:#ffc904;}
 	
