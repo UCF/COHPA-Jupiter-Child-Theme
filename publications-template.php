@@ -19,6 +19,10 @@ get_header(); ?>
                 
                 
 <!-- START THE CUSTOM SECTION -->	
+<style>
+.mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); }
+</style>
+
     <div style="" class="vc_col-sm-4 wpb_column column_container  _ height-full">
         <div class="mk-image   align-center  mk-animate-element left-to-right border_shadow-frame inside-image " style="margin-bottom:10px">
             <div class="mk-image-holder" style="max-width: 600px;">
