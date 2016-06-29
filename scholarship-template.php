@@ -205,12 +205,12 @@ else {
 	#mk-button-4 .mk-button {display: inline-block;max-width: 100%;}
 	#mk-button-4 .mk-button {
 		background-color: #e8e8e8;
-		-o-transition:.5s;
-  		-ms-transition:.5s;
-  		-moz-transition:.5s;
-  		-webkit-transition:.5s;
+		-o-transition:.3s;
+  		-ms-transition:.3s;
+  		-moz-transition:.3s;
+  		-webkit-transition:.3s;
   		/* ...and now for the proper property */
-  		transition:.5s;
+  		transition:.3s;
 	} 
 	#mk-button-4 .mk-button:hover {color:#ffc904;background-color:#000000;}
 	#mk-button-4 .mk-button:hover .mk-svg-icon {color:#ffc904;}
