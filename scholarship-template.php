@@ -152,7 +152,15 @@ else {
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
-       
+   <div id="list-4" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
+	
+	
+	<ul>
+<li><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-577415da32ac1" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>List Item</li>
+<li><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-577415da32ac1" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>item 2</li>
+</ul>
+
+</div>    
                 
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
@@ -190,6 +198,13 @@ else {
 	.button-568d5c104f525 { margin-bottom: 15px; margin-top: 0px; min-width: 0px !important; } 
 	.button-568d5c104f525 { background-color:#e8e8e8 !important; } 
 	.mk-button.button-568d5c104f525.flat-dimension:hover { background-color:#252525 !important; color:#ffc904 !important; } 
+	
+	#text-block-2 {     margin-bottom:0px;     text-align:left;}
+	#padding-3 {height: 40px;}
+	#list-4 {margin-bottom:30px}
+	#list-4 ul li .mk-svg-icon { fill:#ffc904 }
+	
+	 /* 1467225562 - */ .vc_row { position:relative; } .vc_inner.mk-grid { margin:0 auto; } .mk-list-styles.mk-align-left ul { display:inline-block; float:left; } .mk-list-styles.mk-align-right ul { display:inline-block; float:right; } .mk-list-styles ul { margin:0; padding:0; list-style:none; } .mk-list-styles ul li { position:relative; margin:0 0 6px 0; padding:0 0 0 21px; line-height:24px !important; } .mk-list-styles ul li .mk-svg-icon{ position:absolute; top:4px; left:0; height:16px; }
 </style>
 <!-- END OF THE CUSTOM SECTION -->
                         
