@@ -27,7 +27,7 @@ get_header(); ?>
                         
                         
 <!-- START THE CUSTOM SECTION -->
-<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
 	
 <div style="" class="vc_col-sm-4 wpb_column column_container  _ height-full">
 	<div class="mk-image   align-center  mk-animate-element left-to-right border_shadow-frame inside-image " style="margin-bottom:10px">
