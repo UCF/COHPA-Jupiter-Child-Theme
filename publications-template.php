@@ -27,12 +27,21 @@ get_header(); ?>
                         
                         
 <!-- START THE CUSTOM SECTION -->
-<?php the_field('engage_photo'); ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	
-    <div style="" class="vc_col-sm-4 wpb_column column_container ">
-			<div class="mk-image-shortcode mk-shortcode   align-center mk-animate-element left-to-right shadow_only-frame inside-image " style="max-width: 800px; margin-bottom:10px"><div class="mk-image-inner"><a href="<?php the_field('engage_pdf'); ?>" target="_blank" class="mk-image-shortcode-link"><img class="lightbox-false" alt="" title="" src="<?php the_field('engage_photo'); ?>" /></a></div><div class="clearboth"></div></div><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568fbd6f6b618" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_field('engage_title'); ?></span></h2><div class="clearboth"></div><h2 style="font-size: 14px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568fbd6f6ba0d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><em>Date Issued: <?php the_field('engage_date'); ?></em></span></h2><div class="clearboth"></div><h2 style="font-size: 12px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568fbd6f6bde8" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_field('engage_description'); ?></span></h2><div class="clearboth"></div>
-	</div>    
+<div style="" class="vc_col-sm-4 wpb_column column_container  _ height-full">
+	<div class="mk-image   align-center  mk-animate-element left-to-right border_shadow-frame inside-image " style="margin-bottom:10px">
+    	<div class="mk-image-holder" style="max-width: 600px;">
+        	<div class="mk-image-inner ">
+            	<a href="<?php the_field('engage_pdf'); ?>" target="_self" class="mk-image-link">
+                	<img class="lightbox-false" alt="<?php the_field('engage_title'); ?>" title="<?php the_field('engage_title'); ?>" width="600" height="776" src="<?php the_field('engage_photo'); ?>" />
+                </a>
+            </div>
+        </div>
+  		<div class="clearboth"></div>
+    </div><h2 style="font-size: 20px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568fbd6f6b618" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_field('engage_title'); ?></span></h2><div class="clearboth"></div><h2 style="font-size: 14px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568fbd6f6ba0d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><em>Date Issued: <?php the_field('engage_date'); ?></em></span></h2><div class="clearboth"></div><h2 style="font-size: 12px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568fbd6f6bde8" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_field('engage_description'); ?></span></h2><div class="clearboth"></div>
+</div>       
+     
     
     
     <div style="" class="vc_col-sm-4 wpb_column column_container ">
