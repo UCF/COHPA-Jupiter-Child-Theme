@@ -19,7 +19,27 @@ get_header(); ?>
                 
                 
 <!-- START THE CUSTOM SECTION -->	
-
+<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
+	<div id="mk-tabs-2" class="mk-tabs  mobile-true  vertical-left default-style  vertical-style    js-el"	data-mk-component="Tabs">
+		<ul id="mk-tabs-tabs-2" class="mk-tabs-tabs">
+			<?php $myfavetools = new WP_Query(array(
+								'post_type'	=> 'awards',
+								'orderby'=>'title',
+								'order'=>'DESC'
+																	
+							)); ?>
+                            
+                <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+   				<!--START OF THE REPEAT SECTION -->
+                <li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li>
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
+				<div class="clearboth"></div>
+		</ul>
+        
+    </div>
+</div>
+ 
 <!-- END THE CUSTOM SECTION --> 
 
                 
