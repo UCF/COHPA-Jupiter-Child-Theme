@@ -152,7 +152,7 @@ else {
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
-               
+     
                 
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
@@ -183,7 +183,7 @@ else {
 <?php wp_reset_query(); ?> 
 																		
 <style>  
-	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important; }
+	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important; list-style:none !important;  }
 	#list-style-568d5c104ed55 ul li:before { font-family:Icomoon !important; content: "\4a" !important; color:#ffc904 !important; }
 	.button-568d5c104f525 { margin-bottom: 15px; margin-top: 0px; min-width: 0px !important; } 
 	.button-568d5c104f525 { background-color:#e8e8e8 !important; } 

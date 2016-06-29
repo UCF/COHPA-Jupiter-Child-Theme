@@ -45,7 +45,15 @@ get_header(); ?>
                 </div>
 				<div class="mk-tabs-pane-content">
 					<div id="text-block-3" class="mk-text-block   ">
-						<p>INSERT NAME HERE</p>
+						<p>
+                        <?php
+						if ( is_page( 491 )  ) {  
+							the_field('faculty_content'); 
+						} else { 
+							the_field('student_content'); 
+						}	
+						?>
+                        </p>
 						<div class="clearboth"></div>
 					</div>
 				</div>	
@@ -56,6 +64,7 @@ get_header(); ?>
         <?php wp_reset_query(); ?>     
 		</div>
 		<div class="clearboth"></div>
+        <div id="ajax-568d2e73ba7e9" class="mk-dynamic-styles"><!--  #mk-tabs-568d2e73ba7e9 .mk-tabs-tabs li.ui-tabs-active a, #mk-tabs-568d2e73ba7e9 .mk-tabs-panes, #mk-tabs-568d2e73ba7e9 .mk-fancy-title span{ background-color:#ffffff; }--></div>
 	</div>
 </div>
 <!-- END THE CUSTOM SECTION --> 
