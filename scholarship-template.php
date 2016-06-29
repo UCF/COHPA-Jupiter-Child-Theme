@@ -194,7 +194,7 @@ else {
 	#text-block-2 {     margin-bottom:0px;     text-align:left;}
 	#padding-3 {height: 40px;}
 	#list-4 {margin-bottom:30px}
-	#list-4 ul li .mk-svg-icon { fill:#ffc904; padding-right:30px; }
+	#list-4 ul li .mk-svg-icon { fill:#ffc904; padding-right:120px !important; }
 	
 	 /* 1467225562 - */ .vc_row { position:relative; } .vc_inner.mk-grid { margin:0 auto; } .mk-list-styles.mk-align-left ul { display:inline-block; float:left; } .mk-list-styles.mk-align-right ul { display:inline-block; float:right; } .mk-list-styles ul { margin:0; padding:0; list-style:none; } .mk-list-styles ul li { position:relative; margin:0 0 6px 0; padding:0 0 0 21px; line-height:24px !important; } .mk-list-styles ul li .mk-svg-icon{ position:absolute; top:4px; left:0; height:16px; }
 </style>
