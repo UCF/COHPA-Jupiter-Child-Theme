@@ -152,15 +152,7 @@ else {
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
-   <div id="list-4" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
-	
-	
-	<ul>
-<li><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-577415da32ac1" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>List Item</li>
-<li><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-577415da32ac1" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>item 2</li>
-</ul>
-
-</div>    
+ 
                 
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
