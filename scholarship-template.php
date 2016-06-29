@@ -169,11 +169,21 @@ else {
         	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading"><span>Required Attachments for Application Submission:</span></h3>
             	<?php the_field('attachments'); ?>
 		</div>
+        
+        
         <div class="mk-button-align left">
         	<a href="https://my.ucf.edu" target="_self"  class="mk-button dark button-568d5c104f525 dark-color  flat-dimension large pointed   ">
             	<span>Award: <?php the_field('award_amount'); ?></span>
             </a>
         </div>
+        
+        <div id="mk-button-4" class="mk-button-container _ relative    inline left  ">
+			<a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-medium mk-button--corner-rounded text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-1 inline">
+				 <span class="mk-button--text">Award: <?php the_field('award_amount'); ?></span>
+			</a>
+		</div>
+        
+        
     <div class="clearboth"></div>
     <div class="mk-shortcode mk-padding-shortcode" style="height:70px"></div>
     <div class="clearboth"></div>
@@ -194,6 +204,12 @@ else {
 	#text-block-2 {     margin-bottom:0px;     text-align:left;}
 	#padding-3 {height: 40px;}
 	#list-4 {margin-bottom:30px}
+	
+	#mk-button-4 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px;}
+	#mk-button-4 .mk-button {display: inline-block;max-width: 100%;}
+	#mk-button-4 .mk-button {background-color: #d1d1d1;} 
+	#mk-button-4 .mk-button:hover {color:#eeee22;background-color:#000000;}
+	#mk-button-4 .mk-button:hover .mk-svg-icon {color:#eeee22;}
 	
 	 /* 1467225562 - */ .vc_row { position:relative; } .vc_inner.mk-grid { margin:0 auto; } .mk-list-styles.mk-align-left ul { display:inline-block; float:left; } .mk-list-styles.mk-align-right ul { display:inline-block; float:right; } .mk-list-styles ul { margin:0; padding:0; list-style:none; } .mk-list-styles ul li { position:relative; margin:0 0 6px 0; padding:0 0px 0 10px; line-height:24px !important; } .mk-list-styles ul li .mk-svg-icon{ position:absolute; top:4px; left:0; height:16px; }
 </style>
