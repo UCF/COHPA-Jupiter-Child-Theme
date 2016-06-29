@@ -21,7 +21,7 @@ get_header(); ?>
 		<div id="mk-page-id-<?php echo $post->ID; ?>" class="theme-page-wrapper mk-main-wrapper <?php echo $page_layout; ?>-layout <?php echo $padding; ?> mk-grid vc_row-fluid">
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
-						<?php //the_content();?>
+						<?php the_content();?>
                   <?php endwhile; ?>
                 <?php wp_reset_query(); ?>       
                         
@@ -55,7 +55,7 @@ get_header(); ?>
     
     
     <div style="" class="vc_col-sm-4 wpb_column column_container  _ height-full">
-        <div class="mk-image   align-center  mk-animate-element left-to-right border_shadow-frame inside-image " style="margin-bottom:10px">
+        <div class="mk-image   align-center  mk-animate-element top-to-bottom border_shadow-frame inside-image " style="margin-bottom:10px">
             <div class="mk-image-holder" style="max-width: 600px;">
                 <div class="mk-image-inner ">
                     <a href="<?php the_field('focus_pdf'); ?>" target="_self" class="mk-image-link">
@@ -68,7 +68,7 @@ get_header(); ?>
     
     
     <div style="" class="vc_col-sm-4 wpb_column column_container  _ height-full">
-        <div class="mk-image   align-center  mk-animate-element left-to-right border_shadow-frame inside-image " style="margin-bottom:10px">
+        <div class="mk-image   align-center  mk-animate-element right-to-left border_shadow-frame inside-image " style="margin-bottom:10px">
             <div class="mk-image-holder" style="max-width: 600px;">
                 <div class="mk-image-inner ">
                     <a href="<?php the_field('lead_pdf'); ?>" target="_self" class="mk-image-link">
