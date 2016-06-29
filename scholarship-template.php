@@ -185,7 +185,7 @@ else {
 <?php wp_reset_query(); ?> 
 																		
 <style>  
-	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important; width:40px !important; text-indent: 50px; }
+	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important;  }
 	#list-style-568d5c104ed55 ul li:before { font-family:Icomoon !important; content: "\4a" !important; color:#ffc904 !important; }
 	.button-568d5c104f525 { margin-bottom: 15px; margin-top: 0px; min-width: 0px !important; } 
 	.button-568d5c104f525 { background-color:#e8e8e8 !important; } 
@@ -194,7 +194,6 @@ else {
 	#text-block-2 {     margin-bottom:0px;     text-align:left;}
 	#padding-3 {height: 40px;}
 	#list-4 {margin-bottom:30px}
-	#list-4 ul li .mk-svg-icon { fill:#ffc904; }
 	
 	 /* 1467225562 - */ .vc_row { position:relative; } .vc_inner.mk-grid { margin:0 auto; } .mk-list-styles.mk-align-left ul { display:inline-block; float:left; } .mk-list-styles.mk-align-right ul { display:inline-block; float:right; } .mk-list-styles ul { margin:0; padding:0; list-style:none; } .mk-list-styles ul li { position:relative; margin:0 0 6px 0; padding:0 0px 0 10px; line-height:24px !important; } .mk-list-styles ul li .mk-svg-icon{ position:absolute; top:4px; left:0; height:16px; }
 </style>
