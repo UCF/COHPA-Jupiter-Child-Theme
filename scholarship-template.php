@@ -197,11 +197,11 @@ else {
 	#list-4 ul li .mk-svg-icon { fill:#ffc904; }
 	
 	.mk-list-styles ul li {
-    margin: 0 0 6px 60!important;
-    padding: 0 0 0 61px!important;
+    margin: 0 0 6px 15!important;
+    padding: 0 0 0 91px!important;
 }
 	
-	 /* 1467225562 - */ .vc_row { position:relative; } .vc_inner.mk-grid { margin:0 auto; } .mk-list-styles.mk-align-left ul { display:inline-block; float:left; } .mk-list-styles.mk-align-right ul { display:inline-block; float:right; } .mk-list-styles ul { margin:0; padding:0; list-style:none; } .mk-list-styles ul li .mk-svg-icon{ position:absolute; top:4px; left:0; height:16px; }
+	 /* 1467225562 - */ .vc_row { position:relative; } .vc_inner.mk-grid { margin:0 auto; } .mk-list-styles.mk-align-left ul { display:inline-block; float:left; } .mk-list-styles.mk-align-right ul { display:inline-block; float:right; } .mk-list-styles ul { margin:0; padding:0; list-style:none; } .mk-list-styles ul li .mk-svg-icon{ position:absolute; top:4px; left:0; height:16px; margin-right:50px; }
 </style>
 <!-- END OF THE CUSTOM SECTION -->
                         
