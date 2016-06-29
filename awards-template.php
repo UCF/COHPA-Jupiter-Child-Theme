@@ -37,7 +37,23 @@ get_header(); ?>
 				<div class="clearboth"></div>
 		</ul>
         
-    </div>
+        <div class="mk-tabs-panes page-bg-color">
+			<div id="1467220440-1-70" class="mk-tabs-pane is-active">
+				<div class="title-mobile">
+					<i></i> Tab 1	
+                </div>
+				<div class="mk-tabs-pane-content">
+					<div id="text-block-3" class="mk-text-block   ">
+						<p>INSERT NAME HERE</p>
+						<div class="clearboth"></div>
+					</div>
+				</div>	
+				<div class="clearboth"></div>
+			</div>
+  		</div>
+        
+        
+	</div>
 </div>
  
 <!-- END THE CUSTOM SECTION --> 
