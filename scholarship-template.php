@@ -157,7 +157,7 @@ else {
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
-		<h2 style="font-size: 30px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568d5c104e1fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_title(); ?></span></h2>
+		<h2 style="font-size: 30px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568d5c104e1fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_title(); ?></span></h2>
         <div class="clearboth"></div>
         <div id="list-style-568d5c104e58b" class="mk-list-styles mk-shortcode mk-align-none " style="margin-bottom:30px">
         	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading"><span>Recipient Criteria:</span></h3>
@@ -186,7 +186,6 @@ else {
 																		
 <style>  
 	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important; }
-	#list-style-568d5c104e58b ul li { padding-left:50px; }
 	#list-style-568d5c104ed55 ul li:before { font-family:Icomoon !important; content: "\4a" !important; color:#ffc904 !important; }
 	.button-568d5c104f525 { margin-bottom: 15px; margin-top: 0px; min-width: 0px !important; } 
 	.button-568d5c104f525 { background-color:#e8e8e8 !important; } 
