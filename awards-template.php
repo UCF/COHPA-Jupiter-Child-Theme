@@ -23,7 +23,7 @@ get_header(); ?>
 	<div id="mk-tabs-2" class="mk-tabs  mobile-true  vertical-left default-style  vertical-style    js-el" data-mk-component="Tabs">
 
 		<ul id="mk-tabs-tabs-2" class="mk-tabs-tabs">
-			<?php $myfavetools = new WP_Query(array(
+            <?php $myfavetools = new WP_Query(array(
 								'post_type'	=> 'awards',
 								'orderby'=>'title',
 								'order'=>'DESC'
@@ -32,7 +32,7 @@ get_header(); ?>
                             
                 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
-                <li><a href="#"><?php the_title(); ?></a></li>
+                <li class="mk-tabs-tab "><a href="#"><?php the_title(); ?></a></li>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
 			<div class="clearboth"></div>
