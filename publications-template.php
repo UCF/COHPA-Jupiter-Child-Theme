@@ -18,7 +18,7 @@ get_header(); ?>
                 <?php wp_reset_query(); ?> 
                 
                 
-                	<!-- START THE CUSTOM SECTION -->	
+<!-- START THE CUSTOM SECTION -->	
     <div style="" class="vc_col-sm-4 wpb_column column_container  _ height-full">
         <div class="mk-image   align-center  mk-animate-element left-to-right border_shadow-frame inside-image " style="margin-bottom:10px">
             <div class="mk-image-holder" style="max-width: 600px;">
