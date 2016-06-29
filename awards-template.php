@@ -38,10 +38,10 @@ get_header(); ?>
 			<div class="clearboth"></div>
 		</ul>
 		<div class="mk-tabs-panes page-bg-color">
-        
-			<div id="1467220440-1-70" class="mk-tabs-pane is-active">
+        <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+			<div id="<?php the_title(); ?>" class="mk-tabs-pane is-active">
 				<div class="title-mobile">
-					<i></i>Tab 1	
+					<i></i><?php the_title(); ?>	
                 </div>
 				<div class="mk-tabs-pane-content">
 					<div id="text-block-3" class="mk-text-block   ">
@@ -51,20 +51,9 @@ get_header(); ?>
 				</div>	
 				<div class="clearboth"></div>
 			</div>
-            
-			<div id="1467220440-2-44" class="mk-tabs-pane">
-				<div class="title-mobile">
-					<i></i>Tab 2	
-                </div>
-				<div class="mk-tabs-pane-content">
-					<div id="text-block-4" class="mk-text-block   ">
-						<p>INSERT TAB 2 CONTENT</p>
-						<div class="clearboth"></div>	
-                    </div>
-				</div>	
-				<div class="clearboth"></div>
-			</div>
-			<div class="clearboth"></div>
+            <div class="clearboth"></div>
+        <?php endwhile; ?>
+        <?php wp_reset_query(); ?>     
 		</div>
 		<div class="clearboth"></div>
 	</div>
