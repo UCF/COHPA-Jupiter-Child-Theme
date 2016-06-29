@@ -19,6 +19,11 @@ get_header(); ?>
                 
                 
 <!-- START THE CUSTOM SECTION -->	
+<style type='text/css'>
+#mk-tabs-2 .mk-tabs-tabs .is-active a,#mk-tabs-2 .mk-tabs-panes, #mk-tabs-2 .mk-fancy-title span {    background-color: #ffffff}
+#text-block-3 {     margin-bottom:0px;     text-align:left;}
+</style>
+
 <div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
 	<div id="mk-tabs-2" class="mk-tabs  mobile-true  vertical-left default-style  vertical-style    js-el"	data-mk-component="Tabs">
 		<ul id="mk-tabs-tabs-2" class="mk-tabs-tabs">
