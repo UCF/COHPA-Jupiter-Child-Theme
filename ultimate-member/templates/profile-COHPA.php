@@ -51,6 +51,16 @@
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
 ?>
+
+
+<!-- START TESTING SECTION -->
+
+
+HELLO 
+
+
+<!-- END TESTING SECTION -->
+
  
 
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
