@@ -430,9 +430,9 @@ else { ?>
 						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h3>';
 
 						if(get_field('website_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
-							the_field('website_url', 'user_' . $user_id .'');
-							echo '" target="_blank">Personal Website</a></div>';
+							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							the_field('facebook_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Facebook</a></div>';
 						}
 						
 						while (have_rows('additional_links', 'user_' . $user_id .'') ): the_row(); ?>
