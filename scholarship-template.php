@@ -152,6 +152,29 @@ else {
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
                 
+ <!-- START MY NEW TEST SECTION -->
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
+	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
+		<div id="text-block-2" class="mk-text-block   ">
+			<p>Here is Content section 1</p>
+			<div class="clearboth"></div>
+		</div>
+	</div>
+	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+		<div id="text-block-3" class="mk-text-block   ">
+			<p>SIDEBAR GOES HERE</p>
+			<div class="clearboth"></div>
+		</div>
+	</div>
+</div>
+<!-- END MY NEW TEST SECTION -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
                 
 <!-- START THE REPEAT SECTION -->               
