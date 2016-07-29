@@ -221,6 +221,9 @@ else {
 
 																		
 <style>  
+.theme-page-wrapper #mk-sidebar.mk-builtin {
+    width: 100% !important;
+}
 	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important; display: inline-block; width:20px;}
 	#list-style-568d5c104ed55 ul li:before { font-family:FontAwesome !important; content: "\f15c" !important; color:#ffc904 !important; display: inline-block; width:20px; }
 	.button-568d5c104f525 { margin-bottom: 15px; margin-top: 0px; min-width: 0px !important; } 
