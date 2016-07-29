@@ -35,7 +35,7 @@ get_header(); ?>
 	</div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
 		<div id="text-block-3" class="mk-text-block   ">
-			<p><?php if ( $page_layout != 'full' ) get_sidebar(); ?></p>
+			<?php get_sidebar('scholarships'); ?>
 			<div class="clearboth"></div>
 		</div>
 	</div>
