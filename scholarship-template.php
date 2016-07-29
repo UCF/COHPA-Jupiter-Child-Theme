@@ -35,7 +35,7 @@ get_header(); ?>
 	</div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
 		<div id="text-block-3" class="mk-text-block   ">
-			<p>SIDEBAR GOES HERE</p>
+			<?php if ( $page_layout != 'full' ) get_sidebar(); ?>
 			<div class="clearboth"></div>
 		</div>
 	</div>
@@ -265,7 +265,7 @@ else {
 						?>
 				</div>
 			
-		<?php if ( $page_layout != 'full' ) get_sidebar(); ?>
+		
 		<div class="clearboth"></div>
 		</div>
 		<div class="clearboth"></div>
