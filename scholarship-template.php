@@ -203,10 +203,6 @@ else {
 	</div>
     
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
-		<div id="text-block-3" class="mk-text-block   ">
-			<p>SIDEBAR GOES HERE - PLACE CODE HERE FOR THE FULL WIDTH AREA</p>
-			<div class="clearboth"></div>
-		</div>
         <?php get_sidebar('scholarships'); ?>
 	</div>
     
