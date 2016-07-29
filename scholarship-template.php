@@ -16,14 +16,35 @@ if ( empty( $page_layout ) ) {
 $padding = ($padding == 'true') ? 'no-padding' : '';
 
 get_header(); ?>
-<div id="theme-page" <?php echo get_schema_markup('main'); ?>>
+<div id="theme-page" class="master-holder clearfix" role="main" itemprop="mainContentOfPage" >
 	<div class="mk-main-wrapper-holder">
-		<div id="mk-page-id-<?php echo $post->ID; ?>" class="theme-page-wrapper mk-main-wrapper <?php echo $page_layout; ?>-layout <?php echo $padding; ?> mk-grid vc_row-fluid">
+		<div id="mk-page-id-2750" class="theme-page-wrapper mk-main-wrapper mk-grid full-layout  ">
 			<div class="theme-content <?php echo $padding; ?>" itemprop="mainContentOfPage">
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
+                 
+                        
+ <!-- START MY NEW TEST SECTION -->
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
+	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
+		<div id="text-block-2" class="mk-text-block   ">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
 						<?php the_content();?>
                   <?php endwhile; ?>
-                <?php wp_reset_query(); ?>       
+                <?php wp_reset_query(); ?>    
+			<div class="clearboth"></div>
+		</div>
+	</div>
+	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+		<div id="text-block-3" class="mk-text-block   ">
+			<p>SIDEBAR GOES HERE</p>
+			<div class="clearboth"></div>
+		</div>
+	</div>
+</div>
+<!-- END MY NEW TEST SECTION -->                           
+                        
+                        
+                        
+                        
                         
                         
 <!-- START THE CUSTOM SECTION -->
@@ -150,22 +171,7 @@ else {
 ?> 
    
                 
- <!-- START MY NEW TEST SECTION -->
-<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
-	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
-		<div id="text-block-2" class="mk-text-block   ">
-			<p>Here is Content section 1</p>
-			<div class="clearboth"></div>
-		</div>
-	</div>
-	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
-		<div id="text-block-3" class="mk-text-block   ">
-			<p>SIDEBAR GOES HERE</p>
-			<div class="clearboth"></div>
-		</div>
-	</div>
-</div>
-<!-- END MY NEW TEST SECTION -->   
+
                 
 				
 				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
