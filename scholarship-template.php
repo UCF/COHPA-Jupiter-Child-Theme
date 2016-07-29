@@ -148,9 +148,7 @@ else {
 								'order'=>'ASC'
 							)); }
 ?> 
-                
-				
-				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+   
                 
  <!-- START MY NEW TEST SECTION -->
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
@@ -167,7 +165,11 @@ else {
 		</div>
 	</div>
 </div>
-<!-- END MY NEW TEST SECTION -->
+<!-- END MY NEW TEST SECTION -->   
+                
+				
+				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+
  
  
  
