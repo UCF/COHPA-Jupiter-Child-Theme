@@ -207,9 +207,9 @@ else {
 			<p>SIDEBAR GOES HERE - PLACE CODE HERE FOR THE FULL WIDTH AREA</p>
 			<div class="clearboth"></div>
 		</div>
-        
+        <?php get_sidebar('scholarships'); ?>
 	</div>
-    <?php get_sidebar('scholarships'); ?>
+    
 </div>
 <!-- END MY NEW TEST SECTION -->                           
                         
