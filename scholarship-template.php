@@ -31,11 +31,22 @@ get_header(); ?>
                   <?php endwhile; ?>
                 <?php wp_reset_query(); ?>    
 			<div class="clearboth"></div>
-            
-            
- 
- 
- 
+		</div>
+	</div>
+	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+		<div id="text-block-3" class="mk-text-block   ">
+			<p>SIDEBAR GOES HERE - PLACE CODE HERE FOR THE FULL WIDTH AREA</p>
+			<div class="clearboth"></div>
+		</div>
+	</div>
+</div>
+<!-- END MY NEW TEST SECTION -->                           
+                        
+                        
+                        
+                        
+                        
+                        
 <!-- START THE CUSTOM SECTION -->
 <?php 
 if(is_page( 539 )) {
@@ -158,9 +169,22 @@ else {
 								'order'=>'ASC'
 							)); }
 ?> 
-	
-<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+   
+                
 
+                
+				
+				<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
@@ -195,28 +219,6 @@ else {
 <?php endwhile; ?>
 
 <?php wp_reset_query(); ?> 
-
-            
-            
-            
-            
-		</div>
-	</div>
-	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
-		<div id="text-block-3" class="mk-text-block   ">
-			<?php get_sidebar('scholarships'); ?>
-			<div class="clearboth"></div>
-		</div>
-	</div>
-</div>
-<!-- END MY NEW TEST SECTION -->                           
-                        
-                        
-                        
-                        
-                        
-                        
-
 																		
 <style>  
 	#list-style-568d5c104e58b ul li:before { font-family:FontAwesome !important; content: "\f00c" !important; color:#ffc904 !important; display: inline-block; width:20px;}
