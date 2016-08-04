@@ -272,7 +272,54 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 					<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
 				</div>
 			   <?php  endwhile;
-				echo '<p>&nbsp;</p></div>';}?>	
+				echo '<p>&nbsp;</p></div>';}?>
+                
+                <?php 
+					if(get_field('facebook_url', 'user_' . $user_id .'') || get_field('linkedin_url', 'user_' . $user_id .'') || get_field('twitter_url', 'user_' . $user_id .'') || get_field('google_url', 'user_' . $user_id .'') || get_field('youtube_url', 'user_' . $user_id .'')) {
+					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h3>';
+					
+					if(get_field('facebook_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							the_field('facebook_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Facebook</a></div>';
+						}
+						if(get_field('linkedin_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px;4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
+							the_field('linkedin_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Linkedin</a></div>';
+						}
+						if(get_field('twitter_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-Twitter"><i style="color:#00aced;margin:4px;4px;" class="mk-moon-twitter-2  mk-size-small"></i> <a href="';
+							the_field('twitter_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Twitter</a></div>';
+						}
+						if(get_field('google_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-Google"><i style="color:#dd4b39;margin:4px;4px;" class="mk-moon-google-plus-3  mk-size-small"></i> <a href="';
+							the_field('google_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Google+</a></div>';
+						}
+						if(get_field('youtube_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-YouTube"><i style="color:#bb0000;margin:4px;4px;" class="mk-moon-youtube  mk-size-small"></i> <a href="';
+							the_field('youtube_url', 'user_' . $user_id .'');
+							echo '" target="_blank">YouTube</a></div>';
+						}
+					   echo '<p>&nbsp;</p></div>';
+					}?>
+                    
+                    
+                    
+                    <?php
+					   if (have_rows('affiliations', 'user_' . $user_id .'') ) { 
+						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Affiliations</span></h3>';?>
+							<?php while (have_rows('affiliations', 'user_' . $user_id .'') ): the_row(); ?>
+                                <div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
+                                        <a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
+                                </div>                     
+                            <?php  endwhile;
+						echo '</div>';
+					}?>   
+                    
+                    	
 			<div class="clearboth"></div>
 		</div>
 	</div>
@@ -665,7 +712,22 @@ else { ?>
             <div class="wpb_column vc_column_container vc_col-sm-3">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	
+                    	<?php
+					   if(get_field('website_url', 'user_' . $user_id .'')) {
+						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h3>';
+
+						if(get_field('website_url', 'user_' . $user_id .'')) {
+							echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+							the_field('website_url', 'user_' . $user_id .'');
+							echo '" target="_blank">Personal Website</a></div>';
+						}
+						
+						while (have_rows('additional_links', 'user_' . $user_id .'') ): the_row(); ?>
+                        <div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
+                        	<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
+                        </div>
+                       <?php  endwhile;
+						echo '<p>&nbsp;</p></div>';}?>	
                         
                         
 				
