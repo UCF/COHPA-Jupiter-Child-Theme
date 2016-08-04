@@ -328,9 +328,8 @@ else { ?>
                 	</div>
                 	<div class="mk-tabs-pane-content">
 						<div id="text-block-3" class="mk-text-block   ">
-							<p>
-                            	<?php the_field('biography', 'user_' . $user_id .''); ?>
-                            </p>
+							<?php the_field('biography', 'user_' . $user_id .''); ?>
+                            
                             
                              <?php if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
                                   	<h4>Credentials</h4>
@@ -353,9 +352,8 @@ else { ?>
                     </div>
 					<div class="mk-tabs-pane-content">
 						<div id="text-block-4" class="mk-text-block   ">
-							<p>
                             	<?php the_field('research_info', 'user_' . $user_id .''); ?>
-                            </p>
+                            
                             	<?php 
 									$termswer = get_field('research_interests', 'user_' . $user_id .'');
 									if( $termswer ): 
