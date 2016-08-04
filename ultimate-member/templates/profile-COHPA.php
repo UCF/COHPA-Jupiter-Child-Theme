@@ -69,7 +69,7 @@ get_header();
 
 <!-- START TESTING SECTION -->
 
-<?php get_sidebar('scholarships'); ?>
+
 
 <!-- END TESTING SECTION -->
 
@@ -81,6 +81,7 @@ get_header();
         	<?php echo do_shortcode ('[mk_button dimension="flat" corner_style="pointed" size="medium" outline_skin="dark" outline_active_color="#ffffff" outline_hover_color="#333333" bg_color="#212121" btn_hover_bg="#ffc904" text_color="light" icon="mk-moon-arrow-left-6" icon_anim="none" url="/members/" target="_self" align="center" fullwidth="true" button_custom_width="0" margin_top="0" margin_bottom="15" btn_hover_txt_color="#000000"]Back to the Directory[/mk_button]');   ?>
             
             <?php get_sidebar('scholarships'); ?>
+            <?php if ( $page_layout != 'full' ) get_sidebar(); ?>
 
 			<div class="clearboth"></div>
         </div> 
