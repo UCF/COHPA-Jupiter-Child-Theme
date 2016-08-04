@@ -98,7 +98,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                                         <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
                                         </li>
                                 <?php endwhile; ?>
-								<?php endif; ?>
+
 							<div class="clearboth"></div>
                         </div>
 					</div>	
