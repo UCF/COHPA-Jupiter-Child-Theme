@@ -266,7 +266,7 @@ else { ?>
 
 <style type='text/css'>#mk-button-2 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px;}#mk-button-2 .mk-button {display: inline-block;max-width: 100%;}#mk-button-2 .mk-button {background-color: #ffc904;} #mk-button-2 .mk-button:hover {color:#ffffff;background-color:#212121;}#mk-button-2 .mk-button:hover .mk-svg-icon {color:#ffffff;}</style>
                       
-                      <?php  } ?> 
+                      <?php ;} ?> 
                     </div>
                 </div>
             </div>
