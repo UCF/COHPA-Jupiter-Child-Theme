@@ -180,6 +180,48 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 					<div class="clearboth"></div>
 				</div>
                 
+                <div id="1470322917777-7-7" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>Books
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-6" class="mk-text-block   ">
+							<?php            
+									foreach( $profilebooks as $profilebook ) {?>
+                                    
+                                    <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #d9d9d9;">
+                                        <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
+                                            <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($profilebook->ID) ); ?>" width="100%" />
+                                        </div>
+                                        <div style="width:75%; height:100%; float:left;">   
+                                                <div style="font-size:18px; font-weight:bold; margin-bottom:10px;">
+                                                	<?php if(get_field( "book_url", $profilebook->ID )) { ?>
+                                                                <a href="<?php echo get_field( "book_url", $profilebook->ID ); ?>" title="" target="_blank">
+                                                    <?php }?>
+                                                	
+                                                		<?php echo get_the_title( $profilebook->ID ); ?>
+                                                        
+                                                    <?php if(get_field( "book_url", $profilebook->ID )) { ?>
+                                                                </a>
+                                                    <?php }?>
+                                                </div>
+                                                <?php echo get_field( "book_citation", $profilebook->ID ); ?>
+                                    
+                                                <div style="margin-top:10px; font-style:italic;">Published in: <?php echo get_the_date( 'F Y', $profilebook->ID ); ?></div>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                               <?php } 
+									
+									/* Restore original Post Data */
+									wp_reset_postdata();    
+								?>
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
                 
 				<div class="clearboth"></div>
 			</div>
