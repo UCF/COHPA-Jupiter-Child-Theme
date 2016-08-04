@@ -103,21 +103,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                     </div>
 					<div class="mk-tabs-pane-content">
 						<div id="text-block-4" class="mk-text-block   ">
-							<p>
-                            	<?php the_field('research_info', 'user_' . $user_id .''); ?>
-                            </p>
-                            	<?php 
-									$termswer = get_field('research_interests', 'user_' . $user_id .'');
-									if( $termswer ): 
-									echo '<h4>Research Interests</h4>';
-									?>
-										<ul id="capitalText">
-										<?php foreach( $termswer as $term ): ?>
-											<li><?php echo $term->name; ?></li>
-										<?php endforeach; ?>
-										</ul>
-									<?php endif; ?>
-                            
+							<p>Here is the content for RESEARCH</p>
 							<div class="clearboth"></div>
 						</div>
 					</div>	
@@ -131,28 +117,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                     </div>
 					<div class="mk-tabs-pane-content">
 						<div id="text-block-5" class="mk-text-block   ">
-							<ul>
-								<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
-                                    <li>
-                                        <div id="directoryCourseTitle">
-                                            <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                                        <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
-                                            <?php }?>
-                                                        <?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
-                                            <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                                        </a>
-                                            <?php }?>
-                                        </div>
-                                        
-                                        <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
-                                        
-                                        <?php //if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
-                                                       <!-- Typically Available in: <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  -->
-                                        <?php //}?>
-                            
-                                    </li>
-                                	<?php endwhile; ?>
-                            	</ul>
+							<p>Here is the content for COURSES</p>
 							<div class="clearboth"></div>
 						</div>
 					</div>	
