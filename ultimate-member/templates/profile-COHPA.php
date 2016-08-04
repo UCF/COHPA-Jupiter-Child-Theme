@@ -70,7 +70,7 @@ HELLO
             
 			
 			
-            <?php get_sidebar('directory'); ?>
+            <?php get_sidebar('scholarships'); ?>
 			<div class="clearboth"></div>
         </div> 
 	</div>
