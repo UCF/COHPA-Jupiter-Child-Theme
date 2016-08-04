@@ -49,6 +49,14 @@ $page_layout = get_post_meta( $post->ID, '_layout', true );
 $padding = get_post_meta( $post->ID, '_padding', true );
 
 
+if ( empty( $page_layout ) ) {
+	$page_layout = 'full';
+}
+$padding = ($padding == 'true') ? 'no-padding' : '';
+
+get_header();
+
+
 	$image = get_field('upload_headshot', 'user_' . $user_id .'');
 	// vars
 	$url = $image['url'];
