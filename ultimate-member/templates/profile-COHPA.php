@@ -127,7 +127,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                 
 				<div id="1470322879262-2-1" class="mk-tabs-pane">
 					<div class="title-mobile">
-						<i></i>Courses	
+						<i></i>Courses	 
                     </div>
 					<div class="mk-tabs-pane-content">
 						<div id="text-block-5" class="mk-text-block   ">
