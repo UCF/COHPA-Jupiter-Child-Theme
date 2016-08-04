@@ -257,7 +257,22 @@ $padding = get_post_meta( $post->ID, '_padding', true );
     </div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
         <div id="text-block-7" class="mk-text-block   ">
-			<p>HERE IS THE SIDEBAR</p>
+			<?php
+			   if(get_field('website_url', 'user_' . $user_id .'')) {
+				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h3>';
+
+				if(get_field('website_url', 'user_' . $user_id .'')) {
+					echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+					the_field('website_url', 'user_' . $user_id .'');
+					echo '" target="_blank">Personal Website</a></div>';
+				}
+				
+				while (have_rows('additional_links', 'user_' . $user_id .'') ): the_row(); ?>
+				<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
+					<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
+				</div>
+			   <?php  endwhile;
+				echo '<p>&nbsp;</p></div>';}?>	
 			<div class="clearboth"></div>
 		</div>
 	</div>
@@ -650,22 +665,7 @@ else { ?>
             <div class="wpb_column vc_column_container vc_col-sm-3">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
-                    	<?php
-					   if(get_field('website_url', 'user_' . $user_id .'')) {
-						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h3>';
-
-						if(get_field('website_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
-							the_field('website_url', 'user_' . $user_id .'');
-							echo '" target="_blank">Personal Website</a></div>';
-						}
-						
-						while (have_rows('additional_links', 'user_' . $user_id .'') ): the_row(); ?>
-                        <div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
-                        	<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
-                        </div>
-                       <?php  endwhile;
-						echo '<p>&nbsp;</p></div>';}?>	
+                    	
                         
                         
 				
