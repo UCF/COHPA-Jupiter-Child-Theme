@@ -166,7 +166,14 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                     </div>
 					<div class="mk-tabs-pane-content">
 						<div id="text-block-6" class="mk-text-block   ">
-							<p>Here is the content for NEWS</p>
+							<?php 	echo '<ul id="directoryNews">';
+										foreach( $profilenews as $profilenew ) {
+											echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
+										}
+									echo '</ul>';
+									/* Restore original Post Data */
+									wp_reset_postdata();
+                             ?>      
 							<div class="clearboth"></div>
 						</div>
 					</div>	
