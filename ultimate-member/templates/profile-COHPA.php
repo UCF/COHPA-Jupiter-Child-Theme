@@ -43,6 +43,12 @@
 <?php //the_field('upload_headshot', 'user_' . $user_id .''); ?> 
 
 <?php 
+global $post,
+$mk_options;
+$page_layout = get_post_meta( $post->ID, '_layout', true );
+$padding = get_post_meta( $post->ID, '_padding', true );
+
+
 	$image = get_field('upload_headshot', 'user_' . $user_id .'');
 	// vars
 	$url = $image['url'];
