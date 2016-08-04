@@ -87,7 +87,9 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                 	</div>
                 	<div class="mk-tabs-pane-content">
 						<div id="text-block-3" class="mk-text-block   ">
-							<p>Here is the bio content</p>
+							<p>
+                            	<?php the_field('biography', 'user_' . $user_id .''); ?>
+                            </p>
 							<div class="clearboth"></div>
                         </div>
 					</div>	
@@ -101,7 +103,9 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                     </div>
 					<div class="mk-tabs-pane-content">
 						<div id="text-block-4" class="mk-text-block   ">
-							<p>Here is the research content</p>
+							<p>
+                            	<?php the_field('research_info', 'user_' . $user_id .''); ?>
+                            </p>
 							<div class="clearboth"></div>
 						</div>
 					</div>	
