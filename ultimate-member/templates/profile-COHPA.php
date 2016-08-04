@@ -62,7 +62,12 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 <!-- START TESTING SECTION -->
 
 
-HELLO 
+<div id="mk-button-2" class="mk-button-container _ relative    inline left  ">
+	<a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-xx-large mk-button--corner-pointed text-color-light _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
+				 
+		<span class="mk-button--text">CV</span>
+			</a>
+</div>
 
 
 <!-- END TESTING SECTION -->
