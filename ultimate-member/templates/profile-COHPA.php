@@ -652,5 +652,5 @@ else { ?>
 .theme-page-wrapper #mk-sidebar.mk-builtin {
     width: 100% !important;
 }
-
+#mk-tabs-2 .mk-tabs-tabs .is-active a,#mk-tabs-2 .mk-tabs-panes, #mk-tabs-2 .mk-fancy-title span {    background-color: #fff}#text-block-3 {     margin-bottom:0px;     text-align:left;}#text-block-4 {     margin-bottom:0px;     text-align:left;}#text-block-5 {     margin-bottom:0px;     text-align:left;}#text-block-6 {     margin-bottom:0px;     text-align:left;}
 </style>
