@@ -251,10 +251,13 @@ else { ?>
 
 					
 					<?php 
-                    if(get_field('cv', 'user_' . $user_id .'')) {
-							echo '<a href="';
-							the_field('cv', 'user_' . $user_id .'');
-							echo '" title="Curriculum Vitae" target="_blank"><img src="/wp-content/uploads/2016/06/CV-Document.png" width="85" /><br>View the CV</a>';
+                    if(get_field('cv', 'user_' . $user_id .'')) { ?> 
+							
+                            
+					<?php 		
+					the_field('cv', 'user_' . $user_id .'');?> 
+                    
+					<?php 		
 						}
                       ?> 
                       
