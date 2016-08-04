@@ -76,7 +76,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                 <li class="mk-tabs-tab "><a href="#"> Research</a></li>
                 <li class="mk-tabs-tab "><a href="#"> Courses</a></li>
                 <li class="mk-tabs-tab "><a href="#"> News</a></li>
-                <li class="mk-tabs-tab "><a href="#"> Books</a></li>
+                <!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->
                 <div class="clearboth"></div>
 			</ul>
             
@@ -91,7 +91,10 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 							<p>
                             	<?php the_field('biography', 'user_' . $user_id .''); ?>
                             </p>
-                            	
+                            	<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
+                                	<li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
+                                    </li>
+                                <?php endwhile; ?>	
 
 							<div class="clearboth"></div>
                         </div>
