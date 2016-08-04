@@ -62,12 +62,18 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 <!-- START TESTING SECTION -->
 
 
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
+		
+			
+<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
+	
 <div id="mk-button-2" class="mk-button-container _ relative    inline left  ">
 	<a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-xx-large mk-button--corner-pointed text-color-light _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
 				 
 		<span class="mk-button--text">CV</span>
 			</a>
-</div>
+</div></div>
+	</div>
 
 
 <!-- END TESTING SECTION -->
