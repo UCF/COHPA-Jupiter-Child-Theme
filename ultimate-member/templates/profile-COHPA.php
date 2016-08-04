@@ -61,7 +61,88 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 
 <!-- START TESTING SECTION -->
 
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
+	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
+		<div id="mk-tabs-2" class="mk-tabs  mobile-true  default-style  horizental-style    js-el" 	data-mk-component="Tabs">
 
+			<ul id="mk-tabs-tabs-2" class="mk-tabs-tabs">
+                <!-- 
+                    %s 1 'tab-with-icon' class name if icon is added
+                    %s 2 tab ID
+                    $s 3 <i></i> output
+                    $s 4 tab title
+                 -->
+                <li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>
+                <li class="mk-tabs-tab "><a href="#"> Research</a></li>
+                <li class="mk-tabs-tab "><a href="#"> Courses</a></li>
+                <li class="mk-tabs-tab "><a href="#"> News</a></li>
+                <div class="clearboth"></div>
+			</ul>
+            
+            
+			<div class="mk-tabs-panes page-bg-color">
+				<div id="1470321688-1-51" class="mk-tabs-pane is-active">
+                	<div class="title-mobile">
+                    	<i></i>Biography
+                	</div>
+                	<div class="mk-tabs-pane-content">
+						<div id="text-block-3" class="mk-text-block   ">
+							<p>Here is the bio content</p>
+							<div class="clearboth"></div>
+                        </div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div id="1470321688-2-76" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>Research	
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-4" class="mk-text-block   ">
+							<p>Here is the research content</p>
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div id="1470322879262-2-1" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>Courses	
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-5" class="mk-text-block   ">
+							<p>Here is the content for Courses</p>
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div id="1470322913503-3-2" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>News	
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-6" class="mk-text-block   ">
+							<p>Here is the content for NEWS</p>
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div class="clearboth"></div>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+    </div>
+</div>
 
 
 
