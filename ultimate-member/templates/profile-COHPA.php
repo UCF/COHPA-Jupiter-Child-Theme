@@ -61,7 +61,21 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 
 <!-- START TESTING SECTION -->
 
-
+<div class="mk-image  lightbox-enabled align-center border_shadow-frame inside-image " style="margin-bottom:0px">
+	<div class="mk-image-holder" style="max-width: 500px;">
+    	<div class="mk-image-inner ">
+        	<img class="lightbox-true" alt="" title="" width="500" height="751" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/07/S-Carillo.jpg" />
+            	<div class="mk-image-overlay"></div>
+                <a href="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/07/S-Carillo.jpg" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-lightbox">
+                
+                <svg  class="mk-svg-icon" data-name="mk-jupiter-icon-plus-circle" data-cacheid="icon-57a395b56e288" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                	<path d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z"/>
+                </svg>
+                </a>
+        </div>
+    </div>
+    <div class="clearboth"></div>
+</div>
 
 <!-- END TESTING SECTION -->
 
@@ -72,9 +86,8 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 		<div style="text-align: left;" class="mk-text-block  true">
         	<?php echo do_shortcode ('[mk_button dimension="flat" corner_style="pointed" size="medium" outline_skin="dark" outline_active_color="#ffffff" outline_hover_color="#333333" bg_color="#212121" btn_hover_bg="#ffc904" text_color="light" icon="mk-moon-arrow-left-6" icon_anim="none" url="/members/" target="_self" align="center" fullwidth="true" button_custom_width="0" margin_top="0" margin_bottom="15" btn_hover_txt_color="#000000"]Back to the Directory[/mk_button]');   ?>
             
-			
-			
             <?php get_sidebar('scholarships'); ?>
+
 			<div class="clearboth"></div>
         </div> 
 	</div>
