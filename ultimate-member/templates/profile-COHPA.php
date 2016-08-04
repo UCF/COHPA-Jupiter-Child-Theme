@@ -72,11 +72,30 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                     $s 3 <i></i> output
                     $s 4 tab title
                  -->
-                <li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>
-                <li class="mk-tabs-tab "><a href="#"> Research</a></li>
-                <li class="mk-tabs-tab "><a href="#"> Courses</a></li>
-                <li class="mk-tabs-tab "><a href="#"> News</a></li>
-                <!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->
+                 
+                <?php 
+					if(get_field('biography', 'user_' . $user_id .'')) { 
+							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
+						}
+					if(get_field('research_info', 'user_' . $user_id .'')) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
+						}
+									
+					if($profilenews) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> News</a></li>';
+						}
+					if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> Courses</a></li>';
+						}
+					if($profilebooks) { 
+							echo '<!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->';
+						}?>
+						
+                
+                
+                
+                
+                
                 <div class="clearboth"></div>
 			</ul>
             
