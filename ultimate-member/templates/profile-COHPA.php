@@ -507,4 +507,9 @@ else { ?>
 	</div>
 </div>
 
+<style>  
+.theme-page-wrapper #mk-sidebar.mk-builtin {
+    width: 100% !important;
+}
 
+</style>
