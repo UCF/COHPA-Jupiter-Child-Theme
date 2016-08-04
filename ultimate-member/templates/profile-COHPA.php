@@ -80,12 +80,11 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 					if(get_field('research_info', 'user_' . $user_id .'')) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
 						}
-									
-					if($profilenews) { 
-							echo '<li class="mk-tabs-tab "><a href="#"> News</a></li>';
-						}
 					if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Courses</a></li>';
+						}				
+					if($profilenews) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> News</a></li>';
 						}
 					if($profilebooks) { 
 							echo '<!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->';
