@@ -76,6 +76,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
                 <li class="mk-tabs-tab "><a href="#"> Research</a></li>
                 <li class="mk-tabs-tab "><a href="#"> Courses</a></li>
                 <li class="mk-tabs-tab "><a href="#"> News</a></li>
+                <li class="mk-tabs-tab "><a href="#"> Books</a></li>
                 <div class="clearboth"></div>
 			</ul>
             
