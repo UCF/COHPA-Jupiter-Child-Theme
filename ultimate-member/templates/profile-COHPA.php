@@ -261,7 +261,7 @@ else { ?>
                     <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
                         <div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
                             <div id="mk-button-2" class="mk-button-container _ relative    inline left  ">
-                                <a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-x-large mk-button--corner-pointed text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
+                                <a  href="<?php the_field('cv', 'user_' . $user_id .''); ?>"  target="_self" title="Curriculum Vitae" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-x-large mk-button--corner-pointed text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
                                     <span class="mk-button--text">View CV</span>
                                 </a>
                             </div>
