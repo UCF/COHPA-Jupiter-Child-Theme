@@ -61,203 +61,6 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 
 <!-- START TESTING SECTION -->
 
-<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
-	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
-		<div id="mk-tabs-2" class="mk-tabs  mobile-true  default-style  horizental-style    js-el" 	data-mk-component="Tabs">
-
-			<ul id="mk-tabs-tabs-2" class="mk-tabs-tabs">
-                <!-- 
-                    %s 1 'tab-with-icon' class name if icon is added
-                    %s 2 tab ID
-                    $s 3 <i></i> output
-                    $s 4 tab title
-                 -->
-                 
-                <?php 
-					if(get_field('biography', 'user_' . $user_id .'')) { 
-							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
-						}
-					if(get_field('research_info', 'user_' . $user_id .'')) { 
-							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
-						}
-					if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
-							echo '<li class="mk-tabs-tab "><a href="#"> Courses</a></li>';
-						}				
-					if($profilenews) { 
-							echo '<li class="mk-tabs-tab "><a href="#"> News</a></li>';
-						}
-					if($profilebooks) { 
-							echo '<!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->';
-						}?>
-						
-                
-                
-                
-                
-                
-                <div class="clearboth"></div>
-			</ul>
-            
-            
-			<div class="mk-tabs-panes page-bg-color">
-				<div id="1470321688-1-51" class="mk-tabs-pane is-active">
-                	<div class="title-mobile">
-                    	<i></i>Biography
-                	</div>
-                	<div class="mk-tabs-pane-content">
-						<div id="text-block-3" class="mk-text-block   ">
-							<p>
-                            	<?php the_field('biography', 'user_' . $user_id .''); ?>
-                            </p>
-                            
-                             <?php if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
-                                  	<h4>Credentials</h4>
-                            
-                            	<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
-                                	<li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
-                                    </li>
-                                <?php endwhile; ?>	
-							<?php }?>	
-							<div class="clearboth"></div>
-                        </div>
-					</div>	
-					<div class="clearboth"></div>
-				</div>
-                
-                
-				<div id="1470321688-2-76" class="mk-tabs-pane">
-					<div class="title-mobile">
-						<i></i>Research	
-                    </div>
-					<div class="mk-tabs-pane-content">
-						<div id="text-block-4" class="mk-text-block   ">
-							<p>
-                            	<?php the_field('research_info', 'user_' . $user_id .''); ?>
-                            </p>
-                            	<?php 
-									$termswer = get_field('research_interests', 'user_' . $user_id .'');
-									if( $termswer ): 
-									echo '<h4>Research Interests</h4>';
-									?>
-										<ul id="capitalText">
-										<?php foreach( $termswer as $term ): ?>
-											<li><?php echo $term->name; ?></li>
-										<?php endforeach; ?>
-										</ul>
-									<?php endif; ?>
-                            
-							<div class="clearboth"></div>
-						</div>
-					</div>	
-					<div class="clearboth"></div>
-				</div>
-                
-                
-				<div id="1470322879262-2-1" class="mk-tabs-pane">
-					<div class="title-mobile">
-						<i></i>Courses	 
-                    </div>
-					<div class="mk-tabs-pane-content">
-						<div id="text-block-5" class="mk-text-block   ">
-							<ul>
-								<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
-                                    <li>
-                                        <div id="directoryCourseTitle">
-                                            <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                                        <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
-                                            <?php }?>
-                                                        <?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
-                                            <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                                        </a>
-                                            <?php }?>
-                                        </div>
-                                        
-                                        <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
-                                        
-                                        <?php //if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
-                                                       <!-- Typically Available in: <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  -->
-                                        <?php //}?>
-                            
-                                    </li>
-                                	<?php endwhile; ?>
-                            	</ul>
-							<div class="clearboth"></div>
-						</div>
-					</div>	
-					<div class="clearboth"></div>
-				</div>
-                
-                
-				<div id="1470322913503-3-2" class="mk-tabs-pane">
-					<div class="title-mobile">
-						<i></i>News	
-                    </div>
-					<div class="mk-tabs-pane-content">
-						<div id="text-block-6" class="mk-text-block   ">
-							<?php 	echo '<ul id="directoryNews">';
-										foreach( $profilenews as $profilenew ) {
-											echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
-										}
-									echo '</ul>';
-									/* Restore original Post Data */
-									wp_reset_postdata();
-                             ?>      
-							<div class="clearboth"></div>
-						</div>
-					</div>	
-					<div class="clearboth"></div>
-				</div>
-                
-                <div id="1470322917777-7-7" class="mk-tabs-pane">
-					<div class="title-mobile">
-						<i></i>Books
-                    </div>
-					<div class="mk-tabs-pane-content">
-						<div id="text-block-6" class="mk-text-block   ">
-							<?php            
-									foreach( $profilebooks as $profilebook ) {?>
-                                    
-                                    <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #d9d9d9;">
-                                        <div style="width:23%; margin-right:2%; height:100%; float:left; background-color:#666;">   
-                                            <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($profilebook->ID) ); ?>" width="100%" />
-                                        </div>
-                                        <div style="width:75%; height:100%; float:left;">   
-                                                <div style="font-size:18px; font-weight:bold; margin-bottom:10px;">
-                                                	<?php if(get_field( "book_url", $profilebook->ID )) { ?>
-                                                                <a href="<?php echo get_field( "book_url", $profilebook->ID ); ?>" title="" target="_blank">
-                                                    <?php }?>
-                                                	
-                                                		<?php echo get_the_title( $profilebook->ID ); ?>
-                                                        
-                                                    <?php if(get_field( "book_url", $profilebook->ID )) { ?>
-                                                                </a>
-                                                    <?php }?>
-                                                </div>
-                                                <?php echo get_field( "book_citation", $profilebook->ID ); ?>
-                                    
-                                                <div style="margin-top:10px; font-style:italic;">Published in: <?php echo get_the_date( 'F Y', $profilebook->ID ); ?></div>
-                                        </div>
-                                        <div style="clear:both;"></div>
-                                    </div>
-                               <?php } 
-									
-									/* Restore original Post Data */
-									wp_reset_postdata();    
-								?>
-							<div class="clearboth"></div>
-						</div>
-					</div>	
-					<div class="clearboth"></div>
-				</div>
-                
-                
-				<div class="clearboth"></div>
-			</div>
-			<div class="clearboth"></div>
-		</div>
-    </div>
-</div>
-
 
 
 
@@ -478,64 +281,89 @@ else { ?>
         	<div class="divider-inner"><span class="divider-shadow-left"></span><span class="divider-shadow-right"></span></div>
         </div>
         <div class="clearboth"></div>
+        
+        
+        
+        
+        
+        
+        
+        
         <div class="wpb_row vc_inner vc_row  vc_row-fluid   attched-false vc_row-fluid">
-        	<div class="wpb_column vc_column_container vc_col-sm-9">
-            	<div class="wpb_wrapper">
-                	<div style="text-align: left;" class="mk-text-block  true">
-                    	<?php 
-						if(get_field('biography', 'user_' . $user_id .'') || get_field('research_info', 'user_' . $user_id .'') || $profilenews) {
-						   echo '<div id="mk-tabs-54db5aa2f2863" class="mk-shortcode mk-tabs default-style  horizental-style"><ul class="mk-tabs-tabs">';
-								
-								if(get_field('biography', 'user_' . $user_id .'')) { 
-										echo '<li><a href="#1423603736-1-73">Biography</a></li>';
-									}
-								if(get_field('research_info', 'user_' . $user_id .'')) { 
-										echo '<li><a href="#1423603736-2-45">Research</a></li>';
-									}
-									
-								if($profilenews) { 
-										echo '<li><a href="#1423658400557-2-999">News</a></li>';
-									}
-								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
-										echo '<li><a href="#1423658400557-2-0">Courses</a></li>';
-									}
-								if($profilebooks) { 
-										echo '<li><a href="#1423658400557-2-555">Books</a></li>';
-									}
-									
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
+	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
+		<div id="mk-tabs-2" class="mk-tabs  mobile-true  default-style  horizental-style    js-el" 	data-mk-component="Tabs">
 
-						echo '<div class="clearboth"></div></ul><div class="mk-tabs-panes">';
-									
-								 if(get_field('biography', 'user_' . $user_id .'')) { 
-									echo '<div id="1423603736-1-73" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Biography</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
-									the_field('biography', 'user_' . $user_id .'');
-									
-										
-								  if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
+			<ul id="mk-tabs-tabs-2" class="mk-tabs-tabs">
+                <!-- 
+                    %s 1 'tab-with-icon' class name if icon is added
+                    %s 2 tab ID
+                    $s 3 <i></i> output
+                    $s 4 tab title
+                 -->
+                 
+                <?php 
+					if(get_field('biography', 'user_' . $user_id .'')) { 
+							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
+						}
+					if(get_field('research_info', 'user_' . $user_id .'')) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
+						}
+					if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> Courses</a></li>';
+						}				
+					if($profilenews) { 
+							echo '<li class="mk-tabs-tab "><a href="#"> News</a></li>';
+						}
+					if($profilebooks) { 
+							echo '<!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->';
+						}?>
+						
+                
+                
+                
+                
+                
+                <div class="clearboth"></div>
+			</ul>
+            
+            
+			<div class="mk-tabs-panes page-bg-color">
+				<div id="1470321688-1-51" class="mk-tabs-pane is-active">
+                	<div class="title-mobile">
+                    	<i></i>Biography
+                	</div>
+                	<div class="mk-tabs-pane-content">
+						<div id="text-block-3" class="mk-text-block   ">
+							<p>
+                            	<?php the_field('biography', 'user_' . $user_id .''); ?>
+                            </p>
+                            
+                             <?php if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
                                   	<h4>Credentials</h4>
-									
-									<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
-                                        <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
-                                        </li>
-                                    <?php endwhile; ?>
-																				
-									
-									
-									
-									
-									
-									
-									
-								<?php	
-									} echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
-								}
-							
-								if(get_field('research_info', 'user_' . $user_id .'')) { 
-									echo '<div id="1423603736-2-45" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Research</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
-									the_field('research_info', 'user_' . $user_id .'');
-									?>
-                                    
-									<?php 
+                            
+                            	<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
+                                	<li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
+                                    </li>
+                                <?php endwhile; ?>	
+							<?php }?>	
+							<div class="clearboth"></div>
+                        </div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div id="1470321688-2-76" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>Research	
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-4" class="mk-text-block   ">
+							<p>
+                            	<?php the_field('research_info', 'user_' . $user_id .''); ?>
+                            </p>
+                            	<?php 
 									$termswer = get_field('research_interests', 'user_' . $user_id .'');
 									if( $termswer ): 
 									echo '<h4>Research Interests</h4>';
@@ -546,62 +374,76 @@ else { ?>
 										<?php endforeach; ?>
 										</ul>
 									<?php endif; ?>
-
-
-
-								<?php 	
-									
-									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
-								}
-								
-									
-								if($profilenews) { 
-									echo '<div id="1423658400557-2-999" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>News</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';
-									echo '<ul id="directoryNews">';
+                            
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div id="1470322879262-2-1" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>Courses	 
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-5" class="mk-text-block   ">
+							<ul>
+								<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
+                                    <li>
+                                        <div id="directoryCourseTitle">
+                                            <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+                                                        <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
+                                            <?php }?>
+                                                        <?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
+                                            <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
+                                                        </a>
+                                            <?php }?>
+                                        </div>
+                                        
+                                        <?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
+                                        
+                                        <?php //if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
+                                                       <!-- Typically Available in: <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  -->
+                                        <?php //}?>
+                            
+                                    </li>
+                                	<?php endwhile; ?>
+                            	</ul>
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div id="1470322913503-3-2" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>News	
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-6" class="mk-text-block   ">
+							<?php 	echo '<ul id="directoryNews">';
 										foreach( $profilenews as $profilenew ) {
 											echo '<li><a href="' . get_permalink( $profilenew->ID ) . '">' . get_the_title( $profilenew->ID ) . '</a></li>';
 										}
 									echo '</ul>';
 									/* Restore original Post Data */
 									wp_reset_postdata();
-									echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
-								}
-								if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
-									echo '<div id="1423658400557-2-0" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Courses</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
-									<ul>
-										<?php while (have_rows('add_courses', 'user_' . $user_id .'') ): the_row(); ?>
-                                            <li>
-                                                <div id="directoryCourseTitle">
-                                                    <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                                                <a href="<?php the_sub_field('course_url', 'user_' . $user_id .''); ?>" target="_blank">
-                                                    <?php }?>
-                                                                <?php the_sub_field('course_number', 'user_' . $user_id .''); ?>: <?php the_sub_field('course_name', 'user_' . $user_id .''); ?>
-                                                    <?php if(get_sub_field('course_url', 'user_' . $user_id .'')) { ?>
-                                                                </a>
-                                                    <?php }?>
-                                                </div>
-                                                
-												<?php the_sub_field('course_description', 'user_' . $user_id .''); ?>
-                                                
-												<?php //if(get_sub_field('course_semesters', 'user_' . $user_id .'')) { ?>
-                                                               <!-- Typically Available in: <?php //the_sub_field('course_semesters', 'user_' . $user_id .''); ?> semesters  -->
-                                                <?php //}?>
-                                    
-                                            </li>
-                                        <?php endwhile; ?>
-                                    </ul>
-									<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>';
-								}?>
-								
- 
-								
-								
-								
-								<?php 
-								if($profilebooks) { 
-								echo '<div id="1423658400557-2-555" class="mk-tabs-pane"><div class="title-mobile"><i class=""></i>Books</div>	<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  ">';?>
-								
-                                <?php            
+                             ?>      
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                <div id="1470322917777-7-7" class="mk-tabs-pane">
+					<div class="title-mobile">
+						<i></i>Books
+                    </div>
+					<div class="mk-tabs-pane-content">
+						<div id="text-block-6" class="mk-text-block   ">
+							<?php            
 									foreach( $profilebooks as $profilebook ) {?>
                                     
                                     <div style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #d9d9d9;">
@@ -631,16 +473,21 @@ else { ?>
 									/* Restore original Post Data */
 									wp_reset_postdata();    
 								?>
-                                
-								
-								<?php echo '<div class="clearboth"></div></div><div class="clearboth"></div></div>'; }?>
-								
-						 <?php echo '</div></div>';
-						}?>
-						<div class="clearboth"></div>
-                    </div>
-                </div>
-            </div>
+							<div class="clearboth"></div>
+						</div>
+					</div>	
+					<div class="clearboth"></div>
+				</div>
+                
+                
+				<div class="clearboth"></div>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+    </div>
+</div>
+
+
             <div class="wpb_column vc_column_container vc_col-sm-3">
             	<div class="wpb_wrapper">
                 	<div style="text-align: left;" class="mk-text-block  true">
