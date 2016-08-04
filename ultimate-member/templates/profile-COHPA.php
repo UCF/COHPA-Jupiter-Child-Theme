@@ -90,6 +90,13 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 							<p>
                             	<?php the_field('biography', 'user_' . $user_id .''); ?>
                             </p>
+                            	<?php if (have_rows('degrees', 'user_' . $user_id .'') ) { 	?>
+                                  	<h4>Credentials</h4>
+									
+									<?php while (have_rows('degrees', 'user_' . $user_id .'') ): the_row(); ?> 
+                                        <li><?php the_sub_field('degree', 'user_' . $user_id .''); ?><?php if(get_sub_field('degree_discipline', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_discipline', 'user_' . $user_id .''); }?><?php if(get_sub_field('degree_location', 'user_' . $user_id .'')) { ?>, <?php the_sub_field('degree_location', 'user_' . $user_id .''); }?>
+                                        </li>
+                                    <?php endwhile; ?>
 							<div class="clearboth"></div>
                         </div>
 					</div>	
@@ -106,6 +113,17 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 							<p>
                             	<?php the_field('research_info', 'user_' . $user_id .''); ?>
                             </p>
+                            	<?php 
+									$termswer = get_field('research_interests', 'user_' . $user_id .'');
+									if( $termswer ): 
+									echo '<h4>Research Interests</h4>';
+									?>
+										<ul id="capitalText">
+										<?php foreach( $termswer as $term ): ?>
+											<li><?php echo $term->name; ?></li>
+										<?php endforeach; ?>
+										</ul>
+									<?php endif; ?>
 							<div class="clearboth"></div>
 						</div>
 					</div>	
