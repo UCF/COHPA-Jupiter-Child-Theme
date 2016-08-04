@@ -61,7 +61,7 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 
 <!-- START TESTING SECTION -->
 
-
+<?php get_sidebar('scholarships'); ?>
 
 <!-- END TESTING SECTION -->
 
