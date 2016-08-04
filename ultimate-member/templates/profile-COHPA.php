@@ -254,12 +254,7 @@ else { ?>
                     if(get_field('cv', 'user_' . $user_id .'')) { ?> 
 							
                             
-					<?php 		
-					the_field('cv', 'user_' . $user_id .'');?> 
-                    
-					<?php 		
-						}
-                      ?> 
+				
                       
                     <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
                         <div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
@@ -272,6 +267,12 @@ else { ?>
                     </div>
 
 <style type='text/css'>#mk-button-2 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px;}#mk-button-2 .mk-button {display: inline-block;max-width: 100%;}#mk-button-2 .mk-button {background-color: #ffc904;} #mk-button-2 .mk-button:hover {color:#ffffff;background-color:#212121;}#mk-button-2 .mk-button:hover .mk-svg-icon {color:#ffffff;}</style>
+
+
+                    
+					<?php 		
+						}
+                      ?> 
                       
                         
                     </div>
