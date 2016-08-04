@@ -68,14 +68,14 @@ $padding = get_post_meta( $post->ID, '_padding', true );
 <div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
 	
 <div id="mk-button-2" class="mk-button-container _ relative    inline left  ">
-	<a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-xx-large mk-button--corner-pointed text-color-light _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
+	<a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-x-large mk-button--corner-pointed text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
 				 
-		<span class="mk-button--text">CV</span>
+		<span class="mk-button--text">View CV</span>
 			</a>
 </div></div>
 	</div>
 
-<style type='text/css'>#mk-button-2 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px;}#mk-button-2 .mk-button {display: inline-block;max-width: 100%;}#mk-button-2 .mk-button {background-color: #ffc904;} #mk-button-2 .mk-button:hover {}#mk-button-2 .mk-button:hover .mk-svg-icon {}</style>
+<style type='text/css'>#mk-button-2 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px;}#mk-button-2 .mk-button {display: inline-block;max-width: 100%;}#mk-button-2 .mk-button {background-color: #ffc904;} #mk-button-2 .mk-button:hover {color:#ffffff;background-color:#212121;}#mk-button-2 .mk-button:hover .mk-svg-icon {color:#ffffff;}</style>
 <!-- END TESTING SECTION -->
 
  
@@ -267,6 +267,21 @@ else { ?>
 							echo '" title="Curriculum Vitae" target="_blank"><img src="/wp-content/uploads/2016/06/CV-Document.png" width="85" /><br>View the CV</a>';
 						}
                       ?> 
+                      
+                      <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
+		
+			
+<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
+	
+<div id="mk-button-2" class="mk-button-container _ relative    inline left  ">
+	<a  href="#"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-x-large mk-button--corner-pointed text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-2 inline">
+				 
+		<span class="mk-button--text">View CV</span>
+			</a>
+</div></div>
+	</div>
+
+<style type='text/css'>#mk-button-2 {margin-bottom: 15px;margin-top: 0px;margin-right: 15px;}#mk-button-2 .mk-button {display: inline-block;max-width: 100%;}#mk-button-2 .mk-button {background-color: #ffc904;} #mk-button-2 .mk-button:hover {color:#ffffff;background-color:#212121;}#mk-button-2 .mk-button:hover .mk-svg-icon {color:#ffffff;}</style>
                       
                         
                     </div>
