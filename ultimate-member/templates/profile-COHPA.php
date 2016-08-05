@@ -325,6 +325,9 @@ get_header();
             
             
 			<div class="mk-tabs-panes page-bg-color">
+            
+            <?php 
+					if(get_field('biography', 'user_' . $user_id .'')) { ?>
 				<div id="1470321688-1-51" class="mk-tabs-pane is-active">
                 	<div class="title-mobile">
                     	<i></i>Biography
@@ -347,8 +350,11 @@ get_header();
 					</div>	
 					<div class="clearboth"></div>
 				</div>
+                <?php }?>
                 
                 
+                <?php 
+					if(get_field('research_info', 'user_' . $user_id .'')) { ?>
 				<div id="1470321688-2-76" class="mk-tabs-pane">
 					<div class="title-mobile">
 						<i></i>Research	
@@ -374,8 +380,12 @@ get_header();
 					</div>	
 					<div class="clearboth"></div>
 				</div>
+                <?php }?>
                 
                 
+                
+                <?php 
+					if (have_rows('add_courses', 'user_' . $user_id .'') ) { ?>
 				<div id="1470322879262-2-1" class="mk-tabs-pane">
 					<div class="title-mobile">
 						<i></i>Courses	 
@@ -409,8 +419,11 @@ get_header();
 					</div>	
 					<div class="clearboth"></div>
 				</div>
+                <?php }?>
                 
                 
+                <?php 
+					if($profilenews) { ?>
 				<div id="1470322913503-3-2" class="mk-tabs-pane">
 					<div class="title-mobile">
 						<i></i>News	
@@ -430,8 +443,12 @@ get_header();
 					</div>	
 					<div class="clearboth"></div>
 				</div>
+                <?php }?>
                 
                 
+                
+                <?php 
+					if($profilebooks) {  ?>
                 <div id="1470322917777-7-7" class="mk-tabs-pane">
 					<div class="title-mobile">
 						<i></i>Books
@@ -473,6 +490,10 @@ get_header();
 					</div>	
 					<div class="clearboth"></div>
 				</div>
+                <?php }?>
+                
+                
+                
 				<div class="clearboth"></div>
 			</div>
 			<div class="clearboth"></div>
