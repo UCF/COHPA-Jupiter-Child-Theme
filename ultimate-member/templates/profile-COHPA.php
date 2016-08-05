@@ -300,7 +300,7 @@ get_header();
                  
                 <?php 
 					if(get_field('biography', 'user_' . $user_id .'')) { 
-							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
+							echo '<li class="mk-tabs-tab  "><a href="#"> Biography</a></li>';
 						}
 					if(get_field('research_info', 'user_' . $user_id .'')) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
