@@ -7,7 +7,7 @@ um_fetch_user(5);
 echo um_user_profile_url();
 um_reset_user();
 
-echo '<h1>BYE33</h1>';
+echo '<h1>BYE</h1>';
 	
 global $user;
 $user_info = um_fetch_user( $user->id );
@@ -17,22 +17,14 @@ $values = get_field('choose_directory');
 if($values)
 { 
 	foreach($values as $value)	{
+		
+		echo $values;
+		echo $value;
 
 ?>
 	
 	
-	
-<?php global $current_user;
-      get_currentuserinfo();
 
-      echo 'Username: ' . $current_user->user_login . "\n";
-      echo 'User email: ' . $current_user->user_email . "\n";
-      echo 'User level: ' . $current_user->user_level . "\n";
-      echo 'User first name: ' . $current_user->user_firstname . "\n";
-      echo 'User last name: ' . $current_user->user_lastname . "\n";
-      echo 'User display name: ' . $current_user->display_name . "\n";
-      echo 'User ID: ' . $current_user->ID . "\n";
-?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
