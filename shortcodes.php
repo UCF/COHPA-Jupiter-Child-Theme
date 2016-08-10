@@ -34,15 +34,7 @@ if($values)
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3>
-                        <?php		
-							echo '<a href="';
-							echo um_user_profile_url();
-							echo '" title="';
-							echo '' . $user->display_name . '';
-							echo '">';
-							echo '' . $user->display_name . '';
-							echo '</a>';
-						?>	
+                        <a title="<?php echo '' . $user->display_name . ''; ?>" href="https://www.cohpa.ucf.edu/directory/kenneth-adams/" target="_parent"><?php echo '' . $user->display_name . ''; ?></a>
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
