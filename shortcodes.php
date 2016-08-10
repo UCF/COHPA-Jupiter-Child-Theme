@@ -1,13 +1,17 @@
 <?php
 
 add_shortcode('show_faculty', function() {
-	echo '<h1>HELLO!!!!</h1>'; 
+	echo '<h1>HELLO!!!!</h1>';
+	
+um_fetch_user(5);
+echo um_user_profile_url();
+um_reset_user();
+
+echo '<h1>BYE</h1>';
 	
 global $user;
 $user_info = um_fetch_user( $user->id );
 
-		$author_id = get_the_author_meta('ID');
-		$author_badge = get_field('author_badge', 'user_'. $author_id );
 
 $values = get_field('choose_directory');
 if($values)
