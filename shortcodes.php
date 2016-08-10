@@ -32,9 +32,9 @@ if($values)
 						echo '">';
 						the_field('building', 'user_'. $user_db );
 						echo '</a> ';
-						if( ! empty( $user->room_number ) ) { 
+						if( ! empty( the_field('room_number', 'user_'. $user_db ) ) { 
 							echo ' Room: ';
-							echo '' . $user->room_number . '';
+							the_field('room_number', 'user_'. $user_db );
 						}
 						echo '</div>';	?>
 
