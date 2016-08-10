@@ -45,7 +45,14 @@ if($values)
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><strong>
-						<?php the_field('job_titles', 'user_'. $user_db ); ?>
+						<?php		
+                        if( get_field('job_titles', 'user_' . $user_db ) ) {
+                            while ( have_rows('job_titles', 'user_' . $user_db ) ) : the_row();
+                             $arrayJob[] = get_sub_field('job_title', 'user_' . $user_db ); 
+                            endwhile;
+                            $jobTitles = implode(', ', $arrayJob);
+                        }
+                        ?>
                     </strong><br>
                         Criminal Justice<br>
                         Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?><br>
