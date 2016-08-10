@@ -17,7 +17,7 @@ if($values)
 
 
 
-
+<?php the_field('upload_headshot', 'user_' . $user_db); ?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
@@ -26,19 +26,7 @@ if($values)
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        	<?php
-							if( $image ) { ?>
-								<a href="<?php um_fetch_user( $user_db ); echo um_user_profile_url(); ?>" title="<?php echo $value['display_name'] ; ?>">
-								<img class="lightbox-false" src="<?php echo $image; ?>" alt="<?php echo $value['display_name'] ; ?>" title="<?php echo $value['display_name'] ; ?>" width="100%" />
-								</a>
-								 
-							<?php }
-							else { ?> 
-								<img class="lightbox-false" alt="<?php echo $value['display_name'] ; ?>" title="<?php echo $value['display_name'] ; ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image"  width="100%" />
-							<?php } ?> 
-                        
-                        
-                        	<!--<img class="lightbox-false" alt="" title="" width="500" height="751" src="https://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/06/kenneth_adams.jpg"> -->
+                        	<img class="lightbox-false" alt="" title="" width="500" height="751" src="https://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/06/kenneth_adams.jpg">
                         </div>
                     </div>
 					<div class="clearboth"></div>
