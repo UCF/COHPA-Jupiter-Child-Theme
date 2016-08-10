@@ -6,22 +6,9 @@ add_shortcode('show_faculty', function() {
 	
 $values = get_field('choose_directory');
 if($values)
-{
-	echo '<ul>';
- 
-	foreach($values as $value)
-	{
-		echo '<li>' . $value['display_name'] . '</li>';
-	}
- 
-	echo '</ul>';
-}	
-	
-	
-	
-	
-	
-	?>
+{ 
+	foreach($values as $value)	{
+?>
 	
 	
 	
@@ -70,6 +57,11 @@ if($values)
 </div>
 <div class="clearboth"></div>
 <!-- END REPEATER SECTION -->	
+
+<?
+	}
+}	
+	?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #divider-7 { padding:10px 0 30px; } #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
