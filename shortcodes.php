@@ -1,7 +1,7 @@
 <?php
 
 add_shortcode('show_faculty', function() {
-	echo '<h1>HELLO!!!!</h1>';
+	echo '<h1>closer!!!!</h1>';
 	
 
 	
@@ -18,7 +18,11 @@ if($values)
 
 
 
-
+<?php 
+$direct_link = $value['ID'];
+echo $direct_link ;
+echo 'Phone Number' . $direct_link->phone_number . ''; 
+?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
