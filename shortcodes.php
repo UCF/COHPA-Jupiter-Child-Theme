@@ -7,7 +7,7 @@ um_fetch_user(5);
 echo um_user_profile_url();
 um_reset_user();
 
-echo '<h1>BYE</h1>';
+echo '<h1>BYE22</h1>';
 	
 global $user;
 $user_info = um_fetch_user( $user->id );
@@ -22,7 +22,7 @@ if($values)
 	
 	
 	
-	
+	<?php get_userdata( $userid ); ?> 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
