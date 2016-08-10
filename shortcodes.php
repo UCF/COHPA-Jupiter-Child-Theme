@@ -19,9 +19,7 @@ if($values)
 	foreach($values as $value)	{
 
 ?>
-	
-	
-<?php echo $value['phone_number', 'user_23'] ; ?>
+
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
