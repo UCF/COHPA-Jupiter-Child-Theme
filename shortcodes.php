@@ -10,14 +10,10 @@ $values = get_field('choose_directory');
 if($values)
 { 
 	foreach($values as $value)	{
-
+         $user_db = $value['ID'];
 ?>
 
 
-<?php 
-$direct_link = $value['ID'];
-the_field('phone_number', 'user_'. $direct_link ); 
-?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
@@ -42,14 +38,14 @@ the_field('phone_number', 'user_'. $direct_link );
                     <h3>
                         <a title="<?php echo $value['display_name'] ; ?>" href="<?php 
 							
-							um_fetch_user( $direct_link );
+							um_fetch_user( $user_db );
 							echo um_user_profile_url();
 							um_reset_user();
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
-                        Phone: 407704051<br>
+                        Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?><br>
                         Email: <a title="Contact Kenneth Adams" href="mailto:kenneth.adams@ucf.edu">kenneth.adams@ucf.edu</a>
                     </p>
                     <p>Location: <a title="Map to " href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: 360</p>
