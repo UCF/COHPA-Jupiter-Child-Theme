@@ -33,6 +33,7 @@ if($values)
     	<div class="vc_column-inner ">
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
+                <?php echo um_user_profile_url(); ?> - Profile URL
                     <h3>
                         <a title="<?php echo $value['display_name'] ; ?>" href="https://www.cohpa.ucf.edu/directory/kenneth-adams/" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
