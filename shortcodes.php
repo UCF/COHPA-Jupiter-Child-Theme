@@ -4,9 +4,6 @@ add_shortcode('show_faculty', function() {
 	echo '<h1>closer!!!!</h1>';
 	
 
-	
-global $user;
-$user_info = um_fetch_user( $user->id );
 
 
 $values = get_field('choose_directory');
@@ -19,9 +16,10 @@ if($values)
 
 
 <?php 
+global $user;
 $direct_link = $value['ID'];
 echo $direct_link ;
-echo 'Phone Number' . $direct_link->phone_number . ''; 
+echo 'Phone Number' . $user->phone_number . ''; 
 ?>
 
 <!-- START REPEATER SECTION -->	
