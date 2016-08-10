@@ -9,6 +9,7 @@ if($values)
 	foreach($values as $value)	{
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
+		 $roomy = get_field('room_number', 'user_' . $user_db .'');
 
 ?>
 
@@ -32,7 +33,7 @@ if($values)
 						echo '">';
 						the_field('building', 'user_'. $user_db );
 						echo '</a> ';
-						if( ! empty( the_field('room_number', 'user_'. $user_db ) ) { 
+						if( ! empty($roomy) { 
 							echo ' Room: ';
 							the_field('room_number', 'user_'. $user_db );
 						}
