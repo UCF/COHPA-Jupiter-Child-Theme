@@ -3,7 +3,7 @@
 add_shortcode('show_faculty', function() {
 	echo '<h1>closer22!!!!</h1>';
 	
- the_field('phone_number', 'user_204');
+ 
 
 
 $values = get_field('choose_directory');
@@ -14,6 +14,10 @@ if($values)
 ?>
 
 
+<?php 
+$direct_link = $value['ID'];
+the_field('phone_number', 'user_'. $direct_link ); 
+?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
@@ -37,7 +41,7 @@ if($values)
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3>
                         <a title="<?php echo $value['display_name'] ; ?>" href="<?php 
-							$direct_link = $value['ID'];
+							
 							um_fetch_user( $direct_link );
 							echo um_user_profile_url();
 							um_reset_user();
