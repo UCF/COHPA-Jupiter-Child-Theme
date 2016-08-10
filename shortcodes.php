@@ -10,6 +10,10 @@ if($values)
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
+		 $image = get_field('upload_headshot', 'user_' . $user_db .'');
+		 $url = $image['url'];
+		 $size = 'faculty';
+		 $thumb = $image['sizes'][ $size ];
 
 ?>
 
@@ -24,7 +28,19 @@ if($values)
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        	<img class="lightbox-false" alt="" title="" width="500" height="751" src="https://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/06/kenneth_adams.jpg">
+                        	<?php
+							if( $image ) { ?>
+								<a href="<?php um_fetch_user( $user_db ); echo um_user_profile_url(); ?>" title="<?php echo $value['display_name'] ; ?>">
+								<img class="lightbox-false" src="<?php echo $thumb; ?>" alt="<?php echo $value['display_name'] ; ?>" title="<?php echo $value['display_name'] ; ?>" width="100%" />
+								</a>
+								 
+							<?php }
+							else { ?> 
+								<img class="lightbox-false" alt="<?php echo $value['display_name'] ; ?>" title="<?php echo $value['display_name'] ; ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image"  width="100%" />
+							<?php } ?> 
+                        
+                        
+                        	<!--<img class="lightbox-false" alt="" title="" width="500" height="751" src="https://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/06/kenneth_adams.jpg"> -->
                         </div>
                     </div>
 					<div class="clearboth"></div>
@@ -38,22 +54,12 @@ if($values)
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3>
                         <a title="<?php echo $value['display_name'] ; ?>" href="<?php 
-							
 							um_fetch_user( $user_db );
 							echo um_user_profile_url();
 							um_reset_user();
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><strong>
-						<?php		
-                        if( get_field('job_titles', 'user_' . $user_db ) ) {
-                            while ( have_rows('job_titles', 'user_' . $user_db ) ) : the_row();
-                             $arrayJob[] = get_sub_field('job_title', 'user_' . $user_db ); 
-                            endwhile;
-                            $jobTitles = implode(', ', $arrayJob);
-                        }
-                        ?>
-                    </strong><br>
+                    <p><strong>JOB TITLE</strong><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
