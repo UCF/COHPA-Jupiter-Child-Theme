@@ -3,7 +3,9 @@
 add_shortcode('show_faculty', function() {
 	echo '<h1>HELLO!!!!</h1>'; 
 	
-$user_info = um_fetch_user( $user->id );	
+global $user;
+$user_info = um_fetch_user( $user->id );
+
 $values = get_field('choose_directory');
 if($values)
 { 
@@ -40,7 +42,7 @@ if($values)
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
-                        Phone: <?php echo $value['phone_number'] ; ?><br>
+                        Phone: <?php echo '' . $user->phone_number . ''; ?><br>
                         Email: <a title="Contact Kenneth Adams" href="mailto:kenneth.adams@ucf.edu">kenneth.adams@ucf.edu</a>
                     </p>
                     <p>Location: <a title="Map to " href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: 360</p>
