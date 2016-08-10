@@ -21,7 +21,14 @@ if($values)
 ?>
 
 
-<?php echo $value['ID'] ; ?>
+<?php 
+$direct_link = $value['ID'];
+um_fetch_user('direct_link');
+echo um_user_profile_url();
+um_reset_user();
+?>
+
+
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
