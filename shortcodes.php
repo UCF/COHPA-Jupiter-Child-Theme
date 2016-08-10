@@ -34,7 +34,7 @@ if($values)
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3>
-                        <a title="<?php echo '' . $user->display_name . ''; ?>" href="https://www.cohpa.ucf.edu/directory/kenneth-adams/" target="_parent"><?php echo '' . $user->display_name . ''; ?></a>
+                        <a title="<?php echo $value['display_name'] ; ?>" href="https://www.cohpa.ucf.edu/directory/kenneth-adams/" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
