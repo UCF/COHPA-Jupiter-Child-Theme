@@ -21,15 +21,7 @@ if($values)
 ?>
 
 
-<?php 
-$direct_link = $value['ID'];
-echo $direct_link;
 
-echo 'DO IT';
-um_fetch_user( $direct_link );
-echo um_user_profile_url();
-um_reset_user();
-?>
 
 
 <!-- START REPEATER SECTION -->	
@@ -52,9 +44,13 @@ um_reset_user();
     	<div class="vc_column-inner ">
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
-                <?php echo um_user_profile_url(); ?> - Profile URL
                     <h3>
-                        <a title="<?php echo $value['display_name'] ; ?>" href="https://www.cohpa.ucf.edu/directory/kenneth-adams/" target="_parent"><?php echo $value['display_name'] ; ?></a>
+                        <a title="<?php echo $value['display_name'] ; ?>" href="<?php 
+							$direct_link = $value['ID'];
+							um_fetch_user( $direct_link );
+							echo um_user_profile_url();
+							um_reset_user();
+							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
