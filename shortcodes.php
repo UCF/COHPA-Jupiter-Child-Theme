@@ -25,8 +25,8 @@ if($values)
 $direct_link = $value['ID'];
 echo $direct_link;
 
-echo 'here is the link';
-um_fetch_user('direct_link');
+echo 'DO IT';
+um_fetch_user( $direct_link );
 echo um_user_profile_url();
 um_reset_user();
 ?>
