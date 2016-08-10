@@ -1,7 +1,27 @@
 <?php
 
 add_shortcode('show_faculty', function() {
-	echo '<h1>HELLO!!!!</h1>'; ?>
+	echo '<h1>HELLO!!!!</h1>'; 
+	
+	
+$values = get_field('choose_directory');
+if($values)
+{
+	echo '<ul>';
+ 
+	foreach($values as $value)
+	{
+		echo '<li>' . $value['display_name'] . '</li>';
+	}
+ 
+	echo '</ul>';
+}	
+	
+	
+	
+	
+	
+	?>
 	
 	
 	
