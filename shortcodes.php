@@ -6,13 +6,14 @@ add_shortcode('show_faculty', function() {
 global $user;
 $user_info = um_fetch_user( $user->id );
 
+		$author_id = get_the_author_meta('ID');
+		$author_badge = get_field('author_badge', 'user_'. $author_id );
+
 $values = get_field('choose_directory');
 if($values)
 { 
 	foreach($values as $value)	{
-		um_fetch_user( $user->id );
-		$author_id = get_the_author_meta('ID');
-		$author_badge = get_field('author_badge', 'user_'. $author_id );
+
 ?>
 	
 	
