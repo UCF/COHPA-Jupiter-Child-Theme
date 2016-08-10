@@ -8,6 +8,7 @@ $values = get_field('choose_directory');
 if($values)
 { 
 	foreach($values as $value)	{
+		um_fetch_user( $user->id );
 ?>
 	
 	
