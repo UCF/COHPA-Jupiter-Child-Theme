@@ -11,6 +11,8 @@ if($values)
 { 
 	foreach($values as $value)	{
 		um_fetch_user( $user->id );
+		$author_id = get_the_author_meta('ID');
+		$author_badge = get_field('author_badge', 'user_'. $author_id );
 ?>
 	
 	
@@ -42,7 +44,7 @@ if($values)
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
-                        Phone: <?php the_field('phone_number', 'user_1'); ?><br>
+                        Phone: 123123123123  <?php echo $author_badge['url']; ?><br>
                         Email: <a title="Contact Kenneth Adams" href="mailto:kenneth.adams@ucf.edu">kenneth.adams@ucf.edu</a>
                     </p>
                     <p>Location: <a title="Map to " href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: 360</p>
