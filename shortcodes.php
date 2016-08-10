@@ -13,27 +13,7 @@ if($values)
 
 ?>
 
-<?php the_field('department', 'user_' . $user_db); ?></h4>
-                        <?php 
-						$terms = get_field('department');
-						if( $terms ) {
-						  $count = count( $terms );
-							$i = 0;
-							$term_list = '<p>';
-						foreach( $terms as $term ) {
-						  $i++;
-						  echo '<a href="';
-						  echo get_term_link( $term );
-						  echo'">';
-						  echo $term->name;
-						  echo '</a>';
-						if ( $count != $i ) {
-									echo ', ';
-								}
-							}
-						 } 	
 
-						?>
 
 
 <!-- START REPEATER SECTION -->	
@@ -74,7 +54,27 @@ if($values)
                         }
                         ?>
                     </strong><br>
-                        Criminal Justice<br>
+                        <?php the_field('department', 'user_' . $user_db); ?>
+                        <?php 
+						$terms = get_field('department');
+						if( $terms ) {
+						  $count = count( $terms );
+							$i = 0;
+							$term_list = '<p>';
+						foreach( $terms as $term ) {
+						  $i++;
+						  echo '<a href="';
+						  echo get_term_link( $term );
+						  echo'">';
+						  echo $term->name;
+						  echo '</a>';
+						if ( $count != $i ) {
+									echo ', ';
+								}
+							}
+						 } 	
+
+						?><br>
                         Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?><br>
                         Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a>
                     </p>
