@@ -3,11 +3,7 @@
 add_shortcode('show_faculty', function() {
 	echo '<h1>HELLO!!!!</h1>';
 	
-um_fetch_user(5);
-echo um_user_profile_url();
-um_reset_user();
 
-echo '<h1>BYE33</h1>';
 	
 global $user;
 $user_info = um_fetch_user( $user->id );
