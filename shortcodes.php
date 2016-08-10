@@ -3,7 +3,7 @@
 add_shortcode('show_faculty', function() {
 	echo '<h1>HELLO!!!!</h1>'; 
 	
-	
+$user_info = um_fetch_user( $user->id );	
 $values = get_field('choose_directory');
 if($values)
 { 
