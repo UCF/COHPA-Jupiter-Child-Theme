@@ -22,7 +22,7 @@ if($values)
 	
 	
 	
-	<?php get_userdata( $userid ); ?> 
+	USER ID: <?php echo $value['$user_ID'] ; ?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
