@@ -1,10 +1,6 @@
 <?php
 
 add_shortcode('show_faculty', function() {
-	echo '<h1>closer22!!!!</h1>';
-	
- 
-
 
 $values = get_field('choose_directory');
 if($values)
@@ -46,9 +42,9 @@ if($values)
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
                         Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?><br>
-                        Email: <a title="Contact Kenneth Adams" href="mailto:kenneth.adams@ucf.edu">kenneth.adams@ucf.edu</a>
+                        Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a>
                     </p>
-                    <p>Location: <a title="Map to " href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: 360</p>
+                    <p>Location: <a title="Map to " href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: <?php the_field('room_number', 'user_'. $user_db ); ?></p>
     
                     <div class="clearboth"></div>
                 </div>
