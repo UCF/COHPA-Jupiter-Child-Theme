@@ -1,9 +1,9 @@
 <?php
 
 add_shortcode('show_faculty', function() {
-	echo '<h1>closer!!!!</h1>';
+	echo '<h1>closer22!!!!</h1>';
 	
-
+ the_field('phone_number', 'user_204');
 
 
 $values = get_field('choose_directory');
@@ -14,13 +14,6 @@ if($values)
 ?>
 
 
-
-<?php 
-global $user;
-$direct_link = $value['ID'];
-echo $direct_link ;
-echo 'Phone Number' . $user->phone_number . ''; 
-?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
