@@ -7,7 +7,7 @@ um_fetch_user(5);
 echo um_user_profile_url();
 um_reset_user();
 
-echo '<h1>BYE</h1>';
+echo '<h1>phone</h1>';
 	
 global $user;
 $user_info = um_fetch_user( $user->id );
@@ -18,12 +18,10 @@ if($values)
 { 
 	foreach($values as $value)	{
 		
-		echo $values;
-		echo $value;
 
 ?>
 	
-	
+	<?php echo $value['phone_number', 'user_65'] ; ?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
