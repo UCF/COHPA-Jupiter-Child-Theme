@@ -11,9 +11,7 @@ if($values)
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
 		 $image = get_field('upload_headshot', 'user_' . $user_db .'');
-		 $url = $image['url'];
-		 $size = 'faculty';
-		 $thumb = $image['sizes'][ $size ];
+		 
 
 ?>
 
@@ -31,7 +29,7 @@ if($values)
                         	<?php
 							if( $image ) { ?>
 								<a href="<?php um_fetch_user( $user_db ); echo um_user_profile_url(); ?>" title="<?php echo $value['display_name'] ; ?>">
-								<img class="lightbox-false" src="<?php echo $thumb; ?>" alt="<?php echo $value['display_name'] ; ?>" title="<?php echo $value['display_name'] ; ?>" width="100%" />
+								<img class="lightbox-false" src="<?php echo $image; ?>" alt="<?php echo $value['display_name'] ; ?>" title="<?php echo $value['display_name'] ; ?>" width="100%" />
 								</a>
 								 
 							<?php }
