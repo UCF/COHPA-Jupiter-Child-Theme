@@ -20,6 +20,8 @@ if($values)
 
 ?>
 
+
+<?php echo $value['ID'] ; ?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
@@ -46,7 +48,7 @@ if($values)
                     </h3>
                     <p><strong>Professor</strong><br>
                         Criminal Justice<br>
-                        Phone: <?php the_sub_field('phone_number'); ?><br>
+                        Phone: <407704051<br>
                         Email: <a title="Contact Kenneth Adams" href="mailto:kenneth.adams@ucf.edu">kenneth.adams@ucf.edu</a>
                     </p>
                     <p>Location: <a title="Map to " href="http://map.ucf.edu/locations/80/health-public-affairs-i/" target="_blank">HPA I</a> Room: 360</p>
