@@ -118,8 +118,7 @@ if($values)
 </div>
 <div id="divider-7" class="mk-divider  divider_full_width center shadow_line ">
 	<div class="divider-inner">
-		<span class="divider-shadow-left"></span>
-        <span class="divider-shadow-right"></span>
+		<span class="divider-shadow-left"></span><span class="divider-shadow-right"></span>
 	</div>
 </div>
 <div class="clearboth"></div>
