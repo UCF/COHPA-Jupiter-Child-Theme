@@ -66,7 +66,7 @@ if($values)
 						if( $terms ) {
 						  $count = count( $terms );
 							$i = 0;
-							$term_list = '<p>';
+							$term_list = ' ';
 						foreach( $terms as $term ) {
 						  $i++;
 						  echo '<a href="';
