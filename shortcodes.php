@@ -124,7 +124,7 @@ if($values)
 <div class="clearboth"></div>
 <!-- END REPEATER SECTION -->	
 
-<?
+<?php
 	}
 }	
 	?>
