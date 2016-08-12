@@ -16,57 +16,6 @@ if($values)
 
 ?>
 
-<h3>USER ATTEMPT:</h3>
-<?php
-
-if( get_field('job_titles', 'user_' . $user_db .'') ) {
-    $num_rows = 0;
-        while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-        $num_rows++;
-        endwhile;
-
-    echo '<strong>Jobs: </strong>';
-        while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-        $num_rows--;
-        echo '<span>'. get_sub_field('job_title') .'</span>';
-        if ( $num_rows == 0 ) { echo '.'; }
-        else { echo ', '; }
-        endwhile;
-}
-?>
-
-<h3>TRY #2</h3>
-<?php
-if( get_field('job_titles', 'user_' . $user_db .'') ) {
-    echo '<strong>Jobs: </strong>'; 
-    while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-     $array[] = get_sub_field('job_title'); 
-    endwhile;
-    $foo = implode(', ', $array);
-
-    echo $foo;
-}
-?>
-
-<h3>USER ATTEMPT #3</h3>
-<?php
-
-if( get_field('job_titles', 'user_' . $user_db .'') ) {
-    $num_rows = 0;
-        while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-        $num_rows++;
-        endwhile;
-
-    echo '<strong>Jobs: </strong>';
-        while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-        $num_rows--;
-        echo '<span>'. get_sub_field('job_title', 'user_' . $user_db .'') .'</span>';
-        if ( $num_rows == 0 ) { echo '.'; }
-        else { echo ', '; }
-        endwhile;
-}
-?>
-
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
@@ -94,7 +43,23 @@ if( get_field('job_titles', 'user_' . $user_db .'') ) {
 							um_reset_user();
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><strong>JOB TITLE</strong><br>
+                    <p><strong>
+                    	<?php
+							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+								$num_rows = 0;
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows++;
+									endwhile;
+							
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows--;
+									echo '<span>'. get_sub_field('job_title') .'</span>';
+									if ( $num_rows == 0 ) { echo ''; }
+									else { echo ', '; }
+									endwhile;
+							}
+							?>
+                    </strong><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
