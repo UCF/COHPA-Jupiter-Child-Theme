@@ -15,9 +15,6 @@ if($values)
 		 
 
 ?>
-<h1>HELLO</h1>
-
-<?php echo $image_ucf['url']; ?>
 
 
 <!-- START REPEATER SECTION -->	
@@ -28,7 +25,7 @@ if($values)
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        	<img class="lightbox-false" alt="" title="" width="500" height="751" src="https://cohpacmsdev.smca.ucf.edu/wp-content/uploads/2016/06/kenneth_adams.jpg">
+                        	<img class="lightbox-false" alt="" title="" width="500" src="<?php echo $image_ucf['url']; ?>">
                         </div>
                     </div>
 					<div class="clearboth"></div>
