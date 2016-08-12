@@ -10,7 +10,12 @@ if($values)
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
-		 $image = get_field('upload_headshot', 'user_' . $user_db .'');
+		 $image = get_field('upload_headshot', 'user_' . $user->id .'');
+$url = $image['url'];
+$size = 'faculty';
+$thumb = $image['sizes'][ $size ];
+$width = $image['sizes'][ $size . '-width' ];
+$height = $image['sizes'][ $size . '-height' ];
 		 
 
 ?>
@@ -18,7 +23,7 @@ if($values)
 
 
 
-
+<?php echo $thumb; ?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
