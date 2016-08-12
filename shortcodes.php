@@ -16,7 +16,7 @@ if($values)
 
 ?>
 
-
+<h3>USER ATTEMPT:</h3>
 <?php
 
 if( get_field('job_titles', 'user_' . $user_db .'') ) {
@@ -32,6 +32,19 @@ if( get_field('job_titles', 'user_' . $user_db .'') ) {
         if ( $num_rows == 0 ) { echo '.'; }
         else { echo ', '; }
         endwhile;
+}
+?>
+
+<h3>TRY #2</h3>
+<?php
+if( get_field('job_titles', 'user_' . $user_db .'') ) {
+    echo '<strong>Jobs: </strong>'; 
+    while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+     $array[] = get_sub_field('job_title'); 
+    endwhile;
+    $foo = implode(', ', $array);
+
+    echo $foo;
 }
 ?>
 
