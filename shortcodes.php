@@ -28,12 +28,12 @@ if($values)
 							um_fetch_user( $user_db );
 							echo um_user_profile_url();
 							um_reset_user();
-							?>" title="">
+							?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="" title="" width="500" src="<?php echo $image_ucf['url']; ?>">
+                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
                                 else { ?> 
-                                    <img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
                             <?php } ?>
                         </a>    
                         </div>
@@ -54,7 +54,7 @@ if($values)
 							um_reset_user();
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><strong>
+                    <p><span style="font-weight:bold; font-size:18px; line-height:10px;">
                     	<?php
 							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
@@ -70,7 +70,7 @@ if($values)
 									endwhile;
 							}
 							?>
-                    </strong><br>
+                    </span><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
