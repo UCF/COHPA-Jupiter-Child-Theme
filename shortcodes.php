@@ -54,7 +54,7 @@ if($values)
 							um_reset_user();
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><span style="font-weight:bold; font-size:16px; margin-bottom:-20px;">
+                    <p><span style="font-weight:bold; font-size:16px; line-height:8px !important;">
                     	<?php
 							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
