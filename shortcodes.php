@@ -24,12 +24,18 @@ if($values)
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <?php if( $image_ucf ) { ?>
-                        	<img class="lightbox-false" alt="" title="" width="500" src="<?php echo $image_ucf['url']; ?>">
-                         <?php }
-							else { ?> 
-								<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
-						<?php } ?>    
+                        <a href="<?php 
+							um_fetch_user( $user_db );
+							echo um_user_profile_url();
+							um_reset_user();
+							?>" title="">
+							<?php if( $image_ucf ) { ?>
+                                <img class="lightbox-false" alt="" title="" width="500" src="<?php echo $image_ucf['url']; ?>">
+                             <?php }
+                                else { ?> 
+                                    <img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                            <?php } ?>
+                        </a>    
                         </div>
                     </div>
 					<div class="clearboth"></div>
