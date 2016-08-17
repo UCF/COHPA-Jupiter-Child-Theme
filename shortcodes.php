@@ -48,13 +48,13 @@ if($values)
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3>
-                        <a title="<?php echo $value['display_name'] ; ?>" href="<?php 
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="<?php 
 							um_fetch_user( $user_db );
 							echo um_user_profile_url();
 							um_reset_user();
 							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><span style="font-weight:bold; font-size:16px; line-height:8px !important;">
+                    <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
 							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
