@@ -55,13 +55,13 @@ $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
-							if( $jobs_ucf ) {
+							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
-									while ( have_rows($jobs_ucf) ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
 									endwhile;
 							
-									while ( have_rows($jobs_ucf) ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows--;
 									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
