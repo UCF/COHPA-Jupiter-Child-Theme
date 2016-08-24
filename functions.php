@@ -45,6 +45,7 @@ function admin_styles() {
 		#profile-page h2 { display: none; }
 		#profile-page h3 { display: none; }
 		input[name=twitter], label[for=twitter] { display: none; } 
+		.wpmu-message {display:none;}
 	</style>
 	<?php
 }
