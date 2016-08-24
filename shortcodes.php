@@ -17,12 +17,10 @@ if($values)
 ?>
 
 
-<?php 
-      $user_info = get_userdata('user_' . $user_db .'');
-      $first_name = $user_info->first_name;
-      $last_name = $user_info->last_name;
-      echo "$first_name $last_name";
-?>
+
+	  
+<?php the_field('first_name', 'user_' . $user_db); ?>-<?php the_field('last_name', 'user_' . $user_db); ?>
+
 
 
 <!-- START REPEATER SECTION -->	
