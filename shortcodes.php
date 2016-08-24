@@ -2,7 +2,6 @@
 
 add_shortcode('show_faculty', function() {
 
-switch_to_blog(1);
 
 $values = get_field('choose_directory');
 if($values)
@@ -14,14 +13,12 @@ if($values)
 ?>
 
 
-<?php 
+<?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title');
 ?>
-	  
-yyyyyyyyy
-
+<?php restore_current_blog(); ?>
 
 
 <!-- START REPEATER SECTION -->	
@@ -56,7 +53,7 @@ yyyyyyyyy
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
-						
+						switch_to_blog(1);
 						
 							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
@@ -71,10 +68,8 @@ yyyyyyyyy
 									else { echo ', '; }
 									endwhile;
 							}
-						
+						restore_current_blog();
 							?>
-                            
-                            
                             
                     </span><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
@@ -143,7 +138,6 @@ yyyyyyyyy
 
 <?php
 	}
-	restore_current_blog();
 }	
 	?>
 	
