@@ -21,9 +21,23 @@ $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
 <?php restore_current_blog(); ?>
 	  
 
-44444  <?php echo $jobtitle_ucf; ?>
+5555555  
 
-
+<?php
+							if( $jobs_ucf ) {
+								$num_rows = 0;
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows++;
+									endwhile;
+							
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows--;
+									echo '<span>'. get_sub_field('job_title') .'</span>';
+									if ( $num_rows == 0 ) { echo ''; }
+									else { echo ', '; }
+									endwhile;
+							}
+							?>
 
 
 <!-- START REPEATER SECTION -->	
