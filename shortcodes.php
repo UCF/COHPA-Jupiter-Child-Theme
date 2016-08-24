@@ -16,25 +16,23 @@ if($values)
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
-$jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
+$jobtitle_ucf = get_sub_field('job_title');
 ?>
 <?php restore_current_blog(); ?>
 	  
 
-6666666  
+777777
 
 <?php
 							if( $jobs_ucf ) {
 								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									while ( have_rows($jobs_ucf) ) : the_row();
 									$num_rows++;
 									endwhile;
 							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									while ( have_rows($jobs_ucf) ) : the_row();
 									$num_rows--;
-									echo '<span>';
-									echo $jobtitle_ucf;
-									echo '</span>';
+									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
 									endwhile;
