@@ -19,7 +19,6 @@ $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
 
 
-get_sub_field($sub_field_name, $format_value);
 ?>
 <?php restore_current_blog(); ?>
 	  
