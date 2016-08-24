@@ -17,31 +17,13 @@ if($values)
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
-
-
 ?>
 <?php restore_current_blog(); ?>
 	  
 
-333333
+44444  <?php echo $jobtitle_ucf; ?>
 
-<?php
-							if( $jobs_ucf ) {
-								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-									$num_rows++;
-									endwhile;
-							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-									$num_rows--;
-									echo '<span>';
-									echo $jobtitle_ucf;
-									echo'</span>';
-									if ( $num_rows == 0 ) { echo ''; }
-									else { echo ', '; }
-									endwhile;
-							}
-							?>
+
 
 
 <!-- START REPEATER SECTION -->	
