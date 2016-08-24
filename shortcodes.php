@@ -34,7 +34,9 @@ $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
 							
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows--;
-									echo '<span>'. $jobtitle_ucf .'</span>';
+									echo '<span>';
+									echo $jobtitle_ucf;
+									echo'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
 									endwhile;
