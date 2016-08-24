@@ -16,6 +16,12 @@ if($values)
 
 ?>
 
+
+<?php $user_info = get_userdata('$user_db');
+      echo $user_info->first_name .  "-" . $user_info->last_name . "\n";
+?>
+
+
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
