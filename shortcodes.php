@@ -16,12 +16,12 @@ if($values)
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
-$jobtitle_ucf = get_sub_field('job_title');
+$jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
 ?>
 <?php restore_current_blog(); ?>
 	  
 
-666  
+6666666  
 
 <?php
 							if( $jobs_ucf ) {
