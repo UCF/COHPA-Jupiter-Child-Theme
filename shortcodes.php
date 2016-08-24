@@ -16,12 +16,12 @@ if($values)
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
-$jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .''););
+$jobtitle_ucf = get_sub_field('job_title');
 ?>
 <?php restore_current_blog(); ?>
 	  
 
-88-xxxxxx-88
+888888888
 
 <?php
 							if( $jobs_ucf ) {
@@ -33,7 +33,7 @@ $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .''););
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row(); // do I need to convert "have_rows()" to a variable?? 
 									$num_rows--;
 									echo '<span>';
-									echo $jobtitle_ucf;
+									echo get_sub_field('job_title');
 									echo '</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
