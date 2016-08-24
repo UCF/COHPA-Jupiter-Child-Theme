@@ -11,16 +11,12 @@ if($values)
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
 		 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-		 
-         $image_cohpa = the_field('upload_headshot', 'user_' . $user_db .'');
-		 
-
 ?>
 
 
 
 	  
-<?php echo $image_cohpa['url']; ?>
+<?php echo $image_ucf['url']; ?>
 
 
 
