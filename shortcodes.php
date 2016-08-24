@@ -14,9 +14,13 @@ if($values)
 ?>
 
 
-
+<?php switch_to_blog(1); ?>
+hey
+	<?php echo $image_ucf['url']; ?>
+    
+	<?php restore_current_blog(); ?>
 	  
-<?php echo $image_ucf['url']; ?>
+
 
 
 
