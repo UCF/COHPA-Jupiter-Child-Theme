@@ -23,7 +23,7 @@ $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
 <?php restore_current_blog(); ?>
 	  
 
-2222222  <?php echo $jobtitle_ucf; ?>
+333333
 
 <?php
 							if( $jobs_ucf ) {
@@ -34,7 +34,7 @@ $jobtitle_ucf = get_sub_field('job_title', 'user_' . $user_db .'');
 							
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows--;
-									echo '<span>'. get_sub_field('job_title') .'</span>';
+									echo '<span>'. $jobtitle_ucf .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
 									endwhile;
