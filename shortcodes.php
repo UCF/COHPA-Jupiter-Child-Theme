@@ -21,7 +21,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 <?php restore_current_blog(); ?>
 	  
 
-8888 
+888888888
 
 <?php
 							if( $jobs_ucf ) {
@@ -32,7 +32,9 @@ $jobtitle_ucf = get_sub_field('job_title');
 							
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row(); // do I need to convert "have_rows()" to a variable?? 
 									$num_rows--;
-									echo '<span>'. get_sub_field('job_title') .'</span>'; // do I need to convert "get_sub_field()" to a variable?? 
+									echo '<span>';
+									echo get_sub_field('job_title');
+									echo '</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
 									endwhile;
