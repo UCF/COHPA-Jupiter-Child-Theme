@@ -14,8 +14,11 @@ if($values)
 ?>
 
 
-<?php switch_to_blog(1); ?>
-hey
+<?php switch_to_blog(1); 
+$user_db = $value['ID'];
+$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+?>
+hiiii
 	<?php echo $image_ucf['url']; ?>
     
 	<?php restore_current_blog(); ?>
