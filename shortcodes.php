@@ -17,8 +17,11 @@ if($values)
 ?>
 
 
-<?php $user_info = get_userdata('$user_db');
-      echo $user_info->first_name .  "-" . $user_info->last_name . "\n";
+<?php 
+      $user_info = get_userdata('user_' . $user_db .'');
+      $first_name = $user_info->first_name;
+      $last_name = $user_info->last_name;
+      echo "$first_name $last_name";
 ?>
 
 
