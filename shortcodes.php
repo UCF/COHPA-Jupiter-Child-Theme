@@ -17,46 +17,10 @@ if($values)
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title');
-
-
-if( $jobs_ucf ) {
-								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row(); // do I need to convert "have_rows()" to a variable?? 
-									$num_rows++;
-									endwhile;
-							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row(); // do I need to convert "have_rows()" to a variable?? 
-									$num_rows--;
-									echo '<span>';
-									echo get_sub_field('job_title');
-									echo '</span>';
-									if ( $num_rows == 0 ) { echo ''; }
-									else { echo ', '; }
-									endwhile;
-							}
-
 ?>
 <?php restore_current_blog(); ?>
 	  
-99999
 
-<?php
-							if( $jobs_ucf ) {
-								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row(); // do I need to convert "have_rows()" to a variable?? 
-									$num_rows++;
-									endwhile;
-							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row(); // do I need to convert "have_rows()" to a variable?? 
-									$num_rows--;
-									echo '<span>';
-									echo get_sub_field('job_title');
-									echo '</span>';
-									if ( $num_rows == 0 ) { echo ''; }
-									else { echo ', '; }
-									endwhile;
-							}
-							?>
 
 
 <!-- START REPEATER SECTION -->	
@@ -91,7 +55,7 @@ if( $jobs_ucf ) {
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
-							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+							if( get_field($jobs_ucf) ) {
 								$num_rows = 0;
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
