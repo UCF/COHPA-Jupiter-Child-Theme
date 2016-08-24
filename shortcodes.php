@@ -20,7 +20,7 @@ if($values)
 
 	  
 <?php echo $image_ucf['url']; ?>
-
+<?php the_field('upload_headshot', 'user_' . $user_db); ?>
 
 
 <!-- START REPEATER SECTION -->	
