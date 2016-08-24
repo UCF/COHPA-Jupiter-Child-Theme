@@ -11,7 +11,8 @@ if($values)
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
 		 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-
+		 
+         $image_cohpa = the_field('upload_headshot', 'user_' . $user_db .'');
 		 
 
 ?>
@@ -19,12 +20,8 @@ if($values)
 
 
 	  
-<?php echo $image_ucf['url']; ?>
-<?php the_field('upload_headshot', 'user_' . $user_db); ?>
+<?php echo $image_cohpa['url']; ?>
 
-HELLO
-
-<?php get_field('upload_headshot', 'user_' . $user_db); ?>
 
 
 <!-- START REPEATER SECTION -->	
