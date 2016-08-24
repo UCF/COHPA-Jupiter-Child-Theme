@@ -10,13 +10,13 @@ if($values)
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
-		 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 ?>
 
 
 <?php switch_to_blog(1); 
+$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 ?>
-5555
+6666
 	<?php echo $image_ucf['url']; ?>
     
 	<?php restore_current_blog(); ?>
