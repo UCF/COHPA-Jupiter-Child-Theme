@@ -22,6 +22,10 @@ if($values)
 <?php echo $image_ucf['url']; ?>
 <?php the_field('upload_headshot', 'user_' . $user_db); ?>
 
+HELLO
+
+<?php get_field('upload_headshot', 'user_' . $user_db); ?>
+
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
