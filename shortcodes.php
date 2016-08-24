@@ -48,7 +48,7 @@ $jobtitle_ucf = get_sub_field('job_title');
     	<div class="vc_column-inner ">
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
-                    <h3>
+                    <h3 style="font-weight:bold;">
                         <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
