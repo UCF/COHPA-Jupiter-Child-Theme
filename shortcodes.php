@@ -2,7 +2,6 @@
 
 add_shortcode('show_faculty', function() {
 
-switch_to_blog(1); 
 
 $values = get_field('choose_directory');
 if($values)
@@ -15,10 +14,13 @@ if($values)
 ?>
 
 
-
-22222
+<?php switch_to_blog(1); 
+$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+?>
+4444444
+	<?php echo $image_ucf['url']; ?>
     
-	
+	<?php restore_current_blog(); ?>
 	  
 
 
@@ -139,8 +141,6 @@ if($values)
 	}
 }	
 	?>
-    
-<?php restore_current_blog(); ?>    
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #divider-7 { padding:10px 0 30px; } 
