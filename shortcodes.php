@@ -19,7 +19,7 @@ if($values)
 
 
 	  
-
+<?php echo $image_ucf['url']; ?>
 
 
 
