@@ -19,7 +19,7 @@ if($values)
 
 
 	  
-<?php the_field('first_name', 'user_' . $user_db); ?>-<?php the_field('last_name', 'user_' . $user_db); ?>
+/directory/<?php echo strtolower(the_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(the_field('last_name', 'user_' . $user_db)); ?>
 
 
 
