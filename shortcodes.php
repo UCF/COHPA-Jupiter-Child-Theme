@@ -20,6 +20,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 ?>
 <?php restore_current_blog(); ?>
 	  
+xxxxxxxx
 
 
 
@@ -55,7 +56,9 @@ $jobtitle_ucf = get_sub_field('job_title');
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
-							if( get_field($jobs_ucf) ) {
+						switch_to_blog(1);
+						
+							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
@@ -68,7 +71,11 @@ $jobtitle_ucf = get_sub_field('job_title');
 									else { echo ', '; }
 									endwhile;
 							}
+						restore_current_blog();
 							?>
+                            
+                            
+                            
                     </span><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
