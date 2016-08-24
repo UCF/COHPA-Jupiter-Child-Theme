@@ -19,7 +19,7 @@ if($values)
 
 
 	  
-/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>
+
 
 
 
@@ -31,11 +31,7 @@ if($values)
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="<?php 
-							um_fetch_user( $user_db );
-							echo um_user_profile_url();
-							um_reset_user();
-							?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
@@ -55,11 +51,7 @@ if($values)
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3>
-                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="<?php 
-							um_fetch_user( $user_db );
-							echo um_user_profile_url();
-							um_reset_user();
-							?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
