@@ -17,9 +17,9 @@ if($values)
 ?>
 
 
-<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?> 
+
 	  
-/directory/<?php echo strtolower(the_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(the_field('last_name', 'user_' . $user_db)); ?>
+/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>
 
 
 
