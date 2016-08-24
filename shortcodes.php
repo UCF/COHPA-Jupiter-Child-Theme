@@ -16,10 +16,7 @@ if($values)
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 ?>
-6666
-	<?php echo $image_ucf['url']; ?>
-    
-	<?php restore_current_blog(); ?>
+<?php restore_current_blog(); ?>
 	  
 
 
