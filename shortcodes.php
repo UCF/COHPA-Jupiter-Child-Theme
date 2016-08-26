@@ -231,6 +231,42 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 				?></a>			
             </span>
 		</h2>
+        
+        
+        
+        
+    <?php
+	switch_to_blog(1);
+	
+		if( get_field('job_titles', 'user_' . $user_db .'') ) {
+			$num_rows = 0;
+				while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+				$num_rows++;
+				endwhile;
+		
+				while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+				$num_rows--;
+				echo '<span>'. get_sub_field('job_title') .'</span>';
+				if ( $num_rows == 0 ) { echo ''; }
+				else { echo ', '; }
+				endwhile;
+		}
+	restore_current_blog();
+		?>    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 		<div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
 		<?php 
 			$termswer = get_field('research_interests', 'user_'. $user_db );
