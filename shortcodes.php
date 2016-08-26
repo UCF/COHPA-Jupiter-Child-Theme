@@ -251,8 +251,9 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #list-3 {margin-bottom:30px;} 
-#list-3 ul li { list-style:none !important; margin-left:0px !important; padding-left:0px !important; } 
-#list-3 ul li .mk-svg-icon { fill:#ffc904; padding-right:20px !important; }
+#list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
+#list-3 ul li { list-style:none !important;} 
+#list-3 ul li .mk-svg-icon { fill:#ffc904; padding-right:10px !important; }
 #fancy-title-2 {line-height:15px !important; margin:15px 0px 20px 0px !important;}
 .directoryDegrees { font-size:12px !important; font-weight:normal!important; line-height:0px !important; }
 #divider-7 { padding:10px 0 30px; } 
