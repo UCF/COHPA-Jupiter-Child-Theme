@@ -215,7 +215,7 @@ $termswer = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO22
+         HELLO333
         <?php 
 		switch_to_blog(1);
 
@@ -231,7 +231,14 @@ $termswer = get_field('research_interests', 'user_' . $user_id .'');
 		?>
         
         
-        
+
+			<ul>
+           
+			<?php foreach( $termswer as $term ): ?>
+				<li><?php echo $term->name; ?></li>
+			<?php endforeach; ?>
+			</ul>
+
         
         
         
