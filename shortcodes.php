@@ -215,12 +215,26 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO666666666
+         HELLO777
          
-<?php switch_to_blog(1); 
-	get_field('research_info', 'user_' . $user_id .'');
-?>
-<?php restore_current_blog(); ?>
+<?php
+						switch_to_blog(1);
+						
+							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+								$num_rows = 0;
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows++;
+									endwhile;
+							
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows--;
+									echo '<span>'. get_sub_field('job_title') .'</span>';
+									if ( $num_rows == 0 ) { echo ''; }
+									else { echo ', '; }
+									endwhile;
+							}
+						restore_current_blog();
+							?>
          
   
          
