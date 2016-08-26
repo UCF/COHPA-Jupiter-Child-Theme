@@ -182,12 +182,12 @@ $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $research_ucf = get_field('research_interests', 'user_'. $user_db );
 
 $params = array( 'width' => 533 );
-$imageXXX = bfi_thumb( $image_ucf['url'], $params );
+$imageCrop = bfi_thumb( $image_ucf['url'], $params );
 
 ?>
 <?php restore_current_blog(); ?>
 
-<?php echo $imageXXX; ?>
+
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false  vc_row-fluid  js-master-row ">
@@ -196,7 +196,7 @@ $imageXXX = bfi_thumb( $image_ucf['url'], $params );
         	<div class="mk-image-holder" style="max-width: 533px;">
             	<div class="mk-image-inner ">
                 	<a href="#" target="_self" class="mk-image-link">
-                    	<img class="lightbox-true" alt="" title="" width="533" height="800" src="http://cohpacmsdev.smca.ucf.edu/wp-content/uploads/bfi_thumb/david-headshot-mkvq9zv6svldlz02s8jfxz372s9g77upzwqwygl4d4.jpg" />
+                    	<img class="lightbox-true" alt="" title="" width="533" height="800" src="<?php echo $imageCrop; ?>" />
                     </a>
                     <div class="mk-image-overlay"></div>
                     <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" alt="" data-fancybox-group="image-shortcode-" title="" class="mk-lightbox  mk-image-lightbox"><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-plus-circle" data-cacheid="icon-57c032d77f233" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z"/></svg></a>
