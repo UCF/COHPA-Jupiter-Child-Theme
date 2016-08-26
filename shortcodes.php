@@ -174,15 +174,12 @@ if($values)
 { 
 	foreach($values as $value)	{
          $user_db = $value['ID'];
-		 $buildingMap = get_field('building', 'user_' . $user_db .'');
-		 $roomy = get_field('room_number', 'user_' . $user_db .'');
 ?>
 
 
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-$jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
-$jobtitle_ucf = get_sub_field('job_title');
+$termswer = get_field('research_interests', 'user_' . $user_id .'');
 ?>
 <?php restore_current_blog(); ?>
 
@@ -218,19 +215,18 @@ $jobtitle_ucf = get_sub_field('job_title');
 			</ul>
 		</div>
         
-         HELLO1111
+         HELLO22
         <?php 
 		switch_to_blog(1);
-			$termswer = get_field('research_interests', 'user_' . $user_id .'');
-			if( $termswer ): 
+
 		?>
-			<ul id="capitalText">
+			<ul>
            
 			<?php foreach( $termswer as $term ): ?>
 				<li><?php echo $term->name; ?></li>
 			<?php endforeach; ?>
 			</ul>
-		<?php endif; 
+		<?php
 		restore_current_blog();
 		?>
         
