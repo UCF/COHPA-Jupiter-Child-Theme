@@ -206,8 +206,9 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
 		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
 			<span>
-				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php 
-		switch_to_blog(1); 
+				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?>
+				XXXXXXXX
+		<?php 
 		if( get_field('degrees', 'user_'. $user_db ) ) {
 			while ( have_rows('degrees', 'user_'. $user_db ) ) : the_row();
 			 $arrayDegree[] = get_sub_field('degree', 'user_'. $user_db ); 
@@ -216,8 +217,11 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 
 		   echo '<span class="directoryDegrees">, ' . $degreeIDs . '</span>';
 		}
+		else:
+			echo "";
 		endif;
-		restore_current_blog(); ?></a>			
+	    ?>
+     </a>			
             </span>
 		</h2>
 		<div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
