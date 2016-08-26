@@ -179,7 +179,7 @@ if($values)
 
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-$research_ucf = get_field('research_interests', 'user_' . $user_id .'');
+$research_ucf = get_field('research_interests', 'user_'. $user_db );
 ?>
 <?php restore_current_blog(); ?>
 
@@ -222,8 +222,8 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
         <?php 
 		switch_to_blog(1); 
 		if( get_field('degrees', 'user_'. $user_db ) ) {
-			while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
-			 $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
+			while ( have_rows('degrees', 'user_'. $user_db ) ) : the_row();
+			 $arrayDegree[] = get_sub_field('degree', 'user_'. $user_db ); 
 			endwhile;
 			$degreeIDs = implode(', ', $arrayDegree);
 
