@@ -179,7 +179,7 @@ if($values)
 
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-$termswer = get_field('research_interests', 'user_' . $user_id .'');
+$research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 ?>
 <?php restore_current_blog(); ?>
 
@@ -215,31 +215,13 @@ $termswer = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO333
-        <?php 
-		switch_to_blog(1);
+         HELLO444
+         
+         ECHO: <?php echo $research_ucf; ?><br/>
+         
+      THE FIELD: <?php the_field('research_interests', 'user_'. $user_db ); ?><br/>
 
-		?>
-			<ul>
-           
-			<?php foreach( $termswer as $term ): ?>
-				<li><?php echo $term->name; ?></li>
-			<?php endforeach; ?>
-			</ul>
-		<?php
-		restore_current_blog();
-		?>
-        
-        
-
-			<ul>
-           
-			<?php foreach( $termswer as $term ): ?>
-				<li><?php echo $term->name; ?></li>
-			<?php endforeach; ?>
-			</ul>
-
-        
+        STRAIGHT:<?php echo strtolower(get_field('research_interests', 'user_' . $user_db)); ?>
         
         
     </div>
