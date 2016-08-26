@@ -220,15 +220,21 @@ $jobtitle_ucf = get_sub_field('job_title');
         
         
         <?php 
+		switch_to_blog(1);
 			$termswer = get_field('research_interests', 'user_' . $user_id .'');
 			if( $termswer ): 
 		?>
 			<ul id="capitalText">
+            HELLO
 			<?php foreach( $termswer as $term ): ?>
 				<li><?php echo $term->name; ?></li>
 			<?php endforeach; ?>
 			</ul>
-		<?php endif; ?>
+		<?php endif; 
+		restore_current_blog();
+		?>
+        
+        
         
         
         
