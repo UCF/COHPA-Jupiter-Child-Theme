@@ -215,43 +215,40 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO777777777
+BLOG 1: 
          
 <?php
-						switch_to_blog(1);
-						
-							if( get_field('job_titles', 'user_' . $user_db .'') ) {
-								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-									$num_rows++;
-									endwhile;
-							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
-									$num_rows--;
-									echo '<span>'. get_sub_field('job_title') .'</span>';
-									if ( $num_rows == 0 ) { echo ''; }
-									else { echo ', '; }
-									endwhile;
-							}
-							
-							
-							 the_field('research_info', 'user_' . $user_id .''); 
-                            
-                            	
-									$termswer = get_field('research_interests', 'user_' . $user_id .'');
-									if( $termswer ): 
-									echo '<h4>Research Interests</h4>';
-									?>
-										<ul id="capitalText">
-										<?php foreach( $termswer as $term ): ?>
-											<li><?php echo $term->name; ?></li>
-										<?php endforeach; ?>
-										</ul>
-									<?php endif;
-						restore_current_blog();
-							?>
+	switch_to_blog(1);
+		the_field('research_info', 'user_' . $user_id .''); 
+	restore_current_blog();
+?>
+<br />
+
+BLOG 1 GET: 
          
+<?php
+	switch_to_blog(1);
+		$value123 = get_field('research_info', 'user_' . $user_id .''); 
+		echo $value123;
+	restore_current_blog();
+?>
+<br />
+
+Regular: 
+<?php
+	the_field('research_info', 'user_' . $user_id .''); 
+?>
+         
+  <br />
   
+  Regular GET: 
+<?php
+	$value123456 = get_field('research_info', 'user_' . $user_id .''); 
+		echo $value123456;
+?>
+         
+  <br />
+         
          
       
         
