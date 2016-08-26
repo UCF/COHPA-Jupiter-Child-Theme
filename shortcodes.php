@@ -218,6 +218,16 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 				</ul>
 			<?php endif; ?>
 		</div>
+        
+        <?php if( get_field('degrees', 'user_'. $user_db ) ) {
+			while ( have_rows('degrees', 'user_' . $user_id .'') ) : the_row();
+			 $arrayDegree[] = get_sub_field('degree', 'user_' . $user_id .''); 
+			endwhile;
+			$degreeIDs = implode(', ', $arrayDegree);
+
+		   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+		}
+		?>
     </div>
 </div>
 
