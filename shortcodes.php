@@ -214,12 +214,13 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
                 <li><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>Athletic Trainer Knowledge And Attitudes Regarding Heat Illness Prevention And Treatment</li>
 			</ul>
 		</div>
-        
-BLOG 1aaa: 
+
+
+BLOG 1bbb: 
          
 <?php
 	switch_to_blog(1);
-		the_field('email_address', 'user_' . $user_id .''); 
+		the_field('email_address', 'user_'. $user_db ); 
 	restore_current_blog();
 ?>
 <br />
@@ -228,7 +229,7 @@ BLOG 1 GET:
          
 <?php
 	switch_to_blog(1);
-		$value123 = get_field('email_address', 'user_' . $user_id .''); 
+		$value123 = get_field('email_address', 'user_'. $user_db ); 
 		echo $value123;
 	restore_current_blog();
 ?>
@@ -236,14 +237,14 @@ BLOG 1 GET:
 
 Regular: 
 <?php
-	the_field('email_address', 'user_' . $user_id .''); 
+	the_field('email_address', 'user_'. $user_db ); 
 ?>
          
   <br />
   
   Regular GET: 
 <?php
-	$value123456 = get_field('email_address', 'user_' . $user_id .''); 
+	$value123456 = get_field('email_address', 'user_'. $user_db ); 
 		echo $value123456;
 ?>
          
