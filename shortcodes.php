@@ -225,29 +225,19 @@ BLOG 1bbb:
 ?>
 <br />
 
-BLOG 1 GET: 
-         
-<?php
-	switch_to_blog(1);
-		$value123 = get_field('email_address', 'user_'. $user_db ); 
-		echo $value123;
-	restore_current_blog();
-?>
-<br />
-
-Regular: 
-<?php
-	the_field('email_address', 'user_'. $user_db ); 
-?>
-         
-  <br />
-  
-  Regular GET: 
-<?php
-	$value123456 = get_field('email_address', 'user_'. $user_db ); 
-		echo $value123456;
-?>
-         
+<?php the_field('research_info', 'user_'. $user_db ); ?>
+                            
+                            	<?php 
+									$termswer = get_field('research_interests', 'user_'. $user_db );
+									if( $termswer ): 
+									echo '<h4>Research Interests</h4>';
+									?>
+										<ul id="capitalText">
+										<?php foreach( $termswer as $term ): ?>
+											<li><?php echo $term->name; ?></li>
+										<?php endforeach; ?>
+										</ul>
+									<?php endif; ?>
   <br />
          
          
