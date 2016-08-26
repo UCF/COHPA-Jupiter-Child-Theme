@@ -215,7 +215,7 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-BLOG 1: 
+BLOG 1xxx: 
          
 <?php
 	switch_to_blog(1);
