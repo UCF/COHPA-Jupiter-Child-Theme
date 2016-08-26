@@ -250,6 +250,7 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 	?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
+.mk-image-overlay:hover {background:#F00 !important;}
 #list-3 {margin-bottom:30px;} 
 #list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
 #list-3 ul li { list-style:none !important;} 
