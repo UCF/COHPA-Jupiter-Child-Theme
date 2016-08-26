@@ -259,7 +259,7 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 #list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
 #list-3 ul li { list-style:none !important;} 
 #list-3 ul li .mk-svg-icon { fill:#ffc904; padding-right:10px !important; }
-#fancy-title-2{letter-spacing:0px;text-transform:initial;font-size:25px;;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;line-height:15px !important; margin:15px 0px 20px 0px !important;}
+#fancy-title-2{letter-spacing:0px;text-transform:initial;font-size:22px;;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;line-height:15px !important; margin:15px 0px 20px 0px !important;}
 .directoryDegrees { font-size:12px !important; font-weight:normal!important; line-height:0px !important; }
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
