@@ -181,7 +181,7 @@ if($values)
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $research_ucf = get_field('research_interests', 'user_'. $user_db );
 
-$params = array( 'width' => 533 );
+$params = array( 'width' => 533, 'height' => 800 );
 $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 
 ?>
