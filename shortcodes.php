@@ -203,7 +203,16 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
 		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
 			<span>
-				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>			
+				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php 
+		if( get_field('degrees', 'user_'. $user_db ) ) {
+			while ( have_rows('degrees', 'user_'. $user_db ) ) : the_row();
+			 $arrayDegree[] = get_sub_field('degree', 'user_'. $user_db ); 
+			endwhile;
+			$degreeIDs = implode(', ', $arrayDegree);
+
+		   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+		}
+		?></a>			
             </span>
 		</h2>
 		<div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
@@ -218,19 +227,6 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 				</ul>
 			<?php endif; ?>
 		</div>
-        test2222
-        <?php 
-		if( get_field('degrees', 'user_'. $user_db ) ) {
-			while ( have_rows('degrees', 'user_'. $user_db ) ) : the_row();
-			 $arrayDegree[] = get_sub_field('degree', 'user_'. $user_db ); 
-			endwhile;
-			$degreeIDs = implode(', ', $arrayDegree);
-
-		   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
-		}
-		?>
-        
-
     </div>
 </div>
 
