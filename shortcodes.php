@@ -180,9 +180,14 @@ if($values)
 <?php switch_to_blog(1); 
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $research_ucf = get_field('research_interests', 'user_'. $user_db );
+
+$params = array( 'width' => 533 );
+$imageXXX = bfi_thumb( $image_ucf['url'], $params );
+
 ?>
 <?php restore_current_blog(); ?>
 
+<?php echo $imageXXX; ?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false  vc_row-fluid  js-master-row ">
@@ -245,7 +250,7 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 	?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
-#fancy-title-2 {line-height:14px !important; margin-bottom:10px !important;}
+#fancy-title-2 {line-height:15px !important; margin-bottom:20px !important;}
 .directoryDegrees { font-size:12px !important; font-weight:normal!important; line-height:0px !important; }
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
