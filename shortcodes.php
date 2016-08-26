@@ -219,7 +219,7 @@ BLOG 1:
          
 <?php
 	switch_to_blog(1);
-		the_field('research_info', 'user_' . $user_id .''); 
+		the_field('biography', 'user_' . $user_id .''); 
 	restore_current_blog();
 ?>
 <br />
@@ -228,7 +228,7 @@ BLOG 1 GET:
          
 <?php
 	switch_to_blog(1);
-		$value123 = get_field('research_info', 'user_' . $user_id .''); 
+		$value123 = get_field('biography', 'user_' . $user_id .''); 
 		echo $value123;
 	restore_current_blog();
 ?>
@@ -236,14 +236,14 @@ BLOG 1 GET:
 
 Regular: 
 <?php
-	the_field('research_info', 'user_' . $user_id .''); 
+	the_field('biography', 'user_' . $user_id .''); 
 ?>
          
   <br />
   
   Regular GET: 
 <?php
-	$value123456 = get_field('research_info', 'user_' . $user_id .''); 
+	$value123456 = get_field('biography', 'user_' . $user_id .''); 
 		echo $value123456;
 ?>
          
