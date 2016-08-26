@@ -207,6 +207,7 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
 			<span>
 				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php
+				echo '<span class="directoryDegrees">';
 				if( get_field('degrees', 'user_' . $user_db .'') ) {
 					$num_rows = 0;
 						while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
@@ -215,11 +216,12 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 				
 						while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
 						$num_rows--;
-						echo '<span class="directoryDegrees">, '. get_sub_field('degree') .'</span>';
+						echo ', '. get_sub_field('degree') .'';
 						if ( $num_rows == 0 ) { echo ''; }
 						else { echo ', '; }
 						endwhile;
 				}
+				echo '</span>';
 				?></a>			
             </span>
 		</h2>
