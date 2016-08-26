@@ -217,7 +217,9 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
         
          HELLO444
          
-         ECHO: <?php echo $research_ucf; ?><br/>
+THE FIELD: <?php the_field('research_interests', 'user_'. $user_db ); ?><br/>
+
+       
          
       
         
