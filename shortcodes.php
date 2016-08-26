@@ -183,6 +183,7 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 
 $params = array( 'width' => 600, 'height' => 760 );
 $imageCrop = bfi_thumb( $image_ucf['url'], $params );
+$imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $params );
 
 ?>
 <?php restore_current_blog(); ?>
@@ -196,7 +197,12 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
         	<div class="mk-image-holder" style="max-width: 533px;">
             	<div class="mk-image-inner ">
                 	<a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_self" class="mk-image-link">
-                    	<img class="lightbox-true" alt="" title="" width="533" height="800" src="<?php echo $imageCrop; ?>" />
+                    <?php if( $image_ucf ) { ?>
+                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $imageCrop; ?>">
+                     <?php }
+						else { ?> 
+							<img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="<?php echo $imageBackup; ?>" itemprop="image" />        
+					<?php } ?>
                     </a>
                 </div>
             </div>
