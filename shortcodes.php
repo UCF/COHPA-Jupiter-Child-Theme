@@ -216,6 +216,7 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 
 		   echo '<span class="directoryDegrees">, ' . $degreeIDs . '</span>';
 		}
+		endif;
 		restore_current_blog(); ?></a>			
             </span>
 		</h2>
