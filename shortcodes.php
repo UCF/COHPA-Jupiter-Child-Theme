@@ -215,29 +215,17 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
 
-
-BLOG 1bbb: 
-         
-<?php
-	switch_to_blog(1);
-		the_field('email_address', 'user_'. $user_db ); 
-	restore_current_blog();
-?>
-<br />
-
-<?php the_field('research_info', 'user_'. $user_db ); ?>
-                            
-                            	<?php 
-									$termswer = get_field('research_interests', 'user_'. $user_db );
-									if( $termswer ): 
-									echo '<h4>Research Interests</h4>';
-									?>
-										<ul id="capitalText">
-										<?php foreach( $termswer as $term ): ?>
-											<li><?php echo $term->name; ?></li>
-										<?php endforeach; ?>
-										</ul>
-									<?php endif; ?>
+               
+	<?php 
+        $termswer = get_field('research_interests', 'user_'. $user_db );
+        if( $termswer ): 
+        ?>
+            <ul>
+            <?php foreach( $termswer as $term ): ?>
+                <li><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li>
+            <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
   <br />
          
          
