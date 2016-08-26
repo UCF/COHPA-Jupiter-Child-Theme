@@ -215,10 +215,9 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO444
+         HELLO5555
          
- STRAIGHT:<?php echo strtolower(get_field('research_interests', 'user_' . $user_db)); ?>
-       
+       <?php the_field('research_info', 'user_' . $user_id .''); ?>
          
       
         
