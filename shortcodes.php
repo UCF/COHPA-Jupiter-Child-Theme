@@ -206,51 +206,24 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
 		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
 			<span>
-				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php 
-		switch_to_blog(1); 
-		if( get_field('degrees', 'user_'. $user_db ) ) {
-			while ( have_rows('degrees', 'user_'. $user_db ) ) : the_row();
-			 $arrayDegree[] = get_sub_field('degree', 'user_'. $user_db ); 
-			endwhile;
-			$degreeIDs = implode(', ', $arrayDegree);
-
-		   echo '<span class="directoryDegrees">, ' . $degreeIDs . '</span>';
-		}
-		restore_current_blog(); ?></a>			
+				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?>
+                <?php
+				if( get_field('degrees', 'user_' . $user_db .'') ) {
+					$num_rows = 0;
+						while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
+						$num_rows++;
+						endwhile;
+				
+						while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
+						$num_rows--;
+						echo '<span class="directoryDegrees">, '. get_sub_field('degree') .'</span>';
+						if ( $num_rows == 0 ) { echo ''; }
+						else { echo ', '; }
+						endwhile;
+				}
+				?></a>			
             </span>
 		</h2>
-        
-        
-        
-        
-        
-        <?php
-					
-						
-							if( get_field('degrees', 'user_' . $user_db .'') ) {
-								$num_rows = 0;
-									while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
-									$num_rows++;
-									endwhile;
-							
-									while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
-									$num_rows--;
-									echo '<span class="directoryDegrees">, '. get_sub_field('degree') .'</span>';
-									if ( $num_rows == 0 ) { echo ''; }
-									else { echo ', '; }
-									endwhile;
-							}
-						
-							?>
-        
-        
-        
-        
-        
-        
-        
-        
-        
 		<div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
 		<?php 
 			$termswer = get_field('research_interests', 'user_'. $user_db );
