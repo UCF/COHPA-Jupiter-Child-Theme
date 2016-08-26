@@ -215,7 +215,7 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO777
+         HELLO777777777
          
 <?php
 						switch_to_blog(1);
@@ -233,6 +233,21 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 									else { echo ', '; }
 									endwhile;
 							}
+							
+							
+							 the_field('research_info', 'user_' . $user_id .''); 
+                            
+                            	
+									$termswer = get_field('research_interests', 'user_' . $user_id .'');
+									if( $termswer ): 
+									echo '<h4>Research Interests</h4>';
+									?>
+										<ul id="capitalText">
+										<?php foreach( $termswer as $term ): ?>
+											<li><?php echo $term->name; ?></li>
+										<?php endforeach; ?>
+										</ul>
+									<?php endif;
 						restore_current_blog();
 							?>
          
