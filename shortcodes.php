@@ -218,14 +218,14 @@ $jobtitle_ucf = get_sub_field('job_title');
 			</ul>
 		</div>
         
-        
+         HELLO1111
         <?php 
 		switch_to_blog(1);
 			$termswer = get_field('research_interests', 'user_' . $user_id .'');
 			if( $termswer ): 
 		?>
 			<ul id="capitalText">
-            HELLO
+           
 			<?php foreach( $termswer as $term ): ?>
 				<li><?php echo $term->name; ?></li>
 			<?php endforeach; ?>
