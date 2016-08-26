@@ -239,6 +239,7 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 	switch_to_blog(1);
 	echo '<span class="directoryDegrees">';
 		if( get_field('degrees', 'user_' . $user_db .'') ) {
+			echo ', ';
 			$num_rows = 0;
 				while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
 				$num_rows++;
