@@ -201,7 +201,7 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
         </div>
     </div>
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
-		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
+		<h2 id="fancy-title-2 directoryNameFixer" class="mk-fancy-title  simple-style  color-single">
 			<span>
 				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php 
 		if( get_field('degrees', 'user_'. $user_db ) ) {
@@ -245,7 +245,8 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 	?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
-.directoryDegrees { font-size:12px !important; font-weight:normal!important; line-height:0px !important; }
+#directoryNameFixer { line-height:0px !important; }
+.directoryDegrees { font-size:12px !important; font-weight:normal!important;}
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
