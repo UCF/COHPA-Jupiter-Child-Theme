@@ -215,10 +215,10 @@ $research_ucf = get_field('research_interests', 'user_' . $user_id .'');
 			</ul>
 		</div>
         
-         HELLO666
+         HELLO666666666
          
 <?php switch_to_blog(1); 
-	the_field('research_info', 'user_' . $user_id .'');
+	get_field('research_info', 'user_' . $user_id .'');
 ?>
 <?php restore_current_blog(); ?>
          
