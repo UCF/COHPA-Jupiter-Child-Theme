@@ -225,7 +225,7 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
         
         
         <?php
-						switch_to_blog(1);
+					
 						
 							if( get_field('degrees', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
@@ -240,7 +240,7 @@ $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 									else { echo ', '; }
 									endwhile;
 							}
-						restore_current_blog();
+						
 							?>
         
         
