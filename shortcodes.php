@@ -210,7 +210,7 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 			endwhile;
 			$degreeIDs = implode(', ', $arrayDegree);
 
-		   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+		   echo '<span class="directoryDegrees">, ' . $degreeIDs . '</span>';
 		}
 		?></a>			
             </span>
