@@ -212,7 +212,7 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
 		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
 			<span>
-				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?>    <?php
+				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php
 	echo '<span class="directoryDegrees">';
 		if( get_field('degrees', 'user_' . $user_db .'') ) {
 			echo ', ';
