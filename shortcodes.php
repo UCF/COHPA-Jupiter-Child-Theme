@@ -245,7 +245,7 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 	?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
-.directoryDegrees { font-size:12px !important; font-weight:normal!important; }
+.directoryDegrees { font-size:12px !important; font-weight:normal!important; line-height:0px !important; }
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
