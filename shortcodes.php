@@ -218,9 +218,8 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 				</ul>
 			<?php endif; ?>
 		</div>
-        test
+        test2222
         <?php 
-		switch_to_blog(1); 
 		if( get_field('degrees', 'user_'. $user_db ) ) {
 			while ( have_rows('degrees', 'user_'. $user_db ) ) : the_row();
 			 $arrayDegree[] = get_sub_field('degree', 'user_'. $user_db ); 
@@ -229,7 +228,6 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 
 		   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
 		}
-		restore_current_blog();
 		?>
         
 
