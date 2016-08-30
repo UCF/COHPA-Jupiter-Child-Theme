@@ -171,7 +171,6 @@ add_shortcode('show_chair', function() {
 $values = get_field('choose_chair');
 if($values)
 { 
-	foreach($values as $value)	{
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .'');
@@ -302,24 +301,12 @@ $jobtitle_ucf = get_sub_field('job_title');
 <!-- END REPEATER SECTION -->	
 
 <?php
-	}
 }	
 	?>
-	
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
-#divider-7 { padding:10px 0 30px; } 
-#divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
-.mk-divider.shadow_line .divider-inner { height:7px; } 
-.mk-divider.shadow_line .divider-inner .divider-shadow-left, .mk-divider.shadow_line .divider-inner .divider-shadow-right { display:inline-block; width:50%; height:7px; background-repeat:no-repeat; } 
-.mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
-.mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 
-.mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
-
-</style>	
 	
 <?php	
-});// END SHORTCODE [show_faculty]?> 
+});// END SHORTCODE [show_chair]?> 
 
 
 
