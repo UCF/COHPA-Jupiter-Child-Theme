@@ -168,10 +168,9 @@ $jobtitle_ucf = get_sub_field('job_title');
 add_shortcode('show_chair', function() {
 
 
-$values = get_field('choose_chair');
-if($values)
-{ 
-         $user_chair = $value['ID'];
+$valueChairs = get_field('choose_chair');
+
+$user_chair = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_chair .'');
 		 $roomy = get_field('room_number', 'user_' . $user_chair .'');
 ?>
@@ -195,10 +194,10 @@ $jobtitle_ucf = get_sub_field('job_title');
                     	<div class="mk-image-inner ">
                         <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
+                                <img class="lightbox-false" alt="View <?php echo $valueChair['display_name'] ; ?>'s Profile" title="View <?php echo $valueChair['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
                                 else { ?> 
-                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                                    <img class="lightbox-false" alt="View <?php echo $valueChair['display_name'] ; ?>'s Profile" title="View <?php echo $valueChair['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
                             <?php } ?>
                         </a>    
                         </div>
@@ -213,7 +212,7 @@ $jobtitle_ucf = get_sub_field('job_title');
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3 style="font-weight:bold;">
-                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
+                        <a title="View <?php echo $valueChair['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" target="_parent"><?php echo $valueChair['display_name'] ; ?></a>
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
@@ -258,7 +257,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 
 						?>
                         <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_chair ); ?></div>
-                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_chair ); ?>"><?php the_field('email_address', 'user_'. $user_chair ); ?></a></div>
+                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $valueChair['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_chair ); ?>"><?php the_field('email_address', 'user_'. $user_chair ); ?></a></div>
                     </p>
                     <?php				
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
@@ -299,11 +298,6 @@ $jobtitle_ucf = get_sub_field('job_title');
 </div>
 <div class="clearboth"></div>
 <!-- END REPEATER SECTION -->	
-
-<?php
-}	
-	?>
-
 	
 <?php	
 });// END SHORTCODE [show_chair]?> 
