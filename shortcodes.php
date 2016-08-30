@@ -168,17 +168,19 @@ $jobtitle_ucf = get_sub_field('job_title');
 add_shortcode('show_chair', function() {
 
 
-$valueChairs = get_field('choose_chair');
-
-$user_chair = $value['ID'];
-		 $buildingMap = get_field('building', 'user_' . $user_chair .'');
-		 $roomy = get_field('room_number', 'user_' . $user_chair .'');
+$values = get_field('choose_chair');
+if($values)
+{ 
+	foreach($values as $value)	{
+         $user_db = $value['ID'];
+		 $buildingMap = get_field('building', 'user_' . $user_db .'');
+		 $roomy = get_field('room_number', 'user_' . $user_db .'');
 ?>
 
 
 <?php switch_to_blog(1); 
-$image_ucf = get_field('upload_headshot', 'user_' . $user_chair .'');
-$jobs_ucf = get_field('job_titles', 'user_' . $user_chair .'');
+$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+$jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title');
 ?>
 <?php restore_current_blog(); ?>
@@ -192,12 +194,12 @@ $jobtitle_ucf = get_sub_field('job_title');
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="View <?php echo $valueChair['display_name'] ; ?>'s Profile" title="View <?php echo $valueChair['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
+                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
                                 else { ?> 
-                                    <img class="lightbox-false" alt="View <?php echo $valueChair['display_name'] ; ?>'s Profile" title="View <?php echo $valueChair['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
                             <?php } ?>
                         </a>    
                         </div>
@@ -212,19 +214,19 @@ $jobtitle_ucf = get_sub_field('job_title');
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3 style="font-weight:bold;">
-                        <a title="View <?php echo $valueChair['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" target="_parent"><?php echo $valueChair['display_name'] ; ?></a>
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
 						switch_to_blog(1);
 						
-							if( get_field('job_titles', 'user_' . $user_chair .'') ) {
+							if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_chair .'') ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
 									endwhile;
 							
-									while ( have_rows('job_titles', 'user_' . $user_chair .'') ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows--;
 									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
@@ -235,7 +237,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 							?>
                             
                     </span><br>
-                        <?php the_field('department', 'user_' . $user_chair); ?>
+                        <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
 						if( $terms ) {
@@ -256,8 +258,8 @@ $jobtitle_ucf = get_sub_field('job_title');
 						 } 	
 
 						?>
-                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_chair ); ?></div>
-                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $valueChair['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_chair ); ?>"><?php the_field('email_address', 'user_'. $user_chair ); ?></a></div>
+                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
+                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
                     <?php				
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
@@ -275,13 +277,13 @@ $jobtitle_ucf = get_sub_field('job_title');
 						if ($buildingMap == 'UCF Valencia Osceola') {echo 'http://map.ucf.edu/locations/valencia-osceola/valencia-osceola/';}
 						if ($buildingMap == 'UCF Valencia West') {echo 'http://map.ucf.edu/locations/valencia-west/valencia-west/';}
 						echo '" target="_blank" title="Map to ';
-						the_field('building', 'user_'. $user_chair );
+						the_field('building', 'user_'. $user_db );
 						echo '">';
-						the_field('building', 'user_'. $user_chair );
+						the_field('building', 'user_'. $user_db );
 						echo '</a> ';
 						if( ! empty( $roomy ) ) { 
 							echo ' Room: ';
-							the_field('room_number', 'user_'. $user_chair );
+							the_field('room_number', 'user_'. $user_db );
 						}
 						echo '</div>';	?>
     
@@ -298,9 +300,27 @@ $jobtitle_ucf = get_sub_field('job_title');
 </div>
 <div class="clearboth"></div>
 <!-- END REPEATER SECTION -->	
+
+<?php
+	}
+}	
+	?>
+	
+<style id='theme-dynamic-styles-inline-css' type='text/css'>
+#divider-7 { padding:10px 0 30px; } 
+#divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
+.mk-divider.shadow_line .divider-inner { height:7px; } 
+.mk-divider.shadow_line .divider-inner .divider-shadow-left, .mk-divider.shadow_line .divider-inner .divider-shadow-right { display:inline-block; width:50%; height:7px; background-repeat:no-repeat; } 
+.mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
+.mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
+
+.mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
+
+</style>	
 	
 <?php	
-});// END SHORTCODE [show_chair]?> 
+});// END SHORTCODE [show_faculty]?> 
+
 
 
 
