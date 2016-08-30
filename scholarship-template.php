@@ -171,7 +171,7 @@ else {
                 </div>
 		</div>
         <div id="list-style-568d5c104ed55" class="mk-list-styles mk-shortcode mk-align-none " style="margin-bottom:30px">
-        	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading"><span>Required Attachments for Application Submission:</span></h3>
+        	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading" style="font-size: 18px;"><span>Required Attachments for Application Submission:</span></h3>
             	<?php the_field('attachments'); ?>
 		</div>
         
