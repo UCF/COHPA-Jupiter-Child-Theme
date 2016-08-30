@@ -171,15 +171,15 @@ add_shortcode('show_chair', function() {
 $values = get_field('choose_chair');
 if($values)
 { 
-         $user_db = $value['ID'];
-		 $buildingMap = get_field('building', 'user_' . $user_db .'');
-		 $roomy = get_field('room_number', 'user_' . $user_db .'');
+         $user_chair = $value['ID'];
+		 $buildingMap = get_field('building', 'user_' . $user_chair .'');
+		 $roomy = get_field('room_number', 'user_' . $user_chair .'');
 ?>
 
 
 <?php switch_to_blog(1); 
-$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-$jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
+$image_ucf = get_field('upload_headshot', 'user_' . $user_chair .'');
+$jobs_ucf = get_field('job_titles', 'user_' . $user_chair .'');
 $jobtitle_ucf = get_sub_field('job_title');
 ?>
 <?php restore_current_blog(); ?>
@@ -193,7 +193,7 @@ $jobtitle_ucf = get_sub_field('job_title');
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
@@ -213,19 +213,19 @@ $jobtitle_ucf = get_sub_field('job_title');
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3 style="font-weight:bold;">
-                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_chair)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_chair)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><span style="font-weight:bold; font-size:16px;">
                     	<?php
 						switch_to_blog(1);
 						
-							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+							if( get_field('job_titles', 'user_' . $user_chair .'') ) {
 								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user_chair .'') ) : the_row();
 									$num_rows++;
 									endwhile;
 							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user_chair .'') ) : the_row();
 									$num_rows--;
 									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
@@ -236,7 +236,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 							?>
                             
                     </span><br>
-                        <?php the_field('department', 'user_' . $user_db); ?>
+                        <?php the_field('department', 'user_' . $user_chair); ?>
                         <?php 
 						$terms = get_field('department');
 						if( $terms ) {
@@ -257,8 +257,8 @@ $jobtitle_ucf = get_sub_field('job_title');
 						 } 	
 
 						?>
-                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
-                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
+                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_chair ); ?></div>
+                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_chair ); ?>"><?php the_field('email_address', 'user_'. $user_chair ); ?></a></div>
                     </p>
                     <?php				
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
@@ -276,13 +276,13 @@ $jobtitle_ucf = get_sub_field('job_title');
 						if ($buildingMap == 'UCF Valencia Osceola') {echo 'http://map.ucf.edu/locations/valencia-osceola/valencia-osceola/';}
 						if ($buildingMap == 'UCF Valencia West') {echo 'http://map.ucf.edu/locations/valencia-west/valencia-west/';}
 						echo '" target="_blank" title="Map to ';
-						the_field('building', 'user_'. $user_db );
+						the_field('building', 'user_'. $user_chair );
 						echo '">';
-						the_field('building', 'user_'. $user_db );
+						the_field('building', 'user_'. $user_chair );
 						echo '</a> ';
 						if( ! empty( $roomy ) ) { 
 							echo ' Room: ';
-							the_field('room_number', 'user_'. $user_db );
+							the_field('room_number', 'user_'. $user_chair );
 						}
 						echo '</div>';	?>
     
