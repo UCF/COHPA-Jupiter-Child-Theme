@@ -451,15 +451,13 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 
 <?php
 
-add_shortcode('show_COHOAannouncements', function() {
-
-if(is_page( 539 )) { ; }
-else {                                  
-	$myfavetools = new WP_Query(array(
+add_shortcode('show_UCFannouncements', function() {
+                           
+$myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
 								'posts_per_page' => '1',
 								'order'=>'DESC'
-							)); }
+							)); 
 ?> 
 
 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
@@ -475,4 +473,4 @@ else {
 <a href="/announcements/" title="View All Accouncements">View All</a>
 	
 <?php	
-});// END SHORTCODE [show_COHOAannouncements]?> 
+});// END SHORTCODE [show_UCFannouncements]?> 
