@@ -56,10 +56,10 @@ get_header(); ?>
 																		
 <style> 
 #announ {
-padding:15px;
+padding:20px;
 }
 #announ:nth-child(even) {
- background: #e2e2e2 !important;
+ background: #f2f2f2 !important;
 }
 .theme-page-wrapper #mk-sidebar.mk-builtin {
     width: 100% !important;
