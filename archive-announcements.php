@@ -39,7 +39,15 @@ get_header(); ?>
 	</div>
     
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
-        HELLO <?php get_sidebar('scholarships'); ?>
+        HELLO <?php 
+		global $wp_registered_sidebars;
+
+echo '<pre>';
+print_r($wp_registered_sidebars); 
+echo '</pre>'
+		
+		
+		get_sidebar('scholarships'); ?>
 	</div>
     
 </div>
