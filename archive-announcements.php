@@ -39,7 +39,7 @@ get_header(); ?>
 	</div>
     
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
-        <?php get_sidebar('scholarships'); ?>
+        HELLO <?php get_sidebar('scholarships'); ?>
 	</div>
     
 </div>
