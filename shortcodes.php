@@ -453,22 +453,12 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 
 add_shortcode('show_announcements', function() {
 
-if(is_page( 539 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 15)  // COLLEGE WIDE
-								)
-							)); }
+if(is_page( 539 )) { ; }
 else {                                  
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
-								'order'=>'DESC'
+								'order'=>'DESC',
+								'numberposts' => 1,
 							)); }
 ?> 
 
