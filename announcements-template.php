@@ -152,7 +152,6 @@ elseif (is_page( 561 )) {
 else {                                  
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
-								'orderby'=>'title',
 								'order'=>'ASC'
 							)); }
 ?> 
