@@ -451,7 +451,7 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 
 <?php
 
-add_shortcode('show_announcements', function() {
+add_shortcode('show_COHOAannouncements', function() {
 
 if(is_page( 539 )) { ; }
 else {                                  
@@ -475,4 +475,4 @@ else {
 <a href="/announcements/" title="View All Accouncements">View All</a>
 	
 <?php	
-});// END SHORTCODE [show_announcements]?> 
+});// END SHORTCODE [show_COHOAannouncements]?> 
