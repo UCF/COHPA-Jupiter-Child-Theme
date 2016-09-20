@@ -457,7 +457,7 @@ if(is_page( 539 )) { ; }
 else {                                  
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
-								'numberposts' => '1',
+								'posts_per_page' => '1',
 								'order'=>'DESC'
 							)); }
 ?> 
