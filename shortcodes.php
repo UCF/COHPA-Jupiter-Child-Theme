@@ -463,8 +463,10 @@ $myfavetools = new WP_Query(array(
 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
 
 <!-- START THE REPEAT SECTION -->   
-<strong><?php echo get_the_date(); ?></strong> - <?php the_content();?>
 
+<div id="announ">
+<span class="date"><?php echo get_the_date(); ?></span> <?php the_content();?>
+</div>
 <!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
 
