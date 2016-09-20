@@ -90,17 +90,10 @@ get_header(); ?>
                     
                     
                     <div class="clearboth"></div>
-					<?php wp_link_pages( 'before=<div id="mk-page-links">'.__( 'Pages:', 'mk_framework' ).'&after=</div>' ); ?>
-						<?php
-						if($mk_options['pages_comments'] == 'true') {
-							if ( comments_open() ) :
-							comments_template( '', true ); 	
-							endif;
-						}
-						?>
+					
 				</div>
 			
-		<?php if ( $page_layout != 'full' ) get_sidebar(); ?>
+		<?php get_sidebar('scholarships'); ?>
 		<div class="clearboth"></div>
 		</div>
 		<div class="clearboth"></div>
