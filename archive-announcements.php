@@ -52,7 +52,10 @@ get_header(); ?>
                         
 
 																		
-<style>  
+<style> 
+.post:nth-child(even) {
+ background: red !important;
+}
 .theme-page-wrapper #mk-sidebar.mk-builtin {
     width: 100% !important;
 }
