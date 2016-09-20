@@ -93,7 +93,6 @@ get_header(); ?>
 					
 				</div>
 			
-		<?php get_sidebar('scholarships'); ?>
 		<div class="clearboth"></div>
 		</div>
 		<div class="clearboth"></div>
