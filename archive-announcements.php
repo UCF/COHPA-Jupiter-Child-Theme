@@ -25,44 +25,15 @@ get_header(); ?>
  <!-- START MY NEW TEST SECTION -->
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
-		<div id="text-block-2" class="mk-text-block   ">         
+		<div id="text-block-2" class="mk-text-block   ">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
-            
-<!-- START THE CUSTOM SECTION -->
-<?php 
-if(is_page( 539 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 15)  // COLLEGE WIDE
-								)
-							)); }
-else {                                  
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'announcements',
-								'order'=>'DESC'
-							)); }
-?> 
+						<strong><?php echo get_the_date(); ?></strong> - <?php the_content();?>
+                        
+                  <?php endwhile; ?>
+                <?php wp_reset_query(); ?>    
+			<div class="clearboth"></div>
 
-<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
-
-<!-- START THE REPEAT SECTION -->   
-<strong><?php echo get_the_date(); ?></strong> - <?php the_content();?>
-
-<!-- END OF THE REPEAT SECTION -->
-<?php endwhile; ?>
-
-<?php wp_reset_query(); ?> 
-            
-            
-            
-            
-            
             
 		</div>
 	</div>
