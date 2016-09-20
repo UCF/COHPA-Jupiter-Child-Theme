@@ -28,7 +28,9 @@ get_header(); ?>
 		<div id="text-block-2" class="mk-text-block   ">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
+                        <div id="announ">
 						<strong><?php echo get_the_date(); ?></strong> - <?php the_content();?>
+                        </div>
                         
                   <?php endwhile; ?>
                 <?php wp_reset_query(); ?>    
@@ -53,7 +55,7 @@ get_header(); ?>
 
 																		
 <style> 
-.post:nth-child(even) {
+#announ:nth-child(even) {
  background: red !important;
 }
 .theme-page-wrapper #mk-sidebar.mk-builtin {
