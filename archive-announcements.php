@@ -25,13 +25,7 @@ get_header(); ?>
  <!-- START MY NEW TEST SECTION -->
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
-		<div id="text-block-2" class="mk-text-block   ">
-			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
-						<?php the_content();?>
-                  <?php endwhile; ?>
-                <?php wp_reset_query(); ?>    
-			<div class="clearboth"></div>
-            
+		<div id="text-block-2" class="mk-text-block   ">         
             
             
 <!-- START THE CUSTOM SECTION -->
