@@ -48,107 +48,6 @@ if(is_page( 539 )) {
 									'terms' => 15)  // COLLEGE WIDE
 								)
 							)); }
-	
-elseif (is_page( 547 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 16) // COMMUNICATION SCIENCES & DISORDERS
-								)
-							)); }
-	
-elseif (is_page( 555 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 17) // CRIMINAL JUSTICE
-								)
-							)); }
-elseif (is_page( 556 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 18) // HEALTH MANAGEMENT
-								)
-							)); }
-	
-elseif (is_page( 557 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 19) // HEALTH PROFESSIONS
-								)
-							)); }
-elseif (is_page( 558 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 20) // LEGAL STUDIES
-								)
-							)); }
-	
-elseif (is_page( 559 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 21) // PUBLIC ADMINISTRATION
-								)
-							)); }
-elseif (is_page( 560 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 22) // PUBLIC AFFAIRS
-								)
-							)); }
-	
-elseif (is_page( 561 )) {
-	$myfavetools = new WP_Query(array(
-								'post_type'	=> 'scholarship',
-								'orderby'=>'title',
-								'order'=>'ASC',
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'scholarship_cat',
-									'field' => 'term_id',
-									'terms' => 23) // SOCIAL WORK
-								)
-							)); }
 else {                                  
 	$myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
@@ -158,39 +57,9 @@ else {
 
 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
 
+<!-- START THE REPEAT SECTION -->   
 <strong><?php echo get_the_date(); ?></strong> - <?php the_content();?>
 
-
-<!-- START THE REPEAT SECTION -->               
-<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
-	<div style="" class="vc_col-sm-12 wpb_column column_container ">
-		<h2 style="font-size: 24px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-568d5c104e1fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style=""><?php the_title(); ?></span></h2>
-        <div class="clearboth"></div>
-        <div id="list-style-568d5c104e58b" class="mk-list-styles mk-shortcode mk-align-none " style="margin-bottom:30px">
-        	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading" style="font-size: 18px;"><span>Recipient Criteria:</span></h3>
-            	<div id="list-4" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
-				<?php the_field('criteria'); ?>
-                </div>
-		</div>
-        <div id="list-style-568d5c104ed55" class="mk-list-styles mk-shortcode mk-align-none " style="margin-bottom:30px">
-        	<h3 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading" style="font-size: 18px;"><span>Required Attachments for Application Submission:</span></h3>
-            	<?php the_field('attachments'); ?>
-		</div>
-        
-        <div id="mk-button-4" class="mk-button-container _ relative    inline left  ">
-			<a  href="https://my.ucf.edu"  target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-medium mk-button--corner-rounded text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-1 inline">
-				 <span class="mk-button--text">Award: <?php the_field('award_amount'); ?></span>
-			</a>
-		</div>
-        
-
-        
-        
-    <div class="clearboth"></div>
-    <div class="mk-shortcode mk-padding-shortcode" style="height:70px"></div>
-    <div class="clearboth"></div>
-    </div>
-</div>
 <!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
 
