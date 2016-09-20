@@ -36,15 +36,128 @@ get_header(); ?>
             
 <!-- START THE CUSTOM SECTION -->
 <?php 
-	$myannouncements = new WP_Query(array(
-								'post_type'	=> 'announcement',
+if(is_page( 539 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 15)  // COLLEGE WIDE
+								)
+							)); }
+	
+elseif (is_page( 547 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 16) // COMMUNICATION SCIENCES & DISORDERS
+								)
+							)); }
+	
+elseif (is_page( 555 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 17) // CRIMINAL JUSTICE
+								)
+							)); }
+elseif (is_page( 556 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 18) // HEALTH MANAGEMENT
+								)
+							)); }
+	
+elseif (is_page( 557 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 19) // HEALTH PROFESSIONS
+								)
+							)); }
+elseif (is_page( 558 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 20) // LEGAL STUDIES
+								)
+							)); }
+	
+elseif (is_page( 559 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 21) // PUBLIC ADMINISTRATION
+								)
+							)); }
+elseif (is_page( 560 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 22) // PUBLIC AFFAIRS
+								)
+							)); }
+	
+elseif (is_page( 561 )) {
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'tax_query' => array(
+									array(
+									'taxonomy' => 'scholarship_cat',
+									'field' => 'term_id',
+									'terms' => 23) // SOCIAL WORK
+								)
+							)); }
+else {                                  
+	$myfavetools = new WP_Query(array(
+								'post_type'	=> 'scholarship',
+								'orderby'=>'title',
 								'order'=>'ASC'
 							)); }
 ?> 
 
-<?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
-
-<?php the_content();?>
+<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
 
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
