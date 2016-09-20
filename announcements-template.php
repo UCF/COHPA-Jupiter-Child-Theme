@@ -160,6 +160,7 @@ else {
 <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
 
 <?php the_content();?>
+<span class="entry-date"><?php echo get_the_date(); ?></span>
 
 <!-- START THE REPEAT SECTION -->               
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
