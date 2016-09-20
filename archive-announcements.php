@@ -55,8 +55,11 @@ get_header(); ?>
 
 																		
 <style> 
+#announ {
+padding:15px;
+}
 #announ:nth-child(even) {
- background: red !important;
+ background: #e2e2e2 !important;
 }
 .theme-page-wrapper #mk-sidebar.mk-builtin {
     width: 100% !important;
