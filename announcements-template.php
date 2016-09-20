@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Scholarships
+Template Name: Announcements
 */
 
 
