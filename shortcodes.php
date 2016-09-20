@@ -472,6 +472,7 @@ else {
 
 <?php wp_reset_query(); ?> 
 
+<a href="/announcements/" title="View All Accouncements">View All</a>
 	
 <?php	
 });// END SHORTCODE [show_announcements]?> 
