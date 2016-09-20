@@ -24,7 +24,7 @@ get_header(); ?>
                         
  <!-- START MY NEW TEST SECTION -->
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
-	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
+	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
 		<div id="text-block-2" class="mk-text-block   ">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
@@ -38,17 +38,9 @@ get_header(); ?>
 		</div>
 	</div>
     
-	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
-        HELLO <?php 
-		global $wp_registered_sidebars;
-
-echo '<pre>';
-print_r($wp_registered_sidebars); 
-echo '</pre>'
-		
-		
-		get_sidebar('scholarships'); ?>
-	</div>
+	<!--<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+        could not get sidebar.. if you reuse, swith 12 to 9 above
+	</div>-->
     
 </div>
 <!-- END MY NEW TEST SECTION -->                           
