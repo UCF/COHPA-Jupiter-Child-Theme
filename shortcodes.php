@@ -93,7 +93,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 						 } 	
 
 						?>
-                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px 4px;" class="mk-moon-phone-4  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
+                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px 4px;" class="mk-moon-envelop-2  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px 4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
                     <?php				
