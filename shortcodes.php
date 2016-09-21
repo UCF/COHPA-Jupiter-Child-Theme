@@ -93,7 +93,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 						 } 	
 
 						?>
-                        <div id="directoryProfile-phone"><i class="font-icon mk-size-small"><svg class="mk-svg-icon" data-name="mk-moon-phone" data-cacheid="icon-57e28d3fa68dd" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M352 320c-32 32-32 64-64 64s-64-32-96-64-64-64-64-96l64-64s-64-128-96-128l-96 96c0 64 65.75 193.75 128 256s192 128 256 128c0 0 96-64 96-96s-96-128-128-96z"></path></svg></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
+                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
                     <?php				
@@ -150,7 +150,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
-#directoryProfile-phone .font-icon svg {fill:#666666;}
+
 </style>	
 	
 <?php	
