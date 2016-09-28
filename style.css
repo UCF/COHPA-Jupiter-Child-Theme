@@ -169,6 +169,7 @@ table.ical td.amrcol1{
 table.ical td.amrcol2{
   width: 75% !important;
   text-align:left !important;
+  padding:0px 12px !important;
 }
 table.ical tr.odd{
 background-color:#f2f2f2;
