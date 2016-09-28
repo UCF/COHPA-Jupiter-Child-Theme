@@ -301,10 +301,15 @@ display:none !important;
 .mk-blog-thumbnail-item .item-wrapper {
 padding: 10px 30px !important;
 }
+.mk-blog-meta-wrapper a{
+color:#222;
+}
 .mk-blog-meta-wrapper a:hover{
 color:#0052d6;
 }
-
+.mk-categories {
+display:none !important;	
+}
 
 
 #archives-3 .widgettitle {
