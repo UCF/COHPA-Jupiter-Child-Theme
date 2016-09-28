@@ -171,7 +171,9 @@ table.ical td.amrcol2{
   text-align:left !important;
 }
 #events_wrap .ical .lastcol {
-	padding:0px 12px !important;
+padding-top:0px !important;
+padding-bottom:80px !important;
+
 }
 table.ical tr.odd{
 background-color:#f2f2f2;
