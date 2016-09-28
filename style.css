@@ -304,7 +304,9 @@ padding: 10px 30px !important;
 .mk-categories {
 display:none !important;	
 }
-
+.post-list-thumb {
+display:none !important;	
+}
 
 #archives-3 .widgettitle {
 display:none !important;
