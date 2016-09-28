@@ -272,7 +272,6 @@ color: #999 !important;
 #homeLINKS ul li a:hover {
 color: #ffc904 !important;
 }
-
 .sidebar-wrapper .menu .sub-menu {
 background-color: #eaeaea !important;
 }
@@ -280,8 +279,6 @@ background-color: #eaeaea !important;
     float: left !important;
     margin-left:10px !important;
 }
-
-
 .slideText {
 margin-top:50px;
 }
@@ -290,6 +287,8 @@ background:rgba(0,0,0,0.8);
 padding: 15px 30px;
 margin-left:30px;
 }
+
+
 .cohpaNEWS h3 {
 font-weight:bold !important;
 }
@@ -305,6 +304,11 @@ color:#999;
 .cohpaNEWS .mk-blog-meta-wrapper a:hover{
 color:#0052d6;
 }
+.cohpaNEWS .featured-image {
+display:none !important;
+}
+
+
 #archives-3 .widgettitle {
 display:none !important;
 }
