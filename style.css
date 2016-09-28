@@ -48,24 +48,6 @@ font-size:11px !important;
 #mk-breadcrumbs .mk-breadcrumbs-inner {
     width:100% !important;
 }
-.mk-blog-magazine-item.magazine-thumb-post .the-title {
-margin-top: 0px !important;
-}
-.mk-blog-thumbnail-item .item-wrapper h3 {
-font-weight:bold !important;
-}
-.mk-blog-author {
-display:none !important;
-}
-.mk-blog-thumbnail-item .item-wrapper {
-padding: 10px 30px !important;
-}
-.mk-blog-meta-wrapper a{
-color:#999;
-}
-.mk-blog-meta-wrapper a:hover{
-color:#0052d6;
-}
 label.screen-reader-text {
 display:none !important;
 }
@@ -288,7 +270,7 @@ padding: 15px 30px;
 margin-left:30px;
 }
 
-
+/* ******** NEWSROOM FIXES ******** */
 .cohpaNEWS h3 {
 font-weight:bold !important;
 }
@@ -307,6 +289,22 @@ color:#0052d6;
 .cohpaNEWS .featured-image {
 display:none !important;
 }
+.mk-blog-magazine-item.magazine-thumb-post .the-title {
+margin-top: 0px !important;
+}
+.mk-blog-thumbnail-item .item-wrapper h3 {
+font-weight:bold !important;
+}
+.mk-blog-author {
+display:none !important;
+}
+.mk-blog-thumbnail-item .item-wrapper {
+padding: 10px 30px !important;
+}
+.mk-blog-meta-wrapper a:hover{
+color:#0052d6;
+}
+
 
 
 #archives-3 .widgettitle {
