@@ -1,7 +1,6 @@
 <?php // ADDED BY DAVID JANOSIK
 
 include 'shortcodes.php';
-wp_enqueue_style( 'cohpafixes', get_stylesheet_uri('/wp-content/themes/jupiter-child/cohpafixes.css') );
 
 
 	function load_custom_wp_admin_style() {
