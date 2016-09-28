@@ -280,3 +280,37 @@ background-color: #eaeaea !important;
     float: left !important;
     margin-left:10px !important;
 }
+
+
+.slideText {
+margin-top:50px;
+}
+.slideText span{
+background:rgba(0,0,0,0.8);
+padding: 15px 30px;
+margin-left:30px;
+}
+.cohpaNEWS h3 {
+font-weight:bold !important;
+}
+.cohpaNEWS .mk-blog-author {
+display:none !important;
+}
+.cohpaNEWS .item-wrapper {
+padding: 10px 30px !important;
+}
+.cohpaNEWS .mk-blog-meta-wrapper a{
+color:#999;
+}
+.cohpaNEWS .mk-blog-meta-wrapper a:hover{
+color:#0052d6;
+}
+#archives-3 .widgettitle {
+display:none !important;
+}
+#archives-dropdown-3 {
+width: 100% !important;
+}
+#text-6 .page-numbers{
+display:none !important;
+}
