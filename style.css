@@ -27,7 +27,7 @@ display:none !important;
 .widgetHOME .post-list-title {
 color:#4285f4 !important;
 font-weight:bold;
-font-size:14px;
+font-size:14px !important;
 }
 .widgetHOME .post-list-title:hover {
 color:#0052d6 !important;
