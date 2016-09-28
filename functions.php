@@ -1,6 +1,7 @@
 <?php // ADDED BY DAVID JANOSIK
 
 include 'shortcodes.php';
+include 'cohpafixes.css';
 
 
 	function load_custom_wp_admin_style() {
