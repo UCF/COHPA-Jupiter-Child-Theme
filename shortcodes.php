@@ -51,7 +51,7 @@ $jobtitle_ucf = get_sub_field('job_title');
                     <h3 style="font-weight:bold;">
                         <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><span style="font-weight:bold; font-size:16px; line-height:16px !important;">
+                    <p><div style="font-weight:bold; font-size:16px; line-height:10px !important;">
                     	<?php
 						switch_to_blog(1);
 						
@@ -71,7 +71,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 						restore_current_blog();
 							?>
                             
-                    </span><br>
+                    </div><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
