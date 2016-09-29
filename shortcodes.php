@@ -51,7 +51,7 @@ $jobtitle_ucf = get_sub_field('job_title');
                     <h3 style="font-weight:bold;">
                         <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><div style="font-weight:bold; font-size:16px; line-height:16px !important;">
+                    <p><div id="showFacultyJobTitle">
                     	<?php
 						switch_to_blog(1);
 						
@@ -72,6 +72,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 							?>
                             
                     </div>
+                    <div id="showFacultyDepartment">
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
@@ -93,7 +94,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 						 } 	
 
 						?>
-
+					</div>
                         <div id="directoryProfile-phone"><i style="color:#666;margin:4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>

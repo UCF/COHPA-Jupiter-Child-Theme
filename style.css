@@ -230,6 +230,15 @@ display:none;
   font-weight:bold !important;
   margin: 20px 0px 0px 0px !important;
 }
+#showFacultyJobTitle {
+	font-weight:bold; 
+	font-size:16px; 
+	line-height:16px !important;
+}
+#showFacultyDepartment {
+	line-height:16px !important;
+	margin-bottom:20px;
+}
 #directoryDepartments {
   font-size:16px !important;
   font-weight:normal !important;
