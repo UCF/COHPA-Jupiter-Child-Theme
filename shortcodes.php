@@ -478,3 +478,30 @@ $myfavetools = new WP_Query(array(
 	
 <?php	
 });// END SHORTCODE [show_UCFannouncements]?> 
+
+
+
+
+
+
+<?php
+add_shortcode('show_announcements', function() {
+?>
+<!-- START REPEATER SECTION -->	
+
+<?php $myannouncements = new WP_Query(array(
+								'post_type'	=> 'announcement',
+								'orderby'=>'title',
+								'order'=>'DESC'
+																	
+							)); ?>
+                            
+                <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
+   				<!--START OF THE REPEAT SECTION -->
+                <li><a href="#"><?php the_title(); ?></a></li>
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
+
+<!-- END OF THE REPEAT SECTION -->	
+<?php	
+});// END SHORTCODE [show_announcements]?> 
