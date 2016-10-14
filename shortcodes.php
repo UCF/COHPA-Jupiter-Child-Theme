@@ -499,6 +499,21 @@ add_shortcode('show_announcements', function() {
                 <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li><a href="#"><?php the_title(); ?></a></li>
+                <?php if( have_rows('announcement_items') ):
+				
+					// loop through the rows of data
+					while ( have_rows('announcement_items') ) : the_row();
+				
+						// display a sub field value
+						the_sub_field('announcement_item');
+				
+					endwhile;
+				
+				else :
+				
+					// no rows found
+				
+				endif;?>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
 
