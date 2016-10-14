@@ -492,7 +492,7 @@ add_shortcode('show_announcements', function() {
 <?php $myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
 								'orderby'=>'title',
-								'order'=>'DESC'
+								'order'=>'ASC'
 																	
 							)); ?>
                             
