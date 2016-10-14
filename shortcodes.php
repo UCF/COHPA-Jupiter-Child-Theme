@@ -502,12 +502,11 @@ add_shortcode('show_announcements', function() {
                 <?php if( have_rows('announcement_items') ):
 				
 					// loop through the rows of data
-					while ( have_rows('announcement_items') ) : the_row();
+					while ( have_rows('announcement_items') ) : the_row();?>
+					
+				        <strong><?php the_sub_field('announcement_date'); ?></strong> - <?php the_sub_field('announcement_item'); ?>
 				
-						// display a sub field value
-						the_sub_field('announcement_item');
-				
-					endwhile;
+					<?php endwhile;
 				
 				else :
 				
