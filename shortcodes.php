@@ -499,10 +499,7 @@ add_shortcode('show_announcements', function() {
                 <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li><a href="#"><?php the_title(); ?></a></li>
-                <?php if( have_rows('announcement_items') ):
-				
-					// loop through the rows of data
-					
+                <?php
 					
 $row = get_field( 'announcement_items'); // get all the rows from and page ID
 $end_row = end( $row ); // get the end row
@@ -517,11 +514,7 @@ echo $last;
 		
 
 				
-				else :
-				
-					// no rows found
-				
-				endif;?>
+				?>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
 
