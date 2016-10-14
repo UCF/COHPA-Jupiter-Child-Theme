@@ -502,24 +502,20 @@ add_shortcode('show_announcements', function() {
                 <?php if( have_rows('announcement_items') ):
 				
 					// loop through the rows of data
-					while ( have_rows('announcement_items') ) : the_row();
 					
 					
-$rowwert = the_sub_field( 'announcement_items'); // get all the rows from and page ID
-$end_row = end( $rowwert ); // get the end row
+$row = the_sub_field( 'announcement_items'); // get all the rows from and page ID
+$end_row = end( $row ); // get the end row
 $testimonial_content = $end_row['announcement_date' ]; // get the sub field value 
 $testimonial_content = $end_row['announcement_item' ]; // get the sub field value 
-$last =  '<blockquote>' . $testimonial_content . '</blockquote><p>' . $testimonial_content . '</p>'; //set surrounding HTML markup
+$last =  '' . $testimonial_content . '' . $testimonial_content . '</p>'; //set surrounding HTML markup
 echo $last;
 					
 					
 					
 					
-					?>
-					
-				        <strong><?php the_sub_field('announcement_date'); ?></strong> <?php the_sub_field('announcement_item'); ?>
-				
-					<?php endwhile;
+		
+
 				
 				else :
 				
