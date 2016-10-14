@@ -504,7 +504,7 @@ add_shortcode('show_announcements', function() {
 					// loop through the rows of data
 					
 					
-$row = the_sub_field( 'announcement_items'); // get all the rows from and page ID
+$row = get_field( 'announcement_items'); // get all the rows from and page ID
 $end_row = end( $row ); // get the end row
 $testimonial_content = $end_row['announcement_date' ]; // get the sub field value 
 $testimonial_content = $end_row['announcement_item' ]; // get the sub field value 
