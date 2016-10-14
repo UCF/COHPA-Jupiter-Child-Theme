@@ -499,22 +499,13 @@ add_shortcode('show_announcements', function() {
                 <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li><a href="#"><?php the_title(); ?></a></li>
+                
                 <?php
-					
-$row = get_field( 'announcement_items'); // get all the rows from and page ID
-$end_row = end( $row ); // get the end row
-$testimonial_content = $end_row['announcement_date' ]; // get the sub field value 
-$testimonial_content = $end_row['announcement_item' ]; // get the sub field value 
-$last =  '' . $testimonial_content . '' . $testimonial_content . '</p>'; //set surrounding HTML markup
-echo $last;
-					
-					
-					
-					
-		
+$repeater = get_field('announcement_items');
+$last_row = end($repeater);
 
-				
-				?>
+echo $last_row['announcement_item'];
+?>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
 
