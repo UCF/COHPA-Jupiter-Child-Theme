@@ -503,12 +503,12 @@ add_shortcode('show_announcements', function() {
                 <?php
 $repeater = get_field('announcement_items');
 $announdate = get_sub_field('announcement_date');
-$last_row = end($repeater);
+/*$last_row = end($repeater);
 echo $last_row['announdate'];
 echo $last_row['announcement_date'];
 echo $last_row['announcement_item'];
 echo '<br />hello';
-echo $last_row['announcement_item'];
+echo $last_row['announcement_item'];*/
 
 ?>
                 <!-- END OF THE REPEAT SECTION -->
