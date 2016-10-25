@@ -501,14 +501,14 @@ add_shortcode('show_announcements', function() {
                 <li style="list-style:none; font-size:24px !important; font-weight:bold;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
                 
                 <?php
-/*$repeater = get_field('announcement_items');
+$repeater = get_field('announcement_items');
 $announdate = get_sub_field('announcement_date');
 $last_row = end($repeater);
 echo $last_row['announdate'];
 echo $last_row['announcement_date'];
 echo $last_row['announcement_item'];
 echo '<br />hello';
-echo $last_row['announcement_item'];*/
+echo $last_row['announcement_item'];
 
 ?>
                 <!-- END OF THE REPEAT SECTION -->
