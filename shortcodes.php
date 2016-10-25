@@ -489,7 +489,7 @@ add_shortcode('show_announcements', function() {
 ?>
 <!-- START REPEATER SECTION -->	
 
-/*<?php $myannouncements = new WP_Query(array(
+<?php $myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
 								'orderby'=>'title',
 								'order'=>'ASC'
@@ -498,7 +498,7 @@ add_shortcode('show_announcements', function() {
                             
                 <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
-                <!--<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>-->
+                <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
                 
                 <?php
 /*$repeater = get_field('announcement_items');
