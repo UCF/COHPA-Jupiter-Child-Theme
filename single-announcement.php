@@ -29,15 +29,32 @@ get_header(); ?>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
                         <div id="announ">
-						<?php echo get_the_date(); ?> <?php the_content();?>
                         
-                          <?php
-$repeater = get_field('announcement_items');
+                        
+<?php
+
+// check if the repeater field has rows of data
+if( have_rows('announcement_items') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('announcement_items') ) : the_row();
+
+        $repeater = get_field('announcement_items');
 $announdate = get_sub_field('announcement_date');
 $last_row = end($repeater);
 echo $last_row['announcement_date'];
 echo $last_row['announcement_item'];
+
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
 ?>
+
                         </div>
                         
                   <?php endwhile; ?>
