@@ -498,7 +498,7 @@ add_shortcode('show_announcements', function() {
                             
                 <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
-                <li style="list-style:none; font-size:14px !important; font-weight:bold;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
                 
                 <?php
 $repeater = get_field('announcement_items');
