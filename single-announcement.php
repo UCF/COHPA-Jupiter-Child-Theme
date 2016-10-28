@@ -58,6 +58,20 @@ endif;
 
 ?>
 
+
+<?php $products = array_reverse(get_field('announcement_items'));
+
+foreach ($products as $product): ?>
+
+<div id="announ">
+<?php
+  the_sub_field('announcement_date');
+  the_sub_field('announcement_item');
+?>
+</div>
+
+<?php endforeach; ?>
+
                         
                         
                   <?php endwhile; ?>
