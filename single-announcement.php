@@ -28,7 +28,7 @@ get_header(); ?>
 		<div id="text-block-2" class="mk-text-block   ">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
-                        <div id="announ">
+                        
                         
                         
 <?php
@@ -37,12 +37,17 @@ $rowsarray = get_field('announcement_items');
 $rows = array_reverse($rowsarray);
 if($rows):
 
+
  	// loop through the rows of data
     while ( have_rows('announcement_items') ) : the_row();
-
+?>
+<div id="announ">
+<?php
   the_sub_field('announcement_date');
   the_sub_field('announcement_item');
-
+?>
+</div>
+<?php
     endwhile;
 
 else :
@@ -53,7 +58,7 @@ endif;
 
 ?>
 
-                        </div>
+                        
                         
                   <?php endwhile; ?>
                 <?php wp_reset_query(); ?>    
