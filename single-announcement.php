@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Announcements
+Template Name: Announcement Archive
 */
 
 
@@ -29,7 +29,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
                         <div id="announ">
-						<strong><?php echo get_the_date(); ?></strong> - <?php the_content();?>
+						<?php echo get_the_date(); ?> <?php the_content();?>
                         </div>
                         
                   <?php endwhile; ?>
