@@ -499,15 +499,15 @@ add_shortcode('show_announcements', function() {
                 <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-                
+ <div style="margin-left:25px;">               
                 <?php
 $repeater = get_field('announcement_items');
 $announdate = get_sub_field('announcement_date');
 $last_row = end($repeater);
-echo $last_row['announdate'];
 echo $last_row['announcement_date'];
 echo $last_row['announcement_item'];
 ?>
+</div>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
 
