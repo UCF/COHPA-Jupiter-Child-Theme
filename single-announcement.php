@@ -33,8 +33,9 @@ get_header(); ?>
                         
 <?php
 
-// check if the repeater field has rows of data
-if( have_rows('announcement_items') ):
+$rowsarray = get_field('announcement_items');
+$rows = array_reverse($rowsarray);
+if($rows):
 
  	// loop through the rows of data
     while ( have_rows('announcement_items') ) : the_row();
