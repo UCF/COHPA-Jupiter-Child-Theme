@@ -30,6 +30,14 @@ get_header(); ?>
             
                         <div id="announ">
 						<?php echo get_the_date(); ?> <?php the_content();?>
+                        
+                          <?php
+$repeater = get_field('announcement_items');
+$announdate = get_sub_field('announcement_date');
+$last_row = end($repeater);
+echo $last_row['announcement_date'];
+echo $last_row['announcement_item'];
+?>
                         </div>
                         
                   <?php endwhile; ?>
