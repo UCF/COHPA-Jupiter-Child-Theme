@@ -23,8 +23,6 @@ get_header(); ?>
                  
                         
  <!-- START MY NEW TEST SECTION -->
- 
- HELLO!!! 
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">		
 	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
 		<div id="text-block-2" class="mk-text-block   ">
