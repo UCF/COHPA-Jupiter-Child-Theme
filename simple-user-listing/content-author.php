@@ -23,7 +23,7 @@ $size = 'faculty';
 $thumb = $image['sizes'][ $size ];
 $width = $image['sizes'][ $size . '-width' ];
 $height = $image['sizes'][ $size . '-height' ];
-$jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
+$jobs_ucf = get_field('job_titles', 'user_' . $user->id .'');
 $jobtitle_ucf = get_sub_field('job_title');
 		
 ?>
@@ -62,17 +62,17 @@ $jobtitle_ucf = get_sub_field('job_title');
         <div class="clearboth"></div>
         <div style=" margin-bottom:10px;text-align: left;" class="mk-text-block  true">
             <div id="cohpa-directory-name">
-                <strong>HELLO
+                <strong>HELLO 2
                 <?php
 						switch_to_blog(1);
 						
-							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+							if( get_field('job_titles', 'user_' . $user->id .'') ) {
 								$num_rows = 0;
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user->id .'') ) : the_row();
 									$num_rows++;
 									endwhile;
 							
-									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									while ( have_rows('job_titles', 'user_' . $user->id .'') ) : the_row();
 									$num_rows--;
 									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
