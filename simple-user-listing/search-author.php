@@ -22,6 +22,6 @@ $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : '';
 	<?php
 	if( $search ){ ?>
 		<h2 ><?php printf( __('Search Results for: %s' ,'simple-user-listing'), '<em>' . $search .'</em>' );?></h2>
-		<a href="<?php the_permalink(); ?>"><?php _e('Back To Author Listing' ,'simple-user-listing');?></a>
+		<!--<a href="<?php //the_permalink(); ?>"><?php //_e('Back To Author Listing' ,'simple-user-listing');?></a>-->
 	<?php } ?>
 </div><!-- .author-search -->
