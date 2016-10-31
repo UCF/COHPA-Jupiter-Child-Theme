@@ -28,12 +28,13 @@ $jobtitle_ucf = get_sub_field('job_title');
 		
 ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1455896967960" style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #ddd;">
-	<div style="" class="vc_col-sm-2 wpb_column column_container ">
-
-<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
+	<div class="wpb_column vc_column_container vc_col-sm-2">
+    	<div class="vc_column-inner ">
+        	<div class="wpb_wrapper">
+            	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user->id)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
@@ -44,27 +45,10 @@ $jobtitle_ucf = get_sub_field('job_title');
                         </div>
                     </div>
 					<div class="clearboth"></div>
-				</div>	
-    
-    
-    
-    
-<div class="mk-image-shortcode mk-shortcode   align-left single_line-frame inside-image " style="max-width: 600px; margin-bottom:10px">
-            	<div class="mk-image-inner">
-                	<?php
-					if( $image ) { ?>
-						<a href="<?php echo um_user_profile_url(); ?>" title="<?php echo '' . $user->display_name . ''; ?>">
-						<img src="<?php echo $thumb; ?>" alt="<?php echo '' . $user->display_name . ''; ?>" title="<?php echo '' . $user->display_name . ''; ?>" width="100%" />
-						</a>
-						 
-					<?php }
-					else { ?> 
-						<img class="lightbox-true" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image"  width="100%" />
-					<?php } ?>  
-                </div>
-                <div class="clearboth"></div>
+				</div>
             </div>
-	</div>
+        </div>
+    </div>
 	<div style="" class="vc_col-sm-6 wpb_column column_container ">
         <h2 style="font-size: 25px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e076fc" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style directoryNameFixer">
             <span style="">
