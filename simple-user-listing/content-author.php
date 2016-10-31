@@ -29,7 +29,27 @@ $jobtitle_ucf = get_sub_field('job_title');
 ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1455896967960" style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #ddd;">
 	<div style="" class="vc_col-sm-2 wpb_column column_container ">
-			<div class="mk-image-shortcode mk-shortcode   align-left single_line-frame inside-image " style="max-width: 600px; margin-bottom:10px">
+
+<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
+					<div class="mk-image-holder" style="max-width: 500px;">
+                    	<div class="mk-image-inner ">
+                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+							<?php if( $image_ucf ) { ?>
+                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
+                             <?php }
+                                else { ?> 
+                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                            <?php } ?>
+                        </a>    
+                        </div>
+                    </div>
+					<div class="clearboth"></div>
+				</div>	
+    
+    
+    
+    
+<div class="mk-image-shortcode mk-shortcode   align-left single_line-frame inside-image " style="max-width: 600px; margin-bottom:10px">
             	<div class="mk-image-inner">
                 	<?php
 					if( $image ) { ?>
