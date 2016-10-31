@@ -62,7 +62,7 @@ $jobtitle_ucf = get_sub_field('job_title');
         <div class="clearboth"></div>
         <div style=" margin-bottom:10px;text-align: left;" class="mk-text-block  true">
             <div id="cohpa-directory-name">
-                <strong>HELLO 2
+                <p><div id="showFacultyJobTitle">
                 <?php
 						switch_to_blog(1);
 						
@@ -81,7 +81,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 							}
 						restore_current_blog();
 							?>
-                </strong><br />
+                </div><br />
                 <span class="color-lightgray">
                 <?php the_field('department', 'user_' . $user->id .''); ?></h4>
                         <?php 
