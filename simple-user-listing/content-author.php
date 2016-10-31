@@ -23,6 +23,8 @@ $size = 'faculty';
 $thumb = $image['sizes'][ $size ];
 $width = $image['sizes'][ $size . '-width' ];
 $height = $image['sizes'][ $size . '-height' ];
+$jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
+$jobtitle_ucf = get_sub_field('job_title');
 		
 ?>
 <div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid vc_custom_1455896967960" style="padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #ddd;">
@@ -61,16 +63,24 @@ $height = $image['sizes'][ $size . '-height' ];
         <div style=" margin-bottom:10px;text-align: left;" class="mk-text-block  true">
             <div id="cohpa-directory-name">
                 <strong>
-                <?php		
-					if( get_field('job_titles', 'user_' . $user->id .'') ) {
-						while ( have_rows('job_titles', 'user_' . $user->id .'') ) : the_row();
-						 $arrayJob[] = get_sub_field('job_title', 'user_' . $user->id .''); 
-						endwhile;
-						$jobTitles = implode(', ', $arrayJob);
-					
-						//echo $jobTitles;
-					}
-				?>
+                <?php
+						switch_to_blog(1);
+						
+							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+								$num_rows = 0;
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows++;
+									endwhile;
+							
+									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
+									$num_rows--;
+									echo '<span>'. get_sub_field('job_title') .'</span>';
+									if ( $num_rows == 0 ) { echo ''; }
+									else { echo ', '; }
+									endwhile;
+							}
+						restore_current_blog();
+							?>
                 </strong><br />
                 <span class="color-lightgray">
                 <?php the_field('department', 'user_' . $user->id .''); ?></h4>
