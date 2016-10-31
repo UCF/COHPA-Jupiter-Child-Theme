@@ -124,21 +124,8 @@ $jobtitle_ucf = get_sub_field('job_title');
 							echo '</a></div>';
 						}	
 						?>
-                
-               <!-- <span class="color-lightgray">Phone: </span>407-823-5884<br />
-                <span class="color-lightgray">Email: </span>
-                <a title="Contact David Janosik" href="mailto:djanosik@ucf.edu">djanosik@ucf.edu</a>-->
-                
-                
-                
-            </div>
-            <div class="clearboth"></div>
-        </div>
-        <div style="text-align: left;" class="mk-text-block  true">
-            <div id="cohpa-directory-name"></div>
-            
-            
-        <?php				
+                        
+                         <?php				
 		echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
 						if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 						if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
@@ -163,10 +150,16 @@ $jobtitle_ucf = get_sub_field('job_title');
 							echo '' . $user->room_number . '';
 						}
 						echo '</div>';	?>
-            
-            
+                
+               <!-- <span class="color-lightgray">Phone: </span>407-823-5884<br />
+                <span class="color-lightgray">Email: </span>
+                <a title="Contact David Janosik" href="mailto:djanosik@ucf.edu">djanosik@ucf.edu</a>-->
+                
+                
+                
+            </div>
             <div class="clearboth"></div>
-        </div> 
+        </div>
     </div>
     <div style="" class="vc_col-sm-4 wpb_column column_container ">
     
