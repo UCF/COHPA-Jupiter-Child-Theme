@@ -81,8 +81,8 @@ $jobtitle_ucf = get_sub_field('job_title');
 							}
 						restore_current_blog();
 							?>
-                </div><br />
-                <span class="color-lightgray">
+                </div>
+                <div id="showFacultyDepartment">
                 <?php the_field('department', 'user_' . $user->id .''); ?></h4>
                         <?php 
 						$terms = get_field('department');
@@ -104,7 +104,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 						 } 	
 
 						?>
-                </span><br />
+                </div>
                 
                 <?php 
 		if( ! empty( $user->phone_number ) ) { 
