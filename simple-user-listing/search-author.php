@@ -30,7 +30,7 @@ $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : '';
 		</div>
     </div>
     </form>
-    				</section>
+</section>
 
 </div>
 
