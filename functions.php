@@ -49,3 +49,34 @@ function admin_styles() {
 	</style>
 	<?php
 }
+
+
+
+
+
+
+function mc_admin_users_caps( $caps, $cap, $user_id, $args ){
+ 
+    foreach( $caps as $key => $capability ){
+ 
+        if( $capability != 'do_not_allow' )
+            continue;
+ 
+        switch( $cap ) {
+            case 'edit_user':
+            case 'edit_users':
+                $caps[$key] = 'edit_users';
+                break;
+            case 'delete_user':
+            case 'delete_users':
+                $caps[$key] = 'delete_users';
+                break;
+            case 'create_users':
+                $caps[$key] = $cap;
+                break;
+        }
+    }
+ 
+    return $caps;
+}
+add_filter( 'map_meta_cap', 'mc_admin_users_caps', 10, 4 );
