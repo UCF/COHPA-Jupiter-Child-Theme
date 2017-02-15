@@ -302,7 +302,7 @@ get_header();
 					if(get_field('biography', 'user_' . $user_id .'')) { 
 							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
 						}
-					if(get_field('research_info', 'user_' . $user_id .'')) { 
+					if(get_field('research_info', 'user_' . $user_id .'') || get_field('research_interests', 'user_' . $user_id .'')) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
 						}
 					if (have_rows('add_courses', 'user_' . $user_id .'') ) { 
@@ -354,7 +354,7 @@ get_header();
                 
                 
                 <?php 
-					if(get_field('research_info', 'user_' . $user_id .'')) { ?>
+					if(get_field('research_info', 'user_' . $user_id .'') || get_field('research_interests', 'user_' . $user_id .'')) { ?>
 				<div id="1470321688-2-76" class="mk-tabs-pane">
 					<div class="title-mobile">
 						<i></i>Research	
