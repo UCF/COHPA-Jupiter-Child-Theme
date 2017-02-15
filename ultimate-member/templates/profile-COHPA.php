@@ -349,7 +349,7 @@ get_header();
                         </div>
 					</div>	
 					<div class="clearboth"></div>
-				</div>
+				</div> 
                 <?php }?>
                 
                 
