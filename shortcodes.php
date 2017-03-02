@@ -21,6 +21,20 @@ $jobtitle_ucf = get_sub_field('job_title');
 <?php restore_current_blog(); ?>
 
 
+
+<?php
+function seoUrl($mystring) {
+    //Lower case everything
+    $mystring = strtolower(get_field('first_name', 'user_' . $user_db));
+    //Make alphanumeric (removes all other characters)
+    $mystring = preg_replace("/[^a-z0-9_\s-]/", "", $string);
+    //Clean up multiple dashes or whitespaces
+    $mystring = preg_replace("/[\s-]+/", " ", $string);
+    //Convert whitespaces and underscore to dash
+    $mystring = preg_replace("/[\s_]/", "-", $string);
+    return $string;
+}
+?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
@@ -29,7 +43,7 @@ $jobtitle_ucf = get_sub_field('job_title');
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo $mystring; ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
