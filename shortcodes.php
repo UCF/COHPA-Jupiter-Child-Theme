@@ -26,7 +26,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 <?php
 $myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
 $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
-$cohpaFNAME = preg_replace("/[\s_]/", "-", $$myFNAME);
+$cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 ?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
