@@ -28,7 +28,7 @@ $myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
 $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
 $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 
-$myLNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
+$myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
 $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 ?>
