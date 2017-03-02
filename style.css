@@ -157,9 +157,7 @@ font-weight:bold !important;
 /*margin: 0px !important;
   padding:0px !important; */
 }
-table.ical .summary {
-	padding-top: 14px !important;
-}
+
 .ical h4 {
 /*padding-top:0px !important;
 margin-top:0px !important;*/
@@ -174,7 +172,7 @@ table.ical td.amrcol2{
   text-align:left !important;
 }
 #events_wrap .ical .lastcol {
-padding:0px !important;
+padding:14px 0px 0px 0px !important;
 }
 table.ical tr.odd{
 background-color:#f2f2f2;
