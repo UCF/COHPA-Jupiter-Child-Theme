@@ -22,18 +22,7 @@ $jobtitle_ucf = get_sub_field('job_title');
 
 
 
-<?php
-function seoUrl($string) {
-    //Lower case everything
-    $string = strtolower(get_field('first_name', 'user_' . $user_db));
-    //Make alphanumeric (removes all other characters)
-    $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
-    //Clean up multiple dashes or whitespaces
-    $string = preg_replace("/[\s-]+/", " ", $string);
-    //Convert whitespaces and underscore to dash
-    $string = preg_replace("/[\s_]/", "-", $string);
-}
-?>
+
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
