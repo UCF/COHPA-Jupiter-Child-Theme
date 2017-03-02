@@ -157,6 +157,9 @@ font-weight:bold !important;
 /*margin: 0px !important;
   padding:0px !important; */
 }
+table.ical .summary {
+	padding-top: 14px !important;
+}
 .ical h4 {
 /*padding-top:0px !important;
 margin-top:0px !important;*/
