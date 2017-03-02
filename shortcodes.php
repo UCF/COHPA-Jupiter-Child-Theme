@@ -27,6 +27,10 @@ $jobtitle_ucf = get_sub_field('job_title');
 $myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
 $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
 $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
+
+$myLNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
+$myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
+$cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 ?>
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
@@ -36,7 +40,7 @@ $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
@@ -56,7 +60,7 @@ $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3 style="font-weight:bold;">
-                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><div id="showFacultyJobTitle">
                     	<?php
