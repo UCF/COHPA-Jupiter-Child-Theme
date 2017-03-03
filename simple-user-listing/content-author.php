@@ -170,7 +170,6 @@ $jobtitle_ucf = get_sub_field('job_title');
        <?php  }?>	
         <div class="clearboth"></div>
         <div style="text-align: left;" class="mk-text-block  true">
-            <p>
             <?php 
 					if(get_field('cv', 'user_' . $user->id .'') || get_field('website_url', 'user_' . $user->id .'') || get_field('facebook_url', 'user_' . $user->id .'') || get_field('linkedin_url', 'user_' . $user->id .'')) {
 					   echo '';
