@@ -562,7 +562,7 @@ get_header();
                                        
                                         
                                         
-<?php if(get_field('aff_url', 'user_' . $user_id .'')) { ?> 
+<?php if(the_sub_field('aff_url', 'user_' . $user_id .'')) { ?> 
 	<a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
 						<?php }
                         else {
