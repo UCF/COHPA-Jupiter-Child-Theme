@@ -298,7 +298,7 @@ get_header();
 			<div class="mk-tabs-panes page-bg-color">
             
             <?php 
-					if(get_field('biography', 'user_' . $user_id .'')) { ?>
+					if(get_field('biography', 'user_' . $user_id .'') || get_field('degrees', 'user_' . $user_id .'')) { ?>
 				<div id="1470321688-1-51" class="mk-tabs-pane is-active">
                 	<div class="title-mobile">
                     	<i></i>Biography
