@@ -557,7 +557,24 @@ get_header();
 						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Affiliations</span></h4>';?>
 							<?php while (have_rows('affiliations', 'user_' . $user_id .'') ): the_row(); ?>
                                 <div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
-                                        <a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
+                                
+                                
+                                       
+                                        
+                                        
+<?php if(get_field('aff_url', 'user_' . $user_id .'')) { ?> 
+	<a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
+						<?php }
+                        else {
+                        the_sub_field('aff_name', 'user_' . $user_id .'');
+						}
+                        
+  ?>                                                         
+                                        
+                                        
+                                        
+                                        
+                                        
                                 </div>                     
                             <?php  endwhile;
 						echo '</div>';
