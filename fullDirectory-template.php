@@ -225,12 +225,12 @@ if ( ! empty( $user_query->results ) ) {
 					   echo '';
 					
 					if(get_field('cv', 'user_' . $user->id .'')) {
-							echo '<div id="directoryProfile-link"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-icon-file-pdf-o  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-links"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-icon-file-pdf-o  mk-size-small"></i> <a href="';
 							the_field('cv', 'user_' . $user->id .'');
 							echo '" target="_blank">Curriculum Vitae</a></div>';
 						}
 						if(get_field('website_url', 'user_' . $user->id .'')) {
-							echo '<div id="directoryProfile-link"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-links"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
 							the_field('website_url', 'user_' . $user->id .'');
 							echo '" target="_blank">Personal Website</a></div>';
 						}
