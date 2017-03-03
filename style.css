@@ -242,8 +242,11 @@ display:none;
   margin-bottom: 20px !important;
 }
 #directoryProfile-link {
-	margin-bottom:8px;
+	margin-bottom:12px;
 	line-height:12px !important;
+}
+#directoryProfile-link a{
+	margin-left:20px;
 }
 .directoryDegrees {
   font-size:18px !important;
