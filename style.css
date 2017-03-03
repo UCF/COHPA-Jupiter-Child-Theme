@@ -246,8 +246,8 @@ display:none;
 	line-height:12px !important;
 }
 #directoryProfile-link a{
-	margin-left: -2em; 
- text-indent: 2em
+	margin-left: -10px; 
+    text-indent: 10px;
 }
 .directoryDegrees {
   font-size:18px !important;
