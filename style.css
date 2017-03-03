@@ -242,7 +242,8 @@ display:none;
   margin-bottom: 20px !important;
 }
 #directoryProfile-link {
-	margin-bottom:20px;
+	margin-bottom:8px;
+	line-height:12px !important;
 }
 .directoryDegrees {
   font-size:18px !important;
