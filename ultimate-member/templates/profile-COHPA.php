@@ -270,7 +270,7 @@ get_header();
                  -->
                  
                 <?php 
-					if(get_field('biography', 'user_' . $user_id .'')) { 
+					if(get_field('biography', 'user_' . $user_id .'') || get_field('degrees', 'user_' . $user_id .'')) { 
 							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
 						}
 					if(get_field('research_info', 'user_' . $user_id .'') || get_field('research_interests', 'user_' . $user_id .'')) { 
