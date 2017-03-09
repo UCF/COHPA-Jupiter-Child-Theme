@@ -29,8 +29,8 @@ get_header(); ?>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
             
                         <div id="announ">
-						<?php echo get_the_date(); ?> <br />
-                        <?php the_title( '<h4>', '</h4>' ); ?>
+						<span class="date"><?php echo get_the_date(); ?></span> <br />
+                        <?php the_title( '<h3>', '</h3>' ); ?>
 						<?php the_content();?>
                         </div>
                         
