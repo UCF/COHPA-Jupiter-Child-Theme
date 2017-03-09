@@ -30,7 +30,7 @@ get_header(); ?>
             
                         <div id="announ">
 						<?php echo get_the_date(); ?> <br />
-                        <?php the_title( '<h3>', '</h3>' ); ?>
+                        <?php the_title( '<h4>', '</h4>' ); ?>
 						<?php the_content();?>
                         </div>
                         
