@@ -527,7 +527,7 @@ get_header();
 					   if (have_rows('affiliations', 'user_' . $user_id .'') ) { 
 						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Affiliations</span></h4>';?>
 							<?php while (have_rows('affiliations', 'user_' . $user_id .'') ): the_row(); ?>
-                                <div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>                        
+                                <div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-icon-external-link  mk-size-small"></i>                        
                                         
 <?php if(get_sub_field('aff_url', 'user_' . $user_id .'')) { ?> 
 	<a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
