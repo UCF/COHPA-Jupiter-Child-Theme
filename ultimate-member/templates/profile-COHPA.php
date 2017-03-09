@@ -181,19 +181,19 @@ get_header();
 						 }
 						?>
 						<?php if(get_field('phone_number', 'user_' . $user_id .'')) { 
-							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
+							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px 4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
 							the_field('phone_number', 'user_' . $user_id .'');
 							echo '</div>';
 						}?>
 						<?php if(get_field('email_address', 'user_' . $user_id .'')) { 
-							echo '<div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a href="mailto:';
+							echo '<div id="directoryProfile-email"><i style="color:#666;margin:4px 4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a href="mailto:';
 							the_field('email_address', 'user_' . $user_id .'');
 							echo '">';
 							the_field('email_address', 'user_' . $user_id .'');
 							echo '</a></div>';
 						}?> 
 						<?php 
-						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
+						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px 4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
 						if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 						if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
 						if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
@@ -477,13 +477,13 @@ get_header();
 				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h4>';
 
 				if(get_field('website_url', 'user_' . $user_id .'')) {
-					echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+					echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
 					the_field('website_url', 'user_' . $user_id .'');
 					echo '" target="_blank">Personal Website</a></div>';
 				}
 				
 				while (have_rows('additional_links', 'user_' . $user_id .'') ): the_row(); ?>
-				<div id="directoryProfile-link"><i style="color:#666;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i>
+				<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px;" class="mk-icon-external-link  mk-size-small"></i>
 					<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
 				</div>
 			   <?php  endwhile;
@@ -494,27 +494,27 @@ get_header();
 					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h4>';
 					
 					if(get_field('facebook_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px 4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
 							the_field('facebook_url', 'user_' . $user_id .'');
 							echo '" target="_blank">Facebook</a></div>';
 						}
 						if(get_field('linkedin_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px;4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px 4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
 							the_field('linkedin_url', 'user_' . $user_id .'');
 							echo '" target="_blank">Linkedin</a></div>';
 						}
 						if(get_field('twitter_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-Twitter"><i style="color:#00aced;margin:4px;4px;" class="mk-moon-twitter-2  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-Twitter"><i style="color:#00aced;margin:4px 4px;" class="mk-moon-twitter-2  mk-size-small"></i> <a href="';
 							the_field('twitter_url', 'user_' . $user_id .'');
 							echo '" target="_blank">Twitter</a></div>';
 						}
 						if(get_field('google_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-Google"><i style="color:#dd4b39;margin:4px;4px;" class="mk-moon-google-plus-3  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-Google"><i style="color:#dd4b39;margin:4px 4px;" class="mk-moon-google-plus-3  mk-size-small"></i> <a href="';
 							the_field('google_url', 'user_' . $user_id .'');
 							echo '" target="_blank">Google+</a></div>';
 						}
 						if(get_field('youtube_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-YouTube"><i style="color:#bb0000;margin:4px;4px;" class="mk-moon-youtube  mk-size-small"></i> <a href="';
+							echo '<div id="directoryProfile-YouTube"><i style="color:#bb0000;margin:4px 4px;" class="mk-moon-youtube  mk-size-small"></i> <a href="';
 							the_field('youtube_url', 'user_' . $user_id .'');
 							echo '" target="_blank">YouTube</a></div>';
 						}
