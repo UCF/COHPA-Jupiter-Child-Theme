@@ -27,7 +27,6 @@ get_header(); ?>
 	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
 		<div id="text-block-2" class="mk-text-block   ">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
-                        <?php the_title( '<h3>', '</h3>' ); ?>
 						<?php the_content();?>
                   <?php endwhile; ?>
                 <?php wp_reset_query(); ?>    
