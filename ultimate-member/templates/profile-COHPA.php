@@ -483,7 +483,7 @@ get_header();
 				}
 				
 				while (have_rows('additional_links', 'user_' . $user_id .'') ): the_row(); ?>
-				<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px;" class="mk-icon-external-link  mk-size-small"></i>
+				<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-icon-external-link  mk-size-small"></i>
 					<a href="<?php the_sub_field('link_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('link_title', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('link_title', 'user_' . $user_id .''); ?></a>
 				</div>
 			   <?php  endwhile;
