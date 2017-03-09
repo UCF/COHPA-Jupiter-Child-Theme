@@ -478,7 +478,9 @@ $myfavetools = new WP_Query(array(
 <!-- START THE REPEAT SECTION -->   
 
 <div id="announ">
-<span class="date"><?php echo get_the_date(); ?></span> <?php the_content();?>
+<span class="date"><?php echo get_the_date(); ?></span><br />
+<?php the_title( '<strong>', '</strong>' ); ?><br />
+<?php the_content();?>
 </div>
 <!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
