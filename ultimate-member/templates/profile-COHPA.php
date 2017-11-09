@@ -563,7 +563,7 @@ echo '<b>Monday</b>';}?>
 
 <?php
 if (have_rows('tuesday_times_available', 'user_' . $user_id .'') ) { 
-echo '<b>Tuesday</b>';}?>							
+echo '<div style="padding-top:10px;"><b>Tuesday</b></div>';}?>							
 <?php while (have_rows('tuesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
 	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
 		<?php if(get_sub_field('tuesday-start', 'user_' . $user_id .'')) { ?>
