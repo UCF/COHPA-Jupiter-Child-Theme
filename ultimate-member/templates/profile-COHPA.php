@@ -445,7 +445,7 @@ get_header();
                                                                 </a>
                                                     <?php }?>
                                                 </div>
-                                                <?php echo get_field( "book_citation", $profilebook->ID ); ?>
+                                                <div style="line-height: 2px;"><?php echo get_field( "book_citation", $profilebook->ID ); ?></div>
                                     
                                                 <div style="margin-top:10px; font-style:italic;">Published in: <?php echo get_the_date( 'F Y', $profilebook->ID ); ?></div>
                                         </div>
