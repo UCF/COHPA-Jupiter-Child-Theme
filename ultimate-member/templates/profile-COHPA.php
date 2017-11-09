@@ -473,9 +473,9 @@ get_header();
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
         <div id="text-block-7" class="mk-text-block   ">
 			
-		<!-- START NEW OFFICE HOURS SECTION -->                                                                                                                                                           
+		<!-- START NEW OFFICE HOURS SECTION -->
 			  <?php
-			   if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
+			   if (have_rows('monday_times_available', 'user_' . $user_id .'') || have_rows('tuesday_times_available', 'user_' . $user_id .'') || have_rows('wednesday_times_available', 'user_' . $user_id .'') || have_rows('thursday_times_available', 'user_' . $user_id .'') || have_rows('friday_times_available', 'user_' . $user_id .'') ) { 
 				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';?>
 
 		<?php
