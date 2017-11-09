@@ -283,7 +283,7 @@ get_header();
 							echo '<li class="mk-tabs-tab "><a href="#"> News</a></li>';
 						}
 					if($profilebooks) { 
-							echo '<!--<li class="mk-tabs-tab "><a href="#"> Books</a></li>-->';
+							echo '<li class="mk-tabs-tab "><a href="#"> Books</a></li>';
 						}?>
 						
                 
