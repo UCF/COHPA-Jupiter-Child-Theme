@@ -548,7 +548,7 @@ get_header();
 		echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';?>
 <b>Monday</b>						
 <?php while (have_rows('monday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-	<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
 		<?php if(get_sub_field('monday-start', 'user_' . $user_id .'')) { ?>
 			<?php the_sub_field('monday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('monday-end', 'user_' . $user_id .''); ?>
 			<?php }
