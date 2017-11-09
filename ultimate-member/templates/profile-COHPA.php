@@ -181,7 +181,7 @@ get_header();
 						 }
 						?>
 						<?php if(get_field('phone_number', 'user_' . $user_id .'')) { 
-							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px 4px;" class="mk-moon-phone  mk-size-small"></i> Phone: ';
+							echo '<div id="directoryProfile-phone"><i style="color:#666;margin:4px 4px;" class="mk-moon-phone  mk-size-small"></i> Phone 123#: ';
 							the_field('phone_number', 'user_' . $user_id .'');
 							echo '</div>';
 						}?>
