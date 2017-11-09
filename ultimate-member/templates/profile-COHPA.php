@@ -556,10 +556,7 @@ get_header();
 
 			} ?>     
  	</div>
-<?php 
-endwhile; echo '</div>';
-}?>   
-				                                                                                    
+ 	
 <b>Tuesday</b>						
 <?php while (have_rows('tuesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
 	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
@@ -570,9 +567,13 @@ endwhile; echo '</div>';
 
 			} ?>     
  	</div>
+ 	
+ 	 	 	
 <?php 
 endwhile; echo '</div>';
-}?>   				                                                                                             
+}?>   
+				                                                                                    
+				                                                                                             
 					                                                                                    
 <!-- END NEW OFFICE HOURS SECTION -->                   
                     	
