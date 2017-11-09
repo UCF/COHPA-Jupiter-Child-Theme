@@ -545,8 +545,11 @@ get_header();
 <!-- START NEW OFFICE HOURS SECTION -->                                                                                                                                                           
       <?php
 	   if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
-		echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';?>
-<b>Monday</b>						
+		echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';}?>
+		
+<?php
+if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
+echo '<b>Monday</b>';}?>							
 <?php while (have_rows('monday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
 	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
 		<?php if(get_sub_field('monday-start', 'user_' . $user_id .'')) { ?>
@@ -556,7 +559,7 @@ get_header();
 
 			} ?>     
  	</div>
-<?php endwhile; }?>   
+<?php endwhile; ?>   
 
 
 
