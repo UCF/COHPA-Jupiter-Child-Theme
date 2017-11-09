@@ -474,7 +474,7 @@ get_header();
         <div id="text-block-7" class="mk-text-block   ">
 			<?php
 			   if(get_field('website_url', 'user_' . $user_id .'')) {
- 				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h4>';
+ 				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links 1</span></h4>';
 				
 				if(get_field('website_url', 'user_' . $user_id .'')) {
 					echo '<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
@@ -534,27 +534,7 @@ get_header();
 		<?php }
         else {
         the_sub_field('aff_name', 'user_' . $user_id .'');
-        }                  ?>   
-        
-                                                              
-                                                                                                                    
-<!-- START NEW OFFICE HOURS SECTION -->
-                                                                                                                                                                         
-      <?php
-	   if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
-		echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';?>
-			<?php while (have_rows('monday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-				<div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-icon-external-link  mk-size-small"></i>                        
-                                        
-<?php if(get_sub_field('monday-start', 'user_' . $user_id .'')) { ?> 
-<?php the_sub_field('monday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('monday-end', 'user_' . $user_id .''); ?>
-		<?php }
-        else {
-        
-        } ?>                                                                                             
-<!-- END NEW OFFICE HOURS SECTION -->
-                                                                                                                         
-                                                                                                                                                                                                                                                                                                                                            
+        }                  ?>                                                         
    
                                 </div>                     
                             <?php  endwhile;
