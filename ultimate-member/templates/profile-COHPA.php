@@ -561,10 +561,7 @@ get_header();
 <?php 
 endwhile; echo '</div>';
 }?>   
-				                                                                                    
-<?php
-	   if (have_rows('tuesday_times_available', 'user_' . $user_id .'') ) { 
-		echo '<b>Tuesday</b>';?>								
+						
 			                                                                                             
 					                                                                                    
 <!-- END NEW OFFICE HOURS SECTION -->                   
