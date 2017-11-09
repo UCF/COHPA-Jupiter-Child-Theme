@@ -573,7 +573,49 @@ echo '<div style="padding-top:10px;"><b>Tuesday</b></div>';}?>
 
 			} ?>     
  	</div>
+<?php endwhile; ?> 
+
+<?php
+if (have_rows('wednesday_times_available', 'user_' . $user_id .'') ) { 
+echo '<div style="padding-top:10px;"><b>Wednesday</b></div>';}?>							
+<?php while (have_rows('wednesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+		<?php if(get_sub_field('wednesday-start', 'user_' . $user_id .'')) { ?>
+			<?php the_sub_field('wednesday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('wednesday-end', 'user_' . $user_id .''); ?>
+			<?php }
+			else {
+
+			} ?>     
+ 	</div>
+<?php endwhile; ?> 
+
+<?php
+if (have_rows('thursday_times_available', 'user_' . $user_id .'') ) { 
+echo '<div style="padding-top:10px;"><b>Thursday</b></div>';}?>							
+<?php while (have_rows('thursday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+		<?php if(get_sub_field('thursday-start', 'user_' . $user_id .'')) { ?>
+			<?php the_sub_field('thursday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('thursday-end', 'user_' . $user_id .''); ?>
+			<?php }
+			else {
+
+			} ?>     
+ 	</div>
 <?php endwhile; ?>   
+
+<?php
+if (have_rows('friday_times_available', 'user_' . $user_id .'') ) { 
+echo '<div style="padding-top:10px;"><b>Friday</b></div>';}?>							
+<?php while (have_rows('friday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+		<?php if(get_sub_field('friday-start', 'user_' . $user_id .'')) { ?>
+			<?php the_sub_field('friday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('friday-end', 'user_' . $user_id .''); ?>
+			<?php }
+			else {
+
+			} ?>     
+ 	</div>
+<?php endwhile; ?>           
 
 
 <?php echo '</div>'; ?>
