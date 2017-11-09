@@ -549,7 +549,7 @@ get_header();
 		<?php endwhile; ?>           
 
 
-		<?php echo '</div>'; ?>
+		<?php echo '<p>&nbsp;</p></div>'; ?>
 		<!-- END NEW OFFICE HOURS SECTION -->    
 		   
 		   
