@@ -560,7 +560,19 @@ get_header();
 endwhile; echo '</div>';
 }?>   
 				                                                                                    
-				                                                                                             
+<b>Tuesday</b>						
+<?php while (have_rows('tuesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+		<?php if(get_sub_field('tuesday-start', 'user_' . $user_id .'')) { ?>
+			<?php the_sub_field('tuesday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('tuesday-end', 'user_' . $user_id .''); ?>
+			<?php }
+			else {
+
+			} ?>     
+ 	</div>
+<?php 
+endwhile; echo '</div>';
+}?>   				                                                                                             
 					                                                                                    
 <!-- END NEW OFFICE HOURS SECTION -->                   
                     	
