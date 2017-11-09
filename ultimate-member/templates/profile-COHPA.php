@@ -472,7 +472,90 @@ get_header();
     </div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
         <div id="text-block-7" class="mk-text-block   ">
-			<?php
+			
+		<!-- START NEW OFFICE HOURS SECTION -->                                                                                                                                                           
+			  <?php
+			   if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
+				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';}?>
+
+		<?php
+		if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
+		echo '<b>Monday</b>';}?>							
+		<?php while (have_rows('monday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+			<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+				<?php if(get_sub_field('monday-start', 'user_' . $user_id .'')) { ?>
+					<?php the_sub_field('monday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('monday-end', 'user_' . $user_id .''); ?>
+					<?php }
+					else {
+
+					} ?>     
+			</div>
+		<?php endwhile; ?>   
+
+		<?php
+		if (have_rows('tuesday_times_available', 'user_' . $user_id .'') ) { 
+		echo '<div style="padding-top:10px;"><b>Tuesday</b></div>';}?>							
+		<?php while (have_rows('tuesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+			<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+				<?php if(get_sub_field('tuesday-start', 'user_' . $user_id .'')) { ?>
+					<?php the_sub_field('tuesday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('tuesday-end', 'user_' . $user_id .''); ?>
+					<?php }
+					else {
+
+					} ?>     
+			</div>
+		<?php endwhile; ?> 
+
+		<?php
+		if (have_rows('wednesday_times_available', 'user_' . $user_id .'') ) { 
+		echo '<div style="padding-top:10px;"><b>Wednesday</b></div>';}?>							
+		<?php while (have_rows('wednesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+			<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+				<?php if(get_sub_field('wednesday-start', 'user_' . $user_id .'')) { ?>
+					<?php the_sub_field('wednesday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('wednesday-end', 'user_' . $user_id .''); ?>
+					<?php }
+					else {
+
+					} ?>     
+			</div>
+		<?php endwhile; ?> 
+
+		<?php
+		if (have_rows('thursday_times_available', 'user_' . $user_id .'') ) { 
+		echo '<div style="padding-top:10px;"><b>Thursday</b></div>';}?>							
+		<?php while (have_rows('thursday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+			<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+				<?php if(get_sub_field('thursday-start', 'user_' . $user_id .'')) { ?>
+					<?php the_sub_field('thursday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('thursday-end', 'user_' . $user_id .''); ?>
+					<?php }
+					else {
+
+					} ?>     
+			</div>
+		<?php endwhile; ?>   
+
+		<?php
+		if (have_rows('friday_times_available', 'user_' . $user_id .'') ) { 
+		echo '<div style="padding-top:10px;"><b>Friday</b></div>';}?>							
+		<?php while (have_rows('friday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
+			<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
+				<?php if(get_sub_field('friday-start', 'user_' . $user_id .'')) { ?>
+					<?php the_sub_field('friday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('friday-end', 'user_' . $user_id .''); ?>
+					<?php }
+					else {
+
+					} ?>     
+			</div>
+		<?php endwhile; ?>           
+
+
+		<?php echo '</div>'; ?>
+		<!-- END NEW OFFICE HOURS SECTION -->    
+		   
+		   
+		   
+		   
+		   	  <?php
 			   if(get_field('website_url', 'user_' . $user_id .'')) {
  				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h4>';
 				
@@ -540,87 +623,7 @@ get_header();
                             <?php  endwhile;
 						echo '</div>';
 					}?>   
- 
-                    
-<!-- START NEW OFFICE HOURS SECTION -->                                                                                                                                                           
-      <?php
-	   if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
-		echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';}?>
-		
-<?php
-if (have_rows('monday_times_available', 'user_' . $user_id .'') ) { 
-echo '<b>Monday</b>';}?>							
-<?php while (have_rows('monday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
-		<?php if(get_sub_field('monday-start', 'user_' . $user_id .'')) { ?>
-			<?php the_sub_field('monday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('monday-end', 'user_' . $user_id .''); ?>
-			<?php }
-			else {
-
-			} ?>     
- 	</div>
-<?php endwhile; ?>   
-
-<?php
-if (have_rows('tuesday_times_available', 'user_' . $user_id .'') ) { 
-echo '<div style="padding-top:10px;"><b>Tuesday</b></div>';}?>							
-<?php while (have_rows('tuesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
-		<?php if(get_sub_field('tuesday-start', 'user_' . $user_id .'')) { ?>
-			<?php the_sub_field('tuesday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('tuesday-end', 'user_' . $user_id .''); ?>
-			<?php }
-			else {
-
-			} ?>     
- 	</div>
-<?php endwhile; ?> 
-
-<?php
-if (have_rows('wednesday_times_available', 'user_' . $user_id .'') ) { 
-echo '<div style="padding-top:10px;"><b>Wednesday</b></div>';}?>							
-<?php while (have_rows('wednesday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
-		<?php if(get_sub_field('wednesday-start', 'user_' . $user_id .'')) { ?>
-			<?php the_sub_field('wednesday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('wednesday-end', 'user_' . $user_id .''); ?>
-			<?php }
-			else {
-
-			} ?>     
- 	</div>
-<?php endwhile; ?> 
-
-<?php
-if (have_rows('thursday_times_available', 'user_' . $user_id .'') ) { 
-echo '<div style="padding-top:10px;"><b>Thursday</b></div>';}?>							
-<?php while (have_rows('thursday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
-		<?php if(get_sub_field('thursday-start', 'user_' . $user_id .'')) { ?>
-			<?php the_sub_field('thursday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('thursday-end', 'user_' . $user_id .''); ?>
-			<?php }
-			else {
-
-			} ?>     
- 	</div>
-<?php endwhile; ?>   
-
-<?php
-if (have_rows('friday_times_available', 'user_' . $user_id .'') ) { 
-echo '<div style="padding-top:10px;"><b>Friday</b></div>';}?>							
-<?php while (have_rows('friday_times_available', 'user_' . $user_id .'') ): the_row(); ?>
-	<div id="directoryProfile-officehrs"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-li-clock  mk-size-small"></i>
-		<?php if(get_sub_field('friday-start', 'user_' . $user_id .'')) { ?>
-			<?php the_sub_field('friday-start', 'user_' . $user_id .''); ?> - <?php the_sub_field('friday-end', 'user_' . $user_id .''); ?>
-			<?php }
-			else {
-
-			} ?>     
- 	</div>
-<?php endwhile; ?>           
-
-
-<?php echo '</div>'; ?>
-<!-- END NEW OFFICE HOURS SECTION -->                   
-                    	
+            	
 			<div class="clearboth"></div>
 		</div>
 	</div>
