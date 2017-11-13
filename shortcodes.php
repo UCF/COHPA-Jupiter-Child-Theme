@@ -591,7 +591,7 @@ function button_shortcode($atts){
 	extract(shortcode_atts( array(
 	
 		'type' => 'default',
-		'label' => 'Default new',
+		'label' => 'Default new2',
 		'link' => '/',
 	
 	), $atts ));
@@ -607,7 +607,7 @@ function button_shortcode($atts){
 			'relation' => 'AND',
 			'department' => array(
 				'key' => 'department',
-				'value' => '"Social Work"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+				'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 				'compare' => 'LIKE',
 			),
 		)
