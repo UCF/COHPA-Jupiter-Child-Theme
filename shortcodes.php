@@ -559,7 +559,7 @@ echo '<ul>';
  }
 echo '</ul>';
 ?>
-<div>is this shortcode working?</div>
+<div>is this shortcode working 2?</div>
 <!-- END REPEATER SECTION -->	
 
 	
