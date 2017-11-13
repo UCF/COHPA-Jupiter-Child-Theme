@@ -539,42 +539,6 @@ echo $last_row['announcement_item'];
 
 
 
-<?php
-add_shortcode('show_valuesofstuff', function() {
-?>
-<!-- START CONTENT SECTION -->	
-<?php
-	$args1 = array(
-    'meta_key' => 'last_name',
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
-    'exclude' => array(1,8,9),
-    'meta_query' => array(
-        'relation' => 'AND',
-        'department' => array(
-            'key' => 'department',
-            'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
-			'compare' => 'LIKE',
-        ),
-    )
-);	
- $subscribers = get_users($args1);
-echo '<ul>';
- foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
- }
-echo '</ul>';
-?>
-<div>is this shortcode working 2?</div>
-<!-- END CONTENT SECTION -->	
-	
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
-
-</style>	
-
-
-<?php	
-});// END SHORTCODE [show_valuesofstuff]?> 
 
 
 
@@ -591,7 +555,7 @@ function button_shortcode($atts){
 	extract(shortcode_atts( array(
 	
 		'type' => 'default',
-		'label' => 'Default new2',
+		'label' => 'Default new 3',
 		'link' => '/',
 	
 	), $atts ));
