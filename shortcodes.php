@@ -598,8 +598,8 @@ function button_shortcode($atts){
 	), $atts ));
 	$daveandkait = '"' . $department . '"';
 	
-	echo "<a href='{$link}' class='btn btn-{$type}'>{$label} {$department}</a>";
-	echo $daveandkait;
+	//echo "<a href='{$link}' class='btn btn-{$type}'>{$label} {$department}</a>";
+	//echo $daveandkait;
 	//echo '"' . $department . '"';
 	
 	$args1 = array(
@@ -623,7 +623,7 @@ function button_shortcode($atts){
  			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 22?</div>';
+		echo '<div>is this shortcode working 11?</div>';
 	
 	
 // ENDING ROW	
