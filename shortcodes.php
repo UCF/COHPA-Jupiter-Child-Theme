@@ -618,9 +618,11 @@ function button_shortcode($atts){
 	);
 	$subscribers = get_users($args1);
 		echo '<ul>';
- 			foreach ($subscribers as $user) {
- 			echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
- 			}
+ 			foreach ($subscribers as $user) { ?>
+ 			<h3 style="font-weight:bold;">
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
+                    </h3>
+<?php 		}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
 		echo '<div>is this shortcode working 11?</div>';
