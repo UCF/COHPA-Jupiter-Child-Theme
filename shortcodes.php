@@ -540,40 +540,21 @@ echo $last_row['announcement_item'];
 
 
 <?php
-
 add_shortcode('show_valuesofstuff', function() {
-$values = get_field('phone_number');
-if($values)
-{ 
-	echo '<ul>';
-	foreach($values as $value)	{
-         $user_db = $value['ID'];
 ?>
 
 
-<?php switch_to_blog(1); 
-$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
-$research_ucf = get_field('research_interests', 'user_'. $user_db );
-
-$params = array( 'width' => 600, 'height' => 760 );
-$imageCrop = bfi_thumb( $image_ucf['url'], $params );
-$imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $params );
-
-?>
-<?php restore_current_blog(); ?>
 
 <!-- START REPEATER SECTION -->	
-       <?php 
-					echo '<li>' . $value['display_name'] . '</br>';
-           the_field('phone_number', 'user_'. $user_db );
-           echo '</li>';
+       <?php
+$blogusers = get_users( array( 'search' => 'david' ) );
+// Array of WP_User objects.
+foreach ( $blogusers as $user ) {
+	echo '<span>' . esc_html( $user->user_email ) . '</span>';
+}
 		?>
 <!-- END REPEATER SECTION -->	
-<?php
-	}
-	echo '</ul>';
-}	
-	?>
+
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
 
