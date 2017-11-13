@@ -548,7 +548,7 @@ add_shortcode('show_valuesofstuff', function() {
 <!-- START REPEATER SECTION -->	
 <?php
 $args1 = array(
- 'role' => 'subscriber',
+ 'role' => 'administrator',
  'orderby' => 'user_nicename',
  'order' => 'ASC'
 );
