@@ -615,12 +615,15 @@ function dept_option($atts){
 ?>
 
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
- <?php echo $user->email_address ; ?>
- 
+
+<!-- START PUTTIN IN THE FIELDS -->  
+<div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone:<?php echo $user->phone_number ; ?></div>
+<div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php echo $user->email_address ; ?>"><?php echo $user->email_address ; ?></a></div>
+<!-- END PUTTIN IN THE FIELDS -->  
  <?php			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 55?</div>';
+		echo '<div>is this shortcode working 66?</div>';
 	
 	
 // ENDING ROW	
