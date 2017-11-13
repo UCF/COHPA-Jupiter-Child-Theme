@@ -582,17 +582,13 @@ echo '</ul>';
 
 <?php
 /**
- * Shortcode: [btn type="" label="" link=""]
+ * Shortcode: [deptlist department=""]
  * Description: This is how stuff works with parameters
  */
 
-function button_shortcode($atts){
+function dept_option($atts){
 	
 	extract(shortcode_atts( array(
-	
-		'type' => 'default',
-		'label' => 'Default new',
-		'link' => '/',
 		'department' => 'Legal Studies',
 	
 	), $atts ));
@@ -628,7 +624,7 @@ function button_shortcode($atts){
 	
 // ENDING ROW	
 }
-add_shortcode( 'btn', 'button_shortcode' );
+add_shortcode( 'deptlist', 'dept_option' );
 ?>
 
 
