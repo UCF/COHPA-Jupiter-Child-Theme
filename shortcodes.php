@@ -611,17 +611,36 @@ function dept_option($atts){
 	$subscribers = get_users($args1);
 		echo '<ul>';
  			foreach ($subscribers as $user) { 
-$user_db = $user->user_id ;
 ?>
-<?php echo $user_db; ?>
-<?php the_field('email_address', 'user_'. $user_db ); ?>
+
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
 
 <!-- START PUTTIN IN THE FIELDS -->  
-KNOWN WORKING SCRIPTS 99
-<?php echo 'User ID: ' . $user_info->ID . "\n"; ?>
+KNOWN WORKING SCRIPTS 88
 <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php echo $user->phone_number ; ?></div>
 <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php echo $user->email_address ; ?>"><?php echo $user->email_address ; ?></a></div>
+
+<div class="wpb_column vc_column_container vc_col-sm-2">
+    	<div class="vc_column-inner ">
+        	<div class="wpb_wrapper">
+            	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
+					<div class="mk-image-holder" style="max-width: 500px;">
+                    	<div class="mk-image-inner ">
+                        <a href="/directory/<?php echo strtolower($user->first_name); ?>-<?php echo strtolower($user->last_name); ?>" title="View <?php echo $user->display_name ; ?>'s Profile">
+							<?php if( $image_ucf ) { ?>
+                                <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
+                             <?php }
+                                else { ?> 
+                                    <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                            <?php } ?>
+                        </a>    
+                        </div>
+                    </div>
+					<div class="clearboth"></div>
+				</div>
+            </div>
+        </div>
+    </div>
 <!-- END PUTTIN IN THE FIELDS -->  
  <?php			}
 		echo '</ul>';
