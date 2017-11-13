@@ -597,6 +597,8 @@ function button_shortcode($atts){
 	), $atts ));
 	
 	return "<a href='{$link}' class='btn btn-{$type}'>{$label}</a>";
+	return "<div>is this shortcode working 77?</div>";
+
 	
 	$args1 = array(
 		'meta_key' => 'last_name',
