@@ -608,7 +608,7 @@ function button_shortcode($atts){
 			'relation' => 'AND',
 			'department' => array(
 				'key' => 'department',
-				'value' => '"$atts[department]"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+				'value' => '"$department"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 				'compare' => 'LIKE',
 			),
 		)
@@ -620,7 +620,7 @@ function button_shortcode($atts){
  			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 88?</div>';
+		echo '<div>is this shortcode working 77?</div>';
 	
 	
 // ENDING ROW	
