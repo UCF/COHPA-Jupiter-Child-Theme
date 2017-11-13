@@ -539,6 +539,42 @@ echo $last_row['announcement_item'];
 
 
 
+<?php
+add_shortcode('show_valuesofstuff', function() {
+?>
+<!-- START CONTENT SECTION -->	
+<?php
+	$args1 = array(
+    'meta_key' => 'last_name',
+    'orderby' => 'meta_value',
+    'order' => 'ASC',
+    'exclude' => array(1,8,9),
+    'meta_query' => array(
+        'relation' => 'AND',
+        'department' => array(
+            'key' => 'department',
+            'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+			'compare' => 'LIKE',
+        ),
+    )
+);	
+ $subscribers = get_users($args1);
+echo '<ul>';
+ foreach ($subscribers as $user) {
+ echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
+ }
+echo '</ul>';
+?>
+<div>is this shortcode working 2?</div>
+<!-- END CONTENT SECTION -->	
+	
+<style id='theme-dynamic-styles-inline-css' type='text/css'>
+
+</style>	
+
+
+<?php	
+});// END SHORTCODE [show_valuesofstuff]?> 
 
 
 
@@ -555,14 +591,12 @@ function button_shortcode($atts){
 	extract(shortcode_atts( array(
 	
 		'type' => 'default',
-		'label' => 'Default new 3',
+		'label' => 'Default new',
 		'link' => '/',
 	
 	), $atts ));
 	
-	//return "<a href='{$link}' class='btn btn-{$type}'>{$label}</a>";
-	return "<div><a href='{$link}' class='btn btn-{$type}'>is this shortcode working {$label}?</a></div>";
-
+	echo "<a href='{$link}' class='btn btn-{$type}'>{$label}</a>";
 	
 	$args1 = array(
 		'meta_key' => 'last_name',
@@ -573,19 +607,19 @@ function button_shortcode($atts){
 			'relation' => 'AND',
 			'department' => array(
 				'key' => 'department',
-				'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+				'value' => '"Social Work"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 				'compare' => 'LIKE',
 			),
 		)
 	);
 	$subscribers = get_users($args1);
-		return '<ul>';
+		echo '<ul>';
  			foreach ($subscribers as $user) {
- 			return '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
+ 			echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
  			}
-		return '</ul>';
+		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		return "<div>is this shortcode working 99?</div>";
+		echo '<div>is this shortcode working 99?</div>';
 	
 	
 // ENDING ROW	
