@@ -552,7 +552,7 @@ $args1 = array(
     'meta_query' => array(
         'relation' => 'AND',
         'department' => array(
-            'key' => 'phone',
+            'key' => 'phone_number',
             'value' => '347-948-3283',
 			'meta_compare' => '=',
         ),
