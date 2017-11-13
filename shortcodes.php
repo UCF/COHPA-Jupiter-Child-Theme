@@ -611,12 +611,12 @@ function dept_option($atts){
 	$subscribers = get_users($args1);
 		echo '<ul>';
  			foreach ($subscribers as $user) { 
-         		$user_db = $user['ID'];
+         		
 ?>
 
-				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; 
-					echo strtolower(get_field('first_name', 'user_' . $user_db));
-				?>
+				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
+ 
+ 
  <?php			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
