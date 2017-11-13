@@ -596,8 +596,10 @@ function button_shortcode($atts){
 		'department' => 'Legal Studies',
 	
 	), $atts ));
+	$daveandkait = $department;
 	
 	echo "<a href='{$link}' class='btn btn-{$type}'>{$label} {$department}</a>";
+	echo $daveandkait;
 	
 	$args1 = array(
 		'meta_key' => 'last_name',
@@ -608,7 +610,7 @@ function button_shortcode($atts){
 			'relation' => 'AND',
 			'department' => array(
 				'key' => 'department',
-				'value' => '"$department"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+				'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 				'compare' => 'LIKE',
 			),
 		)
@@ -620,7 +622,7 @@ function button_shortcode($atts){
  			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 77?</div>';
+		echo '<div>is this shortcode working 88?</div>';
 	
 	
 // ENDING ROW	
