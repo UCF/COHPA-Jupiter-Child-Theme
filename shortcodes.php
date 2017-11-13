@@ -544,7 +544,7 @@ add_shortcode('show_valuesofstuff', function() {
 ?>
 <!-- START CONTENT SECTION -->	
 <?php
-$chosen_department = get_field('department', 'user_' . $user_db);
+$chosen_department = get_field('phone_number', 'user_' . $user_db);
 
 	$args1 = array(
     'meta_key' => 'last_name',
@@ -554,16 +554,16 @@ $chosen_department = get_field('department', 'user_' . $user_db);
     'meta_query' => array(
         'relation' => 'AND',
         'department' => array(
-            'key' => 'phone_number',
+            'key' => '$chosen_department',
             'value' => '347-948-3283',
-			'meta_compare' => '=',
+			'compare' => 'IN',
         ),
     )
 );	
  $subscribers = get_users($args1);
 echo '<ul>';
  foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.' ['.$user->phone_number . $chosen_department .']</li>';
+ echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
  }
 echo '</ul>';
 ?>
