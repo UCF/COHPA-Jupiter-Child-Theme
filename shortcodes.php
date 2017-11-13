@@ -567,7 +567,7 @@ echo '<ul>';
  }
 echo '</ul>';
 ?>
-<div>is this shortcode working 3?</div>
+<div>is this shortcode working 4?</div>
 <!-- END CONTENT SECTION -->	
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
