@@ -546,12 +546,18 @@ add_shortcode('show_valuesofstuff', function() {
 
 
 <!-- START REPEATER SECTION -->	
-       <?php
-$blogusers = get_users( array( 'search' => 'david' ) );
-// Array of WP_User objects.
-foreach ( $blogusers as $user ) {
-	echo '<li>' . esc_html( $user->user_email ) . '</li>';
-}
+<?php
+$args1 = array(
+ 'role' => 'subscriber',
+ 'orderby' => 'user_nicename',
+ 'order' => 'ASC'
+);
+ $subscribers = get_users($args1);
+echo '<ul>';
+ foreach ($subscribers as $user) {
+ echo '<li>' . $user->display_name.'['.$user->user_email . ']</li>';
+ }
+echo '</ul>';
 ?>
 <div>is this shortcode working?</div>
 <!-- END REPEATER SECTION -->	
