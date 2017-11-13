@@ -596,7 +596,7 @@ function button_shortcode($atts){
 		'department' => 'Legal Studies',
 	
 	), $atts ));
-	$daveandkait = '"$department"';
+	$daveandkait = '"{$department"}';
 	
 	echo "<a href='{$link}' class='btn btn-{$type}'>{$label} {$department}</a>";
 	echo $daveandkait;
