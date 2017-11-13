@@ -553,7 +553,7 @@ add_shortcode('show_valuesofstuff', function() {
         'relation' => 'AND',
         'department' => array(
             'key' => 'department',
-            'value' => '"Social Work"',
+            'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 			'compare' => 'LIKE',
         ),
     )
