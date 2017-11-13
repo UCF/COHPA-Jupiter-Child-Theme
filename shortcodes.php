@@ -609,11 +609,8 @@ function dept_option($atts){
 		)
 	);
 	$subscribers = get_users($args1);
-		echo '<ul>';
  			foreach ($subscribers as $user) { 
 ?>
-
-				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
 
 <!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
@@ -730,7 +727,6 @@ function dept_option($atts){
 <div class="clearboth"></div>
 <!-- END REPEATER SECTION -->
  <?php			}
-		echo '</ul>';
 // SEE IF THIS SHOWS UP	
 		echo '<div>is this shortcode working 66?</div>';
 	
