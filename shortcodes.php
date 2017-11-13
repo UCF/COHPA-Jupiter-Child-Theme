@@ -597,6 +597,31 @@ function button_shortcode($atts){
 	), $atts ));
 	
 	return "<a href='{$link}' class='btn btn-{$type}'>{$label}</a>";
+	$args9 = array(
+		'meta_key' => 'last_name',
+		'orderby' => 'meta_value',
+		'order' => 'ASC',
+		'exclude' => array(1,8,9),
+		'meta_query' => array(
+			'relation' => 'AND',
+			'department' => array(
+				'key' => 'department',
+				'value' => '"Social Work"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+				'compare' => 'LIKE',
+			),
+		)
+	);
+	$mynewsubscribers = get_users($args9);
+		echo '<ul>';
+ 			foreach ($mynewsubscribers as $user) {
+ 			echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
+ 			}
+		echo '</ul>';
+// SEE IF THIS SHOWS UP	
+		echo '<div>is this shortcode working 99?</div>';
+	
+	
+// ENDING ROW	
 }
 add_shortcode( 'btn', 'button_shortcode' );
 ?>
