@@ -555,7 +555,7 @@ $args1 = array(
  $subscribers = get_users($args1);
 echo '<ul>';
  foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.'['.$user->phone_number . ']</li>';
+ echo '<li>' . $user->display_name.'['.$user->room_number . ']</li>';
  }
 echo '</ul>';
 ?>
