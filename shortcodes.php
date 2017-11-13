@@ -615,7 +615,7 @@ function dept_option($atts){
 ?>
 
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
- <?php echo $user['email_address'] ; ?>
+ <?php echo $user->email_address ; ?>
  
  <?php			}
 		echo '</ul>';
