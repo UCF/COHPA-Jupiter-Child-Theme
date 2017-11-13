@@ -555,8 +555,8 @@ $args1 = array(
     'meta_query' => array(
         'relation' => 'AND',
         'department' => array(
-            'key' => 'phone_number',
-            'value' => '347-948-3283',
+            'key' => 'department',
+            'value' => 'Social Work',
         ),
     )
 );	
