@@ -555,7 +555,7 @@ $args1 = array(
  $subscribers = get_users($args1);
 echo '<ul>';
  foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.'['.$user->user_email . ']</li>';
+ echo '<li>' . $user->display_name.'['.$user->user_email . '] </li>' the_field('department', 'user_' . $user_db);
  }
 echo '</ul>';
 ?>
