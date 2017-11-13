@@ -597,7 +597,8 @@ function button_shortcode($atts){
 	), $atts ));
 	
 	return "<a href='{$link}' class='btn btn-{$type}'>{$label}</a>";
-	$args9 = array(
+	
+	$args1 = array(
 		'meta_key' => 'last_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC',
@@ -611,14 +612,14 @@ function button_shortcode($atts){
 			),
 		)
 	);
-	$mynewsubscribers = get_users($args9);
-		echo '<ul>';
- 			foreach ($mynewsubscribers as $user) {
- 			echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
+	$subscribers = get_users($args1);
+		return '<ul>';
+ 			foreach ($subscribers as $user) {
+ 			return '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
  			}
-		echo '</ul>';
+		return '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 99?</div>';
+		return "<div>is this shortcode working 99?</div>";
 	
 	
 // ENDING ROW	
