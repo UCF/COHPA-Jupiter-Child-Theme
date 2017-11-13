@@ -552,9 +552,9 @@ add_shortcode('show_valuesofstuff', function() {
     'meta_query' => array(
         'relation' => 'AND',
         'department' => array(
-            'key' => 'phone_number',
-            'value' => '347-948-3283',
-			'compare' => 'IN',
+            'key' => 'department',
+            'value' => '"Social Work"',
+			'compare' => 'LIKE',
         ),
     )
 );	
