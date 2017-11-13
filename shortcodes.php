@@ -611,7 +611,7 @@ function dept_option($atts){
 	$subscribers = get_users($args1);
 		echo '<ul>';
  			foreach ($subscribers as $user) { 
-$user_db = wp_get_current_user('ID');
+$user_db = get_current_user_id();
 ?>
 <?php echo $user_db; ?>
 <?php the_field('email_address', 'user_'. $user_db ); ?>
