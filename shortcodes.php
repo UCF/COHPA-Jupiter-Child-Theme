@@ -544,7 +544,7 @@ add_shortcode('show_valuesofstuff', function() {
 ?>
 <!-- START CONTENT SECTION -->	
 <?php
-$chosen_department = get_field('department');
+$chosen_department = get_field('department', 'user_' . $user_db);
 
 $args1 = array(
     'meta_key' => 'last_name',
@@ -563,7 +563,7 @@ $args1 = array(
  $subscribers = get_users($args1);
 echo '<ul>';
  foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
+ echo '<li>' . $user->display_name.' ['.$chosen_department . ']</li>';
  }
 echo '</ul>';
 ?>
