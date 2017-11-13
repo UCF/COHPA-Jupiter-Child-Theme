@@ -527,3 +527,58 @@ echo $last_row['announcement_item'];
 <!-- END OF THE REPEAT SECTION -->	
 <?php	
 });// END SHORTCODE [show_announcements]?> 
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+add_shortcode('show_valuesofstuff', function() {
+$values = get_field('profilebooks');
+if($values)
+{ 
+	foreach($values as $value)	{
+         $user_db = $value['ID'];
+?>
+
+
+<?php switch_to_blog(1); 
+$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+$research_ucf = get_field('research_interests', 'user_'. $user_db );
+
+$params = array( 'width' => 600, 'height' => 760 );
+$imageCrop = bfi_thumb( $image_ucf['url'], $params );
+$imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $params );
+
+?>
+<?php restore_current_blog(); ?>
+
+
+
+<!-- START REPEATER SECTION -->	
+             <?php 
+					if($profilebooks) { 
+							echo $value['display_name'] ; 
+						}?>
+<!-- END REPEATER SECTION -->	
+<?php
+	}
+}	
+	?>
+	
+<style id='theme-dynamic-styles-inline-css' type='text/css'>
+
+</style>	
+
+
+	
+<?php	
+});// END SHORTCODE [show_valuesofstuff]?> 
