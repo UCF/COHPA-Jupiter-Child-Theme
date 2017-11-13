@@ -550,7 +550,7 @@ add_shortcode('show_valuesofstuff', function() {
 $blogusers = get_users( array( 'search' => 'david' ) );
 // Array of WP_User objects.
 foreach ( $blogusers as $user ) {
-	echo '<span>' . esc_html( $user->user_email ) . '</span>';
+	echo '<li>' . esc_html( $user->user_email ) . '</li>';
 }
 		?>
 <!-- END REPEATER SECTION -->	
