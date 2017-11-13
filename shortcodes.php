@@ -535,21 +535,12 @@ echo $last_row['announcement_item'];
 
 
 
+
+
+
+
 <?php
-add_shortcode('show_valuesofstuff',  'custom_shortcode' );
-function custom_shortcode( $atts ) {
-
-	// Attributes
-	$atts = shortcode_atts(
-		array(
-			'department' => 'Social Work',
-		),
-		$atts,
-		'show_valuesofstuff'
-	);
-
-}			  
-function show_valuesofstuff() {
+add_shortcode('show_valuesofstuff', function() {
 ?>
 <!-- START CONTENT SECTION -->	
 <?php
@@ -583,4 +574,4 @@ echo '</ul>';
 
 
 <?php	
-};// END SHORTCODE [show_valuesofstuff]?> 
+});// END SHORTCODE [show_valuesofstuff]?> 
