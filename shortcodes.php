@@ -611,9 +611,6 @@ function dept_option($atts){
 	$subscribers = get_users($args1);
 		echo '<ul>';
  			foreach ($subscribers as $user) { 
-			 $user_db = $user['ID'];
-			 $buildingMap = get_field('building', 'user_' . $user_db .'');
-			 $roomy = get_field('room_number', 'user_' . $user_db .'');
 ?>
 
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
