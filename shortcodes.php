@@ -544,8 +544,6 @@ add_shortcode('show_valuesofstuff', function() {
 ?>
 <!-- START CONTENT SECTION -->	
 <?php
-$chosen_department = get_field('phone_number', 'user_' . $user_db);
-
 	$args1 = array(
     'meta_key' => 'last_name',
     'orderby' => 'meta_value',
@@ -554,9 +552,9 @@ $chosen_department = get_field('phone_number', 'user_' . $user_db);
     'meta_query' => array(
         'relation' => 'AND',
         'department' => array(
-            'key' => $chosen_department,
+            'key' => 'phone_number',
             'value' => '347-948-3283',
-			'compare' => '=',
+			'compare' => 'IN',
         ),
     )
 );	
