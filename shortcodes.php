@@ -544,6 +544,8 @@ add_shortcode('show_valuesofstuff', function() {
 ?>
 <!-- START CONTENT SECTION -->	
 <?php
+$chosen_department = get_field('department');
+
 $args1 = array(
     'meta_key' => 'last_name',
     'orderby' => 'meta_value',
@@ -552,8 +554,8 @@ $args1 = array(
     'meta_query' => array(
         'relation' => 'AND',
         'department' => array(
-            'key' => 'phone_number',
-            'value' => '347-948-3283',
+            'key' => $chosen_department,
+            'value' => 'Social Work',
 			'meta_compare' => '=',
         ),
     )
