@@ -594,10 +594,6 @@ function dept_option($atts){
 	), $atts ));
 	$daveandkait = '"' . $department . '"';
 	
-	//echo "<a href='{$link}' class='btn btn-{$type}'>{$label} {$department}</a>";
-	//echo $daveandkait;
-	//echo '"' . $department . '"';
-	
 	$args1 = array(
 		'meta_key' => 'last_name',
 		'orderby' => 'meta_value',
@@ -614,9 +610,10 @@ function dept_option($atts){
 	);
 	$subscribers = get_users($args1);
 		echo '<ul>';
- 			foreach ($subscribers as $user) {
- 			echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
- 			}
+ 			foreach ($subscribers as $user) { ?>
+ 			test 123
+				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
+ <?php			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
 		echo '<div>is this shortcode working 11?</div>';
