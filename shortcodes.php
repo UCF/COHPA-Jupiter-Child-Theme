@@ -593,7 +593,7 @@ function button_shortcode($atts){
 		'type' => 'default',
 		'label' => 'Default new',
 		'link' => '/',
-		'department' => 'Criminal Justice',
+		'department' => 'Legal Studies',
 	
 	), $atts ));
 	
