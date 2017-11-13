@@ -554,10 +554,9 @@ $args1 = array(
     'exclude' => array(1,8,9),
     'meta_query' => array(
         'relation' => 'AND',
-        array(	
-            'meta_key' => 'phone_number',
-            'meta_value' => '347-948-3283',
-            'meta_compare' => '=',
+        'department' => array(
+            'key' => 'phone_number',
+            'value' => '347-948-3283',
         ),
     )
 );	
