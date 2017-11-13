@@ -552,7 +552,8 @@ $blogusers = get_users( array( 'search' => 'david' ) );
 foreach ( $blogusers as $user ) {
 	echo '<li>' . esc_html( $user->user_email ) . '</li>';
 }
-		?>
+?>
+<div>is this shortcode working?</div>
 <!-- END REPEATER SECTION -->	
 
 	
