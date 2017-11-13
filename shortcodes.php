@@ -618,7 +618,8 @@ $user_db = $user->user_id ;
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
 
 <!-- START PUTTIN IN THE FIELDS -->  
-KNOWN WORKING SCRIPTS 77
+KNOWN WORKING SCRIPTS 88
+<?php get_userdata( $userid ); ?>
 <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php echo $user->phone_number ; ?></div>
 <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php echo $user->email_address ; ?>"><?php echo $user->email_address ; ?></a></div>
 <!-- END PUTTIN IN THE FIELDS -->  
