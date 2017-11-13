@@ -611,16 +611,16 @@ function dept_option($atts){
 	$subscribers = get_users($args1);
 		echo '<ul>';
  			foreach ($subscribers as $user) { 
-			$user_db = $value['ID'];
+         		$user_db = $user['ID'];
 ?>
 
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; 
-					echo $user_db ; 
+					echo $user_db;
 				?>
  <?php			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 23?</div>';
+		echo '<div>is this shortcode working 33?</div>';
 	
 	
 // ENDING ROW	
