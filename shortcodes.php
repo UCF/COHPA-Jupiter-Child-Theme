@@ -615,12 +615,12 @@ function dept_option($atts){
 ?>
 
 				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; 
-					echo $user_db ; echo $user ;
+					echo $user_db ; 
 				?>
  <?php			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 22?</div>';
+		echo '<div>is this shortcode working 23?</div>';
 	
 	
 // ENDING ROW	
