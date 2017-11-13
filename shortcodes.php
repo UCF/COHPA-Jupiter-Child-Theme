@@ -543,19 +543,24 @@ echo $last_row['announcement_item'];
 add_shortcode('show_valuesofstuff', function() {
 ?>
 
-
-
 <!-- START REPEATER SECTION -->	
 <?php
 $args1 = array(
- 'role' => 'administrator',
  'orderby' => 'user_nicename',
  'order' => 'ASC'
+ 'meta_query' => array(
+        'relation' => 'AND',
+        array(	
+            'meta_key' => 'department',
+            'meta_value' => 'Social Work',
+            'meta_compare' => '=',
+        ),
+    )
 );
  $subscribers = get_users($args1);
 echo '<ul>';
  foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.'['.$user->room_number . ']</li>';
+ echo '<li>' . $user->display_name.' ['.$user->room_number . ']</li>';
  }
 echo '</ul>';
 ?>
