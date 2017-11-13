@@ -543,12 +543,16 @@ echo $last_row['announcement_item'];
 add_shortcode('show_valuesofstuff', function() {
 ?>
 
+
+
 <!-- START REPEATER SECTION -->	
 <?php
 $args1 = array(
- 'orderby' => 'user_nicename',
- 'order' => 'ASC'
- 'meta_query' => array(
+    'meta_key' => 'last_name',
+    'orderby' => 'meta_value',
+    'order' => 'ASC',
+    'exclude' => array(1,8,9),
+    'meta_query' => array(
         'relation' => 'AND',
         array(	
             'meta_key' => 'department',
@@ -556,7 +560,7 @@ $args1 = array(
             'meta_compare' => '=',
         ),
     )
-);
+);	
  $subscribers = get_users($args1);
 echo '<ul>';
  foreach ($subscribers as $user) {
