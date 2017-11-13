@@ -101,12 +101,7 @@ get_header();
         <?php if( $image ) { ?>
         	<img class="lightbox-true" width="500" height="751" src="<?php echo $thumb; ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" />
             	<div class="mk-image-overlay"></div>
-                <a href="<?php echo $url; ?>" alt="<?php the_title();?>" data-fancybox-group="image-shortcode-" title="<?php the_title();?>" class="mk-lightbox  mk-image-lightbox">
-                
-                <svg  class="mk-svg-icon" data-name="mk-jupiter-icon-plus-circle" data-cacheid="icon-57a395b56e288" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                	<path d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z"/>
-                </svg>
-                </a>
+                <a href="<?php echo $url; ?>" alt="<?php the_title();?>" data-fancybox-group="image-shortcode-" title="<?php the_title();?>" class="mk-lightbox  mk-image-lightbox"><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-plus-circle" data-cacheid="icon-57a395b56e288" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z"/></svg></a>
                 
         <?php }
 			else { ?> 
