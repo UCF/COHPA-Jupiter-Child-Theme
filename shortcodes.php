@@ -613,14 +613,14 @@ function dept_option($atts){
  			foreach ($subscribers as $user) { 
 			$user_db = $value['ID'];
 ?>
-<h3 style="font-weight:bold;">
-                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
-                    </h3>
-				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; ?>
+
+				<?php echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>'; 
+					echo $user_db ; echo $user ;
+				?>
  <?php			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 10?</div>';
+		echo '<div>is this shortcode working 22?</div>';
 	
 	
 // ENDING ROW	
