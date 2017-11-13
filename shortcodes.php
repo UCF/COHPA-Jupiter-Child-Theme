@@ -542,9 +542,10 @@ echo $last_row['announcement_item'];
 <?php
 
 add_shortcode('show_valuesofstuff', function() {
-$values = get_field('profilebooks');
+$values = get_field('phone_number');
 if($values)
 { 
+	echo '<ul>';
 	foreach($values as $value)	{
          $user_db = $value['ID'];
 ?>
@@ -561,16 +562,16 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 ?>
 <?php restore_current_blog(); ?>
 
-
-
 <!-- START REPEATER SECTION -->	
-             <?php 
-					if($profilebooks) { 
-							echo $value['display_name'] ; 
-						}?>
+       <?php 
+					echo '<li>' . $value['display_name'] . '</br>';
+           the_field('phone_number', 'user_'. $user_db );
+           echo '</li>';
+		?>
 <!-- END REPEATER SECTION -->	
 <?php
 	}
+	echo '</ul>';
 }	
 	?>
 	
