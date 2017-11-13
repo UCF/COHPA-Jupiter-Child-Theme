@@ -596,11 +596,11 @@ function button_shortcode($atts){
 		'department' => 'Legal Studies',
 	
 	), $atts ));
-	$daveandkait = $department;
+	$daveandkait = '"' . $department . '"';
 	
 	echo "<a href='{$link}' class='btn btn-{$type}'>{$label} {$department}</a>";
 	echo $daveandkait;
-	echo '"' . $department . '"';
+	//echo '"' . $department . '"';
 	
 	$args1 = array(
 		'meta_key' => 'last_name',
@@ -623,7 +623,7 @@ function button_shortcode($atts){
  			}
 		echo '</ul>';
 // SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 44?</div>';
+		echo '<div>is this shortcode working 33?</div>';
 	
 	
 // ENDING ROW	
