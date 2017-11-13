@@ -591,7 +591,7 @@ function button_shortcode($atts){
 	extract(shortcode_atts( array(
 	
 		'type' => 'default',
-		'label' => 'Default',
+		'label' => 'Default new',
 		'link' => '/',
 	
 	), $atts ));
