@@ -557,6 +557,7 @@ $args1 = array(
         'department' => array(
             'key' => 'department',
             'value' => 'Social Work',
+			'meta_compare' => '=',
         ),
     )
 );	
