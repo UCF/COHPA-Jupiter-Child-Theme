@@ -539,43 +539,6 @@ echo $last_row['announcement_item'];
 
 
 
-<?php
-add_shortcode('show_valuesofstuff', function() {
-?>
-<!-- START CONTENT SECTION -->	
-<?php
-	$args1 = array(
-    'meta_key' => 'last_name',
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
-    'exclude' => array(1,8,9),
-    'meta_query' => array(
-        'relation' => 'AND',
-        'department' => array(
-            'key' => 'department',
-            'value' => '"Criminal Justice"', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
-			'compare' => 'LIKE',
-        ),
-    )
-);	
- $subscribers = get_users($args1);
-echo '<ul>';
- foreach ($subscribers as $user) {
- echo '<li>' . $user->display_name.' ['.$user->phone_number . ']</li>';
- }
-echo '</ul>';
-?>
-<div>is this shortcode working 2?</div>
-<!-- END CONTENT SECTION -->	
-	
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
-
-</style>	
-
-
-<?php	
-});// END SHORTCODE [show_valuesofstuff]?> 
-
 
 
 
@@ -921,10 +884,22 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
                         <a title="View <?php echo $user->display_name ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $user->display_name ; ?></a>
                     </h3>
                     <p>
-                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
                     <div class="clearboth"></div>
+                    
+                    <div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
+						<?php 
+							$termswer = get_field('research_interests', 'user_'. $user_db );
+							if( $termswer ): 
+						?>
+							<ul>
+							<?php foreach( $termswer as $term ): ?>
+								<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li>
+							<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+					</div>
                 </div>
             </div>
 		</div>
