@@ -741,25 +741,26 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
                     <div class="clearboth"></div>
                 </div>
             </div>
-            
+		</div>
+    </div>	        
             
             
             
             
  <!-- INSERTED NEW SECTION -->            
-            <div style="background-color: red;" class="vc_col-sm-4 wpb_column column_container ">
-    
-    
-        		<h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">Additional Info</span></h2>
-       
-        		<div class="clearboth"></div>
-        		<div style="text-align: left;" class="mk-text-block  true">
-            		<p>
-            
+	<div style="background-color: red;" class="vc_col-sm-4 wpb_column column_container ">
 
-            	<div class="clearboth"></div>
-        		</div> 
-    		</div>
+
+		<h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">Additional Info</span></h2>
+
+		<div class="clearboth"></div>
+		<div style="text-align: left;" class="mk-text-block  true">
+			<p>
+
+
+		<div class="clearboth"></div>
+		</div> 
+	</div>
             
  <!-- END INSERTED NEW SECTION -->              
             
@@ -772,8 +773,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
             
             
             
-        </div>
-    </div>	
+
 </div>
 <div id="divider-7" class="mk-divider  divider_full_width center shadow_line ">
 	<div class="divider-inner">
