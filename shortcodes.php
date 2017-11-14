@@ -615,15 +615,26 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
-<?php $variablexxx = $user->ID ;?>
-<?php echo $variablexxx; ?>
-<?php $image_ucf = get_field('upload_headshot', 'user_' . $variablexxx .'');?>
-<?php echo " just the variable "; ?>
-<?php echo $image_ucf; ?>
-<?php echo " URL the variable "; ?>
-<?php echo $image_ucf['url']; ?>
+<?php $user_db = $user->ID ;
 
-<div>HERE IS MY TEST 11</div>
+$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+$jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
+$jobtitle_ucf = get_sub_field('job_title');
+$buildingMap = get_field('building', 'user_' . $user_db .'');
+$roomy = get_field('room_number', 'user_' . $user_db .'');
+
+$myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
+$myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
+$cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
+
+$myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
+$myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
+$cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
+?>
+
+
+
+
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
     	<div class="vc_column-inner ">
