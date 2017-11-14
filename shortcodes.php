@@ -915,6 +915,10 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
  <?php } ?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
+#list-3 {margin-bottom:30px;} 
+#list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
+#list-3 ul li { list-style:none !important;} 
+#list-3 ul li .mk-svg-icon { fill:#ffc904; padding-right:10px !important; }
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
