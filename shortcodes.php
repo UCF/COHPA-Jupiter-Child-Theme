@@ -617,12 +617,13 @@ function dept_option($atts){
 <!-- START REPEATER SECTION -->	
 <?php $variablexxx = $user->ID ;?>
 <?php echo $variablexxx; ?>
-<?php $variableimage = $user->upload_headshot['url'] ;?>
-<?php echo "just the variable"; ?>
-<?php echo $variableimage; ?>
-<?php echo "the variable URL"; ?>
-<?php echo $variableimage['url']; ?>
-<div>HERE IS MY TEST 456</div>
+<?php $image_ucf = get_field('upload_headshot', 'user_' . $variablexxx .'');?>
+<?php echo " just the variable "; ?>
+<?php echo $image_ucf; ?>
+<?php echo " URL the variable "; ?>
+<?php echo $image_ucf['url']; ?>
+
+<div>HERE IS MY TEST 11</div>
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
     	<div class="vc_column-inner ">
