@@ -615,7 +615,7 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
-<?php echo $thistest; ?>
+<?php echo $user_ID ?>
 <div>HERE IS MY TEST</div>
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
