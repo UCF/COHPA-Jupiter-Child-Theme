@@ -854,6 +854,10 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 
 
 <!-- START REPEATER SECTION -->	
+<?php 
+	$researchitems = get_field('research_interests', 'user_'. $user_db );
+	if( $researchitems ): 
+?>
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-3">
     	<div class="vc_column-inner ">
@@ -911,6 +915,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 	</div>
 </div>
 <div class="clearboth"></div>
+<?php endif; ?>
 <!-- END REPEATER SECTION -->
  <?php } ?>
 	
