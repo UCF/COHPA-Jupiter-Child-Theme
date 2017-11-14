@@ -727,6 +727,13 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 						if ($buildingMap == 'UCF South Lake') {echo 'http://map.ucf.edu/locations/south-lake/south-lake/';}
 						if ($buildingMap == 'UCF Valencia Osceola') {echo 'http://map.ucf.edu/locations/valencia-osceola/valencia-osceola/';}
 						if ($buildingMap == 'UCF Valencia West') {echo 'http://map.ucf.edu/locations/valencia-west/valencia-west/';}
+						if ($buildingMap == 'Innovative Center – Suite 500') {echo 'http://map.ucf.edu/locations/8112/innovative-center-ic/';}
+						if ($buildingMap == 'Innovative Center – Suite 300') {echo 'http://map.ucf.edu/locations/8112/innovative-center-ic/';}
+						if ($buildingMap == 'Innovative Center – Suite 250') {echo 'http://map.ucf.edu/locations/8112/innovative-center-ic/';}
+						if ($buildingMap == 'Barbara Ying Center') {echo 'http://map.ucf.edu/locations/71/barbara-ying-center-byc/';}
+						if ($buildingMap == 'Building Partnership 1') {echo 'http://map.ucf.edu/locations/valencia-west/valencia-west/';}
+						if ($buildingMap == 'Engineering 1') {echo 'http://map.ucf.edu/locations/40/engineering-i-eng1/';}
+						if ($buildingMap == 'FAAST Center') {echo 'https://www.faast.org/programs/regional-demo/atlantic';}					 
 						echo '" target="_blank" title="Map to ';
 						the_field('building', 'user_'. $user_db );
 						echo '">';
