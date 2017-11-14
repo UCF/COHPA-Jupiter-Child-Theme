@@ -615,9 +615,10 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
-<?php $variablexxx = get_field('display_name', 'user_2');?>
-<?php echo $variablexxx; ?>
-<div>HERE IS MY TEST</div>
+<?php $variablexxx = get_current_user_id();?>
+<?php $variableyyy = "Hello";?>
+<?php echo $variableyyy; ?>
+<div>HERE IS MY TEST 123</div>
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
     	<div class="vc_column-inner ">
