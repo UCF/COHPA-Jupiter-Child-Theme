@@ -634,7 +634,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 
 
 
-
+<!-- START REPEATER SECTION -->	
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
     	<div class="vc_column-inner ">
@@ -642,12 +642,12 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo strtolower($user->first_name); ?>-<?php echo strtolower($user->last_name); ?>" title="View <?php echo $user->display_name ; ?>'s Profile">
+                        <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
+                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
                                 else { ?> 
-                                    <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
                             <?php } ?>
                         </a>    
                         </div>
@@ -662,9 +662,9 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
                     <h3 style="font-weight:bold;">
-                        <a title="View <?php echo $user->display_name ; ?>'s Profile" href="/directory/<?php echo strtolower($user->first_name); ?>-<?php echo strtolower($user->last_name); ?>" target="_parent"><?php echo $user->display_name ; ?></a>
+                        <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
-                    <p><span style="font-weight:bold; font-size:16px;">
+                    <p><div id="showFacultyJobTitle">
                     	<?php
 						switch_to_blog(1);
 						
@@ -684,8 +684,9 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 						restore_current_blog();
 							?>
                             
-                    </span><br>
-                        <?php $user->department; ?>
+                    </div>
+                    <div id="showFacultyDepartment">
+                        <?php the_field('department', 'user_' . $user_db); ?>
                         <?php 
 						$terms = get_field('department');
 						if( $terms ) {
@@ -706,8 +707,9 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 						 } 	
 
 						?>
-                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php echo strtolower($user->phone_number); ?></div>
-                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php echo strtolower($user->email_address); ?>"><?php echo strtolower($user->email_address); ?></a></div>
+					</div>
+                        <div id="directoryProfile-phone"><i style="color:#666;margin:4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
+                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
                     <?php				
 						echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
