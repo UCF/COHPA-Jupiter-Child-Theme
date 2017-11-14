@@ -884,12 +884,30 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
     	<div class="vc_column-inner ">
             <div class="wpb_wrapper">
                 <div id="text-block-6" class="mk-text-block   ">
-                    <h3 style="font-weight:bold;">
-                        <a title="View <?php echo $user->display_name ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $user->display_name ; ?></a>
-                    </h3>
-                    <p>
-                        <div id="directoryProfile-email" style="margin: -10px 0px 15px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
-                    </p>
+                   <h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
+						<span>
+							<a title="View <?php echo $user->display_name ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $user->display_name ; ?><?php
+				echo '<span class="directoryDegrees">';
+					if( get_field('degrees', 'user_' . $user_db .'') ) {
+						echo ', ';
+						$num_rows = 0;
+							while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
+							$num_rows++;
+							endwhile;
+
+							while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
+							$num_rows--;
+							echo '<span>'. get_sub_field('degree') .'</span>';
+							if ( $num_rows == 0 ) { echo ''; }
+							else { echo ', '; }
+							endwhile;
+					}
+				echo '</span>';	
+					?>   	</a>			
+						</span>
+					</h2>
+					<div id="directoryProfile-email" style="margin: -10px 0px 15px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
+                   
                     <div class="clearboth"></div>
                     
                     <div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
