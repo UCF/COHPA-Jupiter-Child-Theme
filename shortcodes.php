@@ -615,7 +615,7 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
-<?php $variablexxx = get_current_user_id();?>
+<?php $variablexxx = $user->display_name ;?>
 <?php $variableyyy = "Hello";?>
 <?php echo $variablexxx; ?>
 <div>HERE IS MY TEST 456</div>
