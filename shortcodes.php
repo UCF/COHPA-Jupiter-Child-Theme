@@ -617,6 +617,7 @@ function dept_option($atts){
 <!-- START REPEATER SECTION -->	
 <?php $user_db = $user->ID ;
 
+$displayName = get_field('display_name', 'user_' . $user_db .'');
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title');
@@ -642,12 +643,12 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
             	<div class="mk-image   align-left border_shadow-frame inside-image " style="margin-bottom:10px">
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
-                        <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
+                        <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $user->display_name ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
+                                <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
                              <?php }
                                 else { ?> 
-                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                                    <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
                             <?php } ?>
                         </a>    
                         </div>
