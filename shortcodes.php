@@ -906,7 +906,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 					?>   	</a>			
 						</span>
 					</h2>
-					<div id="directoryProfile-email" style="margin: -10px 0px 15px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
+					<div id="directoryProfile-email" style="margin: -13px 0px 15px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                    
                     <div class="clearboth"></div>
                     
