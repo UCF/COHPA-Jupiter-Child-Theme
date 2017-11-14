@@ -617,12 +617,12 @@ function dept_option($atts){
 <!-- START REPEATER SECTION -->	
 <?php $variablexxx = $user->ID ;?>
 <?php echo $variablexxx; ?>
-<?php $variableimage = $user->upload_headshot ;?>
+<?php $variableimage = $user->upload_headshot['url'] ;?>
 <?php echo "just the variable"; ?>
 <?php echo $variableimage; ?>
 <?php echo "the variable URL"; ?>
 <?php echo $variableimage['url']; ?>
-<div>HERE IS MY TEST 123</div>
+<div>HERE IS MY TEST 456</div>
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
     	<div class="vc_column-inner ">
