@@ -884,7 +884,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
                         <a title="View <?php echo $user->display_name ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $user->display_name ; ?></a>
                     </h3>
                     <p>
-                        <div id="directoryProfile-email"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
+                        <div id="directoryProfile-email" style="margin-top: -20px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
                     <div class="clearboth"></div>
                     
