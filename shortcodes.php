@@ -615,7 +615,8 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
-<?php echo $user_ID ?>
+<?php $variablexxx = get_field('display_name', 'user_2');?>
+<?php echo $variablexxx; ?>
 <div>HERE IS MY TEST</div>
 <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
