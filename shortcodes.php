@@ -751,9 +751,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 </div>
 <div class="clearboth"></div>
 <!-- END REPEATER SECTION -->
- <?php			}
-// SEE IF THIS SHOWS UP	
-		echo '<div>is this shortcode working 66?</div>'; ?>
+ <?php } ?>
 	
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #divider-7 { padding:10px 0 30px; } 
