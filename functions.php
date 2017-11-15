@@ -79,7 +79,11 @@ function kia_meta_search( $args ){
 										'value'     => $search,
 										'compare'   => 'LIKE',
 									),
-									
+									array(
+										'key'       => 'display_name',
+										'value'     => $search,
+										'compare'   => '=',
+									),
 								);
 
 	}
