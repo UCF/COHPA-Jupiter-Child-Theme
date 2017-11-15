@@ -68,7 +68,7 @@ function kia_meta_search( $args ){
         //  unset( $args['role'] );
 		
 		$args['meta_query'] = array(
-									'relation' => 'OR',
+									'relation' => 'AND',
 									array(
 										'key'       => 'last_name',
 										'value'     => $search,
