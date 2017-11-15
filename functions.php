@@ -73,7 +73,7 @@ function kia_meta_search( $args ){
 									array(
 										'key'       => 'phone_number',
 										'value'     => $search,
-										//'compare'   => 'IN',
+										'compare'   => 'LIKE',
 									),
 								);
 
