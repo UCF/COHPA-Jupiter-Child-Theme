@@ -80,13 +80,13 @@ function kia_meta_search( $args ){
 										'value'     => $search,
 										'compare'   => '=',
 										'type'      => 'CHAR',
-									)
+									),
 									array(
-										'key'       => 'nickname',
+										'key'       => 'first_name',
 										'value'     => $search,
 										'compare'   => '=',
 										'type'      => 'CHAR',
-									)
+									),
 								);
 
 	}
