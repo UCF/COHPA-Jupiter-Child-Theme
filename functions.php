@@ -51,26 +51,19 @@ function admin_styles() {
 }
 
 
+
 /**
  * Place this in your theme's functions.php file
  * Or a site-specific plugin
  *
  */
-// Switch the WP_User_Query args to a meta search
-function kia_meta_search( $args ){
-
-  // this $_GET is the name field of the custom input in search-author.php
-    $search = ( isset($_GET['as']) ) ? sanitize_text_field($_GET['as']) : false ;
-
-    if ( $search ){
-        // if your shortcode has a 'role' parameter defined it will be maintained
-        // unless you choose to unset the role parameter by uncommenting the following
-        //  unset( $args['role'] );
-		
-		$args['meta_query'] = array(
+function sul_custom_meta_query( $args, $query_id ){
+    // checking the query ID allows us to only target a specific shortcode
+	if( $query_id == 'my_custom_meta_query' ){
+			$args['meta_query'] = array(
 									'relation' => 'OR',
 									array(
-										'key'       => $user_info->display_name,
+										'key'       => 'phone_number',
 										'value'     => $search,
 										'compare'   => 'LIKE',
 									),
@@ -78,17 +71,9 @@ function kia_meta_search( $args ){
 								);
 
 	}
-		
-     /* $args['meta_key'] = 'last_name';
-        $args['meta_value'] = $search;
-        $args['meta_compare'] = '=';
-
-        // need to unset the original search args
-        if( isset( $args['search'] ) ) unset($args['search']);
-    } */
-
-    return $args; 
+	return $args;
 }
 add_filter('sul_user_query_args', 'kia_meta_search');
+
 
 
