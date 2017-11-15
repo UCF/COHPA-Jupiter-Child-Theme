@@ -996,7 +996,7 @@ $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : '';
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
 				<section class="widget widget_search">
 
-	<form class="mk-searchform" method="get" id="sul-searchform searchform" action="/staff/<?php the_permalink() ?>">
+	<form class="mk-searchform" method="get" id="sul-searchform searchform" action="<?php the_permalink() ?>/staff/">
 	<div style="" class="vc_col-sm-8 wpb_column column_container  _ height-full">
 		<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 			<div class="wpb_wrapper">
