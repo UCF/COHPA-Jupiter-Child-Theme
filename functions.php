@@ -72,17 +72,17 @@ function kia_meta_search( $args ){
 									array(
 										'key'       => 'last_name',
 										'value'     => $search,
-										'compare'   => 'IN',
+										'compare'   => 'LIKE',
 									),
 									array(
 										'key'       => 'first_name',
 										'value'     => $search,
-										'compare'   => 'IN',
+										'compare'   => 'LIKE',
 									),
 									array(
 										'key'       => 'display_name',
 										'value'     => $search,
-										'compare'   => 'IN',
+										'compare'   => 'LIKE',
 									),
 								);
 
