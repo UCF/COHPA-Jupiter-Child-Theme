@@ -69,20 +69,11 @@ function kia_meta_search( $args ){
 		
 		$args['meta_query'] = array(
 									'relation' => 'OR',
-									array(
-										'key'       => 'last_name',
-										'value'     => $search,
-										'compare'   => 'LIKE',
-									),
-									array(
-										'key'       => 'first_name',
-										'value'     => $search,
-										'compare'   => 'LIKE',
-									),
+									
 									array(
 										'key'       => 'phone_number',
 										'value'     => $search,
-										'compare'   => 'LIKE',
+										//'compare'   => 'IN',
 									),
 								);
 
