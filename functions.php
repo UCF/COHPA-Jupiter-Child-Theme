@@ -70,7 +70,7 @@ function kia_meta_search( $args ){
 		$args['meta_query'] = array(
 									'relation' => 'OR',
 									array(
-										'key'       => 'last_name',
+										'key'       => 'user_email',
 										'value'     => $search,
 										'compare'   => 'LIKE',
 									),
