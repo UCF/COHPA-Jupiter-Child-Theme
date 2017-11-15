@@ -66,7 +66,7 @@ function sul_custom_meta_query( $args, $query_id ){
 			$args['meta_query'] = array(
 									'relation' => 'OR',
 									array(
-										'key'       => 'phone_number',
+										'key'       => 'last_name',
 										'value'     => $search,
 										'compare'   => 'LIKE',
 									),
