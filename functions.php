@@ -71,7 +71,7 @@ function kia_meta_search( $args ){
 									'relation' => 'OR',
 									
 									array(
-										'key'       => 'phone_number',
+										'key'       => 'user_nicename',
 										'value'     => $search,
 										'compare'   => 'LIKE',
 									),
