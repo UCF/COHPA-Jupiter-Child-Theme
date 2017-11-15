@@ -1029,4 +1029,4 @@ $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : '';
 
 <!-- END FORM SECTION -->	
 <?php	
-});// END SHORTCODE [search_research]?> 
+});// END SHORTCODE [search_faculty]?> 
