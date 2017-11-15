@@ -80,7 +80,7 @@ function kia_meta_search( $args ){
 										'compare'   => 'LIKE',
 									),
 									array(
-										'key'       => 'display_name',
+										'key'       => 'phone_number',
 										'value'     => $search,
 										'compare'   => '=',
 									),
