@@ -58,7 +58,9 @@ function admin_styles() {
  */
 // Switch the WP_User_Query args to a meta search
 function kia_meta_search( $args ){
-
+$field = get_field_object('phone_number');
+$field_key = $field['key'];
+	
   // this $_GET is the name field of the custom input in search-author.php
     $search = ( isset($_GET['as']) ) ? sanitize_text_field($_GET['as']) : false ;
 
@@ -71,7 +73,7 @@ function kia_meta_search( $args ){
 									'relation' => 'OR',
 									
 									array(
-										'key'       => 'user_nicename',
+										'key'       => $field_key,
 										'value'     => $search,
 										'compare'   => 'LIKE',
 									),
