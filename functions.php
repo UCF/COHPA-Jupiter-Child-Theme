@@ -52,11 +52,14 @@ function admin_styles() {
 
 
 
+
 /**
  * Place this in your theme's functions.php file
  * Or a site-specific plugin
  *
  */
+add_filter( 'sul_user_query_args', 'sul_custom_meta_query', 10, 2 );
+
 function sul_custom_meta_query( $args, $query_id ){
     // checking the query ID allows us to only target a specific shortcode
 	if( $query_id == 'my_custom_meta_query' ){
@@ -73,7 +76,6 @@ function sul_custom_meta_query( $args, $query_id ){
 	}
 	return $args;
 }
-add_filter('sul_user_query_args', 'kia_meta_search');
 
 
 
