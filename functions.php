@@ -66,15 +66,34 @@ function kia_meta_search( $args ){
         // if your shortcode has a 'role' parameter defined it will be maintained
         // unless you choose to unset the role parameter by uncommenting the following
         //  unset( $args['role'] );
-        $args['meta_key'] = 'last_name';
+		
+		$args['meta_query'] = array(
+									'relation' => 'OR',
+									array(
+										'key'       => 'last_name',
+										'value'     => $search,
+										'compare'   => '=',
+										'type'      => 'CHAR',
+									),
+									array(
+										'key'       => 'first_name',
+										'value'     => $search,
+										'compare'   => '=',
+										'type'      => 'CHAR',
+									)
+								);
+
+	}
+		
+     /* $args['meta_key'] = 'last_name';
         $args['meta_value'] = $search;
         $args['meta_compare'] = '=';
 
         // need to unset the original search args
         if( isset( $args['search'] ) ) unset($args['search']);
-    }
+    } */
 
-    return $args;
+    return $args; 
 }
 add_filter('sul_user_query_args', 'kia_meta_search');
 
