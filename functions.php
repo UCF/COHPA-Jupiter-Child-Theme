@@ -46,6 +46,7 @@ function admin_styles() {
 		#profile-page h3 { display: none; }
 		input[name=twitter], label[for=twitter] { display: none; } 
 		.wpmu-message, #wpmu-install-dashboard {display:none;}
+		p.notice notice-warning { display: none; }
 	</style>
 	<?php
 }
