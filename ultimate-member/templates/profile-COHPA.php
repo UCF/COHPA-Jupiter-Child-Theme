@@ -279,12 +279,6 @@ get_header();
 <script>
 $( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
 </script>		
-
-<style>
-	#mk-tabs-2 .mk-tabs-tabs li a:first-child {
-    background-color: red !important;
-}
-</style>
                
                
                 
