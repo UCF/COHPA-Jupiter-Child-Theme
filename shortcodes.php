@@ -724,7 +724,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 		<div style="text-align: left;" class="mk-text-block  true">
 			<p>
 			<?php 
-					if( get_field('cv', 'user_' . $user_db .'') || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
+					if( $getcv || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 					   echo '';
 					
 					if($getcv) {
