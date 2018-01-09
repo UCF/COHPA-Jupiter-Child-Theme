@@ -538,7 +538,7 @@ get_header();
 					} ?>     
 			</div>
 		<?php endwhile; ?>           
-
+*During exam week, check with the faculty member for any office-hour changes.
 
 		<?php echo '<p>&nbsp;</p></div>'; }?>
 		<!-- END NEW OFFICE HOURS SECTION -->    
