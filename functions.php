@@ -46,7 +46,7 @@ function admin_styles() {
 		#profile-page h3 { display: none; }
 		input[name=twitter], label[for=twitter] { display: none; } 
 		.wpmu-message, #wpmu-install-dashboard {display:none;}
-		#your-profile .notice-warning { border-left-color: pink !important; }
+		#your-profile .notice-warning { display:none !important; }
 	</style>
 	<?php
 }
