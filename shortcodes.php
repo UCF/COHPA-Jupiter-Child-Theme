@@ -729,7 +729,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 					
 					if(get_field('cv', 'user_' . $user_db .'')) {
 							echo '<div id="directoryProfile-FB"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-moon-file-pdf  mk-size-small"></i> <a href="';
-							the_field('cv', 'user_' . $user_db .'');
+							echo $getcv;
 							echo '" target="_blank">Curriculum Vitae</a></div>';
 						}
 						if(get_field('website_url', 'user_' . $user_db .'')) {
