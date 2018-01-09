@@ -578,9 +578,7 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
-<?php switch_to_blog(1); 
-
-$user_db = $user->ID ;
+<?php $user_db = $user->ID ;
 
 $displayName = get_field('display_name', 'user_' . $user_db .'');
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
@@ -782,10 +780,6 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
 
 </style>
-
-
-<?php restore_current_blog(); ?>
-
 <?php	
 // ENDING ROW	
 }
