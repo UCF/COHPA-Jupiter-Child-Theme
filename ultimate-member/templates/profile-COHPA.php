@@ -281,7 +281,9 @@ $( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
 </script>		
 
 <style>
-	ul.mk-tabs-tabs li.is-active { background-color: red !important;}	
+	#mk-tabs-2 .mk-tabs-tabs .is-active a, #mk-tabs-2 .mk-fancy-title span {
+    background-color: red !important;
+}
 </style>
                 
                 
