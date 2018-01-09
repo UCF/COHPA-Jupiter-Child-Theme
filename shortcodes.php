@@ -20,9 +20,6 @@ $jobtitle_ucf = get_sub_field('job_title');
 ?>
 <?php restore_current_blog(); ?>
 
-
-
-
 <?php
 $myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
 $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
@@ -578,6 +575,7 @@ function dept_option($atts){
 ?>
 
 <!-- START REPEATER SECTION -->	
+<?php switch_to_blog(1); ?>
 <?php $user_db = $user->ID ;
 
 $displayName = get_field('display_name', 'user_' . $user_db .'');
@@ -595,7 +593,7 @@ $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
 $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 ?>
-
+<?php restore_current_blog(); ?>
 
 
 <!-- START REPEATER SECTION -->	
