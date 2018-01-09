@@ -539,7 +539,7 @@ get_header();
 			</div>
 		<?php endwhile; ?>           
 			
-<span style="font-size: 11px; font-style: italic; line-height: 8px !important;">*During exam week, check with the faculty member for any office-hour changes.</span>
+<div style="font-size: 11px; font-style: italic; line-height: 8px !important;">*During exam week, check with the faculty member for any office-hour changes.</div>
 		<?php echo '<p>&nbsp;</p></div>'; }?>
 		<!-- END NEW OFFICE HOURS SECTION -->    
 		   
