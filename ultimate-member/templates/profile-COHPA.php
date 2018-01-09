@@ -277,47 +277,24 @@ get_header();
 							echo '<li class="mk-tabs-tab "><a href="#"> Books</a></li>';
 						}?>
 <script>
-$( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
+$( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "lookhere" );
 </script>		
+
+<style>
+	#mk-tabs-2 .mk-tabs-tabs li a:first-child {
+    background-color: red !important;
+}
+</style>
                
-               
+         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
                 
                 
                 
                 
                 <div class="clearboth"></div>
 			</ul>
-			
-			
-			
-			
-			
-			
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-			
- <style>
-  .highlight{
-    background-color: yellow
-  }
-  </style>
- <p>
-  <span>Look:</span>
-  <span>This is some text in a paragraph.</span>
-  <span>This is a note about it.</span>
-</p>
- 
-<script>
-$( "p span" ).first().addClass( "highlight" );
-</script>           
-                       
-                                 
-                                 
-                                 
-                                 
-                                  
-                                             
-                                                                   
-            
+
 			<div class="mk-tabs-panes page-bg-color">
             
             <?php 
