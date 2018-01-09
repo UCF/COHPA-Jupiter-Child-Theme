@@ -727,7 +727,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 					if( get_field('cv', 'user_' . $user_db .'') || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 					   echo '';
 					
-					if(get_field('cv', 'user_' . $user_db .'')) {
+					if($getcv) {
 							echo '<div id="directoryProfile-FB"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-moon-file-pdf  mk-size-small"></i> <a href="';
 							echo $getcv;
 							echo '" target="_blank">Curriculum Vitae</a></div>';
