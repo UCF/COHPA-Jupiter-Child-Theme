@@ -276,18 +276,7 @@ get_header();
 					if($profilebooks) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Books</a></li>';
 						}?>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-						
-<script>
-$( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "is-active" );
-</script>		
 
-               
-        
-                
-                
-                
-                
                 <div class="clearboth"></div>
 			</ul>
 
@@ -458,6 +447,12 @@ $( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "is-active" );
 					<div class="clearboth"></div>
 				</div>
                 <?php }?>
+                
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>			
+<script>
+$( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "is-active" );
+$( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
+</script>		
                 
                 
                 
