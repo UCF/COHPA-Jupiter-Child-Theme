@@ -276,6 +276,8 @@ get_header();
 					if($profilebooks) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Books</a></li>';
 						}?>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+						
 <script>
 $( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "lookhere" );
 </script>		
@@ -286,7 +288,6 @@ $( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "lookhere" );
 }
 </style>
                
-         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         
                 
                 
