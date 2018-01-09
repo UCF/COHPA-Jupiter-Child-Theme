@@ -281,7 +281,7 @@ $( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
 </script>		
 
 <style>
-	#mk-tabs-2 li:first-child {
+	#mk-tabs-2 .mk-tabs-tabs .is-active a {
     background-color: red !important;
 }
 </style>
