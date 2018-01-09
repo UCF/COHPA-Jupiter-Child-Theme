@@ -276,7 +276,9 @@ get_header();
 					if($profilebooks) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Books</a></li>';
 						}?>
-						
+<script>
+$( "li .mk-tabs-tab" ).first().addClass( "is-active" );
+</script>		
                 
                 
                 
