@@ -299,6 +299,7 @@ $( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
 			
 			
 			
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 			
  <style>
   .highlight{
