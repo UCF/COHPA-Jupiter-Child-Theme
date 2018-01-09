@@ -538,7 +538,9 @@ get_header();
 					} ?>     
 			</div>
 		<?php endwhile; ?>           
-*During exam week, check with the faculty member for any office-hour changes.
+			<?php
+			   if (have_rows('monday_times_available', 'user_' . $user_id .'') || have_rows('tuesday_times_available', 'user_' . $user_id .'') || have_rows('wednesday_times_available', 'user_' . $user_id .'') || have_rows('thursday_times_available', 'user_' . $user_id .'') || have_rows('friday_times_available', 'user_' . $user_id .'') ) { 
+				echo '<div style="font-size:11px;text-align: left;">*During exam week, check with the faculty member for any office-hour changes.</div>';?>		
 
 		<?php echo '<p>&nbsp;</p></div>'; }?>
 		<!-- END NEW OFFICE HOURS SECTION -->    
