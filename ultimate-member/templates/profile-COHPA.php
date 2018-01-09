@@ -277,7 +277,7 @@ get_header();
 							echo '<li class="mk-tabs-tab "><a href="#"> Books</a></li>';
 						}?>
 <script>
-$( "li .mk-tabs-tab" ).first().addClass( "is-active" );
+$( "#mk-tabs-tabs-2 li" ).first().addClass( "is-active" );
 </script>		
                 
                 
