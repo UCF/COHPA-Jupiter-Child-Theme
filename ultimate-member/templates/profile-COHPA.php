@@ -539,13 +539,10 @@ get_header();
 			</div>
 		<?php endwhile; ?>           
 			
-
+<span style="font-size: 11px; font-style: italic; line-height: 12px;">*During exam week, check with the faculty member for any office-hour changes.</span>
 		<?php echo '<p>&nbsp;</p></div>'; }?>
 		<!-- END NEW OFFICE HOURS SECTION -->    
 		   
-		<?php
-			   if (have_rows('monday_times_available', 'user_' . $user_id .'') || have_rows('tuesday_times_available', 'user_' . $user_id .'') || have_rows('wednesday_times_available', 'user_' . $user_id .'') || have_rows('thursday_times_available', 'user_' . $user_id .'') || have_rows('friday_times_available', 'user_' . $user_id .'') ) { 
-				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Office Hours</span></h4>';?>
 				
 				   
 				      
