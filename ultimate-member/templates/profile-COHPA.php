@@ -279,7 +279,10 @@ get_header();
 <script>
 $( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
 </script>		
-                
+
+<style>
+	ul.mk-tabs-tabs li.is-active { background-color: red !important;}	
+</style>
                 
                 
                 
