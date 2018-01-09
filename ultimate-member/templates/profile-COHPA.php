@@ -285,13 +285,43 @@ $( "ul.mk-tabs-tabs li" ).first().addClass( "lookhere" );
     background-color: red !important;
 }
 </style>
+               
+               
                 
                 
                 
                 
                 <div class="clearboth"></div>
 			</ul>
-            
+			
+			
+			
+			
+			
+			
+			
+ <style>
+  .highlight{
+    background-color: yellow
+  }
+  </style>
+ <p>
+  <span>Look:</span>
+  <span>This is some text in a paragraph.</span>
+  <span>This is a note about it.</span>
+</p>
+ 
+<script>
+$( "p span" ).first().addClass( "highlight" );
+</script>           
+                       
+                                 
+                                 
+                                 
+                                 
+                                  
+                                             
+                                                                   
             
 			<div class="mk-tabs-panes page-bg-color">
             
