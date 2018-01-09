@@ -716,7 +716,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 	<div style="" class="vc_col-sm-4 wpb_column column_container ">
 
 		<?php 
-		if( $getcv ) || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
+		if(get_field('cv', 'user_' . $user_db .'') || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 		   ?>
 		<h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">Additional Info</span></h2>
 		<?php  }?>	
@@ -724,10 +724,10 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 		<div style="text-align: left;" class="mk-text-block  true">
 			<p>
 			<?php 
-					if( $getcv ) || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
+					if( get_field('cv', 'user_' . $user_db .'') || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 					   echo '';
 					
-					if( $getcv )) {
+					if(get_field('cv', 'user_' . $user_db .'')) {
 							echo '<div id="directoryProfile-FB"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-moon-file-pdf  mk-size-small"></i> <a href="';
 							the_field('cv', 'user_' . $user_db .'');
 							echo '" target="_blank">Curriculum Vitae</a></div>';
