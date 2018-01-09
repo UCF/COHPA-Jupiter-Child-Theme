@@ -262,7 +262,7 @@ get_header();
                  
                 <?php 
 					if(get_field('biography', 'user_' . $user_id .'') || get_field('degrees', 'user_' . $user_id .'')) { 
-							echo '<li class="mk-tabs-tab  is-active"><a href="#"> Biography</a></li>';
+							echo '<li class="mk-tabs-tab "><a href="#"> Biography</a></li>';
 						}
 					if(get_field('research_info', 'user_' . $user_id .'') || get_field('research_interests', 'user_' . $user_id .'')) { 
 							echo '<li class="mk-tabs-tab "><a href="#"> Research</a></li>';
@@ -279,14 +279,9 @@ get_header();
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 						
 <script>
-$( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "lookhere" );
+$( "#mk-tabs-2 .mk-tabs-tabs li" ).first().addClass( "is-active" );
 </script>		
 
-<style>
-	.lookhere {
-    background-color: red !important;
-}
-</style>
                
         
                 
