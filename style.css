@@ -252,6 +252,20 @@ display:none;
 }
 .directoryNameFixer {margin-bottom:4px;}
 
+#new-dirIconsContact ul {
+    margin-bottom: 0px !important;
+}
+#new-dirIconsContact ul li {
+    display: block;
+    position: relative !important;
+    margin: 0px !important;
+    padding: 0 0 0 21px !important;
+}
+#new-dirIconsContact ul li .mk-svg-icon {
+    fill: #999;
+    padding: 0px 8px 0px 0px !important;
+}
+
 #capitalText {
 text-transform:capitalize;
 }
