@@ -579,11 +579,13 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
                 <?php 
 					if(get_field('facebook_url', 'user_' . $user_id .'') || get_field('linkedin_url', 'user_' . $user_id .'') || get_field('twitter_url', 'user_' . $user_id .'') || get_field('google_url', 'user_' . $user_id .'') || get_field('youtube_url', 'user_' . $user_id .'')) {
 					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h4>';
+						
+						echo '<div id="new-directoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>';
 					
 					if(get_field('facebook_url', 'user_' . $user_id .'')) {
-							echo '<div id="directoryProfile-FB"><i style="color:#3b5998;margin:4px 4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							echo '<li><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-square-facebook" data-cacheid="icon-5a567fa482bd1" style="fill: #3b5998; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M444-6.4h-376c-37.555 0-68 30.445-68 68v376c0 37.555 30.445 68 68 68h376c37.555 0 68-30.445 68-68v-376c0-37.555-30.445-68-68-68zm-123.943 159.299h-49.041c-7.42 0-14.918 7.452-14.918 12.99v19.487h63.723c-2.081 28.41-6.407 64.679-6.407 64.679h-57.565v159.545h-63.929v-159.545h-32.756v-64.474h32.756v-33.53c0-8.098-1.706-62.336 70.46-62.336h57.678v63.183z"/></svg><a href="';
 							the_field('facebook_url', 'user_' . $user_id .'');
-							echo '" target="_blank">Facebook</a></div>';
+							echo '" target="_blank">Facebook</a></li>';
 						}
 						if(get_field('linkedin_url', 'user_' . $user_id .'')) {
 							echo '<div id="directoryProfile-Linkedin"><i style="color:#007bb6;margin:4px 4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
