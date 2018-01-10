@@ -607,6 +607,8 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
 							the_field('youtube_url', 'user_' . $user_id .'');
 							echo '" target="_blank">YouTube</a></div>';
 						}
+						echo '</ul></div>';
+						
 					   echo '<p>&nbsp;</p></div>';
 					}?>
                     
