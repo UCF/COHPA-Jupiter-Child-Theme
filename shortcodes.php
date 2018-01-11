@@ -724,6 +724,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 		<div class="clearboth"></div>
 		<div style="text-align: left;" class="mk-text-block  true">
 			<p>
+			<div id="new-directoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>
 			<?php 
 					if( $getcv || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 					   echo '';
@@ -734,24 +735,24 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 							echo '" target="_blank">Curriculum Vitae</a></div>';
 						}
 						if(get_field('website_url', 'user_' . $user_db .'')) {
-							echo '<div id="directoryProfile-FB"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-icon-external-link  mk-size-small"></i> <a href="';
+							echo '<li><svg  class="mk-svg-icon" data-name="mk-moon-globe" data-cacheid="icon-5a5761fdb02a2" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M240 32c-132.548 0-240 107.452-240 240 0 132.549 107.452 240 240 240 132.549 0 240-107.451 240-240 0-132.548-107.451-240-240-240zm135.795 320c4.29-20.227 6.998-41.696 7.879-64h63.723c-1.668 22.098-6.812 43.557-15.34 64h-56.262zm-271.59-160c-4.29 20.227-6.998 41.696-7.879 64h-63.722c1.668-22.097 6.811-43.557 15.339-64h56.262zm238.813 0c4.807 20.481 7.699 41.927 8.64 64h-95.658v-64h87.018zm-87.018-32v-93.669c7.295 2.123 14.522 5.685 21.614 10.685 13.291 9.37 26.006 23.804 36.77 41.743 7.441 12.401 13.876 26.208 19.248 41.242h-77.632zm-90.384-41.242c10.764-17.939 23.478-32.374 36.77-41.743 7.091-5 14.319-8.562 21.614-10.685v93.67h-77.632c5.373-15.033 11.808-28.84 19.248-41.242zm58.384 73.242v64h-95.657c.94-22.073 3.833-43.519 8.639-64h87.018zm-176.056 160c-8.528-20.443-13.671-41.902-15.339-64h63.722c.881 22.304 3.589 43.773 7.879 64h-56.262zm80.399-64h95.657v64h-87.018c-4.806-20.48-7.699-41.927-8.639-64zm95.657 96v93.67c-7.294-2.123-14.522-5.686-21.614-10.685-13.292-9.37-26.007-23.805-36.77-41.743-7.441-12.402-13.875-26.209-19.249-41.242h77.633zm90.384 41.242c-10.764 17.938-23.479 32.373-36.77 41.743-7.092 4.999-14.319 8.562-21.614 10.685v-93.67h77.633c-5.373 15.033-11.808 28.84-19.249 41.242zm-58.384-73.242v-64h95.657c-.94 22.073-3.833 43.52-8.64 64h-87.017zm127.674-96c-.881-22.304-3.589-43.773-7.879-64h56.262c8.528 20.443 13.672 41.903 15.34 64h-63.723zm31.655-96h-47.95c-9.319-29.381-22.188-55.147-37.658-75.714 21.268 10.17 40.529 23.808 57.357 40.636 10.74 10.739 20.181 22.469 28.251 35.078zm-322.407-35.078c16.829-16.829 36.09-30.466 57.357-40.636-15.471 20.567-28.338 46.333-37.658 75.714h-47.949c8.069-12.609 17.511-24.339 28.25-35.078zm-28.25 259.078h47.949c9.32 29.381 22.188 55.147 37.659 75.715-21.268-10.17-40.529-23.808-57.357-40.637-10.74-10.739-20.182-22.469-28.251-35.078zm322.406 35.078c-16.828 16.829-36.09 30.467-57.357 40.637 15.471-20.567 28.339-46.334 37.658-75.715h47.95c-8.07 12.609-17.511 24.339-28.251 35.078z"/></svg><a href="';
 							the_field('website_url', 'user_' . $user_db .'');
-							echo '" target="_blank">Personal Website</a></div>';
+							echo '" target="_blank">Personal Website</a></li>';
 						}
 						if(get_field('facebook_url', 'user_' . $user_db .'')) {
-							echo '<div id="directoryProfile-FB"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-moon-facebook-2  mk-size-small"></i> <a href="';
+							echo '<li><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-square-facebook" data-cacheid="icon-5a567fa482bd1" style="fill: #3b5998; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M444-6.4h-376c-37.555 0-68 30.445-68 68v376c0 37.555 30.445 68 68 68h376c37.555 0 68-30.445 68-68v-376c0-37.555-30.445-68-68-68zm-123.943 159.299h-49.041c-7.42 0-14.918 7.452-14.918 12.99v19.487h63.723c-2.081 28.41-6.407 64.679-6.407 64.679h-57.565v159.545h-63.929v-159.545h-32.756v-64.474h32.756v-33.53c0-8.098-1.706-62.336 70.46-62.336h57.678v63.183z"/></svg><a href="';
 							the_field('facebook_url', 'user_' . $user_db .'');
-							echo '" target="_blank">Facebook</a></div>';
+							echo '" target="_blank">Facebook</a></li>';
 						}
 						if(get_field('linkedin_url', 'user_' . $user_db .'')) {
-							echo '<div id="directoryProfile-Linkedin"><i style="color:#c1c1c1;margin:4px;4px;" class="mk-moon-linkedin  mk-size-small"></i> <a href="';
+							echo '<li><svg  class="mk-svg-icon" data-name="mk-moon-linkedin" data-cacheid="icon-5a567fa48352f" style="fill: #007bb6; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426 0h-340c-47.3 0-86 38.7-86 86v340c0 47.3 38.7 86 86 86h340c47.3 0 86-38.7 86-86v-340c0-47.3-38.7-86-86-86zm-234 416h-64v-224h64v224zm-32-256c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zm256 256h-64v-128c0-17.673-14.327-32-32-32s-32 14.327-32 32v128h-64v-224h64v39.736c13.199-18.132 33.376-39.736 56-39.736 39.765 0 72 35.817 72 80v144z"/></svg><a href="';
 							the_field('linkedin_url', 'user_' . $user_db .'');
-							echo '" target="_blank">Linkedin</a></div>';
+							echo '" target="_blank">Linkedin</a></li>';
 						}
 						
 					   echo '<p>&nbsp;</p>';
 					}?>
-
+		</ul></div>
 		<div class="clearboth"></div>
 		</div> 
 	</div>
