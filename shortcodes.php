@@ -976,7 +976,7 @@ add_shortcode('show_books', function() {
                 <?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
                 <li style="list-style:none; font-size:16px !important;"><?php the_title(); ?></li>
- <div style="margin-left:25px;">               
+ <div>               
 <?php the_field('book_citation'); ?><br>
 <?php //the_field('book_url'); ?><br>
 <?php //the_field('book_department'); ?><br>
