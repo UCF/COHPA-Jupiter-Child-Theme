@@ -621,7 +621,10 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
 					   if (have_rows('affiliations', 'user_' . $user_id .'') ) { 
 						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Affiliations</span></h4>';?>
 							<?php while (have_rows('affiliations', 'user_' . $user_id .'') ): the_row(); ?>
-                                <div id="directoryProfile-link"><i style="color:#666;margin:4px 4px 0px 0px;" class="mk-icon-external-link  mk-size-small"></i>                        
+                               
+<div id="new-directoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>
+
+<li id="new-directoryLineFix"><svg  class="mk-svg-icon" data-name="mk-icon-arrow-circle-right" data-cacheid="icon-5a576bf1f2b2a" style=" height:16px; width: 13.714285714286px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1792"><path d="M1285 896q0-27-18-45l-91-91-362-362q-18-18-45-18t-45 18l-91 91q-18 18-18 45t18 45l189 189h-502q-26 0-45 19t-19 45v128q0 26 19 45t45 19h502l-189 189q-19 19-19 45t19 45l91 91q18 18 45 18t45-18l362-362 91-91q18-18 18-45zm251 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></svg>                    
                                         
 <?php if(get_sub_field('aff_url', 'user_' . $user_id .'')) { ?> 
 	<a href="<?php the_sub_field('aff_url', 'user_' . $user_id .''); ?>" title="<?php the_sub_field('aff_name', 'user_' . $user_id .''); ?>" target="_blank"><?php the_sub_field('aff_name', 'user_' . $user_id .''); ?></a>
@@ -630,7 +633,7 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
         the_sub_field('aff_name', 'user_' . $user_id .'');
         }                  ?>                                                         
    
-                                </div>                     
+                                </ul></div>                    
                             <?php  endwhile;
 						echo '</div>';
 					}?>   
