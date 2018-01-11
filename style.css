@@ -267,7 +267,8 @@ display:none;
 }
 #new-directoryLineFix {
 	line-height: 16px !important;
-	padding-bottom: 6px !important;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
 }
 
 #capitalText {
