@@ -265,6 +265,9 @@ display:none;
     fill: #999;
     padding: 0px 8px 0px 0px !important;
 }
+#new-directoryLineFix {
+	line-height: 4px !important;
+}
 
 #capitalText {
 text-transform:capitalize;
