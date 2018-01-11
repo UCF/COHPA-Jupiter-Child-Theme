@@ -962,7 +962,30 @@ add_shortcode( 'researchlist', 'research_option' );
 
 
 
+<?php
+add_shortcode('show_books', function() {
+?>
+<!-- START REPEATER SECTION -->	
 
+<?php $mybooklist = new WP_Query(array(
+								'post_type'	=> 'scholarly-books',
+								'orderby'=>'title',
+								'order'=>'ASC'
+																	
+							)); ?>
+                            
+                <?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?>
+   				<!--START OF THE REPEAT SECTION -->
+                <li style="list-style:none; font-size:16px !important;"><?php the_title(); ?></li>
+ <div style="margin-left:25px;">               
+
+</div>
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
+
+<!-- END OF THE REPEAT SECTION -->	
+<?php	
+});// END SHORTCODE [show_books]?> 
 
 
 
