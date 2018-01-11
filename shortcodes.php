@@ -977,6 +977,10 @@ add_shortcode('show_books', function() {
    				<!--START OF THE REPEAT SECTION -->
                 <li style="list-style:none; font-size:16px !important;"><?php the_title(); ?></li>
  <div style="margin-left:25px;">               
+<?php the_field('book_citation'); ?><br>
+<?php the_field('book_url'); ?><br>
+<?php the_field('book_department'); ?><br>
+<?php the_field('book_faculty'); ?>
 
 </div>
                 <!-- END OF THE REPEAT SECTION -->
