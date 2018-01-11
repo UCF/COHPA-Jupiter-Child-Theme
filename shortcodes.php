@@ -969,8 +969,7 @@ add_shortcode('show_books', function() {
 
 <?php $mybooklist = new WP_Query(array(
 								'post_type'	=> 'scholarly-books',
-								'orderby'=>'title',
-								'order'=>'ASC'
+								'order'=>'DESC'
 																	
 							)); ?>
                             
