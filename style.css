@@ -262,7 +262,7 @@ display:none;
     padding-left: 21px !important;
 }
 #new-directoryIcons ul li .mk-svg-icon {
-    fill: #999;
+    fill: #999 !important;
     padding: 0px 8px 0px 0px !important;
 }
 #new-directoryLineFix {
