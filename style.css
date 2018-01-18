@@ -255,13 +255,14 @@ display:none;
 #newdirectoryIcons ul {
     margin-bottom: 0px !important;
 }
-#newdirectoryIcons ul li {
+
+#newdirectoryIcons .mk-list-styles ul li {
     display: block;
     position: relative !important;
     margin: 0px 0px 0px 0px !important;
     padding-left: 21px !important;
 }
-#newdirectoryIcons ul li .mk-svg-icon {
+#newdirectoryIcons .mk-list-styles ul li .mk-svg-icon {
     fill: #999; 
     padding: 0px 8px 0px 0px !important;
 }
