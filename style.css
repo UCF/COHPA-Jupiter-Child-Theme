@@ -271,7 +271,11 @@ display:none;
 	padding-top: 3px !important;
 	padding-bottom: 5px !important;
 }
-
+.testingthis ul li {
+    margin: 0 0 0px 0 !important;
+    line-height: 24px !important;
+}
+	
 #capitalText {
 text-transform:capitalize;
 }
