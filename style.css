@@ -256,12 +256,6 @@ display:none;
     margin-bottom: 0px !important;
 }
 
-#newdirectoryIcons .mk-list-styles ul li {
-    display: block;
-    position: relative !important;
-    margin: 0px 0px 0px 0px !important;
-    padding-left: 21px !important;
-}
 #newdirectoryIcons .mk-list-styles ul li .mk-svg-icon {
     fill: #999; 
     padding: 0px 8px 0px 0px !important;
@@ -271,7 +265,7 @@ display:none;
 	padding-top: 3px !important;
 	padding-bottom: 5px !important;
 }
-.testingthis ul li {
+.newdirectoryspacing ul li {
     margin: 0 0 0px 0 !important;
     line-height: 24px !important;
 }

@@ -171,7 +171,7 @@ get_header();
 							}
 						 }
 						?>
-		<div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>
+		<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>
 						<?php if(get_field('phone_number', 'user_' . $user_id .'')) { 
 							echo '<li><svg  class="mk-svg-icon" data-name="mk-moon-phone" data-cacheid="icon-5a553bfdc3fd3" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 320c-32 32-32 64-64 64s-64-32-96-64-64-64-64-96l64-64s-64-128-96-128l-96 96c0 64 65.75 193.75 128 256s192 128 256 128c0 0 96-64 96-96s-96-128-128-96z"/></svg>Phone: ';
 							the_field('phone_number', 'user_' . $user_id .'');
@@ -563,7 +563,7 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
 			   if(get_field('website_url', 'user_' . $user_id .'')) {
  				echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Professional Links</span></h4>';
 			
-			echo '<div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>';		   
+			echo '<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing clear" data-family=""><ul>';		   
 				   
 				if(get_field('website_url', 'user_' . $user_id .'')) {
 					echo '<li><svg  class="mk-svg-icon" data-name="mk-moon-globe" data-cacheid="icon-5a5761fdb02a2" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M240 32c-132.548 0-240 107.452-240 240 0 132.549 107.452 240 240 240 132.549 0 240-107.451 240-240 0-132.548-107.451-240-240-240zm135.795 320c4.29-20.227 6.998-41.696 7.879-64h63.723c-1.668 22.098-6.812 43.557-15.34 64h-56.262zm-271.59-160c-4.29 20.227-6.998 41.696-7.879 64h-63.722c1.668-22.097 6.811-43.557 15.339-64h56.262zm238.813 0c4.807 20.481 7.699 41.927 8.64 64h-95.658v-64h87.018zm-87.018-32v-93.669c7.295 2.123 14.522 5.685 21.614 10.685 13.291 9.37 26.006 23.804 36.77 41.743 7.441 12.401 13.876 26.208 19.248 41.242h-77.632zm-90.384-41.242c10.764-17.939 23.478-32.374 36.77-41.743 7.091-5 14.319-8.562 21.614-10.685v93.67h-77.632c5.373-15.033 11.808-28.84 19.248-41.242zm58.384 73.242v64h-95.657c.94-22.073 3.833-43.519 8.639-64h87.018zm-176.056 160c-8.528-20.443-13.671-41.902-15.339-64h63.722c.881 22.304 3.589 43.773 7.879 64h-56.262zm80.399-64h95.657v64h-87.018c-4.806-20.48-7.699-41.927-8.639-64zm95.657 96v93.67c-7.294-2.123-14.522-5.686-21.614-10.685-13.292-9.37-26.007-23.805-36.77-41.743-7.441-12.402-13.875-26.209-19.249-41.242h77.633zm90.384 41.242c-10.764 17.938-23.479 32.373-36.77 41.743-7.092 4.999-14.319 8.562-21.614 10.685v-93.67h77.633c-5.373 15.033-11.808 28.84-19.249 41.242zm-58.384-73.242v-64h95.657c-.94 22.073-3.833 43.52-8.64 64h-87.017zm127.674-96c-.881-22.304-3.589-43.773-7.879-64h56.262c8.528 20.443 13.672 41.903 15.34 64h-63.723zm31.655-96h-47.95c-9.319-29.381-22.188-55.147-37.658-75.714 21.268 10.17 40.529 23.808 57.357 40.636 10.74 10.739 20.181 22.469 28.251 35.078zm-322.407-35.078c16.829-16.829 36.09-30.466 57.357-40.636-15.471 20.567-28.338 46.333-37.658 75.714h-47.949c8.069-12.609 17.511-24.339 28.25-35.078zm-28.25 259.078h47.949c9.32 29.381 22.188 55.147 37.659 75.715-21.268-10.17-40.529-23.808-57.357-40.637-10.74-10.739-20.182-22.469-28.251-35.078zm322.406 35.078c-16.828 16.829-36.09 30.467-57.357 40.637 15.471-20.567 28.339-46.334 37.658-75.715h47.95c-8.07 12.609-17.511 24.339-28.251 35.078z"/></svg><a href="';
@@ -583,7 +583,7 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
 					if(get_field('facebook_url', 'user_' . $user_id .'') || get_field('linkedin_url', 'user_' . $user_id .'') || get_field('twitter_url', 'user_' . $user_id .'') || get_field('google_url', 'user_' . $user_id .'') || get_field('youtube_url', 'user_' . $user_id .'')) {
 					   echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Social Networks</span></h4>';
 						
-						echo '<div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>';
+						echo '<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>';
 					
 					if(get_field('facebook_url', 'user_' . $user_id .'')) {
 							echo '<li><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-square-facebook" data-cacheid="icon-5a567fa482bd1" style="fill: #3b5998; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M444-6.4h-376c-37.555 0-68 30.445-68 68v376c0 37.555 30.445 68 68 68h376c37.555 0 68-30.445 68-68v-376c0-37.555-30.445-68-68-68zm-123.943 159.299h-49.041c-7.42 0-14.918 7.452-14.918 12.99v19.487h63.723c-2.081 28.41-6.407 64.679-6.407 64.679h-57.565v159.545h-63.929v-159.545h-32.756v-64.474h32.756v-33.53c0-8.098-1.706-62.336 70.46-62.336h57.678v63.183z"/></svg><a href="';
@@ -622,7 +622,7 @@ $( ".mk-tabs-panes .mk-tabs-pane" ).first().addClass( "is-active" );
 						echo '<div style=" margin-bottom:0px;text-align: left;" class="mk-text-block  "><h4 class="mk-shortcode mk-fancy-title pattern-style mk-shortcode-heading pattern-false"><span >Affiliations</span></h4>';?>
 							<?php while (have_rows('affiliations', 'user_' . $user_id .'') ): the_row(); ?>
                                
-<div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>
+<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing clear" data-family=""><ul>
 
 <li id="newdirectoryLineFix"><svg  class="mk-svg-icon" data-name="mk-icon-arrow-circle-right" data-cacheid="icon-5a576bf1f2b2a" style="fill: #999; height:16px; width: 13.714285714286px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1792"><path d="M1285 896q0-27-18-45l-91-91-362-362q-18-18-45-18t-45 18l-91 91q-18 18-18 45t18 45l189 189h-502q-26 0-45 19t-19 45v128q0 26 19 45t45 19h502l-189 189q-19 19-19 45t19 45l91 91q18 18 45 18t45-18l362-362 91-91q18-18 18-45zm251 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></svg>                    
                                         

@@ -671,7 +671,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 						?>
 					</div>
                        
-                   <div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>    
+                   <div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>    
                         <li><svg  class="mk-svg-icon" data-name="mk-moon-phone" data-cacheid="icon-5a553bfdc3fd3" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 320c-32 32-32 64-64 64s-64-32-96-64-64-64-64-96l64-64s-64-128-96-128l-96 96c0 64 65.75 193.75 128 256s192 128 256 128c0 0 96-64 96-96s-96-128-128-96z"/></svg>Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></li>
                         <li><svg  class="mk-svg-icon" data-name="mk-icon-envelope" data-cacheid="icon-5a55331319080" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg>Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></li>
                     <?php				
@@ -724,7 +724,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME);
 		<div class="clearboth"></div>
 		<div style="text-align: left;" class="mk-text-block  true">
 			<p>
-			<div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>
+			<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>
 			<?php 
 					if( $getcv || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 					   echo '';
