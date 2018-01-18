@@ -170,7 +170,7 @@ $jobtitle_ucf = get_sub_field('job_title');
        <?php  }?>	
         <div class="clearboth"></div>
         <div style="text-align: left;" class="mk-text-block  true">
-           <div id="newdirectoryIcons" data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none   clear" data-family=""><ul>
+           <div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none testingthis  clear" data-family=""><ul>
             <?php 
 					if(get_field('cv', 'user_' . $user->id .'') || get_field('website_url', 'user_' . $user->id .'') || get_field('facebook_url', 'user_' . $user->id .'') || get_field('linkedin_url', 'user_' . $user->id .'')) {
 					   echo '';
