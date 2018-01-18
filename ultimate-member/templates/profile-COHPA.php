@@ -27,7 +27,7 @@
  	));
 	
 	$profilebooks = get_posts(array(			 
-    'post_type' => 'scholarly-books', // "post" because I'm calling regular blog posts? 
+    'post_type' => 'faculty_books', // "post" because I'm calling regular blog posts? 
 	'posts_per_page' => '10',
 	'order' => 'DESC',
     'orderby' => 'date',
