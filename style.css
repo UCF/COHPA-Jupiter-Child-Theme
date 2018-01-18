@@ -258,7 +258,7 @@ display:none;
 #new-directoryIcons ul li {
     display: block;
     position: relative !important;
-    margin: 0px 0px 0px 0px; !important;
+    margin: 0px 0px 0px 0px !important;
     padding-left: 21px !important;
 }
 #new-directoryIcons ul li .mk-svg-icon {
