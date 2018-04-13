@@ -798,16 +798,25 @@ add_shortcode('internlist', function() {
 ?>
 <!-- START REPEATER SECTION -->	
 
-<?php $myinternlist = new WP_Query(array(
+<?php $myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
 								'orderby'=>'title',
 								'order'=>'ASC'
 																	
 							)); ?>
                             
-                <?php while($myinternlist->have_posts()) : $myinternlist->the_post(); ?>
+                <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
    				<!--START OF THE REPEAT SECTION -->
- <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+ <div style="margin-left:25px;">               
+                <?php
+$repeater = get_field('announcement_items');
+$announdate = get_sub_field('announcement_date');
+$last_row = end($repeater);
+echo $last_row['announcement_date'];
+echo $last_row['announcement_item'];
+?>
+</div>
                 <!-- END OF THE REPEAT SECTION -->
    				<?php endwhile; ?>
 
