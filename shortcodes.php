@@ -797,7 +797,7 @@ add_shortcode( 'deptlist', 'dept_option' );
 // [internlist maincat="" subcat=""]
 function interncat( $atts ) {
     $a = shortcode_atts( array(
-        'maincat' => 'something',
+        'maincat' => 'Local',
         //'subcat' => 'something else',
     ), $atts );
 	
@@ -811,7 +811,8 @@ $myfavetools = new WP_Query(array(
 										'key' => 'main_intern_category',
 										'value' => $a['maincat'], // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 										'compare' => 'LIKE',
-									),)
+									),
+								)
 							)); 	
 	
 while($myfavetools->have_posts()) : $myfavetools->the_post();?>	
