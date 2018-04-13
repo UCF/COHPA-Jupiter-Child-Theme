@@ -798,7 +798,7 @@ add_shortcode( 'deptlist', 'dept_option' );
 add_shortcode('internlist', function() {
                            
 $myfavetools = new WP_Query(array(
-								'post_type'	=> 'announcements',
+								'post_type'	=> 'internship',
 								'posts_per_page' => '1',
 								'order'=>'DESC'
 							)); 
@@ -808,11 +808,11 @@ $myfavetools = new WP_Query(array(
 
 <!-- START THE REPEAT SECTION -->   
 
-<div id="announ">
+
 <span class="date"><?php echo get_the_date(); ?></span><br />
 <?php the_title( '<strong>', '</strong>' ); ?><br />
 <?php the_content();?>
-</div>
+
 <!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
 
