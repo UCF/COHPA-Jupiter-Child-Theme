@@ -800,7 +800,14 @@ add_shortcode('internlist', function() {
 $myfavetools = new WP_Query(array(
 								'post_type'	=> 'internship',
 								'orderby'=>'title',
-								'order'=>'ASC'
+								'order'=>'ASC',
+								'meta_query' => array(
+									'relation' => 'AND',
+									'main_intern_category' => array(
+										'key' => 'main_intern_category',
+										'value' => 'Local', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+										'compare' => 'LIKE',
+									),)
 							)); 
 ?> 
 
