@@ -796,7 +796,7 @@ add_shortcode( 'deptlist', 'dept_option' );
 <?php
 
 add_shortcode('internlist', function() {
-                           
+$kaitlynjanosik = 'Other';                           
 $myfavetools = new WP_Query(array(
 								'post_type'	=> 'internship',
 								'orderby'=>'title',
@@ -805,7 +805,7 @@ $myfavetools = new WP_Query(array(
 									'relation' => 'AND',
 									'main_intern_category' => array(
 										'key' => 'main_intern_category',
-										'value' => 'Local', // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+										'value' => $kaitlynjanosik, // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 										'compare' => 'LIKE',
 									),)
 							)); 
