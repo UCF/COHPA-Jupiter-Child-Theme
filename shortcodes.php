@@ -793,7 +793,27 @@ add_shortcode( 'deptlist', 'dept_option' );
 
 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
+<?php
+add_shortcode('internlist', function() {
+?>
+<!-- START REPEATER SECTION -->	
 
+<?php $myinternlist = new WP_Query(array(
+								'post_type'	=> 'announcement',
+								'orderby'=>'title',
+								'order'=>'ASC'
+																	
+							)); ?>
+                            
+                <?php while($myinternlist->have_posts()) : $myinternlist->the_post(); ?>
+   				<!--START OF THE REPEAT SECTION -->
+ <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
+
+<!-- END OF THE REPEAT SECTION -->	
+<?php	
+});// END SHORTCODE [internlist]?> 
 
 
 
