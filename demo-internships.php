@@ -1,52 +1,25 @@
+
 <?php
-/**
- * Shortcode: [internlist basiccat="" subcat=""]
- * Description: This is how stuff works with parameters
- */
 
-function main_cat($atts){
-	
-	extract(shortcode_atts( array(
-		'basiccat' => 'Local',
-	
-	), $atts ));
-	$kaitlynjanosik = '"' . $main_intern_category . '"';
-	
-	$args1 = array(
-		'orderby'=> 'title',
-		'order' => 'ASC',
-		'meta_query' => array(
-			'relation' => 'AND',
-			'basiccat' => array(
-				'key' => 'main_intern_category',
-				'value' => $kaitlynjanosik, // I WANT THIS AS A VARIABLE IN THE SHORTCODE
-				'compare' => 'LIKE',
-			),
-		)
-	);
-function sub_cat($atts){
-	
-	extract(shortcode_atts( array(
-		'subcat' => 'Law Enforcement',
-	
-	), $atts ));
-	$ellebell = '"' . $sub_intern_category . '"';
-	
-	$args2 = array(
-		'orderby'=> 'title',
-		'order' => 'ASC',
-		'meta_query' => array(
-			'relation' => 'AND',
-			'subcat' => array(
-				'key' => 'sub_intern_category',
-				'value' => $ellebell, // I WANT THIS AS A VARIABLE IN THE SHORTCODE
-				'compare' => 'LIKE',
-			),
-		)
-	);
-?>
-<?php while($args1->have_posts()) : $args1->the_post(); ?>
+add_shortcode('internlist', function() {
+$kaitlynjanosik = 'Other';                           
+$myfavetools = new WP_Query(array(
+								'post_type'	=> 'internship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'meta_query' => array(
+									'relation' => 'AND',
+									'main_intern_category' => array(
+										'key' => 'main_intern_category',
+										'value' => $kaitlynjanosik, // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+										'compare' => 'LIKE',
+									),)
+							)); 
+?> 
 
+<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+
+<!-- START THE REPEAT SECTION -->   
 <div  class="wpb_row vc_row vc_row-fluid  mk-fullwidth-false  attched-false     js-master-row ">
 	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
 		<h2 id="fancy-title-3" class="mk-fancy-title  simple-style  titleFIX color-single">
@@ -115,14 +88,11 @@ function sub_cat($atts){
 		<div class="clearboth"></div>
 	</div>
 </div>
+<!-- END OF THE REPEAT SECTION -->
 <?php endwhile; ?>
-<!-- END REPEATER SECTION -->
-
 <style id="mk-shortcode-dynamic-styles" type="text/css">#fancy-title-2{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-2 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-2 { text-align:center !important; } } #fancy-title-3{letter-spacing:0px;text-transform:initial;font-size:18px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-3 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-3 { text-align:center !important; } } #text-block-4 { margin-bottom:0px; text-align:left; } #fancy-title-5{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-5 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-5 { text-align:center !important; } } #fancy-title-6{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-6 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-6 { text-align:center !important; } } #fancy-title-7{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-7 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-7 { text-align:center !important; } } #fancy-title-8{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-8 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-8 { text-align:center !important; } } #fancy-title-9{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-9 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-9 { text-align:center !important; } } #fancy-title-10{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-10 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-10 { text-align:center !important; } } #mk-button-11 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-11 .mk-button { background-color:#ffc904; } #mk-button-11 .mk-button:hover { color:#ffffff !important; background-color:#212121; } #mk-button-11 .mk-button:hover .mk-svg-icon { color:#ffffff !important; } #mk-button-12 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #divider-13 { padding:10px 0 40px; } #divider-13 .divider-inner { border-top-width:1px; } #divider-13 .divider-inner:after { } #fancy-title-14{letter-spacing:0px;text-transform:initial;font-size:18px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-14 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-14 { text-align:center !important; } } #text-block-15 { margin-bottom:0px; text-align:left; } #fancy-title-16{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-16 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-16 { text-align:center !important; } } #fancy-title-17{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-17 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-17 { text-align:center !important; } } #fancy-title-18{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-18 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-18 { text-align:center !important; } } #fancy-title-19{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-19 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-19 { text-align:center !important; } } #fancy-title-20{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-20 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-20 { text-align:center !important; } } #fancy-title-21{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-21 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-21 { text-align:center !important; } } #mk-button-22 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-22 .mk-button { background-color:#ffc904; } #mk-button-22 .mk-button:hover { color:#ffffff !important; background-color:#212121; } #mk-button-22 .mk-button:hover .mk-svg-icon { color:#ffffff !important; } #mk-button-23 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #divider-24 { padding:10px 0 10px; } #divider-24 .divider-inner { border-top-width:1px; } #divider-24 .divider-inner:after { }</style>
+<?php wp_reset_query(); ?> 
 
-
+	
 <?php	
-// ENDING ROW	
-}
-add_shortcode( 'internlist', 'main_cat', 'sub_cat'  );
-?>
+});// END SHORTCODE [internlist]?> 
