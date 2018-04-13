@@ -798,10 +798,31 @@ add_shortcode( 'deptlist', 'dept_option' );
 function interncat( $atts ) {
     $a = shortcode_atts( array(
         'maincat' => 'something',
-        'subcat' => 'something else',
+        //'subcat' => 'something else',
     ), $atts );
+	
+$myfavetools = new WP_Query(array(
+								'post_type'	=> 'internship',
+								'orderby'=>'title',
+								'order'=>'ASC',
+								'meta_query' => array(
+									'relation' => 'AND',
+									'main_intern_category' => array(
+										'key' => 'main_intern_category',
+										'value' => $a['maincat'], // I WANT THIS AS A VARIABLE IN THE SHORTCODE
+										'compare' => 'LIKE',
+									),)
+							)); 	
+	
+while($myfavetools->have_posts()) : $myfavetools->the_post();?>	
 
-    return "maincat = {$a['maincat']}";
+<!-- START OF THE REPEAT SECTION -->
+<h2 id="fancy-title-3" class="mk-fancy-title  simple-style  titleFIX color-single">
+			<span><?php the_title(); ?></span>
+		</h2>
+<!-- END OF THE REPEAT SECTION -->			
+<?php endwhile; ?>
+<?php	
 }
 add_shortcode( 'internlist', 'interncat' );
 ?>
