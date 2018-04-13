@@ -830,10 +830,13 @@ while($myfavetools->have_posts()) : $myfavetools->the_post();?>
 				<p><?php the_content();?></p>
 				<div class="clearboth"></div>
 			</div>
-		</div>
+		</div>				
+		<?php if (get_field('contact_intern_name') || get_field('intern_address') || get_field('intern_phone') || get_field('intern_email')): ?>
 		<h2 id="fancy-title-5" class="mk-fancy-title  simple-style  titleFIX color-single">
 			<span>Contact Information:</span>
 		</h2>
+		<?php endif; ?>
+
 		<div class="clearboth"></div>
 	</div>
 </div>
