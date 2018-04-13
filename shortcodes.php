@@ -804,7 +804,7 @@ function interncat( $atts ) {
 $myfavetools = new WP_Query(array(
 								'post_type'	=> 'internship',
 								'orderby'=>'title',
-								'showposts' => '99',
+								'posts_per_page' => -1,
 								'order'=>'ASC',
 								'meta_query' => array(
 									'relation' => 'AND',
