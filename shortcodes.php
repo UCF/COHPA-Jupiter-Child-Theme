@@ -862,18 +862,22 @@ while($myfavetools->have_posts()) : $myfavetools->the_post();?>
 		<div class="clearboth"></div>
 	</div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+		<?php if (get_field('intern_website')): ?>
 		<div id="mk-button-11" class="mk-button-container _ relative width-full   block text-center internButtonFix">
 			<a  href="<?php the_field('intern_website'); ?>"   target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-x-large mk-button--corner-pointed text-color-dark _ relative text-center font-weight-700 no-backface  letter-spacing-2 block">
 						 <span class="mk-button--text">Website</span>
 			</a>
 		</div>
+		<?php endif; ?>
 	</div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+		<?php if (get_field('intern_app_url')): ?>
 		<div id="mk-button-12" class="mk-button-container _ relative width-full   block text-center internButtonFix">
 			<a  href="<?php the_field('intern_app_url'); ?>"   target="_self" class="mk-button js-smooth-scroll mk-button--dimension-outline mk-button--size-x-large mk-button--corner-pointed skin-dark _ relative text-center font-weight-700 no-backface  letter-spacing-2 block">
 				<span class="mk-button--text">Application</span>
 			</a>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>
 
