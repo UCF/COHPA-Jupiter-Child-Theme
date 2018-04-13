@@ -794,37 +794,33 @@ add_shortcode( 'deptlist', 'dept_option' );
 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
 <?php
+
 add_shortcode('internlist', function() {
-?>
-<!-- START REPEATER SECTION -->	
+                           
+$myfavetools = new WP_Query(array(
+								'post_type'	=> 'announcements',
+								'posts_per_page' => '1',
+								'order'=>'DESC'
+							)); 
+?> 
 
-<?php $myannouncements = new WP_Query(array(
-								'post_type'	=> 'announcement',
-								'orderby'=>'title',
-								'order'=>'ASC'
-																	
-							)); ?>
-                            
-                <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?>
-   				<!--START OF THE REPEAT SECTION -->
-                <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
- <div style="margin-left:25px;">               
-                <?php
-$repeater = get_field('announcement_items');
-$announdate = get_sub_field('announcement_date');
-$last_row = end($repeater);
-echo $last_row['announcement_date'];
-echo $last_row['announcement_item'];
-?>
+<?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?>
+
+<!-- START THE REPEAT SECTION -->   
+
+<div id="announ">
+<span class="date"><?php echo get_the_date(); ?></span><br />
+<?php the_title( '<strong>', '</strong>' ); ?><br />
+<?php the_content();?>
 </div>
-                <!-- END OF THE REPEAT SECTION -->
-   				<?php endwhile; ?>
+<!-- END OF THE REPEAT SECTION -->
+<?php endwhile; ?>
 
-<!-- END OF THE REPEAT SECTION -->	
+<?php wp_reset_query(); ?> 
+
+	
 <?php	
 });// END SHORTCODE [internlist]?> 
-
-
 
 
 
