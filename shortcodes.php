@@ -795,15 +795,7 @@ add_shortcode( 'deptlist', 'dept_option' );
 
 <?php
 
-add_shortcode('internlist', 'dept_option' ); 
-			  
-function dept_option($atts){
-	
-	extract(shortcode_atts( array(
-		'main_intern_category' => 'Local',
-	
-	), $atts ));
-	
+add_shortcode('internlist', function() {
 $kaitlynjanosik = 'Other';                           
 $myfavetools = new WP_Query(array(
 								'post_type'	=> 'internship',
@@ -897,7 +889,7 @@ $myfavetools = new WP_Query(array(
 
 	
 <?php	
-}// END SHORTCODE [internlist]?> 
+});// END SHORTCODE [internlist]?> 
 
 
 
