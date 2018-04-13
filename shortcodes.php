@@ -799,7 +799,8 @@ add_shortcode('internlist', function() {
                            
 $myfavetools = new WP_Query(array(
 								'post_type'	=> 'internship',
-								'order'=>'DESC'
+								'orderby'=>'title',
+								'order'=>'ASC'
 							)); 
 ?> 
 
