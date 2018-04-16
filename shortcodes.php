@@ -1061,3 +1061,35 @@ while($myinterntools->have_posts()) : $myinterntools->the_post();?>
 add_shortcode( 'internlist', 'interncat' );
 ?>
 
+
+
+
+
+<?php
+add_shortcode('show_books', function() {
+?>
+<!-- START REPEATER SECTION -->	
+
+<?php $mybooklist = new WP_Query(array(
+								'post_type'	=> 'faculty_books',
+								'order'=>'DESC'
+																	
+							)); ?>
+                            
+<?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?>
+<!--START OF THE REPEAT SECTION -->
+<?php the_title(); ?>
+ <div>               
+<?php //the_field('book_citation'); ?><br>
+<?php //the_field('book_url'); ?><br>
+<?php //the_field('book_department'); ?><br>
+<?php //the_field('book_faculty'); ?>
+
+</div>
+                <!-- END OF THE REPEAT SECTION -->
+   				<?php endwhile; ?>
+
+<!-- END OF THE REPEAT SECTION -->	
+<?php	
+});// END SHORTCODE [show_books]?> 
+
