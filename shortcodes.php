@@ -1,4 +1,8 @@
-<?php add_shortcode('show_UCFannouncements', function() { 
+<?php add_shortcode('show_UCFannouncements', function() { $myfavetools = new WP_Query(array(
+								'post_type'	=> 'announcements',
+								'posts_per_page' => '1',
+								'order'=>'DESC'
+							));
  }); // END SHORTCODE [show_UCFannouncements]?><?php add_shortcode('show_announcements', function() { 
 	$myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
