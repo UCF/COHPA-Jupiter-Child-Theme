@@ -458,14 +458,8 @@ $myinterntools = new WP_Query(array(
 <?php wp_reset_query(); ?>  <?php	} add_shortcode( 'internlist', 'interncat' ); ?><?php add_shortcode('show_books', function() { ?><!-- START REPEATER SECTION --><?php $mybooklist = new WP_Query(array(
 								'post_type'	=> 'faculty_books',
 								'order'=>'DESC'
-							)); ?>                        
-<?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?><!--START OF THE REPEAT SECTION -->
-<?php the_title(); ?>
- <div>               
-</div>                <!-- END OF THE REPEAT SECTION -->
-   				<?php endwhile; ?><!-- END OF THE REPEAT SECTION -->	 <?php }); // END SHORTCODE [show_books]?> 
-<?php add_shortcode('search_research', function() { ?><!-- START FORM SECTION -->	
-<?php /*** The Template for displaying Author Search */ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+							)); ?> <?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?><!--START OF THE REPEAT SECTION -->
+<?php the_title(); ?> <div></div><!-- END OF THE REPEAT SECTION --> <?php endwhile; ?><!-- END OF THE REPEAT SECTION --> <?php }); // END SHORTCODE [show_books]?>  <?php add_shortcode('search_research', function() { ?><!-- START FORM SECTION -->	<?php /*** The Template for displaying Author Search */ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : ''; ?>
 <div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row ">
 				<section class="widget widget_search">
