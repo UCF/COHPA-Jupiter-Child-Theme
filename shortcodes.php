@@ -1,4 +1,16 @@
-<?php add_shortcode('show_UCFannouncements', function() { $myfavetools = new WP_Query(array(
+<?php add_shortcode('show_research', function() {
+$values = get_field('choose_researchers');
+if($values)  { 
+foreach($values as $value)	{
+$user_db = $value['ID']; 
+switch_to_blog(1);  $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+$research_ucf = get_field('research_interests', 'user_'. $user_db );
+$params = array( 'width' => 600, 'height' => 760 );
+$imageCrop = bfi_thumb( $image_ucf['url'], $params );
+$imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $params ); 
+restore_current_blog(); ?><!-- START REPEATER SECTION -->	
+<?php } } ?>
+<?php });// END SHORTCODE [show_research] ?><?php add_shortcode('show_UCFannouncements', function() { $myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
 								'posts_per_page' => '1',
 								'order'=>'DESC'
