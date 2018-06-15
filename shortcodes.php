@@ -10,9 +10,7 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory); $cohpaFNAME =
 					<div class="mk-image-holder" style="max-width: 500px;">
                     	<div class="mk-image-inner ">
                         <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
-							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
-                             <?php } else { ?> <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+							<?php if( $image_ucf ) { ?> <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>"> <?php } else { ?> <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
                             <?php } ?> </a>    
                         </div>
                     </div>
@@ -29,8 +27,7 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory); $cohpaFNAME =
                         <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><div id="showFacultyJobTitle">
-                    	<?php switch_to_blog(1); if( get_field('job_titles', 'user_' . $user_db .'') ) {
-								$num_rows = 0;
+                    	<?php switch_to_blog(1); if( get_field('job_titles', 'user_' . $user_db .'') ) { $num_rows = 0;
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
 									endwhile;
@@ -44,8 +41,7 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory); $cohpaFNAME =
                     <div id="showFacultyDepartment">
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php $terms = get_field('department');
-						if( $terms ) {
-						  $count = count( $terms );
+						if( $terms ) { $count = count( $terms );
 							$i = 0;
 							$term_list = ' ';
 						foreach( $terms as $term ) {
@@ -55,9 +51,7 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory); $cohpaFNAME =
 						  echo'">';
 						  echo $term->name;
 						  echo '</a>';
-						if ( $count != $i ) {
-									echo ', ';
-								} } } ?></div>
+						if ( $count != $i ) { echo ', '; } } } ?></div>
                         <div id="directoryProfile-phone"><i style="color:#666;margin:4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p><?php echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
@@ -95,21 +89,15 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory); $cohpaFNAME =
 	</div>
 </div>
 <div class="clearboth"></div><!-- END REPEATER SECTION -->	
-<?php	}}		?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
-#divider-7 { padding:10px 0 30px; } 
+<?php	}}		?> <style id='theme-dynamic-styles-inline-css' type='text/css'> #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
 .mk-divider.shadow_line .divider-inner .divider-shadow-left, .mk-divider.shadow_line .divider-inner .divider-shadow-right { display:inline-block; width:50%; height:7px; background-repeat:no-repeat; } 
 .mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } </style>	<?php	});// END SHORTCODE [show_faculty]?> 
-<?php add_shortcode('show_chair', function() {
-$values = get_field('choose_chair');
-if($values) { 
-	foreach($values as $value)	{
-         $user_db = $value['ID'];
-		 $buildingMap = get_field('building', 'user_' . $user_db .'');
-		 $roomy = get_field('room_number', 'user_' . $user_db .''); ?>
+<?php add_shortcode('show_chair', function() { $values = get_field('choose_chair');
+if($values) { foreach($values as $value)	{   $user_db = $value['ID']; $buildingMap = get_field('building', 'user_' . $user_db .''); $roomy = get_field('room_number', 'user_' . $user_db .''); ?>
 <?php switch_to_blog(1); $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title'); ?>
