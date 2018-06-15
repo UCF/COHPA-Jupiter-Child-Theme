@@ -5,7 +5,7 @@
 							));
 						 while($myfavetools->have_posts()) : $myfavetools->the_post();?>
 <div id="announ"><span class="date"><?php echo get_the_date(); ?></span><br /><?php the_title( '<strong>', '</strong>' ); ?><br /><?php the_content();?></div>
-<?php endwhile;?><a href="<?php echo get_site_url(); ?>/announcements/" title="View All Accouncements">View All</a>
+<?php endwhile; wp_reset_query(); ?><a href="<?php echo get_site_url(); ?>/announcements/" title="View All Accouncements">View All</a>
 <?php }); // END SHORTCODE [show_UCFannouncements]?><?php add_shortcode('show_announcements', function() { 
 	$myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
