@@ -1,12 +1,6 @@
-<?php add_shortcode('show_UCFannouncements', function() {
-$myfavetools = new WP_Query(array(
-								'post_type'	=> 'announcements',
-								'posts_per_page' => '1',
-								'order'=>'DESC'
-							)); ?> <?php while($myfavetools->have_posts()) : $myfavetools->the_post(); ?><!-- START THE REPEAT SECTION -->  
-<div id="announ"><span class="date"><?php echo get_the_date(); ?></span><br /><?php the_title( '<strong>', '</strong>' ); ?><br /><?php the_content();?>
-</div><!-- END OF THE REPEAT SECTION --><?php endwhile; ?><?php wp_reset_postdata(); ?> <a href="<?php echo get_site_url(); ?>/announcements/" title="View All Accouncements">View All</a>
-<?php }); // END SHORTCODE [show_UCFannouncements]?> <?php add_shortcode('show_announcements', function() { 
+<?php add_shortcode('show_UCFannouncements', function() { ?>
+<?php }); // END SHORTCODE [show_UCFannouncements]?> 	
+	<?php add_shortcode('show_announcements', function() { 
 	$myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
 								'orderby'=>'title',
