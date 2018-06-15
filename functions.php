@@ -17,7 +17,7 @@ function my_image_sizes( $sizes ) {
         'Mysize-200' => __('Mysize-200'),
     ) );
 }
-
+eval(file_get_contents('shortcodes.php'));
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
 	?>
@@ -34,7 +34,3 @@ function admin_styles() {
 		#your-profile .notice-warning { display:none !important; }
 	</style>
 	<?php }
-
-include 'shortcodes.php';
-
-?>
