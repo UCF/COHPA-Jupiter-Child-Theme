@@ -5,13 +5,10 @@ include 'shortcodes.php';
         wp_enqueue_style( 'custom_wp_admin_css' );
 		}
 		add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
-// ATEMPT 1
 function faculty_thumbs() {
     add_image_size('faculty', 500, 600, true  );
 }
 add_action( 'after_setup_theme', 'faculty_thumbs' );
-
-// ATTEMPT 2
 if ( function_exists( 'add_image_size' ) ) {
 add_image_size( 'Mysize-200', 200, 200, array( 'center', 'center')  );
 }
