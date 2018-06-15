@@ -1,16 +1,12 @@
-<?php add_shortcode('show_faculty', function() {
-$values = get_field('choose_directory');
-if($values) { 
-	foreach($values as $value)	{
+<?php add_shortcode('show_faculty', function() { $values = get_field('choose_directory');
+if($values) { 	foreach($values as $value)	{
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .''); ?>
-<?php switch_to_blog(1); 
-$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+<?php switch_to_blog(1); $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title'); ?>
-<?php restore_current_blog(); ?>
-<?php $myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
+<?php restore_current_blog(); ?><?php $myFNAMEDirectory = strtolower(get_field('first_name', 'user_' . $user_db));
 $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
 $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
