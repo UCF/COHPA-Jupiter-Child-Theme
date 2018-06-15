@@ -1,6 +1,5 @@
 <?php // ADDED BY DAVID JANOSIK
-include 'shortcodes.php';
-	function load_custom_wp_admin_style() {
+function load_custom_wp_admin_style() {
         wp_register_style( 'custom_wp_admin_css', get_stylesheet_directory_uri() . '/custom-admin-style.css', false, '1.0.0' );
         wp_enqueue_style( 'custom_wp_admin_css' );
 		}
@@ -18,6 +17,7 @@ function my_image_sizes( $sizes ) {
         'Mysize-200' => __('Mysize-200'),
     ) );
 }
+include 'shortcodes.php';
 add_action('admin_head', 'admin_styles');
 function admin_styles() {
 	?>
