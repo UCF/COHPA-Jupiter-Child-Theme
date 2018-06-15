@@ -8,9 +8,75 @@ $research_ucf = get_field('research_interests', 'user_'. $user_db );
 $params = array( 'width' => 600, 'height' => 760 );
 $imageCrop = bfi_thumb( $image_ucf['url'], $params );
 $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $params ); 
-restore_current_blog(); ?><!-- START REPEATER SECTION -->	
-<?php } } ?>
-<?php });// END SHORTCODE [show_research] ?><?php add_shortcode('show_UCFannouncements', function() { $myfavetools = new WP_Query(array(
+restore_current_blog(); ?><!-- START REPEATER SECTION -->
+<div class="wpb_row vc_row  mk-fullwidth-false  attched-false  vc_row-fluid  js-master-row ">
+	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
+		<div class="mk-image  lightbox-enabled align-left border_shadow-frame inside-image " style="margin-bottom:10px">
+        	<div class="mk-image-holder" style="max-width: 533px;">
+            	<div class="mk-image-inner ">
+                	<a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_self" class="mk-image-link">
+                    <?php if( $image_ucf ) { ?>
+                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $imageCrop; ?>">
+                     <?php } else { ?> 
+							<img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="<?php echo $imageBackup; ?>" itemprop="image" /> <?php } ?>
+                    </a>
+                </div>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+	<div style="" class="vc_col-sm-9 wpb_column column_container  _ height-full">
+		<h2 id="fancy-title-2" class="mk-fancy-title  simple-style directoryNameFixer color-single">
+			<span>
+				<a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_parent"><?php echo $value['display_name'] ; ?><?php
+	echo '<span class="directoryDegrees">';
+		if( get_field('degrees', 'user_' . $user_db .'') ) {
+			echo ', ';
+			$num_rows = 0;
+				while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
+				$num_rows++;
+				endwhile;
+				while ( have_rows('degrees', 'user_' . $user_db .'') ) : the_row();
+				$num_rows--;
+				echo '<span>'. get_sub_field('degree') .'</span>';
+				if ( $num_rows == 0 ) { echo ''; }
+				else { echo ', '; }
+				endwhile;
+		}
+	echo '</span>';	?>   	</a>			
+            </span>
+		</h2>
+		<div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
+		<?php $termswer = get_field('research_interests', 'user_'. $user_db );
+			if( $termswer ): ?>
+				<ul>
+				<?php foreach( $termswer as $term ): ?>
+					<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li> <?php endforeach; ?>
+				</ul> <?php endif; ?>
+		</div>
+    </div>
+</div>
+<div id="divider-7" class="mk-divider  divider_full_width center shadow_line ">
+	<div class="divider-inner">
+		<span class="divider-shadow-left"></span><span class="divider-shadow-right"></span>
+	</div>
+</div>
+<div class="clearboth"></div><!-- END REPEATER SECTION -->	
+<?php } } ?><style id='theme-dynamic-styles-inline-css' type='text/css'>
+#list-3 {margin-bottom:30px;} 
+#list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
+#list-3 ul li { list-style:none !important;} 
+#list-3 ul li .mk-svg-icon { fill:#ffc904; padding-right:10px !important; }
+#fancy-title-2{letter-spacing:0px;text-transform:initial;font-size:22px;;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;line-height:15px !important; margin:15px 0px 20px 0px !important;}
+.directoryDegrees { font-size:12px !important; font-weight:normal!important; line-height:0px !important; }
+#divider-7 { padding:10px 0 30px; } 
+#divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
+.mk-divider.shadow_line .divider-inner { height:7px; } 
+.mk-divider.shadow_line .divider-inner .divider-shadow-left, .mk-divider.shadow_line .divider-inner .divider-shadow-right { display:inline-block; width:50%; height:7px; background-repeat:no-repeat; } 
+.mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
+.mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
+.mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
+</style><?php });// END SHORTCODE [show_research] ?><?php add_shortcode('show_UCFannouncements', function() { $myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
 								'posts_per_page' => '1',
 								'order'=>'DESC'
