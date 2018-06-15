@@ -1,6 +1,5 @@
-<?php add_shortcode('show_UCFannouncements', function() { ?>
-<?php }); // END SHORTCODE [show_UCFannouncements]?> 	
-	<?php add_shortcode('show_announcements', function() { 
+<?php add_shortcode('show_UCFannouncements', function() { 
+ }); // END SHORTCODE [show_UCFannouncements]?><?php add_shortcode('show_announcements', function() { 
 	$myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
 								'orderby'=>'title',
