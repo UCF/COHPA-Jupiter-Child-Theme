@@ -1,7 +1,6 @@
 <?php add_shortcode('show_faculty', function() {
 $values = get_field('choose_directory');
-if($values)
-{ 
+if($values) { 
 	foreach($values as $value)	{
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
@@ -27,11 +26,8 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
                         <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
-                             <?php }
-                                else { ?> 
-                                    <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
-                            <?php } ?>
-                        </a>    
+                             <?php } else { ?> <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
+                            <?php } ?> </a>    
                         </div>
                     </div>
 					<div class="clearboth"></div>
@@ -47,8 +43,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
                         <a title="View <?php echo $value['display_name'] ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $value['display_name'] ; ?></a>
                     </h3>
                     <p><div id="showFacultyJobTitle">
-                    	<?php switch_to_blog(1);
-							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+                    	<?php switch_to_blog(1); if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
@@ -59,8 +54,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
 									endwhile;
-							}
-						restore_current_blog(); ?> </div>
+							}	restore_current_blog(); ?> </div>
                     <div id="showFacultyDepartment">
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php $terms = get_field('department');
@@ -77,10 +71,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 						  echo '</a>';
 						if ( $count != $i ) {
 									echo ', ';
-								}
-							}
-						 } 	
-						?></div>
+								} } } ?></div>
                         <div id="directoryProfile-phone"><i style="color:#666;margin:4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     </p>
@@ -106,8 +97,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 						if( ! empty( $roomy ) ) { 
 							echo ' Room: ';
 							the_field('room_number', 'user_'. $user_db );
-						}
-						echo '</div>';	?>
+						} echo '</div>';	?>
                     <div class="clearboth"></div>
                 </div>
             </div>
@@ -120,8 +110,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 	</div>
 </div>
 <div class="clearboth"></div><!-- END REPEATER SECTION -->	
-<?php	}}		?>
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
+<?php	}}		?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
@@ -129,18 +118,15 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 .mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
-</style>	
-<?php	});// END SHORTCODE [show_faculty]?> 
+</style>	<?php	});// END SHORTCODE [show_faculty]?> 
 <?php add_shortcode('show_chair', function() {
 $values = get_field('choose_chair');
-if($values)
-{ 
+if($values) { 
 	foreach($values as $value)	{
          $user_db = $value['ID'];
 		 $buildingMap = get_field('building', 'user_' . $user_db .'');
 		 $roomy = get_field('room_number', 'user_' . $user_db .''); ?>
-<?php switch_to_blog(1); 
-$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+<?php switch_to_blog(1); $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
 $jobtitle_ucf = get_sub_field('job_title'); ?>
 <?php restore_current_blog(); ?><!-- START REPEATER SECTION -->	
@@ -153,12 +139,9 @@ $jobtitle_ucf = get_sub_field('job_title'); ?>
                     	<div class="mk-image-inner ">
                         <a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" title="View <?php echo $value['display_name'] ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
-                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
-                             <?php }
-                                else { ?> 
+                                <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>"> <?php } else { ?> 
                                     <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
-                            <?php } ?>
-                        </a>    
+                            <?php } ?> </a>    
                         </div>
                     </div>
 					<div class="clearboth"></div>
@@ -185,9 +168,7 @@ $jobtitle_ucf = get_sub_field('job_title'); ?>
 									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
-									endwhile;
-							}
-						restore_current_blog();	?>
+									endwhile; 	} restore_current_blog();	?>
                     </span><br>
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php $terms = get_field('department');
@@ -203,14 +184,10 @@ $jobtitle_ucf = get_sub_field('job_title'); ?>
 						  echo $term->name;
 						  echo '</a>';
 						if ( $count != $i ) {
-									echo ', ';
-								}
-							}
-						 } 	?>
+									echo ', '; 	} 	}  } 	?>
                         <div id="directoryProfile-phone"><i style="color:#666;margin:4px;4px;" class="mk-moon-phone  mk-size-small"></i> Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></div>
                         <div id="directoryProfile-email"><i style="color:#666;margin:4px;4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $value['display_name'] ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
-                    </p>
-                    <?php echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
+                    </p><?php echo '<div id="directoryProfile-location"><i style="color:#666;margin:4px;4px;" class="mk-moon-location-4  mk-size-small"></i> Location: <a href="';
 						if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 						if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
 						if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
@@ -233,8 +210,7 @@ $jobtitle_ucf = get_sub_field('job_title'); ?>
 							echo ' Room: ';
 							the_field('room_number', 'user_'. $user_db );
 						}
-						echo '</div>';	?>
-                    <div class="clearboth"></div>
+						echo '</div>';	?> <div class="clearboth"></div>
                 </div>
             </div>
         </div>
@@ -246,8 +222,7 @@ $jobtitle_ucf = get_sub_field('job_title'); ?>
 	</div>
 </div>
 <div class="clearboth"></div><!-- END REPEATER SECTION -->	
-<?php } } ?>
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
+<?php } } ?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(https://cohpacmsdev.smca.ucf.edu/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
@@ -259,12 +234,10 @@ $jobtitle_ucf = get_sub_field('job_title'); ?>
 <?php	});// END SHORTCODE [show_faculty]?> 
 <?php add_shortcode('show_research', function() {
 $values = get_field('choose_researchers');
-if($values)
-{ 
+if($values)  { 
 	foreach($values as $value)	{
          $user_db = $value['ID']; ?>
-<?php switch_to_blog(1); 
-$image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
+<?php switch_to_blog(1);  $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $research_ucf = get_field('research_interests', 'user_'. $user_db );
 $params = array( 'width' => 600, 'height' => 760 );
 $imageCrop = bfi_thumb( $image_ucf['url'], $params );
@@ -278,10 +251,8 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
                 	<a href="/directory/<?php echo strtolower(get_field('first_name', 'user_' . $user_db)); ?>-<?php echo strtolower(get_field('last_name', 'user_' . $user_db)); ?>" target="_self" class="mk-image-link">
                     <?php if( $image_ucf ) { ?>
                     <img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" width="500" src="<?php echo $imageCrop; ?>">
-                     <?php }
-						else { ?> 
-							<img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="<?php echo $imageBackup; ?>" itemprop="image" />        
-					<?php } ?>
+                     <?php } else { ?> 
+							<img class="lightbox-false" alt="View <?php echo $value['display_name'] ; ?>'s Profile" title="View <?php echo $value['display_name'] ; ?>'s Profile" src="<?php echo $imageBackup; ?>" itemprop="image" /> <?php } ?>
                     </a>
                 </div>
             </div>
@@ -314,10 +285,8 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 			if( $termswer ): ?>
 				<ul>
 				<?php foreach( $termswer as $term ): ?>
-					<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li>
-				<?php endforeach; ?>
-				</ul>
-			<?php endif; ?>
+					<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li> <?php endforeach; ?>
+				</ul> <?php endif; ?>
 		</div>
     </div>
 </div>
@@ -327,8 +296,7 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 	</div>
 </div>
 <div class="clearboth"></div><!-- END REPEATER SECTION -->	
-<?php } } ?>
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
+<?php } } ?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #list-3 {margin-bottom:30px;} 
 #list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
 #list-3 ul li { list-style:none !important;} 
@@ -343,8 +311,7 @@ $imageBackup = bfi_thumb( "/wp-content/uploads/2016/01/defaul-avatar_0.jpg", $pa
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
 </style>	
-<?php });// END SHORTCODE [show_research]?> 
-<?php add_shortcode('show_UCFannouncements', function() {
+<?php });// END SHORTCODE [show_research] ?> <?php add_shortcode('show_UCFannouncements', function() {
 $myfavetools = new WP_Query(array(
 								'post_type'	=> 'announcements',
 								'posts_per_page' => '1',
@@ -359,14 +326,13 @@ $myfavetools = new WP_Query(array(
 <?php endwhile; ?>
 <?php wp_reset_query(); ?> 
 <a href="<?php echo get_site_url(); ?>/announcements/" title="View All Accouncements">View All</a>
-<?php });// END SHORTCODE [show_UCFannouncements]?> 
+<?php }); // END SHORTCODE [show_UCFannouncements]?> 
 <?php add_shortcode('show_announcements', function() { ?><!-- START REPEATER SECTION -->	
 <?php $myannouncements = new WP_Query(array(
 								'post_type'	=> 'announcement',
 								'orderby'=>'title',
 								'order'=>'ASC'
-							)); ?>
-                <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?> 				<!--START OF THE REPEAT SECTION -->
+							)); ?> <?php while($myannouncements->have_posts()) : $myannouncements->the_post(); ?> 				<!--START OF THE REPEAT SECTION -->
                 <li style="list-style:none; font-size:16px !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
  <div style="margin-left:25px;">               
                 <?php $repeater = get_field('announcement_items');
@@ -374,9 +340,7 @@ $announdate = get_sub_field('announcement_date');
 $last_row = end($repeater);
 echo $last_row['announcement_date'];
 echo $last_row['announcement_item'];
-?>
-</div>               <!-- END OF THE REPEAT SECTION -->
-   				<?php endwhile; ?><!-- END OF THE REPEAT SECTION -->	
+?> </div> <!-- END OF THE REPEAT SECTION --> <?php endwhile; ?> <!-- END OF THE REPEAT SECTION -->	
 <?php	});// END SHORTCODE [show_announcements]?> 
 <?php /**Shortcode: [deptlist department=""] works with parameters */ function dept_option($atts){
 	extract(shortcode_atts( array(
@@ -395,13 +359,10 @@ echo $last_row['announcement_item'];
 				'key' => 'department',
 				'value' => $daveandkait, // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 				'compare' => 'LIKE',
-			),
-		)
-	);
+			), ) );
 	$subscribers = get_users($args1);
  			foreach ($subscribers as $user) { ?><!-- START REPEATER SECTION -->	
-<?php switch_to_blog(1); ?>
-<?php $user_db = $user->ID ;
+<?php switch_to_blog(1); ?> <?php $user_db = $user->ID ;
 $displayName = get_field('display_name', 'user_' . $user_db .'');
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
@@ -415,8 +376,7 @@ $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
 $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
-<?php restore_current_blog(); ?><!-- START REPEATER SECTION -->	
-<div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
+<?php restore_current_blog(); ?><!-- START REPEATER SECTION -->	<div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-2">
     	<div class="vc_column-inner ">
         	<div class="wpb_wrapper">
@@ -426,11 +386,9 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
                         <a href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" title="View <?php echo $user->display_name ; ?>'s Profile">
 							<?php if( $image_ucf ) { ?>
                                 <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" width="500" src="<?php echo $image_ucf['url']; ?>">
-                             <?php }
-                                else { ?> 
+                             <?php }  else { ?> 
                                     <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
-                            <?php } ?>
-                        </a>    
+                            <?php } ?> </a>    
                         </div>
                     </div>
 					<div class="clearboth"></div>
@@ -446,8 +404,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
                         <a title="View <?php echo $user->display_name ; ?>'s Profile" href="/directory/<?php echo $cohpaFNAME; ?>-<?php echo $cohpaLNAME; ?>" target="_parent"><?php echo $user->display_name ; ?></a>
                     </h3>
                     <p><div id="showFacultyJobTitle">
-                    	<?php switch_to_blog(1);
-							if( get_field('job_titles', 'user_' . $user_db .'') ) {
+                    	<?php switch_to_blog(1); if( get_field('job_titles', 'user_' . $user_db .'') ) {
 								$num_rows = 0;
 									while ( have_rows('job_titles', 'user_' . $user_db .'') ) : the_row();
 									$num_rows++;
@@ -457,10 +414,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 									echo '<span>'. get_sub_field('job_title') .'</span>';
 									if ( $num_rows == 0 ) { echo ''; }
 									else { echo ', '; }
-									endwhile;
-							}
-						restore_current_blog(); ?>
-                    </div>
+									endwhile;	} restore_current_blog(); ?> </div>
                     <div id="showFacultyDepartment">
                         <?php the_field('department', 'user_' . $user_db); ?>
                         <?php $terms = get_field('department');
@@ -479,8 +433,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 									echo ', ';
 								}
 							}
-						 } 	?>
-					</div>
+						 } 	?>	</div>
                    <div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>    
                         <li><svg  class="mk-svg-icon" data-name="mk-moon-phone" data-cacheid="icon-5a553bfdc3fd3" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 320c-32 32-32 64-64 64s-64-32-96-64-64-64-64-96l64-64s-64-128-96-128l-96 96c0 64 65.75 193.75 128 256s192 128 256 128c0 0 96-64 96-96s-96-128-128-96z"/></svg>Phone: <?php the_field('phone_number', 'user_'. $user_db ); ?></li>
                         <li><svg  class="mk-svg-icon" data-name="mk-icon-envelope" data-cacheid="icon-5a55331319080" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg>Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></li>
@@ -513,44 +466,38 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 						if( ! empty( $roomy ) ) { 
 							echo ' Room: ';
 							the_field('room_number', 'user_'. $user_db );
-						}
-						echo '</li>';	?>
+						} echo '</li>';	?>
    					 </ul></div>
                     <div class="clearboth"></div>
                 </div>
             </div>
 		</div>
-    </div>	         <!-- INSERTED NEW SECTION -->            
+    </div> <!-- INSERTED NEW SECTION -->            
 	<div style="" class="vc_col-sm-4 wpb_column column_container ">
 		<?php if( $getcv || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {		   ?>
 		<h2 style="font-size: 16px;text-align:left;color: #3d3d3d;font-style:inherit;font-weight:normal;padding-top:0px;padding-bottom:0px; text-transform:initial;letter-spacing:0px;" id="fancy-title-5762ba5e07f2d" class="mk-shortcode mk-fancy-title fancy-title-align-left simple-style "><span style="">Additional Info</span></h2>
 		<?php  }?>	
 		<div class="clearboth"></div>
 		<div style="text-align: left;" class="mk-text-block  true">
-			<p>
-			<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>
+			<p>	<div data-charcode="mk-icon-phone" class="mk-list-styles  mk-align-none newdirectoryspacing  clear" data-family=""><ul>
 			<?php if( $getcv || get_field('website_url', 'user_' . $user_db .'') || get_field('facebook_url', 'user_' . $user_db .'') || get_field('linkedin_url', 'user_' . $user_db .'')) {
 					   echo '';
 					if($getcv) {
 							echo '<li><svg  class="mk-svg-icon" data-name="mk-icon-file-text" data-cacheid="icon-5a577c25b6b92" style="fill: #999; height:16px; width: 13.714285714286px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1792"><path d="M1468 476q14 14 28 36h-472v-472q22 14 36 28zm-476 164h544v1056q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h800v544q0 40 28 68t68 28zm160 736v-64q0-14-9-23t-23-9h-704q-14 0-23 9t-9 23v64q0 14 9 23t23 9h704q14 0 23-9t9-23zm0-256v-64q0-14-9-23t-23-9h-704q-14 0-23 9t-9 23v64q0 14 9 23t23 9h704q14 0 23-9t9-23zm0-256v-64q0-14-9-23t-23-9h-704q-14 0-23 9t-9 23v64q0 14 9 23t23 9h704q14 0 23-9t9-23z"/></svg><a href="';
 							echo $getcv;
-							echo '" target="_blank">Curriculum Vitae</a></li>';
-						}
+							echo '" target="_blank">Curriculum Vitae</a></li>'; }
 						if(get_field('website_url', 'user_' . $user_db .'')) {
 							echo '<li><svg  class="mk-svg-icon" data-name="mk-moon-globe" data-cacheid="icon-5a5761fdb02a2" style="fill: #999; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M240 32c-132.548 0-240 107.452-240 240 0 132.549 107.452 240 240 240 132.549 0 240-107.451 240-240 0-132.548-107.451-240-240-240zm135.795 320c4.29-20.227 6.998-41.696 7.879-64h63.723c-1.668 22.098-6.812 43.557-15.34 64h-56.262zm-271.59-160c-4.29 20.227-6.998 41.696-7.879 64h-63.722c1.668-22.097 6.811-43.557 15.339-64h56.262zm238.813 0c4.807 20.481 7.699 41.927 8.64 64h-95.658v-64h87.018zm-87.018-32v-93.669c7.295 2.123 14.522 5.685 21.614 10.685 13.291 9.37 26.006 23.804 36.77 41.743 7.441 12.401 13.876 26.208 19.248 41.242h-77.632zm-90.384-41.242c10.764-17.939 23.478-32.374 36.77-41.743 7.091-5 14.319-8.562 21.614-10.685v93.67h-77.632c5.373-15.033 11.808-28.84 19.248-41.242zm58.384 73.242v64h-95.657c.94-22.073 3.833-43.519 8.639-64h87.018zm-176.056 160c-8.528-20.443-13.671-41.902-15.339-64h63.722c.881 22.304 3.589 43.773 7.879 64h-56.262zm80.399-64h95.657v64h-87.018c-4.806-20.48-7.699-41.927-8.639-64zm95.657 96v93.67c-7.294-2.123-14.522-5.686-21.614-10.685-13.292-9.37-26.007-23.805-36.77-41.743-7.441-12.402-13.875-26.209-19.249-41.242h77.633zm90.384 41.242c-10.764 17.938-23.479 32.373-36.77 41.743-7.092 4.999-14.319 8.562-21.614 10.685v-93.67h77.633c-5.373 15.033-11.808 28.84-19.249 41.242zm-58.384-73.242v-64h95.657c-.94 22.073-3.833 43.52-8.64 64h-87.017zm127.674-96c-.881-22.304-3.589-43.773-7.879-64h56.262c8.528 20.443 13.672 41.903 15.34 64h-63.723zm31.655-96h-47.95c-9.319-29.381-22.188-55.147-37.658-75.714 21.268 10.17 40.529 23.808 57.357 40.636 10.74 10.739 20.181 22.469 28.251 35.078zm-322.407-35.078c16.829-16.829 36.09-30.466 57.357-40.636-15.471 20.567-28.338 46.333-37.658 75.714h-47.949c8.069-12.609 17.511-24.339 28.25-35.078zm-28.25 259.078h47.949c9.32 29.381 22.188 55.147 37.659 75.715-21.268-10.17-40.529-23.808-57.357-40.637-10.74-10.739-20.182-22.469-28.251-35.078zm322.406 35.078c-16.828 16.829-36.09 30.467-57.357 40.637 15.471-20.567 28.339-46.334 37.658-75.715h47.95c-8.07 12.609-17.511 24.339-28.251 35.078z"/></svg><a href="';
 							the_field('website_url', 'user_' . $user_db .'');
-							echo '" target="_blank">Personal Website</a></li>';
-						}
+							echo '" target="_blank">Personal Website</a></li>'; }
 						if(get_field('facebook_url', 'user_' . $user_db .'')) {
 							echo '<li><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-square-facebook" data-cacheid="icon-5a567fa482bd1" style="fill: #3b5998; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M444-6.4h-376c-37.555 0-68 30.445-68 68v376c0 37.555 30.445 68 68 68h376c37.555 0 68-30.445 68-68v-376c0-37.555-30.445-68-68-68zm-123.943 159.299h-49.041c-7.42 0-14.918 7.452-14.918 12.99v19.487h63.723c-2.081 28.41-6.407 64.679-6.407 64.679h-57.565v159.545h-63.929v-159.545h-32.756v-64.474h32.756v-33.53c0-8.098-1.706-62.336 70.46-62.336h57.678v63.183z"/></svg><a href="';
 							the_field('facebook_url', 'user_' . $user_db .'');
-							echo '" target="_blank">Facebook</a></li>';
-						}
+							echo '" target="_blank">Facebook</a></li>'; }
 						if(get_field('linkedin_url', 'user_' . $user_db .'')) {
 							echo '<li><svg  class="mk-svg-icon" data-name="mk-moon-linkedin" data-cacheid="icon-5a567fa48352f" style="fill: #007bb6; height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426 0h-340c-47.3 0-86 38.7-86 86v340c0 47.3 38.7 86 86 86h340c47.3 0 86-38.7 86-86v-340c0-47.3-38.7-86-86-86zm-234 416h-64v-224h64v224zm-32-256c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zm256 256h-64v-128c0-17.673-14.327-32-32-32s-32 14.327-32 32v128h-64v-224h64v39.736c13.199-18.132 33.376-39.736 56-39.736 39.765 0 72 35.817 72 80v144z"/></svg><a href="';
 							the_field('linkedin_url', 'user_' . $user_db .'');
-							echo '" target="_blank">Linkedin</a></li>';
-						}
+							echo '" target="_blank">Linkedin</a></li>'; }
 					   echo '<p>&nbsp;</p>'; }?>
 		</ul></div>
 		<div class="clearboth"></div>
@@ -563,8 +510,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 	</div>
 </div>
 <div class="clearboth"></div><!-- END REPEATER SECTION -->
- <?php } ?>
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
+ <?php } ?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #divider-7 { padding:10px 0 30px; } 
 #divider-7 .divider-inner { } #divider-7 .divider-inner:after { } #divider-7 .divider-shadow-left, #divider-7 .divider-shadow-right { background-image:url(/wp-content/themes/jupiter/assets/images/shadow-divider.png); } 
 .mk-divider.shadow_line .divider-inner { height:7px; } 
@@ -573,8 +519,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
 </style>
-<?php	}
-add_shortcode( 'deptlist', 'dept_option' );?>
+<?php	} add_shortcode( 'deptlist', 'dept_option' );?>
 <?php /*** Shortcode: [researchlist department=""] */ function research_option($atts){
 	extract(shortcode_atts( array(
 		'department' => 'Legal Studies',
@@ -592,9 +537,7 @@ add_shortcode( 'deptlist', 'dept_option' );?>
 				'key' => 'department',
 				'value' => $daveandkait, // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 				'compare' => 'LIKE',
-			),
-		)
-	);
+			), ) );
 	$subscribers = get_users($args1);
  			foreach ($subscribers as $user) { ?><!-- START REPEATER SECTION -->	
 <?php $user_db = $user->ID ;
@@ -625,8 +568,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
                              <?php }
                                 else { ?> 
                                     <img class="lightbox-false" alt="View <?php echo $user->display_name ; ?>'s Profile" title="View <?php echo $user->display_name ; ?>'s Profile" src="/wp-content/uploads/2016/01/defaul-avatar_0.jpg" itemprop="image" />        
-                            <?php } ?>
-                        </a>    
+                            <?php } ?> </a>    
                         </div>
                     </div>
 					<div class="clearboth"></div>
@@ -661,15 +603,13 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 					<div id="directoryProfile-email" style="margin: -13px 0px 13px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     <div class="clearboth"></div>
                     <div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
-						<?php $termswer = get_field('research_interests', 'user_'. $user_db );
-							if( $termswer ): ?>
+						<?php $termswer = get_field('research_interests', 'user_'. $user_db ); if( $termswer ): ?>
 							<ul>
 							<?php foreach( $termswer as $term ): ?>
 								<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li>
 							<?php endforeach; ?>
 							</ul>
-						<?php endif; ?>
-					</div>
+						<?php endif; ?> </div>
                 </div>
             </div>
 		</div>
@@ -682,8 +622,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 </div>
 <div class="clearboth"></div>
 <?php endif; ?><!-- END REPEATER SECTION -->
- <?php } ?>
-<style id='theme-dynamic-styles-inline-css' type='text/css'>
+ <?php } ?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #list-3 {margin-bottom:30px;} 
 #list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
 #list-3 ul li { list-style:none !important; margin-left: 0px !important;} 
@@ -698,8 +637,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
 </style>
-<?php	}
-add_shortcode( 'researchlist', 'research_option' ); ?>
+<?php	} add_shortcode( 'researchlist', 'research_option' ); ?>
 <?php /* [internlist maincat="" subcat=""] */ function interncat( $atts ) {
     $a = shortcode_atts( array(
         'maincat' => 'Local',
@@ -715,9 +653,7 @@ $myinterntools = new WP_Query(array(
 										'key' => 'main_intern_category',
 										'value' => $a['maincat'], // I WANT THIS AS A VARIABLE IN THE SHORTCODE
 										'compare' => 'LIKE',
-									),
-								)
-							)); 	
+									), ) )); 	
 while($myinterntools->have_posts()) : $myinterntools->the_post();?>	<!-- START THE REPEAT SECTION -->   
 <div  class="wpb_row vc_row vc_row-fluid  mk-fullwidth-false  attched-false     js-master-row ">
 	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
@@ -735,8 +671,7 @@ while($myinterntools->have_posts()) : $myinterntools->the_post();?>	<!-- START T
 		<h2 id="fancy-title-5" class="mk-fancy-title  simple-style  titleFIX color-single">
 			<span>Contact Information:</span>
 		</h2>
-		<?php endif; ?>
-		<div class="clearboth"></div>
+		<?php endif; ?> <div class="clearboth"></div>
 	</div>
 </div>
 <div  class="wpb_row vc_row vc_row-fluid  mk-fullwidth-false  attched-false     js-master-row ">
@@ -769,8 +704,7 @@ while($myinterntools->have_posts()) : $myinterntools->the_post();?>	<!-- START T
 						 <span class="mk-button--text">Website</span>
 			</a>
 		</div>
-		<?php endif; ?>
-	</div>
+		<?php endif; ?> </div>
 	<div style="" class="vc_col-sm-3 wpb_column column_container  _ height-full">
 		<?php if (get_field('intern_app_url')): ?>
 		<div id="mk-button-12" class="mk-button-container _ relative width-full   block text-center internButtonFix">
@@ -778,8 +712,7 @@ while($myinterntools->have_posts()) : $myinterntools->the_post();?>	<!-- START T
 				<span class="mk-button--text">Application</span>
 			</a>
 		</div>
-		<?php endif; ?>
-	</div>
+		<?php endif; ?> </div>
 </div>
 <div  class="wpb_row vc_row vc_row-fluid  mk-fullwidth-false  attched-false     js-master-row ">
 	<div style="" class="vc_col-sm-12 wpb_column column_container  _ height-full">
@@ -789,11 +722,8 @@ while($myinterntools->have_posts()) : $myinterntools->the_post();?>	<!-- START T
 		<div class="clearboth"></div>
 	</div>
 </div><!-- END OF THE REPEAT SECTION -->		
-<?php endwhile; ?>
-<style id="mk-shortcode-dynamic-styles" type="text/css">#fancy-title-2{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-2 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-2 { text-align:center !important; } } #fancy-title-3{letter-spacing:0px;text-transform:initial;font-size:18px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-3 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-3 { text-align:center !important; } } #text-block-4 { margin-bottom:0px; text-align:left; } #fancy-title-5{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-5 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-5 { text-align:center !important; } } #fancy-title-6{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-6 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-6 { text-align:center !important; } } #fancy-title-7{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-7 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-7 { text-align:center !important; } } #fancy-title-8{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-8 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-8 { text-align:center !important; } } #fancy-title-9{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-9 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-9 { text-align:center !important; } } #fancy-title-10{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-10 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-10 { text-align:center !important; } } #mk-button-11 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-11 .mk-button { background-color:#ffc904; } #mk-button-11 .mk-button:hover { color:#ffffff !important; background-color:#212121; } #mk-button-11 .mk-button:hover .mk-svg-icon { color:#ffffff !important; } #mk-button-12 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #divider-13 { padding:10px 0 40px; } #divider-13 .divider-inner { border-top-width:1px; } #divider-13 .divider-inner:after { } #fancy-title-14{letter-spacing:0px;text-transform:initial;font-size:18px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-14 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-14 { text-align:center !important; } } #text-block-15 { margin-bottom:0px; text-align:left; } #fancy-title-16{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-16 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-16 { text-align:center !important; } } #fancy-title-17{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-17 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-17 { text-align:center !important; } } #fancy-title-18{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-18 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-18 { text-align:center !important; } } #fancy-title-19{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-19 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-19 { text-align:center !important; } } #fancy-title-20{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-20 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-20 { text-align:center !important; } } #fancy-title-21{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-21 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-21 { text-align:center !important; } } #mk-button-22 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-22 .mk-button { background-color:#ffc904; } #mk-button-22 .mk-button:hover { color:#ffffff !important; background-color:#212121; } #mk-button-22 .mk-button:hover .mk-svg-icon { color:#ffffff !important; } #mk-button-23 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #divider-24 { padding:10px 0 10px; } #divider-24 .divider-inner { border-top-width:1px; } #divider-24 .divider-inner:after { }</style>
-<?php wp_reset_query(); ?> 
-<?php	}
-add_shortcode( 'internlist', 'interncat' ); ?>
+<?php endwhile; ?> <style id="mk-shortcode-dynamic-styles" type="text/css">#fancy-title-2{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-2 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-2 { text-align:center !important; } } #fancy-title-3{letter-spacing:0px;text-transform:initial;font-size:18px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-3 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-3 { text-align:center !important; } } #text-block-4 { margin-bottom:0px; text-align:left; } #fancy-title-5{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-5 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-5 { text-align:center !important; } } #fancy-title-6{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-6 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-6 { text-align:center !important; } } #fancy-title-7{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-7 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-7 { text-align:center !important; } } #fancy-title-8{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-8 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-8 { text-align:center !important; } } #fancy-title-9{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-9 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-9 { text-align:center !important; } } #fancy-title-10{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-10 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-10 { text-align:center !important; } } #mk-button-11 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-11 .mk-button { background-color:#ffc904; } #mk-button-11 .mk-button:hover { color:#ffffff !important; background-color:#212121; } #mk-button-11 .mk-button:hover .mk-svg-icon { color:#ffffff !important; } #mk-button-12 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #divider-13 { padding:10px 0 40px; } #divider-13 .divider-inner { border-top-width:1px; } #divider-13 .divider-inner:after { } #fancy-title-14{letter-spacing:0px;text-transform:initial;font-size:18px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-14 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-14 { text-align:center !important; } } #text-block-15 { margin-bottom:0px; text-align:left; } #fancy-title-16{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-16 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-16 { text-align:center !important; } } #fancy-title-17{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:bold;padding-top:0px;padding-bottom:0px;}#fancy-title-17 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-17 { text-align:center !important; } } #fancy-title-18{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-18 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-18 { text-align:center !important; } } #fancy-title-19{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-19 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-19 { text-align:center !important; } } #fancy-title-20{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-20 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-20 { text-align:center !important; } } #fancy-title-21{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:0px;}#fancy-title-21 span{} @media handheld, only screen and (max-width:767px) { #fancy-title-21 { text-align:center !important; } } #mk-button-22 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-22 .mk-button { background-color:#ffc904; } #mk-button-22 .mk-button:hover { color:#ffffff !important; background-color:#212121; } #mk-button-22 .mk-button:hover .mk-svg-icon { color:#ffffff !important; } #mk-button-23 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #divider-24 { padding:10px 0 10px; } #divider-24 .divider-inner { border-top-width:1px; } #divider-24 .divider-inner:after { }</style>
+<?php wp_reset_query(); ?>  <?php	} add_shortcode( 'internlist', 'interncat' ); ?>
 <?php add_shortcode('show_books', function() { ?><!-- START REPEATER SECTION -->	
 <?php $mybooklist = new WP_Query(array(
 								'post_type'	=> 'faculty_books',
@@ -803,8 +733,7 @@ add_shortcode( 'internlist', 'interncat' ); ?>
 <?php the_title(); ?>
  <div>               
 </div>                <!-- END OF THE REPEAT SECTION -->
-   				<?php endwhile; ?><!-- END OF THE REPEAT SECTION -->	
-<?php }); // END SHORTCODE [show_books]?> 
+   				<?php endwhile; ?><!-- END OF THE REPEAT SECTION -->	 <?php }); // END SHORTCODE [show_books]?> 
 <?php add_shortcode('search_research', function() { ?><!-- START FORM SECTION -->	
 <?php /*** The Template for displaying Author Search */ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : ''; ?>
