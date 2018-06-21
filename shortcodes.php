@@ -354,7 +354,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
 </style>
-<?php	} add_shortcode( 'deptlist', 'dept_option' );?><?php /*** Shortcode: [researchlist department=""] */  switch_to_blog(1); function research_option($atts){
+<?php	} add_shortcode( 'deptlist', 'dept_option' );?><?php /*** Shortcode: [researchlist department=""] */ function research_option($atts){
 	extract(shortcode_atts( array(
 		'department' => 'Legal Studies',
 	), $atts ));
@@ -457,7 +457,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECT
 .mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
-</style><?php	} add_shortcode( 'researchlist', 'research_option' ); restore_current_blog(); ?><?php add_shortcode('show_books', function() { ?><!-- START REPEATER SECTION --><?php $mybooklist = new WP_Query(array(
+</style><?php	} add_shortcode( 'researchlist', 'research_option' ); ?><?php add_shortcode('show_books', function() { ?><!-- START REPEATER SECTION --><?php $mybooklist = new WP_Query(array(
 								'post_type'	=> 'faculty_books',
 								'order'=>'DESC'
 							)); ?> <?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?><!--START OF THE REPEAT SECTION --><?php the_title(); ?> <div></div><!-- END OF THE REPEAT SECTION --> <?php endwhile; ?><!-- END OF THE REPEAT SECTION --> <?php }); // END SHORTCODE [show_books]?><?php add_shortcode('search_research', function() { ?><!-- START FORM SECTION -->	<?php /*** The Template for displaying Author Search */ if ( ! defined( 'ABSPATH' ) ) exit;  $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : ''; ?><div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row "> <section class="widget widget_search">	<form class="mk-searchform" method="get" id="sul-searchform searchform" action="/staff/">	<div style="" class="vc_col-sm-8 wpb_column column_container  _ height-full">		<div class="wpb_raw_code wpb_content_element wpb_raw_html">
