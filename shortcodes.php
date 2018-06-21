@@ -354,7 +354,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
 </style>
-<?php	} add_shortcode( 'deptlist', 'dept_option' );?><?php /*** Shortcode: [researchlist department=""] */ function research_option($atts){
+<?php	} add_shortcode( 'deptlist', 'dept_option' );?><?php /*** Shortcode: [researchlist department=""] */  switch_to_blog(1); function research_option($atts){
 	extract(shortcode_atts( array(
 		'department' => 'Legal Studies',
 	), $atts ));
@@ -374,7 +374,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 			), ) );
 	$subscribers = get_users($args1);
  			foreach ($subscribers as $user) { ?><!-- START REPEATER SECTION -->	
-<?php switch_to_blog(1); $user_db = $user->ID ;
+<?php $user_db = $user->ID ;
 $displayName = get_field('display_name', 'user_' . $user_db .'');
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
@@ -386,7 +386,7 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
 $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
-$cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); restore_current_blog(); ?><!-- START REPEATER SECTION -->	
+$cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECTION -->	
 <?php 	$researchitems = get_field('research_interests', 'user_'. $user_db ); 	if( $researchitems ): ?> <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-3">
     	<div class="vc_column-inner ">
@@ -427,11 +427,11 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); restore_current_blog(); ?>
 					<div id="directoryProfile-email" style="margin: -13px 0px 13px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     <div class="clearboth"></div>
                     <div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
-						<?php switch_to_blog(1); $termswer = get_field('research_interests', 'user_'. $user_db ); if( $termswer ): ?><ul>
+						<?php $termswer = get_field('research_interests', 'user_'. $user_db ); if( $termswer ): ?><ul>
 							<?php foreach( $termswer as $term ): ?>
 								<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li>
 							<?php endforeach; ?></ul>
-						<?php endif; restore_current_blog(); ?> </div>
+						<?php endif; ?> </div>
                 </div>
             </div>
 		</div>
@@ -457,7 +457,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); restore_current_blog(); ?>
 .mk-divider.shadow_line .divider-inner .divider-shadow-left { background-position:left center; } 
 .mk-divider.shadow_line .divider-inner .divider-shadow-right { background-position:right center; }
 .mk-image.border_shadow-frame .mk-image-inner { border:6px solid #ffffff; box-shadow:0 0 5px rgba(0, 0, 0, 0.25); } 
-</style><?php	} add_shortcode( 'researchlist', 'research_option' ); ?><?php add_shortcode('show_books', function() { ?><!-- START REPEATER SECTION --><?php $mybooklist = new WP_Query(array(
+</style><?php	} add_shortcode( 'researchlist', 'research_option' ); restore_current_blog(); ?><?php add_shortcode('show_books', function() { ?><!-- START REPEATER SECTION --><?php $mybooklist = new WP_Query(array(
 								'post_type'	=> 'faculty_books',
 								'order'=>'DESC'
 							)); ?> <?php while($mybooklist->have_posts()) : $mybooklist->the_post(); ?><!--START OF THE REPEAT SECTION --><?php the_title(); ?> <div></div><!-- END OF THE REPEAT SECTION --> <?php endwhile; ?><!-- END OF THE REPEAT SECTION --> <?php }); // END SHORTCODE [show_books]?><?php add_shortcode('search_research', function() { ?><!-- START FORM SECTION -->	<?php /*** The Template for displaying Author Search */ if ( ! defined( 'ABSPATH' ) ) exit;  $search = ( get_query_var( 'as' ) ) ? get_query_var( 'as' )  : ''; ?><div class="wpb_row vc_row  mk-fullwidth-false  attched-false    vc_row-fluid  js-master-row "> <section class="widget widget_search">	<form class="mk-searchform" method="get" id="sul-searchform searchform" action="/staff/">	<div style="" class="vc_col-sm-8 wpb_column column_container  _ height-full">		<div class="wpb_raw_code wpb_content_element wpb_raw_html">
