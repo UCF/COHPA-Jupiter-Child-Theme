@@ -387,8 +387,7 @@ $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
 $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); 
-$researchitems = get_field('research_interests', 'user_'. $user_db );
-$termswer = get_field('research_interests', 'user_'. $user_db ); restore_current_blog(); ?><!-- START REPEATER SECTION -->	
+$researchitems = get_field('research_interests', 'user_'. $user_db ); ?><!-- START REPEATER SECTION -->	
 <?php 	if( $researchitems ): ?> <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-3">
     	<div class="vc_column-inner ">
@@ -429,11 +428,11 @@ $termswer = get_field('research_interests', 'user_'. $user_db ); restore_current
 					<div id="directoryProfile-email" style="margin: -13px 0px 13px 0px !important;"><i style="color:#666;margin:4px;" class="mk-moon-envelop-2  mk-size-small"></i> Email: <a title="Contact <?php echo $user->display_name ; ?>" href="mailto:<?php the_field('email_address', 'user_'. $user_db ); ?>"><?php the_field('email_address', 'user_'. $user_db ); ?></a></div>
                     <div class="clearboth"></div>
                     <div id="list-3" class="mk-list-styles  mk-align-none  clear" data-charcode="f00c" data-family="awesome-icons">
-						<?php switch_to_blog(1); if( $termswer ): ?><ul>
+						<?php if( $termswer ): ?><ul>
 							<?php foreach( $termswer as $term ): ?>
 								<li style="text-transform:capitalize;"><svg  class="mk-svg-icon" data-name="mk-icon-ok" data-cacheid="icon-57c032d7801fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg><?php echo $term->name; ?></li>
 							<?php endforeach; ?></ul>
-						<?php endif; restore_current_blog(); ?> </div>
+						<?php endif; ?> </div>
                 </div>
             </div>
 		</div>
@@ -445,7 +444,7 @@ $termswer = get_field('research_interests', 'user_'. $user_db ); restore_current
 	</div>
 </div>
 <div class="clearboth"></div>
-<?php endif; ?><!-- END REPEATER SECTION --> <?php } ?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
+<?php endif; 	restore_current_blog(); ?><!-- END REPEATER SECTION --> <?php } ?> <style id='theme-dynamic-styles-inline-css' type='text/css'>
 #list-3 {margin-bottom:30px;} 
 #list-3 ul { margin-left:0px !important; padding-left:0px !important; } 
 #list-3 ul li { list-style:none !important; margin-left: 0px !important;} 
