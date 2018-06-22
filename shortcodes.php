@@ -1,7 +1,7 @@
 <?php /* [internlist maincat="" subcat=""] */ function interncat( $atts ) {
     $a = shortcode_atts( array(
         'maincat' => 'Local',
-    ), $atts );
+    ), $atts ); 
 $myinterntools = new WP_Query(array(
 'post_type'	=> 'internship',
 'orderby'=>'title',
