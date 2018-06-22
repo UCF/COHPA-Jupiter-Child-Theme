@@ -386,8 +386,9 @@ $myFNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myFNAMEDirectory);
 $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
-$cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECTION -->	
-<?php 	$researchitems = get_field('research_interests', 'user_'. $user_db ); 	if( $researchitems ): restore_current_blog(); ?> <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
+$cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); 
+$researchitems = get_field('research_interests', 'user_'. $user_db ); 	restore_current_blog(); ?><!-- START REPEATER SECTION -->	
+<?php 	if( $researchitems ): ?> <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-3">
     	<div class="vc_column-inner ">
         	<div class="wpb_wrapper">
