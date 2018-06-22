@@ -374,7 +374,7 @@ $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?>
 			), ) );
 	$subscribers = get_users($args1);
  			foreach ($subscribers as $user) { ?><!-- START REPEATER SECTION -->	
-<?php $user_db = $user->ID ;
+<?php switch_to_blog(1); $user_db = $user->ID ;
 $displayName = get_field('display_name', 'user_' . $user_db .'');
 $image_ucf = get_field('upload_headshot', 'user_' . $user_db .'');
 $jobs_ucf = get_field('job_titles', 'user_' . $user_db .'');
@@ -387,7 +387,7 @@ $cohpaFNAME = preg_replace("/[\s_]/", "-", $myFNAME);
 $myLNAMEDirectory = strtolower(get_field('last_name', 'user_' . $user_db));
 $myLNAME = preg_replace("/[^a-z0-9_\s-]/", "", $myLNAMEDirectory);
 $cohpaLNAME = preg_replace("/[\s_]/", "-", $myLNAME); ?><!-- START REPEATER SECTION -->	
-<?php 	$researchitems = get_field('research_interests', 'user_'. $user_db ); 	if( $researchitems ): ?> <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
+<?php 	$researchitems = get_field('research_interests', 'user_'. $user_db ); 	if( $researchitems ): restore_current_blog(); ?> <div class="wpb_row vc_inner vc_row    attched-false   vc_row-fluid ">
 	<div class="wpb_column vc_column_container vc_col-sm-3">
     	<div class="vc_column-inner ">
         	<div class="wpb_wrapper">
